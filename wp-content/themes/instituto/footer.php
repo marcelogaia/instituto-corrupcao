@@ -28,35 +28,57 @@ wp_reset_query();
 					<div class="contact-us-box">
 						<h3 class="footer-title">Contato</h3>
 						<div class="box-right">
-							<p>Instituto Não Aceito Corrupção</p>
-							<p>Rua Riachuelo, 217, Sala 101</p>
-							<p>Sé | São Paulo, SP | CEP 01007-000</p>
+							<p><?php bloginfo('name') ?></p>
+							<p><?php echo $GLOBALS['cgv']['endereco-1'] ?></p>
+							<p><?php echo $GLOBALS['cgv']['endereco-2'] ?></p>
 							<p class="contact-icon">
 								<a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>ver mapa</a>
 							</p>
 							<p class="contact-icon">
-							<i class="fa fa-phone" aria-hidden="true"></i> 11 3112-0432</p>
+							<i class="fa fa-phone" aria-hidden="true"></i> <?php echo $GLOBALS['cgv']['telefone'] ?></p>
 							<p class="contact-icon">
-							<i class="fa fa-print" aria-hidden="true"></i>
-							11 3112-0432</p>
+							<i class="fa fa-print" aria-hidden="true"> <?php echo $GLOBALS['cgv']['fax'] ?></i></p>
 							<p class="contact-icon">
-								<a href="mailto:contato@naoaceitocorrupcao.org.br">
-									<i class="fa fa-envelope" aria-hidden="true"></i> contato@naoaceitocorrupcao.org.br
+								<a href="mailto:<?php echo $GLOBALS['cgv']['email'] ?>">
+									<i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $GLOBALS['cgv']['email'] ?>
 								</a>
 							</p>
 						</div><!--/.box-right-->
 					</div>
 				</div>
+<?php 
+	$socialArr = array();
+
+	if(!empty($GLOBALS['cgv']['linkedin'])) $socialArr['linkedin'] = $GLOBALS['cgv']['linkedin'];
+	if(!empty($GLOBALS['cgv']['facebook'])) $socialArr['facebook'] = $GLOBALS['cgv']['facebook'];
+	if(!empty($GLOBALS['cgv']['twitter'])) $socialArr['twitter'] = $GLOBALS['cgv']['twitter'];
+	if(!empty($GLOBALS['cgv']['instagram'])) $socialArr['instagram'] = $GLOBALS['cgv']['instagram'];
+	if(!empty($GLOBALS['cgv']['google-plus'])) $socialArr['google-plus'] = $GLOBALS['cgv']['google-plus'];
+
+	if(!empty($socialArr)):
+?>
 				<div class="col-sm-4">
 					<h3 class="footer-title">Siga-nos</h3>
 					<div class="contact-us-social">
-						<a href="#" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
-						<a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-						<a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-						<a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-						<a href="#" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
+
+	<?php if(!empty($socialArr['linkedin'])): ?>
+						<a href="$socialArr['linkedin']" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+	<?php endif; ?>
+	<?php if(!empty($socialArr['facebook'])): ?>
+						<a href="<?= $socialArr['facebook'] ?>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+	<?php endif; ?>
+	<?php if(!empty($socialArr['twitter'])): ?>
+						<a href="<?= $socialArr['twitter'] ?>" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+	<?php endif; ?>
+	<?php if(!empty($socialArr['instagram'])): ?>
+						<a href="<?= $socialArr['instagram'] ?>" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+	<?php endif; ?>
+	<?php if(!empty($socialArr['google-plus'])): ?>
+						<a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
+	<?php endif; ?>
 					</div><!--/.contact-us-social-->
 				</div>
+<?php endif; ?>
 				<div class=" col-sm-4">
 					<div class="contact-us-newsletter">
 						<h3 class="footer-title" data-customizer="box-left-customer-support-title"> Newsletter </h3><!--/.box-left-->

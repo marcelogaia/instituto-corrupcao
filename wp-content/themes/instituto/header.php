@@ -91,14 +91,36 @@ $isHome = is_home();
 												</p>
 											</form>
 										</div>
+<?php 
+	$socialArr = array();
+
+	if(!empty($GLOBALS['cgv']['linkedin'])) $socialArr['linkedin'] = $GLOBALS['cgv']['linkedin'];
+	if(!empty($GLOBALS['cgv']['facebook'])) $socialArr['facebook'] = $GLOBALS['cgv']['facebook'];
+	if(!empty($GLOBALS['cgv']['twitter'])) $socialArr['twitter'] = $GLOBALS['cgv']['twitter'];
+	if(!empty($GLOBALS['cgv']['instagram'])) $socialArr['instagram'] = $GLOBALS['cgv']['instagram'];
+	if(!empty($GLOBALS['cgv']['google-plus'])) $socialArr['google-plus'] = $GLOBALS['cgv']['google-plus'];
+
+	if(!empty($socialArr)):
+?>
 										<p class="social-links">
-											<a href="#" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
-											<a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-											<a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-											<a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-											<a href="#" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
+										<?php if(!empty($socialArr['linkedin'])): ?>
+											<a href="$socialArr['linkedin']" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+										<?php endif; ?>
+										<?php if(!empty($socialArr['facebook'])): ?>
+											<a href="<?= $socialArr['facebook'] ?>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+										<?php endif; ?>
+										<?php if(!empty($socialArr['twitter'])): ?>
+											<a href="<?= $socialArr['twitter'] ?>" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+										<?php endif; ?>
+										<?php if(!empty($socialArr['instagram'])): ?>
+											<a href="<?= $socialArr['instagram'] ?>" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+										<?php endif; ?>
+										<?php if(!empty($socialArr['google-plus'])): ?>
+											<a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
+										<?php endif; ?>
 											<div class="participe"><button>Participe</button></div>
 										</p>
+	<?php endif; ?>
 									</div><!--/.box-right-->
 								</div><!--/.contact-us-box-->
 							</li>
