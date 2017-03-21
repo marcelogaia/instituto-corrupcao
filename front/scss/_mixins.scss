@@ -1,0 +1,50 @@
+// Mixin: Backgorund Size
+@mixin background-size($value) {
+	-webkit-background-size: $value;
+	   -moz-background-size: $value;
+		 -o-background-size: $value;
+			background-size: $value;
+}
+
+// Mixin: Border Radius
+@mixin border-radius($value) {
+	-webkit-border-radius: $value;
+	   -moz-border-radius: $value;
+		-ms-border-radius: $value;
+		 -o-border-radius: $value;
+			border-radius: $value;
+}
+
+// Mixin: Transition
+@mixin transition($value) {
+	-webkit-transition: $value;
+	   -moz-transition: $value;
+		 -o-transition: $value;
+			transition: $value;
+}
+
+@mixin rotate($value) {
+	-webkit-transform: rotate($value);
+	   -moz-transform: rotate($value);
+		-ms-transform: rotate($value);
+		 -o-transform: rotate($value);
+			transform: rotate($value);
+}
+
+@mixin filter($value) {
+	-webkit-filter: $value;
+	   -moz-filter: $value;
+		-ms-filter: $value;
+		 -o-filter: $value;
+			filter: $value;
+}
+// Mixin: Vertical Align Center
+@mixin vertical-align($position: relative) {
+	position: $position;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		 -o-transform: translateY(-50%);
+			transform: translateY(-50%);
+}
