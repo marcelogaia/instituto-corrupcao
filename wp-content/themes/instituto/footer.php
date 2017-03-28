@@ -37,7 +37,7 @@ wp_reset_query();
 							<p class="contact-icon">
 							<i class="fa fa-phone" aria-hidden="true"></i> <?php echo $GLOBALS['cgv']['telefone'] ?></p>
 							<p class="contact-icon">
-							<i class="fa fa-print" aria-hidden="true"> <?php echo $GLOBALS['cgv']['fax'] ?></i></p>
+							<i class="fa fa-print" aria-hidden="true"></i> <?php echo $GLOBALS['cgv']['fax'] ?></p>
 							<p class="contact-icon">
 								<a href="mailto:<?php echo $GLOBALS['cgv']['email'] ?>">
 									<i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $GLOBALS['cgv']['email'] ?>

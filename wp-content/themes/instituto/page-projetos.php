@@ -20,7 +20,7 @@
 		<div class="container">
 			<h3 class="general-title col-xs-10 col-xs-offset-1">Titulo chamativo</h3>
 			<div class="description col-xs-10 col-xs-offset-1">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi. Proin vel nunc faucibus, aliquet nibh ut, porttitor neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi. Proin vel nunc faucibus, aliquet nibh ut, porttitor neque. </p>
+				<p>Acreditamos que, para enfrentar a corrupção, devemos primeiro estudá-la, mensurá-la e entendê-la. Analisar as políticas públicas de prevenção e combate, e testar sua eficácia. Levantar as boas práticas e disseminá-las. Trabalhamos com objetivos de longo prazo. Somos técnicos, rigorosamente apartidários e temos mais perguntas do que respostas. Vamos usar a inteligência para derrubar a cultura da corrupção e, assim, contribuir para a construção de um Brasil mais ético e justo para as próximas gerações. </p>
 			</div>
 		</div>
 	</section>

@@ -22,7 +22,7 @@ if ( ! function_exists( 'instituto_nav_menus' ) ) {
 }
 
 /**
- * Filter the except length to 20 words.
+ * Filter the except length to 25 words.
  *
  * @param int $length Excerpt length.
  * @return int (Maybe) modified excerpt length.

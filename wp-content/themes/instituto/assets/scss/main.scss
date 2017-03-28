@@ -556,6 +556,8 @@ section#header {
 			color: $color_dark-grey;
 			
 			.wpcf7-form.newsletter {
+				margin-bottom: 50px;
+
 				input, label:after, label:before {
 					border-color: $color_dark-grey !important;
 					color: $color_dark-grey !important;
@@ -577,6 +579,10 @@ section#header {
 
 			p {
 				line-height: 1em;
+			}
+
+			.contact-us-box {
+				margin-top: 60px;
 			}
 			
 			.social-links {
@@ -613,6 +619,7 @@ section#header {
 						line-height: 65px;
 						height: 65px;
 						display: block;
+						text-transform: lowercase;
 						
 						&:hover{
 							text-decoration:underline;	
@@ -967,6 +974,7 @@ section#blog {
 	.post {
 		background-repeat: no-repeat;
 		background-position: center center;
+		background-image: url(../img/blog-top.jpg);
 		@include background-size(cover);
 		position: relative;
 		min-height: 366px;
@@ -1056,7 +1064,7 @@ section#participe {
 				font-size: 16px;
 				color: $color_dark-grey;
 				display: block;
-				height: 87px;
+				min-height: 95px;
 				width: 100%;
 				line-height: 1.6;
 			}
@@ -1456,6 +1464,7 @@ body#o-instituto {
 			}
 
 			&>h2 {
+				font:80px/76px $font_din-condensed;
 				color: $color_mid-grey;
 				margin-top: 105px;
 			}
@@ -2367,7 +2376,7 @@ body#blog {
 			.slick-slide {
 				height: 411px;
 				position: relative;
-				background: url(../img/blog-placeholder-large.jpg);
+				background-image: url(../img/blog-top.jpg);
 				background-size: cover;
 				@include border-radius(0);
 				margin: 0;
@@ -2397,7 +2406,7 @@ body#blog {
 
 				a {
 					padding:47px 20px;
-					background: url(../img/blog-placeholder-large.jpg);
+					background-image: url(../img/blog-top.jpg);
 					background-size: cover;
 					height:144px;
 					display: block;
@@ -2408,7 +2417,7 @@ body#blog {
 					}
 
 					span.tag {
-						display: block;
+						display: inline-block;
 						width: 92px;
 						height: 25px;
 						line-height: 35px;
@@ -2486,6 +2495,7 @@ body#blog {
 						margin-right:15px;
 						padding-top: 15px;
 						border-top: 1px $color_std-yellow solid;
+						max-width: 122px;
 					}
 
 					h3 {
@@ -2546,7 +2556,7 @@ body#blog {
 			}
 		}
 
-		.latest-news-button {
+		.latest-news-button,.latest-news-button:hover {
 			color: $color_mid-grey;
 			display: block;
 			margin:70px auto;

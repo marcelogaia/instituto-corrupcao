@@ -26,7 +26,7 @@
 							<div style="width: 640px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
 								<video class="wp-video-shortcode" id="video-172-1" width="640" height="360" preload="metadata" controls="controls"><source type="video/mp4" src="img/movie.mp4?_=1" />Colocar um titulo para o vídeo<a href="img/movie.mp4">img/movie.mp4</a></video>
 							</div>
-							<p class="wp-caption-text"><em>Colocar um titulo para o vídeo</em></p>
+							<p class="wp-caption-text"><em>Assista nosso manifesto - "UNIÃO"</em></p>
 						</div>
 						<p>O Instituto Não Aceito Corrupção é uma associação apartidária, sem fins lucrativos, fundada em julho de 2015 (leia nosso estatuto). A entidade surgiu da articulação de um grupo de cidadãos que viu na crise política instalada a partir de junho de 2013, com os protestos de rua, uma oportunidade para transformar indignação em esforços estruturados para o enfrentamento da corrupção.</p>
 						<p>Somos pessoas com backgrounds diferentes e formações profissionais bastante distintas, o que nos traz uma vocação multidisciplinar. Usaremos o Direito, a Estatística e a Comunicação como principais ferramentas de trabalho. Entendemos que o conhecimento atual sobre corrupção é superficial, e que seu aprofundamento é indispensável para prevenir e combater a corrupção de forma eficiente, tanto nas instâncias oficiais, quanto na percepção da sociedade.</p>
@@ -40,36 +40,27 @@
 				<div class="row">
 					<h2>Diretoria e Conselho Estrategico</h2>
 					<div>
-						<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+						<h3>O INAC é administrado por uma Diretoria Executiva que faz a gestão das tarefas do dia-a-dia, e que responde ao Conselho Estratégico, cuja função é definir os rumos do Instituto. Há ainda o Conselho de Novos Associados e Compliance que discute as questões ligadas a esses temas.</h3>
 						<ul class="legend">
 							<li style="text-align: center;">Diretoria</li>
 							<li style="text-align: center;">Conselho Estratégico</li>
 						</ul>
 						<ul>
+<?php 
+	query_posts( array(	
+		'post_type' => "pt_diretoria",
+		'order' => "ASC"	
+	));
+
+	while(have_posts()): the_post();
+?>
 							<li>
-								<img src="http://www.constructionweekonline.com/pictures/TomBower_1.jpg" alt="" />
-								<h4 class="diretoria conselho">Roberto Liviano</h4>
-								<h5>Presidente</h5>
-								<p>Vivamus vel lorem faucibus magna tristique tristique a a diam. Curabitur tincidunt eros porttitor nunc pretium sagittis. Nam at ipsum justo. Morbi at consequat magna, ac imperdiet ligula. Nam feugiat suscipit nisl. Quisque erat ipsum, placerat ac quam at, lobortis rhoncus libero. Donec a urna mollis ligula hendrerit suscipit eget sit amet dui. Proin ultricies mattis efficitur. Curabitur semper dapibus porttitor.</p>
+								<img src="<?= the_post_thumbnail_url() ?>" alt="" />
+								<h4 class="<?= implode(" ", get_field('categoria')) ?>"><?php the_title() ?></h4>
+								<h5><?php the_field('cargo') ?></h5>
+								<p><?php the_content() ?></p>
 							</li>
-							<li>
-								<img src="http://www.constructionweekonline.com/pictures/TomBower_1.jpg" alt="" />
-								<h4 class="conselho">Laura Diniz</h4>
-								<h5>Vice-Presidente</h5>
-								<p>Vivamus vel lorem faucibus magna tristique tristique a a diam. Curabitur tincidunt eros porttitor nunc pretium sagittis. Nam at ipsum justo. Morbi at consequat magna, ac imperdiet ligula. Nam feugiat suscipit nisl. Quisque erat ipsum, placerat ac quam at, lobortis rhoncus libero. Donec a urna mollis ligula hendrerit suscipit eget sit amet dui. Proin ultricies mattis efficitur. Curabitur semper dapibus porttitor.</p>
-							</li>
-							<li>
-								<img src="http://www.constructionweekonline.com/pictures/TomBower_1.jpg" alt="" />
-								<h4 class="diretoria conselho">Monica Rosenberg Braizat</h4>
-								<h5>Diretora Executiva</h5>
-								<p>Vivamus vel lorem faucibus magna tristique tristique a a diam. Curabitur tincidunt eros porttitor nunc pretium sagittis. Nam at ipsum justo. Morbi at consequat magna, ac imperdiet ligula. Nam feugiat suscipit nisl. Quisque erat ipsum, placerat ac quam at, lobortis rhoncus libero. Donec a urna mollis ligula hendrerit suscipit eget sit amet dui. Proin ultricies mattis efficitur. Curabitur semper dapibus porttitor.</p>
-							</li>
-							<li>
-								<img src="http://www.constructionweekonline.com/pictures/TomBower_1.jpg" alt="" />
-								<h4 class="diretoria">Bruno Bertani</h4>
-								<h5>Consultor de Estratégia e Comunicação</h5>
-								<p>Vivamus vel lorem faucibus magna tristique tristique a a diam. Curabitur tincidunt eros porttitor nunc pretium sagittis. Nam at ipsum justo. Morbi at consequat magna, ac imperdiet ligula. Nam feugiat suscipit nisl. Quisque erat ipsum, placerat ac quam at, lobortis rhoncus libero. Donec a urna mollis ligula hendrerit suscipit eget sit amet dui. Proin ultricies mattis efficitur. Curabitur semper dapibus porttitor.</p>
-							</li>
+<?php endwhile; ?>
 						</ul>
 					</div>
 				</div>
@@ -80,7 +71,7 @@
 				<div class="row">
 					<h2>Fundadores &#038; Associados</h2>
 					<div>
-						<p>Morbi at consequat magna, ac imperdiet ligula. Nam feugiat suscipit nisl. Quisque erat ipsum, placerat ac quam at, lobortis rhoncus libero.</p>
+						<p>Entre nossos fundadores e associados estao os seguintes:</p>
 						<ul>
 							<li>Elli Doubleday</li>
 							<li>Darrick Reeser</li>
@@ -174,9 +165,9 @@
 		<div class="obrigado" >
 			<div class="container">
 				<div class="row">
-					<h2>a todos que sempre nos ajudam a combater a corrupção:</h2>
+					<h2>A todos que de alguma forma vêm nos ajudando a enfrentar a corrupção:</h2>
 					<div>
-						<h2>Obrigado.</h2>
+						<h2>muito obrigado!</h2>
 						<ul>
 							<li>Elli Doubleday</li>
 							<li>Darrick Reeser</li>

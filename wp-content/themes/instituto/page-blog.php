@@ -20,14 +20,18 @@
 			<section id="main" class="col-sm-8">
 			
 <?php // List all main posts
-	query_posts( 'category_name=principal' );
+	query_posts(array('category_name' => 'principal') );
 
 	if ( have_posts() ) : ?>
 				<section id="news">
 					<h2>Principais notícias</h2>
 					<ul class="slick-carousel-blog">	
-	<?php while( have_posts() ): the_post(); ?>			
+	<?php while( have_posts() ): the_post(); ?>
+						<?php if(get_the_post_thumbnail()): ?>
+						<li style="background-image: url(<?= the_post_thumbnail_url() ?>)">
+						<?php else: ?>
 						<li>
+						<?php endif; ?>
 							<a href="<?php the_permalink(); ?>" <?= post_class() ?>>
 								<span class="date-label">
 									<b><?php the_time('d'); ?></b> 
@@ -46,23 +50,37 @@
 				</section>
 <?php  // List all featured posts
 	endif; 
-	query_posts( 'category_name=destaque' );
+	query_posts( array(	
+		'category_name' => "destaque", 
+		'posts_per_page' => 4
+	));
+
 	if ( have_posts() ) : 
 	$count = 0 ?>
 				<section id="featured">
 					<h2>Destaque</h2>
 					<ul class="row">
-	<?php while( have_posts() ): the_post(); ?>			
+<?php while( have_posts() ): the_post(); ?>	
 						<li class="<?= $count<=0 ? 'col-xs-7' : 'col-xs-5' ?>">
+						<?php if(get_the_post_thumbnail()): ?>
+							<a href="<?php the_permalink(); ?>" style="background-image: url(<?= the_post_thumbnail_url() ?>)">
+						<?php else: ?>
 							<a href="<?php the_permalink(); ?>">
-								<span class="date-label"><b>13</b> AGO 2016</span>
-								<?php if( has_category('mundo') ) : ?>
+						<?php endif; ?>
+								<span class="date-label"><b><?php the_time('d'); ?></b><?php the_time('M Y'); ?></span>
+<?php if( has_category('mundo') ) : ?>
 								<span class="flag-label"><img src="img/mundo-icon.png" alt=""></span>
-								<?php elseif ( has_category('instituto') ) : ?>
+<?php elseif ( has_category('instituto') ) : ?>
 								<span class="flag-label"><img src="img/mini-logo.png" alt=""></span>
-								<?php endif; ?>
-								<span class="tag">mundo</span>
-								<h3>Um titulo para o post desse artigo que ocupe uma linha só</h3>
+<?php endif; 
+	$tags = get_the_tags();
+	if($tags):
+		foreach($tags as $t):
+?>
+								<span class="tag"><?= $t->name ?></span>
+<?php 	endforeach;
+	endif; ?>
+								<h3><?= the_title() ?></h3>
 							</a>
 						</li>
 	<?php 
@@ -85,7 +103,11 @@
 	<?php while( have_posts() ): the_post(); ?>
 						<li>
 							<a href="<?php the_permalink(); ?>">
+							<?php if(get_the_post_thumbnail()): ?>
+								<img class="blog-small" src="<?php the_post_thumbnail_url() ?>">
+							<?php else: ?>
 								<img class="blog-small" src="img/blog-placeholder-small.jpg">
+							<?php endif; ?>
 								<h3><?php the_title() ?></h3>
 								<p>
 									<span class="date-time"><?php the_time('d \d\e F \d\e Y | G:i' ); ?></span>  
