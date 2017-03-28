@@ -25,36 +25,32 @@
 				<input type="text" placeholder="Buscar por palavra(s) chave(s)">
 				<button>PROCURAR <i class="fa fa-search"></i></button>
 			</form>
+<?php $args = array(
+	'orderby'          => 'date',
+	'order'            => 'ASC',
+	'post_type'        => 'pt_faq',
+	'post_status'      => 'publish',
+	'suppress_filters' => true 
+);
+$posts_array = get_posts( $args ); 
+$c = 1;
+foreach($posts_array as $post):
+	//print_r($post);
+?>
 			<article class="pergunta row">
-				<h4 data-toggle="collapse" data-target="#resposta-1" aria-expanded="true" aria-controls="resposta-1"><span>Porque é tão difícil achar as palavras certas para colocar nesses campos?</span></h4>
-				<div id="resposta-1" class="col-sm-10 col-sm-offset-1 collapse in resposta">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim, erat a mattis auctor, nibh odio consequat leo, a posuere dolor libero a eros. Integer iaculis augue arcu, ac vulputate massa scelerisque a. Donec posuere gravida odio, sed tristique nulla elementum et. Nam fermentum risus vitae vehicula imperdiet. Quisque tincidunt turpis tristique velit porttitor, sollicitudin molestie augue fermentum. Aenean et ante nec tellus rutrum feugiat sit amet nec odio. Maecenas vulputate ante vitae sagittis eleifend. Morbi dui lectus, lacinia eget nisl quis, cursus bibendum dolor. Praesent sit amet ex metus. Nam faucibus est sit amet iaculis commodo. Quisque aliquam mi vel erat dapibus, ut molestie enim blandit. Vivamus tincidunt quis neque et sodales. Vestibulum sed vulputate neque. Proin tristique mattis pulvinar. Nunc felis sapien, sollicitudin eget accumsan at, sagittis et ipsum.</p>
+				<?php if($c==1):?>
+				<h4 data-toggle="collapse" data-target="#resposta-<?= $c ?>" aria-expanded="true" aria-controls="resposta-<?= $c ?>"><span><?= $post->post_title; ?></span></h4>
+				<div id="resposta-<?= $c ?>" class="col-sm-10 col-sm-offset-1 collapse in resposta">
+				<?php else: ?>
+				<h4 data-toggle="collapse" data-target="#resposta-<?= $c ?>" aria-expanded="false" aria-controls="resposta-<?= $c ?>" class="collapsed"><span><?= $post->post_title; ?></span></h4>
+				<div id="resposta-<?= $c ?>" class="col-sm-10 col-sm-offset-1 collapse resposta">
+				<?php endif; ?>
+					<?= $post->post_content; ?>
 				</div>
 			</article>
-			<article class="pergunta row">
-				<h4 data-toggle="collapse" data-target="#resposta-2" aria-expanded="false" aria-controls="resposta-2" class="collapsed"><span>E para achar as mesmas para uma linha só?</span></h4>
-				<div id="resposta-2" class="col-sm-10 col-sm-offset-1 collapse resposta">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim, erat a mattis auctor, nibh odio consequat leo, a posuere dolor libero a eros. Integer iaculis augue arcu, ac vulputate massa scelerisque a. Donec posuere gravida odio, sed tristique nulla elementum et. Nam fermentum risus vitae vehicula imperdiet. Quisque tincidunt turpis tristique velit porttitor, sollicitudin molestie augue fermentum. Aenean et ante nec tellus rutrum feugiat sit amet nec odio. Maecenas vulputate ante vitae sagittis eleifend. Morbi dui lectus, lacinia eget nisl quis, cursus bibendum dolor. Praesent sit amet ex metus. Nam faucibus est sit amet iaculis commodo. Quisque aliquam mi vel erat dapibus, ut molestie enim blandit. Vivamus tincidunt quis neque et sodales. Vestibulum sed vulputate neque. Proin tristique mattis pulvinar. Nunc felis sapien, sollicitudin eget accumsan at, sagittis et ipsum.</p>
-				</div>
-			</article>
-			<article class="pergunta row">
-				<h4 data-toggle="collapse" data-target="#resposta-3" aria-expanded="false" aria-controls="resposta-3" class="collapsed"><span>E para achar as mesmas para uma linha só?</span></h4>
-				<div id="resposta-3" class="col-sm-10 col-sm-offset-1 collapse resposta">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim, erat a mattis auctor, nibh odio consequat leo, a posuere dolor libero a eros. Integer iaculis augue arcu, ac vulputate massa scelerisque a. Donec posuere gravida odio, sed tristique nulla elementum et. Nam fermentum risus vitae vehicula imperdiet. Quisque tincidunt turpis tristique velit porttitor, sollicitudin molestie augue fermentum. Aenean et ante nec tellus rutrum feugiat sit amet nec odio. Maecenas vulputate ante vitae sagittis eleifend. Morbi dui lectus, lacinia eget nisl quis, cursus bibendum dolor. Praesent sit amet ex metus. Nam faucibus est sit amet iaculis commodo. Quisque aliquam mi vel erat dapibus, ut molestie enim blandit. Vivamus tincidunt quis neque et sodales. Vestibulum sed vulputate neque. Proin tristique mattis pulvinar. Nunc felis sapien, sollicitudin eget accumsan at, sagittis et ipsum.</p>
-				</div>
-			</article>
-			<article class="pergunta row">
-				<h4 data-toggle="collapse" data-target="#resposta-4" aria-expanded="false" aria-controls="resposta-4" class="collapsed"><span>E para achar as mesmas para uma linha só?</span></h4>
-				<div id="resposta-4" class="col-sm-10 col-sm-offset-1 collapse resposta">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim, erat a mattis auctor, nibh odio consequat leo, a posuere dolor libero a eros. Integer iaculis augue arcu, ac vulputate massa scelerisque a. Donec posuere gravida odio, sed tristique nulla elementum et. Nam fermentum risus vitae vehicula imperdiet. Quisque tincidunt turpis tristique velit porttitor, sollicitudin molestie augue fermentum. Aenean et ante nec tellus rutrum feugiat sit amet nec odio. Maecenas vulputate ante vitae sagittis eleifend. Morbi dui lectus, lacinia eget nisl quis, cursus bibendum dolor. Praesent sit amet ex metus. Nam faucibus est sit amet iaculis commodo. Quisque aliquam mi vel erat dapibus, ut molestie enim blandit. Vivamus tincidunt quis neque et sodales. Vestibulum sed vulputate neque. Proin tristique mattis pulvinar. Nunc felis sapien, sollicitudin eget accumsan at, sagittis et ipsum.</p>
-				</div>
-			</article>
-			<article class="pergunta row">
-				<h4 data-toggle="collapse" data-target="#resposta-5" aria-expanded="false" aria-controls="resposta-5" class="collapsed"><span>E para achar as mesmas para uma linha só?</span></h4>
-				<div id="resposta-5" class="col-sm-10 col-sm-offset-1 collapse resposta">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim, erat a mattis auctor, nibh odio consequat leo, a posuere dolor libero a eros. Integer iaculis augue arcu, ac vulputate massa scelerisque a. Donec posuere gravida odio, sed tristique nulla elementum et. Nam fermentum risus vitae vehicula imperdiet. Quisque tincidunt turpis tristique velit porttitor, sollicitudin molestie augue fermentum. Aenean et ante nec tellus rutrum feugiat sit amet nec odio. Maecenas vulputate ante vitae sagittis eleifend. Morbi dui lectus, lacinia eget nisl quis, cursus bibendum dolor. Praesent sit amet ex metus. Nam faucibus est sit amet iaculis commodo. Quisque aliquam mi vel erat dapibus, ut molestie enim blandit. Vivamus tincidunt quis neque et sodales. Vestibulum sed vulputate neque. Proin tristique mattis pulvinar. Nunc felis sapien, sollicitudin eget accumsan at, sagittis et ipsum.</p>
-				</div>
-			</article>
+<?php 
+	$c++;
+endforeach; ?>
 		</div>
 	</section>
 

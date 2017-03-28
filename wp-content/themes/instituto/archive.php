@@ -18,10 +18,10 @@
 
 	$the_slug = 'blog';
 	$args = array(
-	  'name'        => $the_slug,
-	  'post_type'   => 'page',
-	  'post_status' => 'publish',
-	  'numberposts' => 1
+		'name'        => $the_slug,
+		'post_type'   => 'page',
+		'post_status' => 'publish',
+		'numberposts' => 1
 	);
 	$my_posts = get_posts($args);
 	$post = $my_posts[0];

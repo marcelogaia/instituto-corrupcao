@@ -21,48 +21,46 @@
         <h3 class="general-title">Projetos</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a.</p>
       </header>
+<?php 
+
+$args = array(
+  'orderby'          => 'date',
+  'order'            => 'ASC',
+  'post_type'        => 'pt_projetos',
+  'post_status'      => 'publish',
+  'suppress_filters' => true 
+);
+
+$projetos_array = get_posts( $args ); 
+
+$c = 1;
+  //print_r($post);
+?>
       <ul class="col-xs-12 project-tabs">
-        <li class="tab"><a href="#">PESQUISA</a></li>
-        <li class="tab"><a href="#">POLÍTICAS PÚBLICAS</a></li>
-        <li class="tab"><a href="#">EDUCAÇÃO E MOBILIZAÇÃO</a></li>
+<?php foreach($projetos_array as $proj): ?>
+        <li class="tab"><a href="#"><?= $proj->post_title; ?></a></li>
+<?php endforeach; ?>
       </ul>
       <div class="content-holder">
+<?php foreach($projetos_array as $proj):
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $proj->ID ), 'single-post-thumbnail' );
+        //var_dump($image);
+ ?>
         <article class="row">
           <div class="col-sm-5 col-sm-offset-1 text-holder">
-            <h3>Pesquisa</h3>
+            <h3><?= $proj->post_title; ?></h3>
             <div class="project-entry">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi. Proin vel nunc faucibus, aliquet nibh ut, porttitor neque. Cras cursus massa eget libero scelerisque, ut faucibus odio bibendum. Quisque in gravida odio, sagittis suscipit nunc. Cras varius maximus varius. In posuere id augue eu ullamcorper. Vestibulum dapibus magna vel interdum malesuada. Sed imperdiet pellentesque efficitur.</p>
+              <?= $proj->post_content; ?>
             </div><!--/.project-entry-->
             <button>Saiba mais</button>
           </div>
+<?php if($image): ?>
           <div class="col-sm-6">
-            <img src="<?= site_url("/");?>wp-content/uploads/2017/01/Research_Hero.jpg">
+            <img src="<?= $image[0]; ?>">
           </div>
+<?php endif; ?>
         </article>
-        <article class="row">
-          <div class="col-sm-5 col-sm-offset-1 text-holder">
-            <h3>POLÍTICAS PÚBLICAS</h3>
-            <div class="project-entry">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi. Proin vel nunc faucibus, aliquet nibh ut, porttitor neque. Cras cursus massa eget libero scelerisque, ut faucibus odio bibendum. Quisque in gravida odio, sagittis suscipit nunc. Cras varius maximus varius. In posuere id augue eu ullamcorper. Vestibulum dapibus magna vel interdum malesuada. Sed imperdiet pellentesque efficitur.</p>
-            </div><!--/.project-entry-->
-            <button>Saiba mais</button>
-          </div>
-          <div class="col-sm-6">
-            <img src="<?= site_url("/");?>wp-content/uploads/2017/01/Research_Hero.jpg">
-          </div>
-        </article>
-        <article class="row">
-          <div class="col-sm-5 col-sm-offset-1 text-holder">
-            <h3>EDUCAÇÃO E MOBILIZAÇÃO</h3>
-            <div class="project-entry">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi. Proin vel nunc faucibus, aliquet nibh ut, porttitor neque. Cras cursus massa eget libero scelerisque, ut faucibus odio bibendum. Quisque in gravida odio, sagittis suscipit nunc. Cras varius maximus varius. In posuere id augue eu ullamcorper. Vestibulum dapibus magna vel interdum malesuada. Sed imperdiet pellentesque efficitur.</p>
-            </div><!--/.project-entry-->
-            <button>Saiba mais</button>
-          </div>
-          <div class="col-sm-6">
-            <img src="<?= site_url("/");?>wp-content/uploads/2017/01/Research_Hero.jpg">
-          </div>
-        </article>
+<?php endforeach; ?>
       </div>
     </div>
   </section>
