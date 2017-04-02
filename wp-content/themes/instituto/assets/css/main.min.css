@@ -945,4 +945,33 @@ body#blog-interna section#comments .comments-list .comment .likes .fa-heart { co
 /* line 2948, ../scss/main.scss */
 body#blog-interna section#comments .comments-list .comment .likes .count { display: inline-block; padding: 15px 9px 6px; height: 16px; border: 1px #65665c solid; font: 12px "din-regular"; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; color: #3f4444; margin-left: 10px; vertical-align: middle; }
 
+@media (max-width: 575px) { /* line 10, ../scss/_mobile.scss */
+  section#header .jumbotron h1 { font-size: 32px; padding: 0 15px; }
+  /* line 16, ../scss/_mobile.scss */
+  section#header .my-navbar { border-width: 0 0 1px; position: fixed; right: 0; left: 0; height: 91px; line-height: 91px; }
+  /* line 24, ../scss/_mobile.scss */
+  section#header .my-navbar .open-responsive-menu { height: 91px; }
+  /* line 26, ../scss/_mobile.scss */
+  section#header .my-navbar .open-responsive-menu .fa { line-height: 91px; font-size: 45px; }
+  /* line 32, ../scss/_mobile.scss */
+  section#header .my-navbar .logo { line-height: 91px; }
+  /* line 35, ../scss/_mobile.scss */
+  section#header .my-navbar .logo img { width: 110px; margin-top: 15px; }
+  /* line 41, ../scss/_mobile.scss */
+  section#header .my-navbar .participe { margin-right: 10px; line-height: 1em; padding: 0; margin-top: 30px; }
+  /* line 47, ../scss/_mobile.scss */
+  section#header .my-navbar .participe button { width: 120px; height: 34px; line-height: 33px; font-family: "din-alternate"; font-size: 12px; }
+  /* line 58, ../scss/_mobile.scss */
+  section#projetos { margin-top: 0 !important; }
+  /* line 61, ../scss/_mobile.scss */
+  section#projetos .project-tabs { height: 59px; }
+  /* line 64, ../scss/_mobile.scss */
+  section#projetos .project-tabs .tab { width: calc(33% - 5px); background-size: cover; height: 59px; }
+  /* line 69, ../scss/_mobile.scss */
+  section#projetos .project-tabs .tab a { font-size: 12px; padding: 0; }
+  /* line 78, ../scss/_mobile.scss */
+  section#participe .service-br-flag { background-size: cover; width: 300px; height: 157px; } }
+@media (min-width: 576px) and (max-width: 767px) { /* line 87, ../scss/_mobile.scss */
+  p { font-size: 18px; } }
+
 /*# sourceMappingURL=main.min.css.map */

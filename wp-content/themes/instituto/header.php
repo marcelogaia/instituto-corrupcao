@@ -53,7 +53,7 @@ $isHome = is_home();
 		<div class="jumbotron">
 			<h1><?php the_title() ?></h1>
 			<?php if(is_home()) { ?>
-			<p><a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais</a></p>
+			<p><a class="btn btn-primary btn-lg" href="javascript:void(0);" role="button">Saiba mais</a></p>
 			<?php } ?>
 		</div>
 		<div class="nav-wrapper">
@@ -128,15 +128,16 @@ $isHome = is_home();
 					</nav>
 
 					<div class="row" style="overflow:hidden; margin: 0;">
-						<div class="col-xs-8">
-							<a href="<?= site_url() ?>"><img src="img/logo-header.png" /></a></div><!--/.col-xs-8-->
-							<div class="col-xs-4">
-								<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
-								<div class="participe"><button>Participe</button></div>
-							</div><!--/.col-xs-4-->
-							<div class="stripped-border"><!-- Border --></div>
-						</div><!--/.row-->
-					</div>
+						<div class="col-sm-8 col-xs-5 logo">
+							<a href="<?= site_url() ?>"><img src="img/logo-header.png" /></a>
+						</div><!--/.col-sm-8-->
+						<div class="col-sm-4">
+							<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
+							<div class="participe"><button>Participe</button></div>
+						</div><!--/.col-sm-4-->
+						<div class="stripped-border"><!-- Border --></div>
+					</div><!--/.row-->
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>

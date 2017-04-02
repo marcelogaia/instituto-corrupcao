@@ -180,37 +180,37 @@
 					<img src="img/initiative-placeholder.jpg">
 					<h4>Título para o vídeo que tenha duas linhas</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel.</p>
-					<a href="#">www.linkdowebsite.com.br</a>
+					<a href="javascript:void(0);" target="_blank">www.linkdowebsite.com.br</a>
 				</li>
 				<li>
 					<img src="img/initiative-placeholder.jpg">
 					<h4>Título para o vídeo que tenha duas linhas</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel.</p>
-					<a href="#">www.linkdowebsite.com.br</a>
+					<a href="javascript:void(0);" target="_blank">www.linkdowebsite.com.br</a>
 				</li>
 				<li>
 					<img src="img/initiative-placeholder.jpg">
 					<h4>Título para o vídeo que tenha duas linhas</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel.</p>
-					<a href="#">www.linkdowebsite.com.br</a>
+					<a href="javascript:void(0);" target="_blank">www.linkdowebsite.com.br</a>
 				</li>
 				<li>
 					<img src="img/initiative-placeholder.jpg">
 					<h4>Título para o vídeo que tenha duas linhas</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel.</p>
-					<a href="#">www.linkdowebsite.com.br</a>
+					<a href="javascript:void(0);" target="_blank">www.linkdowebsite.com.br</a>
 				</li>
 				<li>
 					<img src="img/initiative-placeholder.jpg">
 					<h4>Título para o vídeo que tenha duas linhas</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel.</p>
-					<a href="#">www.linkdowebsite.com.br</a>
+					<a href="javascript:void(0);" target="_blank">www.linkdowebsite.com.br</a>
 				</li>
 				<li>
 					<img src="img/initiative-placeholder.jpg">
 					<h4>Título para o vídeo que tenha duas linhas</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel.</p>
-					<a href="#">www.linkdowebsite.com.br</a>
+					<a href="javascript:void(0);" target="_blank">www.linkdowebsite.com.br</a>
 				</li>
 			</ul>
 		</div>

@@ -42,7 +42,7 @@
 				<div class="col-sm-8 col-sm-offset-1">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.</p>
 				</div>
-				<a href="#"><span>baixar</span><span>Kit de imagens</span><span>INAC</span></a>
+				<a href="javascript:void(0);"><span>baixar</span><span>Kit de imagens</span><span>INAC</span></a>
 			</div>
 			
 			<div class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
@@ -52,14 +52,36 @@
 					<a href="img/movie.mp4">img/movie.mp4</a>
 				</video>
 			</div>
+<?php 
+	$socialArr = array();
+
+	if(!empty($GLOBALS['cgv']['linkedin'])) $socialArr['linkedin'] = $GLOBALS['cgv']['linkedin'];
+	if(!empty($GLOBALS['cgv']['facebook'])) $socialArr['facebook'] = $GLOBALS['cgv']['facebook'];
+	if(!empty($GLOBALS['cgv']['twitter'])) $socialArr['twitter'] = $GLOBALS['cgv']['twitter'];
+	if(!empty($GLOBALS['cgv']['instagram'])) $socialArr['instagram'] = $GLOBALS['cgv']['instagram'];
+	if(!empty($GLOBALS['cgv']['google-plus'])) $socialArr['google-plus'] = $GLOBALS['cgv']['google-plus'];
+
+	if(!empty($socialArr)):
+?>
 			<h4>conecte-se com nossas redes</h4>
 			<ul class="social">
-				<li class="linkedin"><a href="#">LINKEDIN</a></li>
-				<li class="facebook"><a href="#">FACEBOOK</a></li>
-				<li class="twitter"><a href="#">TWITTER</a></li>
-				<li class="instagram"><a href="#">INSTAGRAM</a></li>
-				<li class="gplus"><a href="#">GOOGLE+</a></li>
+	<?php if(!empty($socialArr['linkedin'])): ?>
+				<li class="linkedin"><a href="<?= $socialArr['linkedin'] ?>">LINKEDIN</a></li>
+	<?php endif; ?>
+	<?php if(!empty($socialArr['facebook'])): ?>
+				<li class="facebook"><a href="<?= $socialArr['facebook'] ?>">FACEBOOK</a></li>
+	<?php endif; ?>
+	<?php if(!empty($socialArr['twitter'])): ?>
+				<li class="twitter"><a href="<?= $socialArr['twitter'] ?>">TWITTER</a></li>
+	<?php endif; ?>
+	<?php if(!empty($socialArr['instagram'])): ?>
+				<li class="instagram"><a href="<?= $socialArr['instagram'] ?>">INSTAGRAM</a></li>
+	<?php endif; ?>
+	<?php if(!empty($socialArr['gplus'])): ?>
+				<li class="gplus"><a href="<?= $socialArr['gplus'] ?>">GOOGLE+</a></li>
+	<?php endif; ?>
 			</ul>
+<?php endif; ?>
 		</div>
 	</section>
 	<section class="quer-doar">

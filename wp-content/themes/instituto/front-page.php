@@ -125,17 +125,25 @@ get_header();
 			<article class="col-sm-4">
 				<h4>Embaixador</h4>
 				<p>Os embaixadores nos ajudarão a divulgar o instituto, nossa causa e nossos projetos em suas respectivas redes sociais. Nao ha aporte financeiro, somento dedicacao de tempo e energia. Recebem o selo virtual de Embaixador INAC e sao mencionados no setor de Embaixadores.</p>
-				<a href="#" class="eu-quero">Eu quero!</a>
 			</article>
 			<article class="col-sm-4">
 				<h4>Doação</h4>
 				<p>Os doadores investem o valor que lhes for conveniente, com periodicidade anual, podendo ser definidos como Ouro, Prata ou Bronze. Receberão selo virtual de doador, bem como menção no setro respectivo do site.</p>
-				<a href="#" class="eu-quero">Eu quero!</a>
 			</article>
 			<article class="col-sm-4">
 				<h4>Voluntários</h4>
 				<p>Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus.</p>
-				<a href="#" class="eu-quero">Eu quero!</a>
+			</article>
+		</div>
+		<div class="row col-sm-10 col-sm-offset-1"> 
+			<article class="col-sm-4">
+				<a href="<?= site_url('participe') ?>" class="eu-quero">Eu quero!</a>
+			</article>
+			<article class="col-sm-4">
+				<a href="<?= site_url('participe') ?>" class="eu-quero">Eu quero!</a>
+			</article>
+			<article class="col-sm-4">
+				<a href="<?= site_url('participe') ?>" class="eu-quero">Eu quero!</a>
 			</article>
 		</div>
 	</div>

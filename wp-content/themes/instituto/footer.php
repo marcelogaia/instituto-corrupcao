@@ -22,7 +22,7 @@ wp_reset_query();
 
 					</div>
 					<h3 class="footer-title imprensa">Imprensa</h3>
-					<a href="#" class="imprensa">Veja nossa página de clippings</a>
+					<a href="javascript:void(0);" class="imprensa">Veja nossa página de clippings</a>
 				</div>
 				<div class="col-sm-4">
 					<div class="contact-us-box">
@@ -32,7 +32,7 @@ wp_reset_query();
 							<p><?php echo $GLOBALS['cgv']['endereco-1'] ?></p>
 							<p><?php echo $GLOBALS['cgv']['endereco-2'] ?></p>
 							<p class="contact-icon">
-								<a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>ver mapa</a>
+								<a href="javascript:void(0);"><i class="fa fa-map-marker" aria-hidden="true"></i>ver mapa</a>
 							</p>
 							<p class="contact-icon">
 							<i class="fa fa-phone" aria-hidden="true"></i> <?php echo $GLOBALS['cgv']['telefone'] ?></p>
@@ -62,7 +62,7 @@ wp_reset_query();
 					<div class="contact-us-social">
 
 	<?php if(!empty($socialArr['linkedin'])): ?>
-						<a href="$socialArr['linkedin']" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+						<a href="<?= $socialArr['linkedin'] ?>" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
 	<?php endif; ?>
 	<?php if(!empty($socialArr['facebook'])): ?>
 						<a href="<?= $socialArr['facebook'] ?>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>

@@ -1,0 +1,90 @@
+$xs: "(max-width: 575px)";
+$sm: "(min-width: 576px) and (max-width: 767px)";
+$md: "(min-width: 768px) and (max-width: 991px)";
+$lg: "(min-width: 992px) and (max-width: 1199px)";
+$xl: "(min-width: 1200px)";
+
+@media #{$xs} {
+	section#header {
+		.jumbotron {
+			h1 {
+				font-size: 32px;
+				padding:0 15px;
+			}
+		}
+
+		.my-navbar {
+			border-width: 0 0 1px;
+			position: fixed;
+			right: 0;
+			left: 0;
+			height:91px;
+			line-height:91px;
+
+			.open-responsive-menu {
+				height: 91px;
+				.fa {
+					line-height: 91px;
+					font-size:45px;
+				}
+			}
+
+			.logo {
+				line-height: 91px;
+
+				img {
+					width:110px;
+					margin-top: 15px;
+				}
+			}
+
+			.participe {
+				margin-right: 10px;
+				line-height: 1em;
+				padding: 0;
+				margin-top: 30px;
+
+				button {
+					width: 120px;
+					height:34px;
+					line-height: 33px;
+					font-family: $font_din-alternate;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	section#projetos {
+		margin-top: 0 !important;
+
+		.project-tabs {
+			height:59px;
+
+			.tab {
+				width:calc(33% - 5px);
+				background-size: cover;
+				height:59px;
+				
+				a {    
+					font-size: 12px;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	section#participe {
+		.service-br-flag {
+			background-size: cover;
+			width: 300px;
+			height: 157px;
+		}
+	}
+}
+
+@media #{$sm} {
+	p {
+		font-size: 18px;
+	}
+}
