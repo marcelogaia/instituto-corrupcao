@@ -13,21 +13,21 @@ jQuery( document ).ready( function($) {
 	var vidHeight = $video.attr('height');
 
     function makeBoardProfilePictureRound() {
-    	$('.diretoria-e-conselho-estrategico img').wrap("<div class='img-circle'></div>");
+    	$('.diretoria-e-conselho-estrategico img').wrap("<div class='img-circle'><a href='mailto:contato@naoaceitocorrupcao.org.br'></div>");
 
     	var left = true;
 
     	$('.img-circle').each(function(){
-    		var img = $(this).find('img').eq(0);
-    		$(this).css({
-    			backgroundImage	: "url("+img.attr('src')+")"
-    		});
+    		// var img = $(this).find('img').eq(0);
+    		// $(this).css({
+    		// 	backgroundImage	: "url("+img.attr('src')+")"
+    		// });
 
     		if(!left) $(this).parents("li").addClass('right');
 
     		left = !left;
 
-    		img.remove();
+    		// img.remove();
     	});
     }
 

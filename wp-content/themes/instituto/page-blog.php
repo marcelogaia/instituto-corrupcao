@@ -110,7 +110,7 @@
 							<?php endif; ?>
 								<h3><?php the_title() ?></h3>
 								<p>
-									<span class="date-time"><?php the_time('d \d\e F \d\e Y | G:i' ); ?></span>  
+									<span class="date-time"><?php the_time('d \d\e F \d\e Y | G:i | ' ); ?></span>  
 									<span class="comments"><?php comments_number( "Nenhum comentário", "1  comentário", "%  comentários" ); ?></span> | 
 									<?php if( has_category('mundo') ) : ?>
 									<img src="img/mundo-icon.png" alt="">
@@ -128,11 +128,11 @@
 			</section>
 			<section id="side" class="col-sm-4">
 				<?php get_search_form() ?>
-				<div class="fb-page" data-href="https://www.facebook.com/institutonaoaceitocorrupcao/" data-tabs="timeline" data-height="120" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/institutonaoaceitocorrupcao/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/institutonaoaceitocorrupcao/">Instituto Não Aceito Corrupção</a></blockquote></div>
+				<div class="fb-page" data-href="https://www.facebook.com/institutonaoaceitocorrupcao/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/institutonaoaceitocorrupcao/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/institutonaoaceitocorrupcao/">Instituto Não Aceito Corrupção</a></blockquote></div>
 
 				<h3>Newsletter</h3><!--/.box-left-->
 				<div class="form">
-					<form action="#" method="post">
+					<form action="#" method="post" class="wpcf7-form newsletter">
 						<p>
 							<label>
 								<span class="wpcf7-form-control-wrap email">

@@ -155,6 +155,16 @@ $font-din-black-2: url(fonts/din/din-black.otf);
     @include border-radius(50%);
     @include transition(all 0.3s);
 
+    &:hover {
+		color:$color_mid-grey;
+
+		&:before,&:after {
+			height:100px;
+			border-color: white;
+			top:35px;
+		}
+    }
+
 	&:before,&:after{
 		left: 15px;
 		content: ' ';
@@ -186,6 +196,7 @@ $font-din-black-2: url(fonts/din/din-black.otf);
 	text-transform: uppercase;
 	width: 175px;
 	display: inline-block;
+	padding-top:6px;
 }
 
 %basic_button {
@@ -237,7 +248,7 @@ a {
 .front-page-section {
 	&#header{
 		height: 580px !important;
-		margin-bottom: 170px;
+		margin-bottom: 140px;
 
 		.jumbotron {
 			padding: 230px 0 0 0;
@@ -352,12 +363,12 @@ a {
 
 			&.slick-prev {
 				background-position: 0px;
-				left: 8px;
+				left: 40px;
 			}
 
 			&.slick-next {
 				background-position: -27px;
-				right: 8px;
+				right: 40px;
 			}
 
 		}
@@ -490,6 +501,8 @@ section#header {
 		padding: 180px 0 0 0;
 		height:410px;
 		background-image: url(../img/header-home.jpg);
+		background-size: cover;
+		background-position: center center;
 		text-align: center;
 		margin:0;
 	
@@ -514,14 +527,14 @@ section#header {
 
 		&.affix {
 			position: relative !important;
-			margin-bottom:170px;
+			margin-bottom:140px;
 		}
 	}
 
 	.my-navbar {
 		width:100%;
-		height: 170px;
-		line-height: 170px;
+		height: 140px;
+		line-height: 140px;
 		background: white;
 		padding:0;
 		margin:0;
@@ -534,6 +547,8 @@ section#header {
 			
 			button {
 				width: 190px;
+				margin-top: 43px;
+
 				@extend %basic_button;
 			}
 		}
@@ -644,12 +659,12 @@ section#header {
 			outline: 0;
 			display: block;
 			float: right;
-			height: 170px;
+			height: 140px;
 			
 			.fa {
 				color: $color_std-yellow;
 				font-size:70px;
-				line-height: 170px;
+				line-height: 140px;
 				border-radius:0;
 				overflow: hidden;
 				&.small {
@@ -896,17 +911,18 @@ section#projetos {
 			.text-holder {
 				position: static;
 				margin-bottom: 120px;
+				line-height: 32px;
 
 				h3 {
 					color: $color_std-yellow;
 					font-family: $font_din-black;
-					text-transform: capitalize;
+					text-transform: uppercase;
+					margin-bottom: 25px;
 				}
 
 				button {
 					@extend %inverted_button;
 
-					padding: 0;
 					position: absolute;
 					bottom: 90px;
 				}
@@ -933,19 +949,28 @@ section#projetos {
 			display: inline-block;
 			width: 160px;
 			height:81px;
+			margin: 0 12px;
 
 			background: transparent url(../img/project-tab-active.png) no-repeat center center;
 			z-index: 0;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+				margin-right: -0.25em; /* Adjusts for spacing */
+			}
 
 			a {	
 				text-decoration: none;
 				font:normal normal 17px/1.3 $font_din;
 				color: $color_dark-grey;
 				text-align: center;
-				position: absolute;
-				bottom:0;left:0;right:0;
-				padding:0 20px;
 				text-transform: uppercase;
+				display: inline-block;
+				vertical-align: middle;
+				padding-top:20px;
 			}
 
 			&:hover, &.active {
@@ -991,6 +1016,7 @@ section#blog {
 			padding: 15px;
 			position: absolute;
 		    text-transform: uppercase;
+		    text-align: left;
 			width:100%;
 		    @include transition(all 0.3s);
 		}
@@ -1000,7 +1026,7 @@ section#blog {
 			text-align: center;
 			font: normal normal 16px/21px $font_din;
 			color: white;
-			background-color: rgba(0,0,0,0.5);
+			background-color: rgba(0,0,0,0.8);
 		    position: absolute;
 		    width: 100%;
 		    height: calc(100% - 65px);
@@ -1009,7 +1035,17 @@ section#blog {
 
 			h3 {
 				text-transform: uppercase;
-				margin:50px auto 30px;
+				margin:50px auto 20px;
+				font-size: 20px;
+			}
+
+			p, .post-button {
+				border-left: 1px $color_std-yellow solid;
+				border-right: 1px $color_std-yellow solid;
+				padding:0 30px;
+				display: block;
+				margin:0;
+				font-size: 17px;
 			}
 
 			.post-button {
@@ -1018,6 +1054,7 @@ section#blog {
 				padding: 0 30px;
 				font-size: 18px;
 				color: #f1d204;
+				padding-top:30px;
 			}
 		}
 
@@ -1058,6 +1095,7 @@ section#participe {
 			    width: 100%;
 			    line-height: 1.611;
 			    font-weight: 700;
+			    color: $color_dark-grey;
 			}
 
 			p {
@@ -1267,8 +1305,7 @@ body#o-instituto {
 				float:left;
 				position: relative;
 
-				&:before {
-					content:url(../img/dark-mail.png);
+				a.email {
 					height: 30px;
 					width: 30px;
 					background-color: $color_std-yellow;
@@ -1316,7 +1353,7 @@ body#o-instituto {
 				.img-circle{
 					float:right;
 
-					&:before {
+					a.email {
 						left:-15px;
 					}
 				}
@@ -1942,6 +1979,16 @@ body#projetos {
 					li {
 						text-align: center;
 
+						&:hover {
+							div{
+								display: none;
+							}
+
+							div.post-hover {
+								display: block !important;
+							}
+						}
+
 						div {
 							background: black;
 							@include border-radius(50%);
@@ -1957,45 +2004,108 @@ body#projetos {
 								font: 25px/1em $font_din-condensed;
 								text-transform: uppercase;
 							}
-						}
 
-						&.radio div{
-							color: white;
-							background: $color_mid-grey;
-
-							h4 {
-								padding-top: 160px;
+							&.post-hover {
+								display: none;
 							}
 						}
 
-						&.mapa div{
-							color: white;
-							background: url(../img/projeto-mapa.png);
-							background-size: cover;
+						&.radio {
+							div{
+								color: white;
+								background: $color_mid-grey;
 
-							h4 {
-								padding-top: 100px;
+								h4 {
+									padding-top: 160px;
+								}
 							}
+							
+							div.post-hover{
+								color: white;
+								background: url(../img/projeto-radiografia.png);
+								background-size: cover;
 
-							p {
-								font: 14px/1em $font_din;
-								margin-top: 20px;
-							}
+								h4 {
+									padding-top: 100px;
+								}
 
-							a {
-								color: $color_std-yellow;
-								font: 17px/1em $font_din;
-								margin-top: 30px;
-								display: block;
+								p {
+									font: 14px/1em $font_din;
+									margin-top: 20px;
+								}
+
+								a {
+									color: $color_std-yellow;
+									font: 17px/1em $font_din;
+									margin-top: 30px;
+									display: block;
+								}
 							}
 						}
 
-						&.corrida div{
-							color: $color_dark-grey;
-							background: $color_std-yellow;
+						&.mapa {
+							div{
+								color: $color_dark-grey;
+								background: white;
 
-							h4 {
-								padding-top: 120px;
+								h4 {
+									padding-top: 140px;
+								}
+							}
+							div.post-hover{
+								display: none;
+								color: white;
+								background: url(../img/projeto-mapa.png);
+								background-size: cover;
+
+								h4 {
+									padding-top: 100px;
+								}
+
+								p {
+									font: 14px/1em $font_din;
+									margin-top: 20px;
+								}
+
+								a {
+									color: $color_std-yellow;
+									font: 17px/1em $font_din;
+									margin-top: 30px;
+									display: block;
+								}
+							}
+						}
+
+						&.corrida { 
+							div{
+								color: $color_dark-grey;
+								background: $color_std-yellow;
+
+								h4 {
+									padding-top: 120px;
+								}
+							}
+							
+							div.post-hover{
+								color: white;
+								background: url(../img/projeto-radiografia.png);
+								background-size: cover;
+
+								h4 {
+									padding-top: 100px;
+								}
+
+								p {
+									font: 14px/1em $font_din;
+									margin-top: 20px;
+								}
+
+								a {
+									color: $color_std-yellow;
+									font: 17px/1em $font_din;
+									margin-top: 30px;
+									display: block;
+								}
 							}
 						}
 					}
@@ -2029,18 +2139,30 @@ body#participe {
 			h4 {
 				width:230px;
 				height: 60px;
-				border-right: 6px $color_std-yellow solid;
 				display: table-cell;
 				vertical-align: middle;
 				color: white;
 				font: 35px/1 $font_din;
 				text-align: right;
 				padding-right:25px;
+				position: relative;
 
 				&:before {
 					content:" ";
 					height:20px;
 					display: block;
+				}
+
+				&:after {
+					content:" ";
+					height:60px;
+					display: block;
+					position: absolute;
+					width:1px;
+					top: 0;
+					right: 0;
+					border-right: 6px $color_std-yellow solid;
+					box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2)
 				}
 			}
 
@@ -2234,13 +2356,25 @@ body#participe {
 							line-height: 35px;
 						}
 					}
+
+					.caret {
+						border: none;
+						width: 16px;
+						height: 9px;
+						background: url(../img/caret.png) center center no-repeat;
+					}
 				}
 
 				&.empresa {
+					background-position: 84px -174px;
+
+					>button {
+						background: $color_dark-grey;
+					}
 					h4 {
 						span {
-							font-size:35px;
-							line-height: 45px;	
+							font-size:30px;
+							line-height: 32px;	
 						}
 					}
 				}
@@ -2273,10 +2407,11 @@ body#participe {
 				}
 
 				&:hover {
-					background-position: 84px -174px;
+					// background-position: 84px -174px;
 
 					>button {
-						background: $color_dark-grey;
+						// background: $color_dark-grey;
+						color: white;
 					}
 				}
 
@@ -2341,6 +2476,10 @@ body#participe {
 body#blog {
 	.jumbotron {
 		background-image: url(../img/blog-top.jpg);
+	}
+	
+	.fb-page, .fb-page iframe[style], .fb-page span {
+		width: 100% !important;
 	}
 
 	ul {
@@ -2587,6 +2726,28 @@ body#blog {
 
 			}
 		}
+			
+		.wpcf7-form.newsletter {
+			margin-bottom: 50px;
+
+			input, label:after, label:before {
+				border-color: $color_dark-grey !important;
+				color: $color_dark-grey !important;
+			}
+
+			input[type=email] {
+				padding-left: 25px !important;
+				background-image: url(../img/dark-mail.png) !important;
+			}
+
+			input[type=submit] {
+				padding: 11px 3px 0 0 !important;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
 
 		h3 {
 			background: $color_std-yellow;
@@ -2629,6 +2790,9 @@ body#blog {
 
 // Blog interna 
 body#blog-interna {
+	a {
+		color: $color_std-yellow;
+	}
 	section#header .my-navbar {
 		box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 	}
@@ -2696,7 +2860,7 @@ body#blog-interna {
 				}
 
 				h1 {
-					font:52px/1.1em $font_din-black;
+					font:37px/1.1em $font_din-black;
 					color: $color_dark-grey;
 				}
 			}
@@ -2717,11 +2881,14 @@ body#blog-interna {
 					line-height: 30px;
 					padding:0 15px;
 					background: #cacaca;
-					color: $color_dark-grey;
 					margin:0 3px;
 
 					&.active, &:hover {
 						background: $color_std-yellow;
+					}
+
+					a {
+						color: $color_dark-grey;
 					}
 				}
 			}

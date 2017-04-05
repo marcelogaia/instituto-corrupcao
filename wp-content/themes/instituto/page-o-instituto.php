@@ -52,15 +52,20 @@
 		'order' => "ASC"	
 	));
 
+	$left = true;
 	while(have_posts()): the_post();
 ?>
-							<li>
-								<img src="<?= the_post_thumbnail_url() ?>" alt="" />
+							<li<?= $left ? "" : " class='right'"?>>
+								<div class="img-circle" style="background-image: url(<?= the_post_thumbnail_url() ?>);">
+									<a href="mailto:contato@naoaceitocorrupcao.org.br" class="email"><img src="img/dark-mail.png" alt=""></a>
+								</div>
 								<h4 class="<?= implode(" ", get_field('categoria')) ?>"><?php the_title() ?></h4>
 								<h5><?php the_field('cargo') ?></h5>
 								<p><?php the_content() ?></p>
 							</li>
-<?php endwhile; ?>
+<?php 
+	$left = !$left;
+endwhile; ?>
 						</ul>
 					</div>
 				</div>

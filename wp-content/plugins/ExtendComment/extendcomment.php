@@ -11,34 +11,20 @@ Author URI: http://www.speckygeek.com
 // Add custom meta (ratings) fields to the default comment form
 // Default comment form includes name, email and URL
 // Default comment form elements are hidden when user is logged in
-
 add_filter('comment_form_default_fields','custom_fields');
 function custom_fields($fields) {
 
-		$commenter = wp_get_current_commenter();
-		$req = get_option( 'require_name_email' );
-		$aria_req = ( $req ? " aria-required='true'" : '' );
-
-		$fields[ 'author' ] = '<p class="comment-form-author">'.
-			'<label for="author">' . __( 'Name' ) . '</label>'.
-			( $req ? '<span class="required">*</span>' : '' ).
-			'<input id="author" name="author" type="text" value="'. esc_attr( $commenter['comment_author'] ) . 
-			'" size="30" tabindex="1"' . $aria_req . ' /></p>';
+		$fields[ 'author' ] = '<div class="col-sm-3">
+						<label for="author">Nome</label>
+						<input type="text" id="author" name="author">
+					</div>';
 		
-		$fields[ 'email' ] = '<p class="comment-form-email">'.
-			'<label for="email">' . __( 'Email' ) . '</label>'.
-			( $req ? '<span class="required">*</span>' : '' ).
-			'<input id="email" name="email" type="text" value="'. esc_attr( $commenter['comment_author_email'] ) . 
-			'" size="30"  tabindex="2"' . $aria_req . ' /></p>';
-					
-		$fields[ 'url' ] = '<p class="comment-form-url">'.
-			'<label for="url">' . __( 'Website' ) . '</label>'.
-			'<input id="url" name="url" type="text" value="'. esc_attr( $commenter['comment_author_url'] ) . 
-			'" size="30"  tabindex="3" /></p>';
-
-		$fields[ 'phone' ] = '<p class="comment-form-phone">'.
-			'<label for="phone">' . __( 'Phone' ) . '</label>'.
-			'<input id="phone" name="phone" type="text" size="30"  tabindex="4" /></p>';
+		$fields[ 'email' ] = '<div class="col-sm-3">
+						<label for="email">Email</label>
+						<input type="text" id="email" name="email">
+					</div>';
+		$fields[ 'url' ] = "";
+		$fields[ 'phone' ] = "";
 
 	return $fields;
 }
@@ -49,18 +35,17 @@ add_action( 'comment_form_logged_in_after', 'additional_fields' );
 add_action( 'comment_form_after_fields', 'additional_fields' );
 
 function additional_fields () {
-	echo '<p class="comment-form-title">'.
-	'<label for="title">' . __( 'Comment Title' ) . '</label>'.
-	'<input id="title" name="title" type="text" size="30"  tabindex="5" /></p>';
+	echo '
+		<div class="col-sm-3">
+			<label for="Cidade">cidade</label>
+			<input type="text" id="cidade" name="cidade">
+		</div>';
 
-	echo '<p class="comment-form-rating">'.
-	'<label for="rating">'. __('Rating') . '<span class="required">*</span></label>
-	<span class="commentratingbox">';
-	
-	for( $i=1; $i <= 5; $i++ )
-	echo '<span class="commentrating"><input type="radio" name="rating" id="rating" value="'. $i .'"/>'. $i .'</span>';
-
-	echo'</span></p>';
+	echo '
+		<div class="col-sm-3">
+			<label for="Empresa">empresa</label>
+			<input type="text" id="empresa" name="empresa">
+		</div>';
 
 }
 
@@ -68,17 +53,13 @@ function additional_fields () {
 
 add_action( 'comment_post', 'save_comment_meta_data' );
 function save_comment_meta_data( $comment_id ) {
-	if ( ( isset( $_POST['phone'] ) ) && ( $_POST['phone'] != '') )
-	$phone = wp_filter_nohtml_kses($_POST['phone']);
-	add_comment_meta( $comment_id, 'phone', $phone );
+	if ( ( isset( $_POST['cidade'] ) ) && ( $_POST['cidade'] != '') )
+	$cidade = wp_filter_nohtml_kses($_POST['cidade']);
+	add_comment_meta( $comment_id, 'cidade', $cidade );
 
-	if ( ( isset( $_POST['title'] ) ) && ( $_POST['title'] != '') )
-	$title = wp_filter_nohtml_kses($_POST['title']);
-	add_comment_meta( $comment_id, 'title', $title );
-
-	if ( ( isset( $_POST['rating'] ) ) && ( $_POST['rating'] != '') )
-	$rating = wp_filter_nohtml_kses($_POST['rating']);
-	add_comment_meta( $comment_id, 'rating', $rating );
+	if ( ( isset( $_POST['empresa'] ) ) && ( $_POST['empresa'] != '') )
+	$empresa = wp_filter_nohtml_kses($_POST['empresa']);
+	add_comment_meta( $comment_id, 'empresa', $empresa );
 }
 
 
@@ -86,8 +67,7 @@ function save_comment_meta_data( $comment_id ) {
 
 add_filter( 'preprocess_comment', 'verify_comment_meta_data' );
 function verify_comment_meta_data( $commentdata ) {
-	if ( ! isset( $_POST['rating'] ) )
-	wp_die( __( 'Error: You did not add your rating. Hit the BACK button of your Web browser and resubmit your comment with rating.' ) );
+	
 	return $commentdata;
 }
 
@@ -99,29 +79,17 @@ function extend_comment_add_meta_box() {
 }
  
 function extend_comment_meta_box ( $comment ) {
-    $phone = get_comment_meta( $comment->comment_ID, 'phone', true );
-    $title = get_comment_meta( $comment->comment_ID, 'title', true );
-    $rating = get_comment_meta( $comment->comment_ID, 'rating', true );
+    $cidade = get_comment_meta( $comment->comment_ID, 'cidade', true );
+    $empresa = get_comment_meta( $comment->comment_ID, 'empresa', true );
     wp_nonce_field( 'extend_comment_update', 'extend_comment_update', false );
     ?>
     <p>
-        <label for="phone"><?php _e( 'Phone' ); ?></label>
-        <input type="text" name="phone" value="<?php echo esc_attr( $phone ); ?>" class="widefat" />
+        <label for="cidade"><?php _e( 'Cidade' ); ?></label>
+        <input type="text" name="cidade" value="<?php echo esc_attr( $cidade ); ?>" class="widefat" />
     </p>
     <p>
-        <label for="title"><?php _e( 'Comment Title' ); ?></label>
-        <input type="text" name="title" value="<?php echo esc_attr( $title ); ?>" class="widefat" />
-    </p>
-    <p>
-        <label for="rating"><?php _e( 'Rating: ' ); ?></label>
-			<span class="commentratingbox">
-			<?php for( $i=1; $i <= 5; $i++ ) {
-				echo '<span class="commentrating"><input type="radio" name="rating" id="rating" value="'. $i .'"';
-				if ( $rating == $i ) echo ' checked="checked"';
-				echo ' />'. $i .' </span>'; 
-				}
-			?>
-			</span>
+        <label for="empresa"><?php _e( 'Empresa' ); ?></label>
+        <input type="text" name="empresa" value="<?php echo esc_attr( $empresa ); ?>" class="widefat" />
     </p>
     <?php
 }
@@ -132,27 +100,20 @@ add_action( 'edit_comment', 'extend_comment_edit_metafields' );
 function extend_comment_edit_metafields( $comment_id ) {
     if( ! isset( $_POST['extend_comment_update'] ) || ! wp_verify_nonce( $_POST['extend_comment_update'], 'extend_comment_update' ) ) return;
 
-	if ( ( isset( $_POST['phone'] ) ) && ( $_POST['phone'] != '') ) : 
-	$phone = wp_filter_nohtml_kses($_POST['phone']);
-	update_comment_meta( $comment_id, 'phone', $phone );
+	if ( ( isset( $_POST['cidade'] ) ) && ( $_POST['cidade'] != '') ) : 
+	$cidade = wp_filter_nohtml_kses($_POST['cidade']);
+	update_comment_meta( $comment_id, 'cidade', $cidade );
 	else :
-	delete_comment_meta( $comment_id, 'phone');
+	delete_comment_meta( $comment_id, 'cidade');
 	endif;
 		
-	if ( ( isset( $_POST['title'] ) ) && ( $_POST['title'] != '') ):
-	$title = wp_filter_nohtml_kses($_POST['title']);
-	update_comment_meta( $comment_id, 'title', $title );
+	if ( ( isset( $_POST['empresa'] ) ) && ( $_POST['empresa'] != '') ):
+	$empresa = wp_filter_nohtml_kses($_POST['empresa']);
+	update_comment_meta( $comment_id, 'empresa', $empresa );
 	else :
-	delete_comment_meta( $comment_id, 'title');
+	delete_comment_meta( $comment_id, 'empresa');
 	endif;
 
-	if ( ( isset( $_POST['rating'] ) ) && ( $_POST['rating'] != '') ):
-	$rating = wp_filter_nohtml_kses($_POST['rating']);
-	update_comment_meta( $comment_id, 'rating', $rating );
-	else :
-	delete_comment_meta( $comment_id, 'rating');
-	endif;
-	
 }
 
 // Add the comment meta (saved earlier) to the comment text 
@@ -163,17 +124,15 @@ function modify_comment( $text ){
 
 	$plugin_url_path = WP_PLUGIN_URL;
 
-	if( $commenttitle = get_comment_meta( get_comment_ID(), 'title', true ) ) {
+	if( $commenttitle = get_comment_meta( get_comment_ID(), 'cidade', true ) ) {
 		$commenttitle = '<strong>' . esc_attr( $commenttitle ) . '</strong><br/>';
 		$text = $commenttitle . $text;
 	} 
 
-	if( $commentrating = get_comment_meta( get_comment_ID(), 'rating', true ) ) {
-		$commentrating = '<p class="comment-rating">	<img src="'. $plugin_url_path .
-		'/ExtendComment/images/'. $commentrating . 'star.gif"/><br/>Rating: <strong>'. $commentrating .' / 5</strong></p>';
-		$text = $text . $commentrating;
-		return $text;		
-	} else {
-		return $text;		
-	}	 
+	if( $commenttitle = get_comment_meta( get_comment_ID(), 'empresa', true ) ) {
+		$commenttitle = '<strong>' . esc_attr( $commenttitle ) . '</strong><br/>';
+		$text = $commenttitle . $text;
+	} 
+
+	return $text;			 
 }
