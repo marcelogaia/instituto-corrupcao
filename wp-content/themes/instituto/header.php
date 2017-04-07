@@ -49,6 +49,7 @@ $isHome = is_home();
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
+	<div class="shade"></div>
 	<section id="header"<?php if(is_home()){ echo ' class="front-page-section"'; } ?>>
 		<div class="jumbotron">
 			<h1><?php the_title() ?></h1>

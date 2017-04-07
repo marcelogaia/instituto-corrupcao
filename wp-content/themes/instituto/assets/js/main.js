@@ -93,6 +93,18 @@ jQuery( document ).ready( function($) {
 	// Open Responsive Menu
 	function openResponsiveMenu() {
 		$( '.open-responsive-menu' ).click( function() {
+
+			if(!$('.responsive-menu').hasClass('active')) {
+				$('.shade').fadeIn(400, function(){
+					$('.my-navbar').addClass('fix-top');
+				});
+			} else {
+				$('.shade').fadeOut(400, function(){
+					$('.my-navbar').removeClass('fix-top');
+				});
+				
+			}
+			
 			$( '.responsive-menu' ).toggle( 'slow', function() {
 				$( this ).toggleClass( 'active' );
 			});

@@ -90,6 +90,22 @@ $font-din-black-2: url(fonts/din/din-black.otf);
 	font-style: normal;
 }
 
+.shade {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 8;
+    display: none;
+    @include transition(all 0.3s);
+}
+
+.fix-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
 .stripped-border {
 	height: 8px;
 	display: block;
@@ -668,7 +684,7 @@ section#header {
 				border-radius:0;
 				overflow: hidden;
 				&.small {
-					height:69px;
+					height:55px;
 				}
 			}
 		}
