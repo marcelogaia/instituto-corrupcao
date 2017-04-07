@@ -23,9 +23,7 @@
 					<h2>Porque somos diferentes</h2>
 					<div>
 						<div class="wp-caption">
-							<div style="width: 640px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-								<video class="wp-video-shortcode" id="video-172-1" width="640" height="360" preload="metadata" controls="controls"><source type="video/mp4" src="img/movie.mp4?_=1" />Colocar um titulo para o vídeo<a href="img/movie.mp4">img/movie.mp4</a></video>
-							</div>
+							<div class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]--><video class="wp-video-shortcode" id="video-172-1" width="640" height="360" preload="metadata" controls="controls"><source type="video/mp4" src="img/movie.mp4?_=1" />Colocar um titulo para o vídeo<a href="img/movie.mp4">img/movie.mp4</a></video></div>
 							<p class="wp-caption-text"><em>Assista nosso manifesto - "UNIÃO"</em></p>
 						</div>
 						<p>O Instituto Não Aceito Corrupção é uma associação apartidária, sem fins lucrativos, fundada em julho de 2015 (leia nosso estatuto). A entidade surgiu da articulação de um grupo de cidadãos que viu na crise política instalada a partir de junho de 2013, com os protestos de rua, uma oportunidade para transformar indignação em esforços estruturados para o enfrentamento da corrupção.</p>

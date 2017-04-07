@@ -177,6 +177,34 @@ jQuery( document ).ready( function($) {
 		}).trigger('scroll');
 	}
 
+	function projectFilters() {
+		$(".categories li a").click(function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			var cat = $(this).parent().attr('class');
+			var projects = $(".the-projects");
+			var allProjects = $(".the-projects").find('li');
+			var theProjects = projects.find('li.'+cat);
+			var otherProjects = projects.find('li:not(.'+cat+')');
+
+			if(cat == 'todos') {
+				allProjects.fadeOut(200,function(){
+					setTimeout(function(){
+						allProjects.fadeIn(200);
+					},200);
+				});	
+			} else {
+				otherProjects.fadeOut(200,function(){
+					setTimeout(function(){
+						theProjects.fadeIn(200);
+					},200);
+				});	
+			}
+
+			return false;
+		});
+	}
+
 	// Called Functions
 	$( function() {
 		fixMenuHeight();
@@ -186,6 +214,7 @@ jQuery( document ).ready( function($) {
 		fixedMenu();
 
 		oInstitutoPageFunctions();
+		projectFilters()
 	});
 
 	// Window Resize
