@@ -44,15 +44,11 @@
 				</div>
 				<a href="javascript:void(0);"><span>baixar</span><span>Kit de imagens</span><span>INAC</span></a>
 			</div>
-			
-			<div class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-				<video controls style="">
-					<source type="video/mp4" src="img/movie.mp4?_=1" />
-					Colocar um titulo para o vídeo
-					<a href="img/movie.mp4">img/movie.mp4</a>
-				</video>
+
+			<div class="wp-video" style="border:none;">
+				<center><iframe width="560" height="315" src="https://www.youtube.com/embed/-g6AUHINKs4" frameborder="0" allowfullscreen></iframe></center>
 			</div>
-<?php 
+<?php
 	$socialArr = array();
 
 	if(!empty($GLOBALS['cgv']['linkedin'])) $socialArr['linkedin'] = $GLOBALS['cgv']['linkedin'];
@@ -86,7 +82,7 @@
 	</section>
 	<section class="quer-doar">
 		<div class="container">
-			<div class="row">	
+			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1">
 					<header>
 						<h3 class="general-title">quer doar?</h3>
@@ -97,7 +93,7 @@
 							<h4><span>doação direta</span></h4>
 							<div>
 								<img src="img/paypal-logo.png" alt="">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.
 								</p>
 							</div>
 							<button>eu quero</button>
@@ -130,7 +126,7 @@
 	</section>
 	<section class="voluntarios">
 		<div class="container">
-			<div class="row">	
+			<div class="row">
 				<div class="col-sm-8 col-xs-offset-2">
 					<h3 class="general-title">precisamos de voluntários</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
@@ -139,7 +135,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 <?php
   get_footer();
 ?>

@@ -55,8 +55,8 @@ $font-din-black-2: url(fonts/din/din-black.otf);
 @font-face {
 	font-family: $font_din;
 	src: $font-din-0;
-	src: $font-din-1, 
-		 $font-din-2, 
+	src: $font-din-1,
+		 $font-din-2,
 		 $font-din-3;
  	font-weight: normal;
 	font-style: normal;
@@ -65,8 +65,8 @@ $font-din-black-2: url(fonts/din/din-black.otf);
 @font-face {
 	font-family: $font_din-condensed;
 	src: $font-din-condensed-0;
-	src: $font-din-condensed-1, 
-		 $font-din-condensed-2, 
+	src: $font-din-condensed-1,
+		 $font-din-condensed-2,
 		 $font-din-condensed-3;
 	font-weight: normal;
 	font-style: normal;
@@ -75,7 +75,7 @@ $font-din-black-2: url(fonts/din/din-black.otf);
 @font-face {
 	font-family: $font_din-alternate;
 	src: $font-din-alternate-0;
-	src: $font-din-alternate-1, 
+	src: $font-din-alternate-1,
 		 $font-din-alternate-2;
 	font-weight: normal;
 	font-style: normal;
@@ -84,7 +84,7 @@ $font-din-black-2: url(fonts/din/din-black.otf);
 @font-face {
 	font-family: $font_din-black;
 	src: $font-din-black-0;
-	src: $font-din-black-1, 
+	src: $font-din-black-1,
 		 $font-din-black-2;
 	font-weight: bold;
 	font-style: normal;
@@ -148,6 +148,9 @@ $font-din-black-2: url(fonts/din/din-black.otf);
 	}
 }
 
+/* classes for independent colors */
+.white {color: #ffffff;}
+
 .latest-news-button{
 	position:relative;
     width: 174px;
@@ -200,7 +203,7 @@ $font-din-black-2: url(fonts/din/din-black.otf);
 	}
 
 	.fa{
-		display:none;	
+		display:none;
 	}
 }
 
@@ -251,7 +254,7 @@ a {
 	display: inline-block;
 
 	&:hover {
-		text-decoration: none;	
+		text-decoration: none;
 	}
 }
 
@@ -433,7 +436,7 @@ form.newsletter {
 			line-height: 30px;
 			height: 30px;
 			margin: 0 !important;
-			
+
 			input {
 				padding: 0 25px !important;
 				color: white;
@@ -521,7 +524,7 @@ section#header {
 		background-position: center center;
 		text-align: center;
 		margin:0;
-	
+
 		h1{
 			font:60px/1.2em $font_ocrastd;
 			color: $color_std-yellow;
@@ -560,7 +563,7 @@ section#header {
 		.participe {
 			float:right;
 			margin-right: 30px;
-			
+
 			button {
 				width: 190px;
 				margin-top: 43px;
@@ -568,12 +571,12 @@ section#header {
 				@extend %basic_button;
 			}
 		}
-			
+
 		.responsive-menu{
 			overflow: auto;
 			border:none;
 			border-radius:0;
-			display: none;	
+			display: none;
 			float: right;
 			top:0 !important;
 			margin:0;
@@ -585,7 +588,7 @@ section#header {
 			height:100%;
 			line-height: 23px;
 			color: $color_dark-grey;
-			
+
 			.wpcf7-form.newsletter {
 				margin-bottom: 50px;
 
@@ -615,7 +618,7 @@ section#header {
 			.contact-us-box {
 				margin-top: 60px;
 			}
-			
+
 			.social-links {
 				display: inline-block;
 
@@ -629,7 +632,7 @@ section#header {
 
 			.participe {
 				margin: 0px;
-			
+
 				button {
 					width: 115px;
 				}
@@ -651,9 +654,9 @@ section#header {
 						height: 65px;
 						display: block;
 						text-transform: lowercase;
-						
+
 						&:hover{
-							text-decoration:underline;	
+							text-decoration:underline;
 						}
 					}
 
@@ -676,7 +679,7 @@ section#header {
 			display: block;
 			float: right;
 			height: 140px;
-			
+
 			.fa {
 				color: $color_std-yellow;
 				font-size:70px;
@@ -721,7 +724,7 @@ footer#contato {
 			color: white;
 		}
 	}
-	
+
 	h3.imprensa {
 		margin-top: 165px;
 	}
@@ -772,7 +775,7 @@ footer#contato {
 				height: 100px;
 				padding: 7px 10px;
 			}
-	
+
 			.wpcf7-submit {
 				border: 1px white solid;
 				background: black;
@@ -799,7 +802,7 @@ footer#contato {
 		list-style: none;
 		text-align: left;
 		padding: 0;
-		
+
 		li {
 			margin-bottom: 19px;
 			a {
@@ -823,7 +826,7 @@ footer#contato {
 				a {
 					color: white;
 				}
-				
+
 				&:first-of-type {
 					margin-bottom: 3px;
 				}
@@ -886,6 +889,7 @@ footer#contato {
 						display: inline-block;
 						margin-left: 10px;
 						padding-left: 10px;
+						padding-top: 7px;
 						border-left: 2px solid white;
 					}
 				}
@@ -978,7 +982,7 @@ section#projetos {
 				margin-right: -0.25em; /* Adjusts for spacing */
 			}
 
-			a {	
+			a {
 				text-decoration: none;
 				font:normal normal 17px/1.3 $font_din;
 				color: $color_dark-grey;
@@ -1162,7 +1166,7 @@ section#parceiro {
 			font-size: 18px;
 			margin-bottom: 70px;
 		}
-	} 
+	}
 
 	.bnt-ver-todos.logo-carousel-btn {
 	    @extend %basic_button;
@@ -1203,13 +1207,13 @@ body#o-instituto {
 			float: right;
 			margin: 0 0 0 40px;
 			width: calc(50% - 20px);
-	
+
 			.wp-video {
 				border-color: white;
 				border-style: solid;
 				border-width: 7px 10px;
 			}
-	
+
 			// Here's the CSS I used to ensure the video takes up the full width of its container:
 			// https://cfxdesign.com/how-to-make-the-wordpress-video-shortcode-responsive/
 			.wp-video, video.wp-video-shortcode, .mejs-container, .mejs-overlay.load {
@@ -1434,6 +1438,13 @@ body#o-instituto {
 		p {
 			font: 25px $font_din;
 		}
+
+		.bt-ok {
+			background: #ffc72c;
+			text-align: center;
+			padding: 15px;
+			font-size: 12px;
+		}
 	}
 
 	.parceiros{
@@ -1476,9 +1487,14 @@ body#o-instituto {
 				margin-top: 3px;
 			}
 
+			&:before {
+				margin-left: 60px;
+			}
+
 			&:after {
 				left: auto;
 				margin-top: -15px;
+				margin-right: 60px;
 				right: calc(100% / 12);
 			}
 
@@ -1486,8 +1502,14 @@ body#o-instituto {
 				outline-color: $color_std-yellow;
 				background-color: $color_std-yellow;
 
-				&:before, &:after {
+				&:before {
 					border-color: $color_std-yellow;
+					margin-left: 60px;
+				}
+
+				&:after {
+					border-color: $color_std-yellow;
+					margin-right: 60px;
 				}
 			}
 
@@ -1507,7 +1529,7 @@ body#o-instituto {
 		text-align: center;
 		background-color: $color_std-yellow;
 		padding-bottom: 58px;
-		
+
 		.row {
 			h2 {
 				font:95px/91px $font_din-condensed;
@@ -1572,9 +1594,9 @@ body#o-instituto {
 body#faq {
 	background-color: $color_std-yellow;
 	.jumbotron {
-		
+
 		background-image: url(../img/faq-top.jpg);
-		
+
 		h1 {
 			font:100px $font_din-alternate;
 			font-weight: bold;
@@ -1584,6 +1606,8 @@ body#faq {
 	header {
 		text-align: center;
 		float:none;
+		overflow: hidden;
+		margin-top: 50px;
 
 		p {
 			font: 20px $font_din;
@@ -1615,7 +1639,7 @@ body#faq {
 			color: $color_std-yellow;
 		}
 	}
-	
+
 	.pergunta {
 		h4 {
 			width: 100%;
@@ -1688,7 +1712,7 @@ body#biblioteca {
 		text-align: center;
 		font: 45px/1em $font_din;
 		height: auto;
-		padding-top:70px;
+		padding: 70px 0 20px 0;
 		text-transform: uppercase;
 		margin-top:0;
 	}
@@ -1696,7 +1720,7 @@ body#biblioteca {
 
 	.slick-carousel-biblioteca {
 		padding-bottom: 75px;
-		
+
 		.slick-arrow {
 			height:105px;
 			width:27px;
@@ -1744,7 +1768,7 @@ body#biblioteca {
 		}
 
 		.slick-carousel-biblioteca {
-			
+
 			.slick-arrow {
 				@include filter(brightness(60%) grayscale(100%) saturate(0));
 			}
@@ -1772,14 +1796,19 @@ body#biblioteca {
 
 		button.btn {
 			width:100px;
-			height:40px;
-			padding:0;
-			line-height: 40px;
+			padding:10px 0;
 			background: $color_dark-grey;
 			@include border-radius(0);
 			color:$color_std-yellow;
 			font:22px $font_din-condensed;
 		}
+
+		button.btn:hover {
+			background:$color_std-yellow;
+			color: $color_dark-grey;
+			border: none;
+		}
+
 		.slick-carousel-biblioteca {
 
 			li {
@@ -1843,7 +1872,7 @@ body#biblioteca {
 				color: $color_dark-grey;
 			}
 		}
-		
+
 	}
 }
 
@@ -1857,7 +1886,7 @@ body#projetos {
 		background: $color_std-yellow;
 		text-align: center;
 		color: $color_dark-grey;
-		
+
 		.container {
 			padding: 100px 0 90px;
 
@@ -1865,7 +1894,7 @@ body#projetos {
 				margin-bottom: 40px;
 			}
 		}
-	} 
+	}
 
 	.projetos {
 		background: url(../img/projetos-bg.jpg);
@@ -1905,37 +1934,37 @@ body#projetos {
 
 						&.todos{
 							outline-color: black;
-							a { 
-								color:white; 
-								background: black; 
+							a {
+								color:white;
+								background: black;
 							}
 						}
 						&.pesquisa{
 							outline-color: white;
-							a { 
-								color:$color_dark-grey; 
-								background: white; 
+							a {
+								color:$color_dark-grey;
+								background: white;
 							}
 						}
 						&.politicas{
 							outline-color: $color_std-yellow;
-							a { 
-								color:$color_dark-grey; 
-								background: $color_std-yellow; 
+							a {
+								color:$color_dark-grey;
+								background: $color_std-yellow;
 							}
 						}
 						&.educacao{
 							outline-color: $color_mid-grey;
-							a { 
-								color:white; 
-								background: $color_mid-grey; 
+							a {
+								color:white;
+								background: $color_mid-grey;
 							}
 						}
 						&.captacao{
 							outline-color: #D9D9D9;
-							a { 
-								color:$color_dark-grey; 
-								background: #D9D9D9; 
+							a {
+								color:$color_dark-grey;
+								background: #D9D9D9;
 
 								&:after {
 									content: " ";
@@ -1951,9 +1980,9 @@ body#projetos {
 						}
 						&.andamento{
 							outline-color: #D9D9D9;
-							a { 
-								color:$color_dark-grey; 
-								background: #D9D9D9; 
+							a {
+								color:$color_dark-grey;
+								background: #D9D9D9;
 
 								&:after {
 									content: " ";
@@ -1971,9 +2000,9 @@ body#projetos {
 							outline-color: #D9D9D9;
 							border: 4px $color_std-yellow solid;
 							@include border-radius(4px);
-							a { 
-								color:$color_dark-grey; 
-								background: #D9D9D9; 
+							a {
+								color:$color_dark-grey;
+								background: #D9D9D9;
 								vertical-align: middle;
 
 								&:after {
@@ -2035,7 +2064,7 @@ body#projetos {
 									padding-top: 160px;
 								}
 							}
-							
+
 							div.post-hover{
 								color: white;
 								background: url(../img/projeto-radiografia.png);
@@ -2092,7 +2121,7 @@ body#projetos {
 							}
 						}
 
-						&.corrida { 
+						&.corrida {
 							div{
 								color: $color_dark-grey;
 								background: $color_std-yellow;
@@ -2101,7 +2130,7 @@ body#projetos {
 									padding-top: 120px;
 								}
 							}
-							
+
 							div.post-hover{
 								color: white;
 								background: url(../img/projeto-radiografia.png);
@@ -2212,6 +2241,7 @@ body#participe {
 
 			p {
 				color:white;
+				font-size: 1.26em;
 			}
 
 			a {
@@ -2246,7 +2276,7 @@ body#participe {
 					}
 
 					&:nth-of-type(3) {
-						font-size: 55px;	
+						font-size: 55px;
 					}
 				}
 			}
@@ -2390,7 +2420,7 @@ body#participe {
 					h4 {
 						span {
 							font-size:30px;
-							line-height: 32px;	
+							line-height: 32px;
 						}
 					}
 				}
@@ -2493,7 +2523,7 @@ body#blog {
 	.jumbotron {
 		background-image: url(../img/blog-top.jpg);
 	}
-	
+
 	.fb-page, .fb-page iframe[style], .fb-page span {
 		width: 100% !important;
 	}
@@ -2644,7 +2674,7 @@ body#blog {
 					clear: both;
 					color: $color_dark-grey;
 					display: inline;
-					
+
 					>img {
 						float:left;
 						margin-right:15px;
@@ -2670,7 +2700,7 @@ body#blog {
 						display: inline-block;
 						padding:10px 10px 0 0;
 						margin: 0;
-						
+
 						span {
 							display: inline-block;
 						}
@@ -2688,7 +2718,7 @@ body#blog {
 						}
 					}
 				}
-				
+
 				&:after{
 					content: " ";
 					clear: both;
@@ -2742,7 +2772,7 @@ body#blog {
 
 			}
 		}
-			
+
 		.wpcf7-form.newsletter {
 			margin-bottom: 50px;
 
@@ -2804,7 +2834,7 @@ body#blog {
 	}
 }
 
-// Blog interna 
+// Blog interna
 body#blog-interna {
 	a {
 		color: $color_std-yellow;
@@ -2849,7 +2879,7 @@ body#blog-interna {
 				color: $color_mid-grey;
 
 				i {
-					color: #00aced;	
+					color: #00aced;
 				}
 			}
 
@@ -2937,13 +2967,21 @@ body#blog-interna {
 			}
 		}
 
+		.prev-news:hover .fa {
+			background: $color_std-yellow;
+		}
+
 		.next-news {
 			text-align: right;
-			
+
 			img {
 				float:left;
 				margin-right:28px;
 			}
+		}
+
+		.next-news:hover .fa {
+			background: $color_std-yellow;
 		}
 
 		a {
@@ -3051,7 +3089,7 @@ body#blog-interna {
 			padding:0 10px;
 			margin-bottom: 20px;
 		}
-		
+
 		button {
 			@extend %inverted_button;
 
@@ -3100,7 +3138,7 @@ body#blog-interna {
 						padding-top:9px;
 						margin:0;
 					}
-					
+
 					.when {
 						font:12px/1.1em $font_din;
 						color: $color_mid-grey;
