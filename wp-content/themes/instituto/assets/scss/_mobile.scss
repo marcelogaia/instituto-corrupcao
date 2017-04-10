@@ -145,6 +145,15 @@ $xl: "(min-width: 1200px)";
 		}
 	}
 
+
+
+	body#participe {
+		.precisamos li h4 {width: 100%;}
+		.precisamos li h4:after {
+			display:none;
+		}
+	}
+
 	footer {
 		.footer-title, .imprensa, .menu-principal-container {display: none;}
 		.title-social {display:block; text-align: center !important;}
