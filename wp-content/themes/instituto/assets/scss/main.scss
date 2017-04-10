@@ -866,10 +866,6 @@ footer#contato {
 		margin-top:45px;
 
 		.last-line {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
 			text-align: left;
 
 			.title {
@@ -897,9 +893,7 @@ footer#contato {
 		}
 
 		.logo {
-			position: absolute;
-			bottom: 0;
-			right: 0;
+			float: right;
 			text-align: right;
 		}
 	}

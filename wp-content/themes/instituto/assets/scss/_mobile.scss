@@ -69,9 +69,10 @@ $xl: "(min-width: 1200px)";
 				button {
 					width: 120px;
 					height:34px;
-					line-height: 33px;
+					line-height: 22px;
 					font-family: $font_din-alternate;
 					font-size: 12px;
+					margin: 0px;
 				}
 			}
 		}
@@ -88,8 +89,8 @@ $xl: "(min-width: 1200px)";
 				background-size: cover;
 				height:59px;
 				margin:1px;
-				
-				a {    
+
+				a {
 					font-size: 12px;
 					padding: 0;
 				}
@@ -142,6 +143,27 @@ $xl: "(min-width: 1200px)";
 				margin-bottom: 20px;
 			}
 		}
+	}
+
+	footer {
+		.footer-title, .imprensa, .menu-principal-container {display: none;}
+		.title-social {display:block; text-align: center !important;}
+
+		p {text-align: center;}
+
+		.contact-us-social li {display: inline-block; width:19%; text-align: center;}
+		.contact-us-social li a {margin: 0px !important;}
+
+		.form {height:270px;overflow: hidden;}
+		.form-title {display:block;}
+
+		.last-line span {display:block; width: 100%; text-align: center; font-size: 12px;}
+
+		ul.menu li {display: inline-block; font-size: 10px;}
+
+		.line-logo {margin-top: 15px !important;}
+
+		.line-logo .logo {display: block; margin: 0 auto; width:100%; text-align: center !important;}
 	}
 }
 

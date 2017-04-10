@@ -17,7 +17,7 @@ wp_reset_query();
 				<div class="col-sm-4">
 					<h3 class="footer-title">Menu</h3>
 					<div class="menu-principal-container">
-						
+
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
 					</div>
@@ -46,7 +46,7 @@ wp_reset_query();
 						</div><!--/.box-right-->
 					</div>
 				</div>
-<?php 
+<?php
 	$socialArr = array();
 
 	if(!empty($GLOBALS['cgv']['linkedin'])) $socialArr['linkedin'] = $GLOBALS['cgv']['linkedin'];
@@ -58,23 +58,23 @@ wp_reset_query();
 	if(!empty($socialArr)):
 ?>
 				<div class="col-sm-4">
-					<h3 class="footer-title">Siga-nos</h3>
+					<h3 class="footer-title title-social">Siga-nos</h3>
 					<div class="contact-us-social">
 
 	<?php if(!empty($socialArr['linkedin'])): ?>
-						<a href="<?= $socialArr['linkedin'] ?>" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+						<li><a href="<?= $socialArr['linkedin'] ?>" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 	<?php endif; ?>
 	<?php if(!empty($socialArr['facebook'])): ?>
-						<a href="<?= $socialArr['facebook'] ?>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+						<li><a href="<?= $socialArr['facebook'] ?>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
 	<?php endif; ?>
 	<?php if(!empty($socialArr['twitter'])): ?>
-						<a href="<?= $socialArr['twitter'] ?>" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+						<li><a href="<?= $socialArr['twitter'] ?>" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
 	<?php endif; ?>
 	<?php if(!empty($socialArr['instagram'])): ?>
-						<a href="<?= $socialArr['instagram'] ?>" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+						<li><a href="<?= $socialArr['instagram'] ?>" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
 	<?php endif; ?>
 	<?php if(!empty($socialArr['google-plus'])): ?>
-						<a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
+						<li><a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
 	<?php endif; ?>
 					</div><!--/.contact-us-social-->
 				</div>
@@ -97,8 +97,8 @@ wp_reset_query();
 					</div><!--/.contact-us-newsletter-->
 				</div>
 				<div class="col-sm-4">
-					<h3 class="footer-title">Fale Conosco</h3>
-					<div role="form" class="wpcf7" id="wpcf7-f6-o3" lang="en-CA" dir="ltr">
+					<h3 class="footer-title form-title">Fale Conosco</h3>
+					<div role="form" class="wpcf7 form" id="wpcf7-f6-o3" lang="en-CA" dir="ltr">
 						<form action="#" method="post" class="wpcf7-form">
 							<p class="wpcf7-form-control-wrap nome">
 								<input type="text" name="nome" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="nome" />
@@ -113,17 +113,17 @@ wp_reset_query();
 								<input type="submit" value="enviar" class="wpcf7-form-control wpcf7-submit" />
 							</p>
 						</form>
-					</div>																	
+					</div>
 				</div>
 			</div><!--/.row-->
-			
+
 
 			<div class="row line-logo">
 				<div class="col-sm-9 last-line">
 					<span class="title">Instituto Não Aceito Corrupção</span>
 					<span class="copyright">© 2017 Todos os direitos reservados</span>
 					<div class="menu-footer-container">
-						
+
 						<?php wp_nav_menu( array( 'theme_location' => 'footer_menu' ) ); ?>
 
 					</div>
@@ -138,7 +138,7 @@ wp_reset_query();
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 
 	<script type="text/javascript" src="js/main.min.js"></script>
