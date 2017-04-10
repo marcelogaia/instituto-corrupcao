@@ -23,7 +23,9 @@
 					<h2>Porque somos diferentes</h2>
 					<div>
 						<div class="wp-caption">
-							<div class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]--><video class="wp-video-shortcode" id="video-172-1" width="640" height="360" preload="metadata" controls="controls"><source type="video/mp4" src="img/movie.mp4?_=1" />Colocar um titulo para o vídeo<a href="img/movie.mp4">img/movie.mp4</a></video></div>
+							<div class="wp-video" style="border: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-g6AUHINKs4" frameborder="0" allowfullscreen></iframe>
+              </div>
 							<p class="wp-caption-text"><em>Assista nosso manifesto - "UNIÃO"</em></p>
 						</div>
 						<p>O Instituto Não Aceito Corrupção é uma associação apartidária, sem fins lucrativos, fundada em julho de 2015 (leia nosso estatuto). A entidade surgiu da articulação de um grupo de cidadãos que viu na crise política instalada a partir de junho de 2013, com os protestos de rua, uma oportunidade para transformar indignação em esforços estruturados para o enfrentamento da corrupção.</p>
@@ -44,10 +46,10 @@
 							<li style="text-align: center;">Conselho Estratégico</li>
 						</ul>
 						<ul>
-<?php 
-	query_posts( array(	
+<?php
+	query_posts( array(
 		'post_type' => "pt_diretoria",
-		'order' => "ASC"	
+		'order' => "ASC"
 	));
 
 	$left = true;
@@ -61,7 +63,7 @@
 								<h5><?php the_field('cargo') ?></h5>
 								<p><?php the_content() ?></p>
 							</li>
-<?php 
+<?php
 	$left = !$left;
 endwhile; ?>
 						</ul>
@@ -76,26 +78,26 @@ endwhile; ?>
 					<div>
 						<p>Entre nossos fundadores e associados estao os seguintes:</p>
 						<ul>
-							<li>Elli Doubleday</li>
-							<li>Darrick Reeser</li>
-							<li>Sparkle Spargo</li>
-							<li>Jeanette Poudrier</li>
-							<li>Freeman Rahm</li>
-							<li>Reynalda Wilmeth</li>
-							<li>Santa Ravelo</li>
-							<li>Leia Keener</li>
-							<li>Sunshine Ralph</li>
-							<li>Carli Mackay</li>
-							<li>Phyliss Mccloud</li>
-							<li>Asuncion Kearse</li>
-							<li>Mercedez Kimbro</li>
-							<li>Elanor Vanleer</li>
-							<li>Glen Hume</li>
-							<li>Ouida Hylton</li>
-							<li>Mazie Eby</li>
-							<li>Blossom Greek</li>
-							<li>Orval Cooney</li>
-							<li>Carmela Paek</li>
+							<li>Elli Doubleday <span class="white">(A)</span></li>
+							<li>Darrick Reeser <span class="white">(AF)</span></li>
+							<li>Sparkle Spargo <span class="white">(F)</span></li>
+							<li>Jeanette Poudrier <span class="white">(A)</span></li>
+							<li>Freeman Rahm <span class="white">(AF)</span></li>
+							<li>Reynalda Wilmeth <span class="white">(F)</span></li>
+							<li>Santa Ravelo <span class="white">(A)</span></li>
+							<li>Leia Keener <span class="white">(AF)</span></li>
+							<li>Sunshine Ralph <span class="white">(F)</span></li>
+							<li>Carli Mackay <span class="white">(A)</span></li>
+							<li>Phyliss Mccloud <span class="white">(AF)</span></li>
+							<li>Asuncion Kearse <span class="white">(F)</span></li>
+							<li>Mercedez Kimbro <span class="white">(A)</span></li>
+							<li>Elanor Vanleer <span class="white">(AF)</span></li>
+							<li>Glen Hume <span class="white">(F)</span></li>
+							<li>Ouida Hylton <span class="white">(A)</span></li>
+							<li>Mazie Eby <span class="white">(AF)</span></li>
+							<li>Blossom Greek <span class="white">(F)</span></li>
+							<li>Orval Cooney <span class="white">(A)</span></li>
+							<li>Carmela Paek <span class="white">(AF)</span></li>
 						</ul>
 					</div>
 				</div>
@@ -111,7 +113,7 @@ endwhile; ?>
 							<select class="selectpicker" data-style="btn-warning" name="" id="">
 								<option value="">2015  |  2º Semestre</option>
 							</select>
-							<button>OK</button>
+							<button class="bt-ok">OK</button>
 						</p>
 					</div>
 				</div>
@@ -224,7 +226,7 @@ endwhile; ?>
 			</div>
 		</div>
 	</div>
-  
+
 <?php
   get_footer();
 ?>
