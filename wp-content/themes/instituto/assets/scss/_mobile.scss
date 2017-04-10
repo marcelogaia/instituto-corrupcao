@@ -5,6 +5,28 @@ $lg: "(min-width: 992px) and (max-width: 1199px)";
 $xl: "(min-width: 1200px)";
 
 @media #{$xs} {
+	.slick-initialized {
+		margin:0 -35px;
+		padding:0 20px;
+
+		.slick-list {
+			margin: 0 35px;
+		}
+
+		.slick-arrow {
+			height:106px;
+			width: 30px;
+			top: 80px;
+
+			&.slick-prev {
+				left:22px;
+			}
+			&.slick-next {
+				right:22px;
+				background-position: -30px;
+			}
+		}
+	}
 	section#header {
 		.jumbotron {
 			h1 {
@@ -65,20 +87,60 @@ $xl: "(min-width: 1200px)";
 				width:calc(33% - 5px);
 				background-size: cover;
 				height:59px;
+				margin:1px;
 				
 				a {    
 					font-size: 12px;
 					padding: 0;
+				}
+
+			}
+		}
+		.content-holder .row {
+			text-align: center;
+			padding-top: 20px;
+			img {
+				display: none;
+			}
+
+			.text-holder {
+				margin-bottom: 0;
+
+				button {
+					position: static;
+					bottom: auto;
+					margin-top: 10px;
 				}
 			}
 		}
 	}
 
 	section#participe {
+		padding-top: 40px;
+		header h3.general-title {
+			font-size: 41px !important;
+		}
 		.service-br-flag {
 			background-size: cover;
 			width: 300px;
 			height: 157px;
+			bottom: -25px;
+		}
+	}
+
+	section#blog {
+	    padding: 35px 0 0 0;
+	}
+
+	section#parceiro {
+		header {
+			h3 {
+				font-size: 27px !important;
+				margin-bottom: 20px;
+			}
+			p {
+				margin-bottom: 20px;
+			}
 		}
 	}
 }

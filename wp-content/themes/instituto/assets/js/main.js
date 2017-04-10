@@ -61,7 +61,15 @@ jQuery( document ).ready( function($) {
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			centerMode: true,
-			variableWidth: true
+			variableWidth: true,
+			responsive: [
+    			{
+					breakpoint: 380,
+					settings: {
+						slidesToShow: 1,
+					}
+				}
+    		]
 		});
 
 		$('.slick-carousel-ouro').slick({
@@ -181,6 +189,7 @@ jQuery( document ).ready( function($) {
 		$(".categories li a").click(function(e){
 			e.preventDefault();
 			e.stopPropagation();
+			
 			var cat = $(this).parent().attr('class');
 			var projects = $(".the-projects");
 			var allProjects = $(".the-projects").find('li');
@@ -201,6 +210,9 @@ jQuery( document ).ready( function($) {
 				});	
 			}
 
+			$(".categories li").removeClass('active');
+			$(this).parents("li").addClass('active');
+			
 			return false;
 		});
 	}

@@ -41,7 +41,7 @@
 				><li class="realizados"><a href="#">Realizados</a></li
 			></ul>
 			<ul class="the-projects">
-				<li class="radio realizados col-xs-12 col-sm-4">
+				<li class="radio educacao realizados col-xs-12 col-sm-4">
 					<div>
 						<h4 class="big-title">Radiografia</h4>
 					</div>
@@ -51,7 +51,7 @@
 						<a href="#">Quero Ver</a>
 					</div>
 				</li>
-				<li class="mapa andamento col-xs-12 col-sm-4">
+				<li class="mapa pesquisa andamento col-xs-12 col-sm-4">
 					<div>
 						<h4 class="big-title">mapa da corrupção</h4>
 					</div>
@@ -61,7 +61,7 @@
 						<a href="#">Quero Ver</a>
 					</div>
 				</li>
-				<li class="corrida captacao col-xs-12 col-sm-4">
+				<li class="corrida politicas captacao col-xs-12 col-sm-4">
 					<div>
 						<h4 class="big-title">Corrida contra corrupção</h4>
 					</div>
