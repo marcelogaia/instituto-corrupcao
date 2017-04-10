@@ -148,9 +148,23 @@ $xl: "(min-width: 1200px)";
 
 
 	body#participe {
-		.precisamos li h4 {width: 100%;}
+		.precisamos ul {margin: 0px; padding: 0px;}
+		.precisamos li {overflow: hidden;}
+		.precisamos li h4, .precisamos li p {width: 100%; display: block; margin: 0; padding: 0; text-align: center;}
 		.precisamos li h4:after {
 			display:none;
+		}
+
+		.buscamos h3 {font: 40px/50px "din-regular" !important; text-align:left; margin-top: 50px;}
+		.buscamos .seja-embaixador {overflow: hidden; font-size: 12px; float: left;}
+		.buscamos .row a {display:block; position: relative; float: left; margin: 0 auto; left: calc(100% / 4);}
+		.buscamos h4 {float: left}
+		.buscamos .wp-video {overflow: hidden; float: left; margin: 20px 0;}
+
+		.buscamos .social {overflow: hidden;}
+
+		.voluntarios .seja-voluntario {
+			margin: 0px; padding: 0 20px;
 		}
 	}
 
