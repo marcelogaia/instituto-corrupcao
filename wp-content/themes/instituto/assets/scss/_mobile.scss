@@ -28,7 +28,9 @@ $xl: "(min-width: 1200px)";
 		}
 	}
 	section#header {
+
 		.jumbotron {
+			height: 310px;
 			h1 {
 				font-size: 32px;
 				padding:0 15px;
@@ -145,48 +147,352 @@ $xl: "(min-width: 1200px)";
 		}
 	}
 
+	body#home {
+		section#header .jumbotron {
+			padding-top: 125px;
+		}
 
+		section#projetos {
+			padding-top: 30px;
+		}
+	}
 
 	body#participe {
-		.precisamos ul {margin: 0px; padding: 0px;}
-		.precisamos li {overflow: hidden;}
-		.precisamos li h4, .precisamos li p {width: 100%; display: block; margin: 0; padding: 0; text-align: center;}
+		height: 450px;
+		.precisamos ul {
+			margin: 0px; 
+			padding: 0px;
+		}
+
+		.precisamos li {
+			overflow: hidden;
+		}
+
+		.precisamos li h4, .precisamos li p {
+			width: 100%; 
+			display: block; 
+			margin: 0; 
+			padding: 0; 
+			text-align: center;
+		}
+
 		.precisamos li h4:after {
 			display:none;
 		}
 
-		.buscamos h3 {font: 40px/50px "din-regular" !important; text-align:left; margin-top: 50px;}
-		.buscamos .seja-embaixador {overflow: hidden; font-size: 12px; float: left;}
-		.buscamos .row a {display:block; position: relative; float: left; margin: 0 auto; left: calc(100% / 4);}
-		.buscamos h4 {float: left}
-		.buscamos .wp-video {overflow: hidden; float: left; margin: 20px 0;}
+		.buscamos h3 {
+			font: 40px/50px "din-regular" !important; 
+			text-align:left; 
+			margin-top: 50px;
+		}
 
-		.buscamos .social {overflow: hidden;}
+		.buscamos .seja-embaixador {
+			overflow: hidden; 
+			font-size: 12px; 
+			float: left;
+		}
+
+		.buscamos {
+			.row a {
+				display:block; 
+				position: relative; 
+				float: left; 
+				margin: 0 auto; 
+				left: calc(100% / 4);
+			}
+			.wp-video {
+				overflow: hidden; 
+				float: left; 
+				margin: 20px 0;
+				width:100%;
+
+				iframe {
+					width: 100%;
+				}
+			}
+
+			h4 {
+				float: left;
+			}
+
+			ul.social {
+				padding-left: 3px;
+
+				li {
+					margin-top: 7px;
+				}
+			}
+		}
+
+		.quer-doar {
+			.items {
+				padding:0;
+				margin-left: -40px;
+			}
+		}
+
+		.buscamos .social {
+			overflow: hidden;
+		}
+
 
 		.voluntarios .seja-voluntario {
-			margin: 0px; padding: 0 20px;
+
+			margin: 0px; 
+			padding: 0 20px;
+		}
+
+		.general-title {
+			font-size: 35px !important;
+			margin-top: 20px;
 		}
 	}
 
-	footer {
-		.footer-title, .imprensa, .menu-principal-container {display: none;}
-		.title-social {display:block; text-align: center !important;}
+	body#biblioteca {
+		h3 {
+			padding: 40px 0 0;
+		}
 
-		p {text-align: center;}
+		section.search form {
+			input, button {
+				margin:16px 2px;
+			}
+			input {
+				width: calc(100% - 140px);
+				padding-left:10px;
+			}
 
-		.contact-us-social li {display: inline-block; width:19%; text-align: center;}
-		.contact-us-social li a {margin: 0px !important;}
+			button {
+				width: 115px;
+				font-size: 15px;
+			}
+		}
+	}
 
-		.form {height:270px;overflow: hidden;}
-		.form-title {display:block;}
+	body#faq {
+		section#header .jumbotron h1 {
+			font-size: 50px;
+			line-height: 50px;
+		}
 
-		.last-line span {display:block; width: 100%; text-align: center; font-size: 12px;}
+		header {	
+			.general-title {
+				font-size: 27px !important;
+			}
+			p {
+				line-height: 1em;
+			}
+		}
 
-		ul.menu li {display: inline-block; font-size: 10px;}
+		.search {
+			input, button {
+				margin: 15px 2px;
+			}
 
-		.line-logo {margin-top: 15px !important;}
+			input {
+				padding-left: 10px;
+				width: calc(100% - 140px);
+			}
 
-		.line-logo .logo {display: block; margin: 0 auto; width:100%; text-align: center !important;}
+			button {
+				width: 115px;
+				font-size: 15px;
+			}
+		}
+
+		.pergunta {
+			h4 {
+				font: 25px/1.2em $font_din-black;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			.resposta {
+				font-size: 16px;
+				padding: 30px 15px 20px;
+			}
+		}
+	}
+
+	body#projetos {
+		.chamada {
+			.container {
+				padding: 30px 0 20px;
+
+				h3 {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	body#blog {
+		section#side {
+			display: none;
+		}
+	}
+
+	footer#contato {
+		.footer-title, .imprensa, .menu-principal-container {
+			display: none;
+		}
+
+		.title-social {
+			display:block; 
+			text-align: center !important;
+		}
+
+		p {
+			text-align: center;
+		}
+
+		.contact-us-social li {
+			width:19%; 
+			text-align: center;
+
+			a {
+				margin: 0px !important;
+			}
+		}
+
+		.form {
+			height:270px;overflow: hidden;
+		}
+
+		.form-title {
+			display:block;
+		}
+
+		.last-line span {
+			display:block; 
+			width: 100%; 
+			text-align: center; 
+			font-size: 12px;
+		}
+
+		ul.menu li {
+			display: inline-block; 
+			font-size: 10px;
+		}
+
+		.line-logo {
+			margin-top: 15px !important;
+			.logo {
+				display: block; 
+				margin: 0 auto; 
+				width:100%; 
+				text-align: center !important;
+			}
+		}
+	}
+
+	body#o-instituto {
+		.porque-somos-diferentes {
+			h2 {
+				font-size: 30px;
+				margin: 35px 0 20px;
+			}
+			p {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			.wp-caption {
+				width: 100%; 
+				padding: 0 15px;
+
+				iframe {
+					width:100%;
+				}
+			}
+		}
+
+		.fundadores-associados {
+			padding: 20px 0 20px;
+			ul {
+				padding: 0 10px;
+				font-size: 12px;
+
+				li {
+					margin-bottom: 10px;
+				}
+			}
+		}
+		.diretoria-e-conselho-estrategico {
+			h2 {
+				font-size: 30px;
+			}
+
+			ul {
+				padding: 0;
+
+				li {
+					height: auto;
+				}
+			}
+
+			.legend {
+				margin: 0;
+				padding: 0;
+
+				li { 
+					width: calc(50% - 15px);
+					margin: 0 5px 30px;
+
+					&:before {
+						height: 40px;
+						width: 40px;
+					}
+				}
+			}
+		}
+		.obrigado {
+			.row  {
+				h2 {
+					padding-left:10px;
+					padding-right:10px;
+					font-size:41px;
+					line-height: 1.2em;
+					margin-top:0;
+				}
+
+				&>h2 {
+					font-size:32px;
+					margin-top:80px;
+				}
+
+				ul {
+					padding: 0 10px;
+					font-size: 12px;
+
+					li {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+
+		.transparencia {
+			h2 {
+				font-size: 55px;
+			}
+
+			p {
+				line-height: 1.2em;
+				font-size: 20px;
+				padding: 15px;
+			}
+		}
+
+		.duvidas {
+
+			height: 400px; 
+
+			h2 {
+				font-size: 50px;
+				letter-spacing: 5px;
+			}
+		}
 	}
 }
 

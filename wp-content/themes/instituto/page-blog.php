@@ -61,7 +61,7 @@
 					<h2>Destaque</h2>
 					<ul class="row">
 <?php while( have_posts() ): the_post(); ?>	
-						<li class="<?= $count<=0 ? 'col-xs-7' : 'col-xs-5' ?>">
+						<li class="<?= $count<=0 ? 'col-sm-7' : 'col-sm-5 col-xs-6' ?>">
 						<?php if(get_the_post_thumbnail()): ?>
 							<a href="<?php the_permalink(); ?>" style="background-image: url(<?= the_post_thumbnail_url() ?>)">
 						<?php else: ?>

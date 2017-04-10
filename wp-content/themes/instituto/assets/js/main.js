@@ -13,22 +13,7 @@ jQuery( document ).ready( function($) {
 	var vidHeight = $video.attr('height');
 
     function makeBoardProfilePictureRound() {
-    	$('.diretoria-e-conselho-estrategico img').wrap("<div class='img-circle'><a href='mailto:contato@naoaceitocorrupcao.org.br'></div>");
-
-    	var left = true;
-
-    	$('.img-circle').each(function(){
-    		// var img = $(this).find('img').eq(0);
-    		// $(this).css({
-    		// 	backgroundImage	: "url("+img.attr('src')+")"
-    		// });
-
-    		if(!left) $(this).parents("li").addClass('right');
-
-    		left = !left;
-
-    		// img.remove();
-    	});
+    	$('.diretoria-e-conselho-estrategico img').wrap("<div><a href='mailto:contato@naoaceitocorrupcao.org.br'></div>");
     }
 
 	function fixMenuHeight() {
@@ -75,21 +60,53 @@ jQuery( document ).ready( function($) {
 		$('.slick-carousel-ouro').slick({
 			slidesToShow: 4,
 			slidesToScroll: 1,
+			responsive: [
+    			{
+					breakpoint: 380,
+					settings: {
+						slidesToShow: 1,
+					}
+				}
+    		]
 		});
 
 		$('.slick-carousel-prata').slick({
 			slidesToShow: 6,
 			slidesToScroll: 1,
+			responsive: [
+    			{
+					breakpoint: 380,
+					settings: {
+						slidesToShow: 1,
+					}
+				}
+    		]
 		});
 
 		$('.slick-carousel-bronze').slick({
 			slidesToShow: 9,
 			slidesToScroll: 1,
+			responsive: [
+    			{
+					breakpoint: 380,
+					settings: {
+						slidesToShow: 1,
+					}
+				}
+    		]
 		});
 
 		$('.slick-carousel-biblioteca').slick({
 			slidesToShow: 4,
-			slidesToScroll: 1
+			slidesToScroll: 1,
+			responsive: [
+    			{
+					breakpoint: 380,
+					settings: {
+						slidesToShow: 1,
+					}
+				}
+    		]
 		});
 
 		$('.slick-carousel-blog').slick({

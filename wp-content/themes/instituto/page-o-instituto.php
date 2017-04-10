@@ -64,8 +64,8 @@
 								<p><?php the_content() ?></p>
 							</li>
 <?php
-	$left = !$left;
-endwhile; ?>
+		$left = !$left;
+	endwhile; ?>
 						</ul>
 					</div>
 				</div>

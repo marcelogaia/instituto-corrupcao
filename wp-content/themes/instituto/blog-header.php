@@ -122,15 +122,16 @@ $isHome = is_home();
 					</nav>
 
 					<div class="row" style="overflow:hidden; margin: 0;">
-						<div class="col-xs-8">
-							<a href="<?= site_url() ?>"><img src="img/logo-header.png" /></a></div><!--/.col-xs-8-->
-							<div class="col-xs-4">
-								<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
-								<div class="participe"><button>Participe</button></div>
-							</div><!--/.col-xs-4-->
-							<div class="stripped-border"><!-- Border --></div>
-						</div><!--/.row-->
-					</div>
+						<div class="col-sm-8 col-xs-5 logo">
+							<a href="<?= site_url() ?>"><img src="img/logo-header.png" /></a>
+						</div><!--/.col-xs-8-->
+						<div class="col-xs-4">
+							<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
+							<div class="participe"><button>Participe</button></div>
+						</div><!--/.col-xs-4-->
+						<div class="stripped-border"><!-- Border --></div>
+					</div><!--/.row-->
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
