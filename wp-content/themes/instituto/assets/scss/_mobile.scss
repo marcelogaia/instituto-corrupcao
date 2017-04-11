@@ -129,6 +129,16 @@ $xl: "(min-width: 1200px)";
 			height: 157px;
 			bottom: -25px;
 		}
+
+		.row.textos .eu-quero {
+			display: inline-block;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.row.botoes {
+			display: none;
+		}
 	}
 
 	section#blog {
@@ -330,6 +340,24 @@ $xl: "(min-width: 1200px)";
 		section#side {
 			display: none;
 		}
+
+	    section#last-news ul.filters li {
+	    	float:left;
+	    	width: 50%;
+
+	    	padding-left: 5px;
+
+	    	&:first-of-type {
+		    	padding-left: 0;
+		    	padding-right: 5px;
+	    	}
+
+	    	button {
+	    		width: 100%;
+	    		font-size: 18px;
+	    		margin-bottom: 20px;
+	    	}
+	    }
 	}
 
 	footer#contato {
@@ -428,6 +456,14 @@ $xl: "(min-width: 1200px)";
 
 				li {
 					height: auto;
+
+					&.right {
+						text-align: left;
+					}
+
+					.img-circle {
+						float: none;
+					}
 				}
 			}
 
@@ -482,6 +518,9 @@ $xl: "(min-width: 1200px)";
 				font-size: 20px;
 				padding: 15px;
 			}
+			.bootstrap-select {
+				margin: 0 0 20px;
+			}
 		}
 
 		.duvidas {
@@ -493,6 +532,14 @@ $xl: "(min-width: 1200px)";
 				letter-spacing: 5px;
 			}
 		}
+	}
+
+	ul[class^='slick'] {
+		width:100%;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 

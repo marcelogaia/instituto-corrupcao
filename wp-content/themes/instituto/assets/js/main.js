@@ -234,8 +234,19 @@ jQuery( document ).ready( function($) {
 		});
 	}
 
+	function protectLinks() {
+		$('a').click(function(e){
+			if($(this).attr('href') == "#") {
+				e.preventDefault();
+				e.stopPropagation();
+				return false;
+			}
+		});
+	}
+
 	// Called Functions
 	$( function() {
+		// protectLinks();
 		fixMenuHeight();
 		addSlickCarousel();
 		openResponsiveMenu();
@@ -243,7 +254,8 @@ jQuery( document ).ready( function($) {
 		fixedMenu();
 
 		oInstitutoPageFunctions();
-		projectFilters()
+		projectFilters();
+
 	});
 
 	// Window Resize

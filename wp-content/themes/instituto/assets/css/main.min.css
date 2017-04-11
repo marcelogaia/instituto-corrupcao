@@ -788,6 +788,10 @@ section#participe {
     width: 170px; }
     section#participe .row article .eu-quero:hover {
       background-color: #65665c; }
+  section#participe .row.textos .eu-quero {
+    display: none; }
+  section#participe .row.botoes {
+    display: block; }
   section#participe .service-br-flag {
     margin: 0 auto;
     background: transparent url(../img/br-flag.png) no-repeat;
@@ -988,14 +992,41 @@ body#o-instituto .transparencia {
     font: 190px "din-condensed-bold";
     color: #ffc72c;
     opacity: 0.6;
-    margin: 70px 0 30px; }
+    margin: 70px 0 10px; }
   body#o-instituto .transparencia p {
     font: 25px "din-regular"; }
+  body#o-instituto .transparencia .bootstrap-select {
+    height: 40px;
+    margin: 40px 0; }
+    body#o-instituto .transparencia .bootstrap-select .dropdown-toggle {
+      color: white;
+      height: 40px;
+      font: 17px/1em "din-alternate";
+      background: #3f4444;
+      border: 1px #65665c solid; }
+      body#o-instituto .transparencia .bootstrap-select .dropdown-toggle .caret {
+        border: none;
+        width: 16px;
+        height: 9px;
+        background: url(../img/caret.png) center center no-repeat; }
+    body#o-instituto .transparencia .bootstrap-select .dropdown-menu.open {
+      color: white;
+      line-height: 40px;
+      font: 17px/1em "din-alternate";
+      background: #3f4444; }
+      body#o-instituto .transparencia .bootstrap-select .dropdown-menu.open li {
+        background: #3f4444; }
+        body#o-instituto .transparencia .bootstrap-select .dropdown-menu.open li a {
+          color: white; }
+          body#o-instituto .transparencia .bootstrap-select .dropdown-menu.open li a:hover, body#o-instituto .transparencia .bootstrap-select .dropdown-menu.open li a:focus {
+            background: #65665c; }
   body#o-instituto .transparencia .bt-ok {
     background: #ffc72c;
-    text-align: center;
-    padding: 15px;
-    font-size: 12px; }
+    font: 17px/1em "din-alternate";
+    color: #3f4444;
+    border: 1px #3f4444 solid;
+    height: 40px;
+    width: 40px; }
 body#o-instituto .parceiros {
   color: white;
   background-color: #8b8b8b;
@@ -2256,6 +2287,12 @@ body#blog-interna section#comments {
       width: 300px;
       height: 157px;
       bottom: -25px; }
+    section#participe .row.textos .eu-quero {
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 20px; }
+    section#participe .row.botoes {
+      display: none; }
 
   section#blog {
     padding: 35px 0 0 0; }
@@ -2366,6 +2403,17 @@ body#blog-interna section#comments {
 
   body#blog section#side {
     display: none; }
+  body#blog section#last-news ul.filters li {
+    float: left;
+    width: 50%;
+    padding-left: 5px; }
+    body#blog section#last-news ul.filters li:first-of-type {
+      padding-left: 0;
+      padding-right: 5px; }
+    body#blog section#last-news ul.filters li button {
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 20px; }
 
   footer#contato .footer-title, footer#contato .imprensa, footer#contato .menu-principal-container {
     display: none; }
@@ -2424,6 +2472,10 @@ body#blog-interna section#comments {
     padding: 0; }
     body#o-instituto .diretoria-e-conselho-estrategico ul li {
       height: auto; }
+      body#o-instituto .diretoria-e-conselho-estrategico ul li.right {
+        text-align: left; }
+      body#o-instituto .diretoria-e-conselho-estrategico ul li .img-circle {
+        float: none; }
   body#o-instituto .diretoria-e-conselho-estrategico .legend {
     margin: 0;
     padding: 0; }
@@ -2453,11 +2505,20 @@ body#blog-interna section#comments {
     line-height: 1.2em;
     font-size: 20px;
     padding: 15px; }
+  body#o-instituto .transparencia .bootstrap-select {
+    margin: 0 0 20px; }
   body#o-instituto .duvidas {
     height: 400px; }
     body#o-instituto .duvidas h2 {
       font-size: 50px;
-      letter-spacing: 5px; } }
+      letter-spacing: 5px; }
+
+  ul[class^='slick'] {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0; } }
 @media (min-width: 576px) and (max-width: 767px) {
   p {
     font-size: 18px; } }

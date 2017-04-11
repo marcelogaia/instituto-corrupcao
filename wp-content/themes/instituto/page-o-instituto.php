@@ -24,7 +24,7 @@
 					<div>
 						<div class="wp-caption">
 							<div class="wp-video" style="border: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/-g6AUHINKs4" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/-g6AUHINKs4" frameborder="0" allowfullscreen></iframe>
               </div>
 							<p class="wp-caption-text"><em>Assista nosso manifesto - "UNIÃO"</em></p>
 						</div>
@@ -121,49 +121,47 @@
 		</div>
 		<div class="parceiros" >
 			<div class="container">
+				<h2>Parceiros</h2>
+				<p class="col-sm-8 col-sm-offset-2">Morbi at consequat magna, ac imperdiet ligula. Nam feugiat suscipit nisl. Quisque erat ipsum, placerat ac quam at, lobortis rhoncus libero.</p>
 				<div class="row">
-					<h2>Parceiros</h2>
-					<p class="col-sm-8 col-sm-offset-2">Morbi at consequat magna, ac imperdiet ligula. Nam feugiat suscipit nisl. Quisque erat ipsum, placerat ac quam at, lobortis rhoncus libero.</p>
-					<div class="row">
-						<h4>Ouro</h4>
-						<ul class="slick-carousel-ouro">
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-						</ul>
+					<h4>Ouro</h4>
+					<ul class="slick-carousel-ouro">
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+					</ul>
 
-						<h4>Prata</h4>
-						<ul class="slick-carousel-prata">
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-						</ul>
-						<h4>Bronze</h4>
-						<ul class="slick-carousel-bronze">
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-							<li><img src="img/partner-placeholder.png"></li>
-						</ul>
-					</div>
+					<h4>Prata</h4>
+					<ul class="slick-carousel-prata">
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+					</ul>
+					<h4>Bronze</h4>
+					<ul class="slick-carousel-bronze">
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+						<li><img src="img/partner-placeholder.png"></li>
+					</ul>
 				</div>
 			</div>
 		</div>

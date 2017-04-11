@@ -101,11 +101,11 @@ get_header();
 				<?php else: ?>
 				<div class="post">
 				<?php endif;?>
-					<a href="#" class="post-title"><?= the_title() ?></a>
-					<a href="#" class="post-entry">
-						<h3><?= the_title() ?></h3>
-						<p><?= the_excerpt() ?></p>
-						<span href="#" title="Read more" class="post-button">ler mais</span>
+					<a href="<?php the_permalink() ?>" class="post-title"><?= the_title() ?></a>
+					<a href="<?php the_permalink() ?>" class="post-entry">
+						<h3><?php the_title() ?></h3>
+						<p><?php the_excerpt() ?></p>
+						<span href="<?php the_permalink() ?>" title="Read more" class="post-button">ler mais</span>
 					</a><!--/.post-entry-->
 				</div><!--/.post-->
 			</article>
@@ -121,21 +121,24 @@ get_header();
 			<h3 class="general-title">FAÇA PARTE DA MUDANÇA. <strong>PARTICIPE.</strong></h3>
 			<p></p>
 		</header>
-		<div class="row col-sm-10 col-sm-offset-1"> 
+		<div class="row col-sm-10 col-sm-offset-1 textos"> 
 			<article class="col-sm-4">
 				<h4>Embaixador</h4>
 				<p>Os embaixadores nos ajudarão a divulgar o instituto, nossa causa e nossos projetos em suas respectivas redes sociais. Nao ha aporte financeiro, somento dedicacao de tempo e energia. Recebem o selo virtual de Embaixador INAC e sao mencionados no setor de Embaixadores.</p>
+				<a href="<?= site_url('participe') ?>" class="eu-quero">Eu quero!</a>
 			</article>
 			<article class="col-sm-4">
 				<h4>Doação</h4>
 				<p>Os doadores investem o valor que lhes for conveniente, com periodicidade anual, podendo ser definidos como Ouro, Prata ou Bronze. Receberão selo virtual de doador, bem como menção no setro respectivo do site.</p>
+				<a href="<?= site_url('participe') ?>" class="eu-quero">Eu quero!</a>
 			</article>
 			<article class="col-sm-4">
 				<h4>Voluntários</h4>
 				<p>Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus.</p>
+				<a href="<?= site_url('participe') ?>" class="eu-quero">Eu quero!</a>
 			</article>
 		</div>
-		<div class="row col-sm-10 col-sm-offset-1"> 
+		<div class="row col-sm-10 col-sm-offset-1 botoes"> 
 			<article class="col-sm-4">
 				<a href="<?= site_url('participe') ?>" class="eu-quero">Eu quero!</a>
 			</article>

@@ -233,6 +233,9 @@ $font-din-black-2: url(fonts/din/din-black.otf);
 You can add your own CSS here.
 Click the help icon above to learn more.
 */
+* {
+	//outline: 1px red solid;
+}
 
 html,body {
 	height: 100%;
@@ -1135,6 +1138,14 @@ section#participe {
 				}
 			}
 		}
+
+		&.textos .eu-quero {
+			display: none;
+		}
+
+		&.botoes {
+			display: block;
+		}
 	}
 
 	.service-br-flag {
@@ -1431,18 +1442,60 @@ body#o-instituto {
 			font: 190px $font_din-condensed;
 			color: $color_std-yellow;
 			opacity: 0.6;
-			margin: 70px 0 30px;
+			margin: 70px 0 10px;
 		}
 
 		p {
 			font: 25px $font_din;
 		}
 
+		.bootstrap-select {
+			height: 40px;
+			margin: 40px 0;
+
+			.dropdown-toggle {
+				color: white;
+				height: 40px;
+				font: 17px/1em $font_din-alternate;
+				background: $color_dark-grey;
+				border: 1px $color_mid-grey solid;
+
+
+				.caret {
+					border: none;
+					width: 16px;
+					height: 9px;
+					background: url(../img/caret.png) center center no-repeat;
+				}
+			}
+
+			.dropdown-menu.open {
+				color: white;
+				line-height: 40px;
+				font: 17px/1em $font_din-alternate;
+				background: $color_dark-grey;
+
+				li {
+					background: $color_dark-grey;
+
+					a {
+						color: white;
+
+						&:hover, &:focus {
+							background: $color_mid-grey;
+						}
+					}
+				}
+			}
+		}
+
 		.bt-ok {
 			background: #ffc72c;
-			text-align: center;
-			padding: 15px;
-			font-size: 12px;
+			font: 17px/1em $font_din-alternate;
+			color: $color_dark-grey;
+			border: 1px $color_dark-grey solid;
+			height: 40px;
+			width:40px;
 		}
 	}
 
