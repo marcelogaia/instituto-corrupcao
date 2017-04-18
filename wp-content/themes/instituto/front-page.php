@@ -21,17 +21,17 @@ get_header();
 			<h3 class="general-title">Projetos</h3>
 			<p>Nossos projetos se dividem nos seguintes eixos de atuação:</p>
 		</header>
-		<?php 
+		<?php
 
 		$args = array(
 			'orderby'          => 'date',
 			'order'            => 'ASC',
 			'post_type'        => 'pt_projetos',
 			'post_status'      => 'publish',
-			'suppress_filters' => true 
+			'suppress_filters' => true
 			);
 
-		$projetos_array = get_posts( $args ); 
+		$projetos_array = get_posts( $args );
 
 		$c = 1;
 //print_r($post);
@@ -68,27 +68,27 @@ get_header();
 <section id="blog" class="front-page-section">
 	<div class="container">
 		<header>
-			<h3 class="general-title">Blog</h3>
+			<h3 class="general-title">BloCo</h3>
 			<p>O Blog contra a Corrupção</p>
 		</header>
 		<div class="row">
-<?php 
+<?php
 
-	query_posts( array(	
-		'category_name' => "principal", 
+	query_posts( array(
+		'category_name' => "principal",
 		'posts_per_page' => 2
 	));
 
 	if(!have_posts()) {
-		query_posts( array(	
-			'category_name' => "destaque", 
+		query_posts( array(
+			'category_name' => "destaque",
 			'posts_per_page' => 2
 		));
 	}
 
 	if(!have_posts()) {
-		query_posts( array(	
-			'category_name' => "uncategorized", 
+		query_posts( array(
+			'category_name' => "uncategorized",
 			'posts_per_page' => 2
 		));
 	}
@@ -121,7 +121,7 @@ get_header();
 			<h3 class="general-title">FAÇA PARTE DA MUDANÇA. <strong>PARTICIPE.</strong></h3>
 			<p></p>
 		</header>
-		<div class="row col-sm-10 col-sm-offset-1 textos"> 
+		<div class="row col-sm-10 col-sm-offset-1 textos">
 			<article class="col-sm-4">
 				<h4>Embaixador</h4>
 				<p>Os embaixadores nos ajudarão a divulgar o instituto, nossa causa e nossos projetos em suas respectivas redes sociais. Nao ha aporte financeiro, somento dedicacao de tempo e energia. Recebem o selo virtual de Embaixador INAC e sao mencionados no setor de Embaixadores.</p>
@@ -138,7 +138,7 @@ get_header();
 				<a href="<?= site_url('participe') ?>" class="eu-quero">Eu quero!</a>
 			</article>
 		</div>
-		<div class="row col-sm-10 col-sm-offset-1 botoes"> 
+		<div class="row col-sm-10 col-sm-offset-1 botoes">
 			<article class="col-sm-4">
 				<a href="<?= site_url('participe') ?>" class="eu-quero">Eu quero!</a>
 			</article>
@@ -160,9 +160,9 @@ get_header();
 			<p>Queremos agradecer nossos parceiros, sem quem não seria possível nada.</p>
 		</header>
 		<ul class="slick-carousel">
-<?php 
-	query_posts( array(	
-		'category_name' => "principal", 
+<?php
+	query_posts( array(
+		'category_name' => "principal",
 		'posts_per_page' => 2
 	));
 ?>

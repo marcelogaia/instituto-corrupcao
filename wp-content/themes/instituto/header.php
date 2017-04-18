@@ -25,7 +25,7 @@ $isHome = is_home();
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">  
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
 	<link rel="stylesheet" type="text/css" href="css/main.min.css"/>
@@ -92,7 +92,7 @@ $isHome = is_home();
 												</p>
 											</form>
 										</div>
-<?php 
+<?php
 	$socialArr = array();
 
 	if(!empty($GLOBALS['cgv']['linkedin'])) $socialArr['linkedin'] = $GLOBALS['cgv']['linkedin'];
@@ -119,7 +119,7 @@ $isHome = is_home();
 										<?php if(!empty($socialArr['google-plus'])): ?>
 											<a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
 										<?php endif; ?>
-											<div class="participe"><button>Participe</button></div>
+											<div class="participe"><button type="reset" onclick="location.href='/INAC/instituto-corrupcao/participe/'">Participe></button></div>
 										</p>
 	<?php endif; ?>
 									</div><!--/.box-right-->
@@ -134,7 +134,7 @@ $isHome = is_home();
 						</div><!--/.col-sm-8-->
 						<div class="col-sm-4">
 							<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
-							<div class="participe"><button>Participe</button></div>
+							<div class="participe"><button type="reset" onclick="location.href='/INAC/instituto-corrupcao/participe/'">Participe</button></div>
 						</div><!--/.col-sm-4-->
 						<div class="stripped-border"><!-- Border --></div>
 					</div><!--/.row-->

@@ -143,6 +143,14 @@ $xl: "(min-width: 1200px)";
 
 	section#blog {
 	    padding: 35px 0 0 0;
+
+			.post {
+				&:hover {
+					.post-entry {
+						display: none;
+					}
+				}
+			}
 	}
 
 	section#parceiro {
@@ -170,7 +178,7 @@ $xl: "(min-width: 1200px)";
 	body#participe {
 		height: 450px;
 		.precisamos ul {
-			margin: 0px; 
+			margin: 0px;
 			padding: 0px;
 		}
 
@@ -179,10 +187,10 @@ $xl: "(min-width: 1200px)";
 		}
 
 		.precisamos li h4, .precisamos li p {
-			width: 100%; 
-			display: block; 
-			margin: 0; 
-			padding: 0; 
+			width: 100%;
+			display: block;
+			margin: 0;
+			padding: 0;
 			text-align: center;
 		}
 
@@ -191,28 +199,28 @@ $xl: "(min-width: 1200px)";
 		}
 
 		.buscamos h3 {
-			font: 40px/50px "din-regular" !important; 
-			text-align:left; 
+			font: 40px/50px "din-regular" !important;
+			text-align:left;
 			margin-top: 50px;
 		}
 
 		.buscamos .seja-embaixador {
-			overflow: hidden; 
-			font-size: 12px; 
+			overflow: hidden;
+			font-size: 12px;
 			float: left;
 		}
 
 		.buscamos {
 			.row a {
-				display:block; 
-				position: relative; 
-				float: left; 
-				margin: 0 auto; 
+				display:block;
+				position: relative;
+				float: left;
+				margin: 0 auto;
 				left: calc(100% / 4);
 			}
 			.wp-video {
-				overflow: hidden; 
-				float: left; 
+				overflow: hidden;
+				float: left;
 				margin: 20px 0;
 				width:100%;
 
@@ -248,7 +256,7 @@ $xl: "(min-width: 1200px)";
 
 		.voluntarios .seja-voluntario {
 
-			margin: 0px; 
+			margin: 0px;
 			padding: 0 20px;
 		}
 
@@ -285,7 +293,7 @@ $xl: "(min-width: 1200px)";
 			line-height: 50px;
 		}
 
-		header {	
+		header {
 			.general-title {
 				font-size: 27px !important;
 			}
@@ -313,8 +321,7 @@ $xl: "(min-width: 1200px)";
 		.pergunta {
 			h4 {
 				font: 25px/1.2em $font_din-black;
-				padding-left: 15px;
-				padding-right: 15px;
+				padding: 15px;
 			}
 
 			.resposta {
@@ -341,6 +348,7 @@ $xl: "(min-width: 1200px)";
 			display: none;
 		}
 
+			section#last-news ul.filters {overflow: hidden;}
 	    section#last-news ul.filters li {
 	    	float:left;
 	    	width: 50%;
@@ -360,13 +368,20 @@ $xl: "(min-width: 1200px)";
 	    }
 	}
 
+	body#blog-interna {
+		.featured-img {
+			height: 200px;
+			margin-top: 108px;
+		}
+	}
+
 	footer#contato {
 		.footer-title, .imprensa, .menu-principal-container {
 			display: none;
 		}
 
 		.title-social {
-			display:block; 
+			display:block;
 			text-align: center !important;
 		}
 
@@ -375,7 +390,7 @@ $xl: "(min-width: 1200px)";
 		}
 
 		.contact-us-social li {
-			width:19%; 
+			width:19%;
 			text-align: center;
 
 			a {
@@ -392,23 +407,23 @@ $xl: "(min-width: 1200px)";
 		}
 
 		.last-line span {
-			display:block; 
-			width: 100%; 
-			text-align: center; 
+			display:block;
+			width: 100%;
+			text-align: center;
 			font-size: 12px;
 		}
 
 		ul.menu li {
-			display: inline-block; 
+			display: inline-block;
 			font-size: 10px;
 		}
 
 		.line-logo {
 			margin-top: 15px !important;
 			.logo {
-				display: block; 
-				margin: 0 auto; 
-				width:100%; 
+				display: block;
+				margin: 0 auto;
+				width:100%;
 				text-align: center !important;
 			}
 		}
@@ -426,7 +441,7 @@ $xl: "(min-width: 1200px)";
 			}
 
 			.wp-caption {
-				width: 100%; 
+				width: 100%;
 				padding: 0 15px;
 
 				iframe {
@@ -471,7 +486,7 @@ $xl: "(min-width: 1200px)";
 				margin: 0;
 				padding: 0;
 
-				li { 
+				li {
 					width: calc(50% - 15px);
 					margin: 0 5px 30px;
 
@@ -525,7 +540,7 @@ $xl: "(min-width: 1200px)";
 
 		.duvidas {
 
-			height: 400px; 
+			height: 400px;
 
 			h2 {
 				font-size: 50px;

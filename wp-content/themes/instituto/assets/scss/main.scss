@@ -722,8 +722,8 @@ footer#contato {
 		margin: -7px 0 55px;
 
 		li {
-			display: inline-block; 
-		
+			display: inline-block;
+
 			a {
 				margin:0 20px 0 0;
 				font-size: 30px;
@@ -1324,6 +1324,7 @@ body#o-instituto {
 		li {
 			height: 300px;
 			color: black;
+			list-style: none;
 
 			.img-circle {
 				width: 230px;
@@ -1419,6 +1420,7 @@ body#o-instituto {
 
 			li {
 				text-transform: uppercase;
+				list-style: none;
 
 				&:first-child:before {
 					content: "";
@@ -1604,6 +1606,7 @@ body#o-instituto {
 			li {
 				text-transform: uppercase;
 				color: $color_mid-grey;
+				list-style: none;
 
 				&:first-child:before {
 					content: "";
@@ -1695,22 +1698,22 @@ body#faq {
 	.pergunta {
 		h4 {
 			width: 100%;
-			height: 150px;
-			display: table;
+			display: block;
 			position: relative;
 			font:30px $font_din-black;
 			color: $color_std-yellow;
 			text-transform: uppercase;
 			text-align: center;
 			background-color: $color_dark-grey;
+			padding: 30px 0;
 
 			&.collapsed {
 				background-color: $color_mid-grey;
 			}
 
 			span {
-				display: table-cell;
-				vertical-align: middle;
+				display: block;
+				padding: 20px 0;
 				text-align: center;
 			}
 		}
