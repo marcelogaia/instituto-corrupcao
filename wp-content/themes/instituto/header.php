@@ -119,7 +119,7 @@ $isHome = is_home();
 										<?php if(!empty($socialArr['google-plus'])): ?>
 											<a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
 										<?php endif; ?>
-											<div class="participe"><button type="reset" onclick="location.href='/INAC/instituto-corrupcao/participe/'">Participe></button></div>
+											<div class="participe"><button type="reset" onclick="location.href='/2017/participe/'">Participe></button></div>
 										</p>
 	<?php endif; ?>
 									</div><!--/.box-right-->
@@ -134,7 +134,7 @@ $isHome = is_home();
 						</div><!--/.col-sm-8-->
 						<div class="col-sm-4">
 							<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
-							<div class="participe"><button type="reset" onclick="location.href='/INAC/instituto-corrupcao/participe/'">Participe</button></div>
+							<div class="participe"><button type="reset" onclick="location.href='/2017/participe/'">Participe</button></div>
 						</div><!--/.col-sm-4-->
 						<div class="stripped-border"><!-- Border --></div>
 					</div><!--/.row-->
