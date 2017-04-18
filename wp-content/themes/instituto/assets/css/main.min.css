@@ -14,25 +14,25 @@
 @font-face {
   font-family: "din-regular";
   src: url(fonts/din/din.eot) format("embedded-opentype");
-  src: url(fonts/din/din.woff) format("woff"), url(fonts/din/din.ttf) format("truetype"), url(fonts/din/din.otf);
+  src: url(fonts/din/din.woff) format("woff"), url(fonts/din/din.ttf) format("truetype"), url(fonts/din/din.svg) format("svg"), url(fonts/din/din.woff2) format("woff2"), url(fonts/din/din.otf) format("opentype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "din-condensed-bold";
   src: url(fonts/din/din-condensed-bold.eot) format("embedded-opentype");
-  src: url(fonts/din/din-condensed-bold.woff) format("woff"), url(fonts/din/din-condensed-bold.ttf) format("truetype"), url(fonts/din/din-condensed-bold.otf);
+  src: url(fonts/din/din-condensed-bold.woff) format("woff"), url(fonts/din/din-condensed-bold.ttf) format("truetype"), url(fonts/din/din-condensed-bold.otf) format("opentype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "din-alternate";
   src: url(fonts/din/din-alternate.eot) format("embedded-opentype");
-  src: url(fonts/din/din-alternate.ttf) format("truetype"), url(fonts/din/din-alternate.otf);
+  src: url(fonts/din/din-alternate.otf) format("opentype"), url(fonts/din/din-alternate.svg) format("svg"), url(fonts/din/din-alternate.ttf) format("truetype"), url(fonts/din/din-alternate.woff) format("woff"), url(fonts/din/din-alternate.woff2) format("woff2");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "din-black";
   src: url(fonts/din/din-black.eot) format("embedded-opentype");
-  src: url(fonts/din/din-black.ttf) format("truetype"), url(fonts/din/din-black.otf);
+  src: url(fonts/din/din-black.ttf) format("truetype"), url(fonts/din/din-black.otf) format("opentype"), url(fonts/din/din-black.svg) format("svg"), url(fonts/din/din-black.woff) format("woff"), url(fonts/din/din-black.woff2) format("woff2");
   font-weight: bold;
   font-style: normal; }
 .shade {
