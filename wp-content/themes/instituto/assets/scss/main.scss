@@ -1700,12 +1700,12 @@ body#faq {
 			width: 100%;
 			display: block;
 			position: relative;
-			font:30px $font_din-black;
-			color: $color_std-yellow;
+			font: 30px "din-black";
+			color: #ffc72c;
 			text-transform: uppercase;
 			text-align: center;
-			background-color: $color_dark-grey;
-			padding: 30px 0;
+			background-color: #3f4444;
+
 
 			&.collapsed {
 				background-color: $color_mid-grey;
@@ -1713,7 +1713,7 @@ body#faq {
 
 			span {
 				display: block;
-				padding: 20px 0;
+				padding: 50px;
 				text-align: center;
 			}
 		}
