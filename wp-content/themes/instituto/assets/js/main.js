@@ -244,6 +244,21 @@ jQuery( document ).ready( function($) {
 		});
 	}
 
+	function homeJumbotron() {
+		$("body#home").each(function(){
+			$(window).on('scroll resize',function(){
+
+				var jumbotron = $('#header .jumbotron');
+				var menuHeight = $('#header .nav-wrapper').height();
+
+				console.log(window.innerHeight, menuHeight, window.innerHeight - menuHeight);
+
+				jumbotron.css('height',window.innerHeight - menuHeight);
+
+			}).trigger("scroll");
+		});
+	}
+
 	// Called Functions
 	$( function() {
 		// protectLinks();
@@ -255,7 +270,7 @@ jQuery( document ).ready( function($) {
 
 		oInstitutoPageFunctions();
 		projectFilters();
-
+		homeJumbotron();
 	});
 
 	// Window Resize

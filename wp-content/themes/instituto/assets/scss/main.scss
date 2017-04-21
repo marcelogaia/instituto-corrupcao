@@ -278,6 +278,12 @@ a {
 	}
 }
 
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 .general-title{
 	font: normal normal 40px/1.1em $font_din !important;
 	color: $color_dark-grey !important;
@@ -537,13 +543,15 @@ section#header {
 	}
 
 	.jumbotron {
-		padding: 180px 0 0 0;
+		padding: 0;
 		height:410px;
 		background-image: url(../img/header-home.jpg);
 		background-size: cover;
 		background-position: center center;
 		text-align: center;
 		margin:0;
+		display: table;
+		width: 100%;
 
 		h1{
 			font:60px/1.2em $font_ocrastd;
@@ -552,6 +560,8 @@ section#header {
 			width: 100%;
 			margin:0 0 50px 0;
 			text-transform: uppercase;
+		    display: table-cell;
+		    vertical-align: middle;
 
 			.span-dot {
 				display:none;
