@@ -48,3 +48,18 @@
 		 -o-transform: translateY(-50%);
 			transform: translateY(-50%);
 }
+
+@mixin placeholder($value) {
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: $value;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+		color: $value;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+		color: $value;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+		color: $value;
+	}
+}

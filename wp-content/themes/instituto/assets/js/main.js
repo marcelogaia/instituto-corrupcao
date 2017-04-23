@@ -234,16 +234,6 @@ jQuery( document ).ready( function($) {
 		});
 	}
 
-	function protectLinks() {
-		$('a').click(function(e){
-			if($(this).attr('href') == "#") {
-				e.preventDefault();
-				e.stopPropagation();
-				return false;
-			}
-		});
-	}
-
 	function homeJumbotron() {
 		$("body#home").each(function(){
 			$(window).on('scroll resize',function(){
@@ -259,9 +249,15 @@ jQuery( document ).ready( function($) {
 		});
 	}
 
+	function participeForms() {
+		$('body#participe a.my-modal').click(function (e) {
+		    e.preventDefault();
+		    $(this).ekkoLightbox();
+		});
+	}
+
 	// Called Functions
 	$( function() {
-		// protectLinks();
 		fixMenuHeight();
 		addSlickCarousel();
 		openResponsiveMenu();
@@ -271,6 +267,7 @@ jQuery( document ).ready( function($) {
 		oInstitutoPageFunctions();
 		projectFilters();
 		homeJumbotron();
+		participeForms();
 	});
 
 	// Window Resize

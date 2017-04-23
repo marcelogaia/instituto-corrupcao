@@ -232,7 +232,6 @@ $font-din-black-5: url(fonts/din/din-black.woff2) format('woff2');
 	text-transform: uppercase;
 	width: 175px;
 	display: inline-block;
-	padding-top:6px;
 }
 
 %basic_button {
@@ -2510,14 +2509,22 @@ body#participe {
 					}
 				}
 
-				>button {
+				button {
 					float: left;
 					background: $color_mid-grey;
 					border:none;
 					color: $color_std-yellow;
 					font: 45px/1.1em $font_din-condensed;
 					text-transform: uppercase;
-					padding:0 20px;
+
+					a, a:active, a:visited {
+						color: $color_std-yellow;
+						padding:35px 20px;
+
+						&:hover {
+							color:white;
+						}
+					}
 				}
 
 				>div {
@@ -2534,15 +2541,6 @@ body#participe {
 					img {
 						float:right;
 						margin: 38px 25px 0 5px;
-					}
-				}
-
-				&:hover {
-					// background-position: 84px -174px;
-
-					>button {
-						// background: $color_dark-grey;
-						color: white;
 					}
 				}
 
@@ -2602,7 +2600,73 @@ body#participe {
 			@extend %basic_button;
 		}
 	}
+
+	&.modal-open {
+		.modal-content {
+			@include border-radius(0);
+			overflow: auto;
+		}
+
+		.modal-body {
+			padding: 0;
+
+			.ekko-lightbox-item {
+				height: 100%;
+			}
+		}
+	}
 }
+
+.participe-form {
+	text-align: center;
+	background: $color_std-yellow;
+	padding: 50px;
+	overflow: auto;
+	height: 100%;
+
+	* {
+		background: $color_std-yellow;
+		color:white;	
+	}
+	
+	h2 {
+		margin-top: 0;
+		text-transform: uppercase;
+		font: 32px/1em $font_din-black;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		font: 20px/1em $font_din;
+	}
+
+	input {
+		border: 1px solid white;
+		margin-top: 13px;
+		height: 36px;
+		line-height: 36px;
+		padding: 0 12px;
+		width: 80%;
+		max-width: 315px;
+
+		&[type="submit"] {
+			background: $color_dark-grey;
+			border: none;
+		}
+
+		@include placeholder(white);
+	}
+
+	p.note {
+		text-align: left;
+		display: block;
+		width: 80%;
+		max-width: 315px;
+
+		margin: 0 auto;
+	}
+}
+
 // Blog
 body#blog {
 	.jumbotron {

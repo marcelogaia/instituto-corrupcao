@@ -101,3 +101,20 @@ function get_short_title( $maxchar = 90 ) {
 function the_short_title( $maxchar = 90 ) {
 	echo get_short_title($maxchar);
 }
+
+// Based on: https://wordpress.stackexchange.com/a/231626
+add_filter( 'page_template', function ( $template ) use ( &$post )
+{
+    // Check if we have page which is a child of people, ID 10
+    if ( 11 !== $post->post_parent )
+        return $template;
+
+    // This is a person page, child of people, try to locate our custom page
+    $locate_template = locate_template( 'page-participe-form.php' );
+
+    // Check if our template was found, if not, bail
+    if ( !$locate_template )
+        return $template;
+
+    return $locate_template;
+});

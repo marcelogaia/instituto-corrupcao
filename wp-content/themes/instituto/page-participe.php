@@ -110,14 +110,14 @@
 									<option value="">2ª Corrida Anual</option>
 								</select>
 							</div>
-							<button>eu quero</button>
+							<button><a href="<?= site_url('participe/seja-um-voluntario') ?>" class="my-modal">eu quero</a></button>
 						</li>
 						<li class="empresa">
 							<h4><span>doação <br>por empresa</span></h4>
 							<div>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. condimentum. </p>
 							</div>
-							<button>eu quero</button>
+							<button><a href="<?= site_url('participe/seja-um-voluntario') ?>" class="my-modal">eu quero</a></button>
 						</li>
 					</ul>
 				</div>
@@ -130,12 +130,11 @@
 				<div class="col-sm-8 col-xs-offset-2 seja-voluntario">
 					<h3 class="general-title">precisamos de voluntários</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-					<button>quero ser um</button>
+					<a href="<?= site_url('participe/seja-um-voluntario') ?>" class="my-modal"><button>quero ser um</button></a>
 				</div>
 			</div>
 		</div>
 	</section>
-
 <?php
   get_footer();
 ?>
