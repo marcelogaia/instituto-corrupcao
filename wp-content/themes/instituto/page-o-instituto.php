@@ -45,7 +45,8 @@
 							<li style="text-align: center;">Diretoria</li>
 							<li style="text-align: center;">Conselho Estratégico</li>
 						</ul>
-						<ul>
+						<div class="mCustomScrollbar diretoria-scroll" data-mcs-theme="minimal-dark">
+							<ul>
 <?php
 	query_posts( array(
 		'post_type' => "pt_diretoria",
@@ -55,18 +56,19 @@
 	$left = true;
 	while(have_posts()): the_post();
 ?>
-							<li<?= $left ? "" : " class='right'"?>>
-								<div class="img-circle" style="background-image: url(<?= the_post_thumbnail_url() ?>);">
-									<a href="mailto:contato@naoaceitocorrupcao.org.br" class="email"><img src="img/dark-mail.png" alt=""></a>
-								</div>
-								<h4 class="<?= implode(" ", get_field('categoria')) ?>"><?php the_title() ?></h4>
-								<h5><?php the_field('cargo') ?></h5>
-								<p><?php the_content() ?></p>
-							</li>
+								<li<?= $left ? "" : " class='right'"?>>
+									<div class="img-circle" style="background-image: url(<?= the_post_thumbnail_url() ?>);">
+										<a href="mailto:contato@naoaceitocorrupcao.org.br" class="email"><img src="img/dark-mail.png" alt=""></a>
+									</div>
+									<h4 class="<?= implode(" ", get_field('categoria')) ?>"><?php the_title() ?></h4>
+									<h5><?php the_field('cargo') ?></h5>
+									<p><?php the_content() ?></p>
+								</li>
 <?php
 		$left = !$left;
 	endwhile; ?>
-						</ul>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -75,9 +77,49 @@
 			<div class="container">
 				<div class="row">
 					<h2>Fundadores &#038; Associados</h2>
-					<div>
-						<p>Entre nossos fundadores e associados estao os seguintes:</p>
+					<p>Entre nossos fundadores e associados estao os seguintes:</p>
+					<div class="mCustomScrollbar founders-list" data-mcs-theme="minimal">
 						<ul>
+							<li>Elli Doubleday <span class="white">(A)</span></li>
+							<li>Darrick Reeser <span class="white">(AF)</span></li>
+							<li>Sparkle Spargo <span class="white">(F)</span></li>
+							<li>Jeanette Poudrier <span class="white">(A)</span></li>
+							<li>Freeman Rahm <span class="white">(AF)</span></li>
+							<li>Reynalda Wilmeth <span class="white">(F)</span></li>
+							<li>Santa Ravelo <span class="white">(A)</span></li>
+							<li>Leia Keener <span class="white">(AF)</span></li>
+							<li>Sunshine Ralph <span class="white">(F)</span></li>
+							<li>Carli Mackay <span class="white">(A)</span></li>
+							<li>Phyliss Mccloud <span class="white">(AF)</span></li>
+							<li>Asuncion Kearse <span class="white">(F)</span></li>
+							<li>Mercedez Kimbro <span class="white">(A)</span></li>
+							<li>Elanor Vanleer <span class="white">(AF)</span></li>
+							<li>Glen Hume <span class="white">(F)</span></li>
+							<li>Ouida Hylton <span class="white">(A)</span></li>
+							<li>Mazie Eby <span class="white">(AF)</span></li>
+							<li>Blossom Greek <span class="white">(F)</span></li>
+							<li>Orval Cooney <span class="white">(A)</span></li>
+							<li>Carmela Paek <span class="white">(AF)</span></li>
+							<li>Elli Doubleday <span class="white">(A)</span></li>
+							<li>Darrick Reeser <span class="white">(AF)</span></li>
+							<li>Sparkle Spargo <span class="white">(F)</span></li>
+							<li>Jeanette Poudrier <span class="white">(A)</span></li>
+							<li>Freeman Rahm <span class="white">(AF)</span></li>
+							<li>Reynalda Wilmeth <span class="white">(F)</span></li>
+							<li>Santa Ravelo <span class="white">(A)</span></li>
+							<li>Leia Keener <span class="white">(AF)</span></li>
+							<li>Sunshine Ralph <span class="white">(F)</span></li>
+							<li>Carli Mackay <span class="white">(A)</span></li>
+							<li>Phyliss Mccloud <span class="white">(AF)</span></li>
+							<li>Asuncion Kearse <span class="white">(F)</span></li>
+							<li>Mercedez Kimbro <span class="white">(A)</span></li>
+							<li>Elanor Vanleer <span class="white">(AF)</span></li>
+							<li>Glen Hume <span class="white">(F)</span></li>
+							<li>Ouida Hylton <span class="white">(A)</span></li>
+							<li>Mazie Eby <span class="white">(AF)</span></li>
+							<li>Blossom Greek <span class="white">(F)</span></li>
+							<li>Orval Cooney <span class="white">(A)</span></li>
+							<li>Carmela Paek <span class="white">(AF)</span></li>
 							<li>Elli Doubleday <span class="white">(A)</span></li>
 							<li>Darrick Reeser <span class="white">(AF)</span></li>
 							<li>Sparkle Spargo <span class="white">(F)</span></li>
@@ -181,9 +223,85 @@
 			<div class="container">
 				<div class="row">
 					<h2>A todos que de alguma forma vêm nos ajudando a enfrentar a corrupção:</h2>
-					<div>
-						<h2>muito obrigado!</h2>
+					<div><h2>muito obrigado!</h2></div>
+					<div class="mCustomScrollbar founders-list" data-mcs-theme="minimal">
 						<ul>
+							<li>Elli Doubleday</li>
+							<li>Darrick Reeser</li>
+							<li>Sparkle Spargo</li>
+							<li>Jeanette Poudrier</li>
+							<li>Freeman Rahm</li>
+							<li>Reynalda Wilmeth</li>
+							<li>Santa Ravelo</li>
+							<li>Leia Keener</li>
+							<li>Sunshine Ralph</li>
+							<li>Carli Mackay</li>
+							<li>Phyliss Mccloud</li>
+							<li>Asuncion Kearse</li>
+							<li>Mercedez Kimbro</li>
+							<li>Elanor Vanleer</li>
+							<li>Glen Hume</li>
+							<li>Ouida Hylton</li>
+							<li>Mazie Eby</li>
+							<li>Blossom Greek</li>
+							<li>Orval Cooney</li>
+							<li>Elli Doubleday</li>
+							<li>Darrick Reeser</li>
+							<li>Sparkle Spargo</li>
+							<li>Jeanette Poudrier</li>
+							<li>Freeman Rahm</li>
+							<li>Reynalda Wilmeth</li>
+							<li>Santa Ravelo</li>
+							<li>Leia Keener</li>
+							<li>Sunshine Ralph</li>
+							<li>Carli Mackay</li>
+							<li>Phyliss Mccloud</li>
+							<li>Asuncion Kearse</li>
+							<li>Mercedez Kimbro</li>
+							<li>Elanor Vanleer</li>
+							<li>Glen Hume</li>
+							<li>Ouida Hylton</li>
+							<li>Mazie Eby</li>
+							<li>Blossom Greek</li>
+							<li>Orval Cooney</li>
+							<li>Elli Doubleday</li>
+							<li>Darrick Reeser</li>
+							<li>Sparkle Spargo</li>
+							<li>Jeanette Poudrier</li>
+							<li>Freeman Rahm</li>
+							<li>Reynalda Wilmeth</li>
+							<li>Santa Ravelo</li>
+							<li>Leia Keener</li>
+							<li>Sunshine Ralph</li>
+							<li>Carli Mackay</li>
+							<li>Phyliss Mccloud</li>
+							<li>Asuncion Kearse</li>
+							<li>Mercedez Kimbro</li>
+							<li>Elanor Vanleer</li>
+							<li>Glen Hume</li>
+							<li>Ouida Hylton</li>
+							<li>Mazie Eby</li>
+							<li>Blossom Greek</li>
+							<li>Orval Cooney</li>
+							<li>Elli Doubleday</li>
+							<li>Darrick Reeser</li>
+							<li>Sparkle Spargo</li>
+							<li>Jeanette Poudrier</li>
+							<li>Freeman Rahm</li>
+							<li>Reynalda Wilmeth</li>
+							<li>Santa Ravelo</li>
+							<li>Leia Keener</li>
+							<li>Sunshine Ralph</li>
+							<li>Carli Mackay</li>
+							<li>Phyliss Mccloud</li>
+							<li>Asuncion Kearse</li>
+							<li>Mercedez Kimbro</li>
+							<li>Elanor Vanleer</li>
+							<li>Glen Hume</li>
+							<li>Ouida Hylton</li>
+							<li>Mazie Eby</li>
+							<li>Blossom Greek</li>
+							<li>Orval Cooney</li>
 							<li>Elli Doubleday</li>
 							<li>Darrick Reeser</li>
 							<li>Sparkle Spargo</li>

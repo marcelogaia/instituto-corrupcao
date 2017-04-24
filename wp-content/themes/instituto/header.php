@@ -29,6 +29,7 @@ $isHome = is_home();
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.min.css"/>
 
 

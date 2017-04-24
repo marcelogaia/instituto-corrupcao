@@ -887,6 +887,11 @@ section#parceiro {
 
 body#o-instituto section#header .jumbotron {
   background-image: url(../img/instituto-top.png); }
+body#o-instituto .diretoria-scroll {
+  max-height: 620px;
+  margin-bottom: 60px; }
+body#o-instituto .founders-list {
+  max-height: 200px; }
 body#o-instituto .porque-somos-diferentes {
   background: #3f4444;
   color: white;
