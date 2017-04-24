@@ -92,7 +92,7 @@
 						<li class="direta">
 							<h4><span>doação direta</span></h4>
 							<div>
-								<img src="img/paypal-logo.png" alt="">
+								<a href="https://pag.ae/bkjpKBb" target="_blank"></a><img src="img/paypal-logo.png" alt="">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.
 								</p>
 							</div>

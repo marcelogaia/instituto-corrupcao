@@ -68,6 +68,7 @@ $isHome = is_home();
 				<div class="container-full">
 
 					<nav id="the-menu" class="responsive-menu">
+						<a href="javascript:void(0);" class="close"><i class="fa fa-times" aria-hidden="true"></i></a>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 						<ul>
 							<li>
@@ -125,7 +126,7 @@ $isHome = is_home();
 										<?php if(!empty($socialArr['google-plus'])): ?>
 											<a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
 										<?php endif; ?>
-											<div class="participe"><button type="reset" onclick="location.href='/2017/participe/'">Participe></button></div>
+											<div class="participe"><button type="reset" onclick="location.href='<?= site_url('participe')?>'">Participe></button></div>
 										</p>
 	<?php endif; ?>
 									</div><!--/.box-right-->
@@ -140,11 +141,12 @@ $isHome = is_home();
 						</div><!--/.col-sm-8-->
 						<div class="col-sm-4">
 							<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
-							<div class="participe"><button type="reset" onclick="location.href='/2017/participe/'">Participe</button></div>
+							<div class="participe"><button type="reset"  onclick="location.href='<?= site_url('participe')?>'">Participe</button></div>
 						</div><!--/.col-sm-4-->
 						<div class="stripped-border"><!-- Border --></div>
 					</div><!--/.row-->
 				</div>
 			</div>
 		</div>
+		<?= do_shortcode('[contact-form-7 id="1056" title="newsletter" html_id="newsletter-form"]') ?>
 	</section>

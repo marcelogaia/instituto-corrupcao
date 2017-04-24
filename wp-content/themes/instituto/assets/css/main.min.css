@@ -142,6 +142,69 @@
   .latest-news-button .fa {
     display: none; }
 
+#newsletter-form {
+  position: fixed;
+  right: -15px;
+  top: 160px;
+  padding: 47px 0 0 53px;
+  width: 500px;
+  height: 87px;
+  background: transparent url(../img/newsletter-form.png) 0 0;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  z-index: 99; }
+  #newsletter-form .wpcf7-response-output {
+    display: none !important; }
+  #newsletter-form input {
+    background: #3f4444;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-right: 20px;
+    width: 175px; }
+    #newsletter-form input::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: white; }
+    #newsletter-form input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: white; }
+    #newsletter-form input:-ms-input-placeholder {
+      /* IE 10+ */
+      color: white; }
+    #newsletter-form input:-moz-placeholder {
+      /* Firefox 18- */
+      color: white; }
+    #newsletter-form input[type="submit"] {
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      color: #3f4444;
+      font-size: 12px;
+      background: #ffc72c;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      padding: 0; }
+  #newsletter-form.closed {
+    right: -461px; }
+  #newsletter-form.sucesso {
+    background-image: url(../img/newsletter-form-success.png); }
+    #newsletter-form.sucesso *:not(a):not(p) {
+      display: none; }
+  #newsletter-form .close-link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25px;
+    left: 0px; }
+
 section#header .my-navbar .participe button, section#participe .row article .eu-quero, section#parceiro .bnt-ver-todos.logo-carousel-btn, body#participe .voluntarios button, section#header .jumbotron .btn, section#projetos .content-holder .row .text-holder button, body#blog section#last-news ul.filters li button, body#blog-interna section#comments button {
   border: none;
   height: 54px;
@@ -457,6 +520,11 @@ section#header {
       height: 100%;
       line-height: 23px;
       color: #3f4444; }
+      section#header .my-navbar .responsive-menu .close {
+        font-size: 1.6em;
+        position: absolute;
+        top: 30px;
+        right: 30px; }
       section#header .my-navbar .responsive-menu .wpcf7-form.newsletter {
         margin-bottom: 50px; }
         section#header .my-navbar .responsive-menu .wpcf7-form.newsletter input, section#header .my-navbar .responsive-menu .wpcf7-form.newsletter label:after, section#header .my-navbar .responsive-menu .wpcf7-form.newsletter label:before {
@@ -1807,7 +1875,8 @@ body#participe .quer-doar {
         font: 22px "din-condensed-bold";
         color: #ffc72c;
         float: left;
-        line-height: 41px; }
+        line-height: 41px;
+        padding-top: 4px; }
       body#participe .quer-doar ul.items > li .bootstrap-select {
         width: 215px;
         line-height: 41px;
@@ -1820,8 +1889,7 @@ body#participe .quer-doar {
           -ms-border-radius: 0;
           -o-border-radius: 0;
           border-radius: 0;
-          font: 15px/41px "din-regular";
-          line-height: 41px; }
+          font: 15px/1em "din-regular"; }
         body#participe .quer-doar ul.items > li .bootstrap-select > .dropdown-menu {
           border: 1px #65665c solid;
           margin: 0; }
@@ -2478,7 +2546,9 @@ body#blog-interna section#comments {
     body#participe .precisamos li h4:after {
       display: none; }
     body#participe .quer-doar ul.items {
-      margin-top: 60px; }
+      margin-top: 60px;
+      padding: 0;
+      margin-left: -40px; }
       body#participe .quer-doar ul.items > li {
         background: url(../img/quer-doar-mobile-bg.png) no-repeat 0 0;
         width: 312px;
@@ -2498,12 +2568,31 @@ body#blog-interna section#comments {
           body#participe .quer-doar ul.items > li h4 span {
             width: 174px; }
         body#participe .quer-doar ul.items > li > div {
+          float: none;
+          width: 100%; }
+          body#participe .quer-doar ul.items > li > div p {
+            padding: 15px 10px; }
+          body#participe .quer-doar ul.items > li > div img {
+            position: absolute;
+            bottom: 80px;
+            left: calc(50% - 50px);
+            margin: 0; }
+        body#participe .quer-doar ul.items > li label {
+          margin: 0;
+          text-align: center;
+          display: block;
+          width: 100%;
           float: none; }
-        body#participe .quer-doar ul.items > li button {
+        body#participe .quer-doar ul.items > li > button {
           position: absolute;
           bottom: -127px;
           left: 0;
           right: 0; }
+        body#participe .quer-doar ul.items > li .bootstrap-select {
+          display: block;
+          margin: 10px auto; }
+        body#participe .quer-doar ul.items > li.empresa {
+          background-position: inherit; }
     body#participe .buscamos h3 {
       font: 40px/50px "din-regular" !important;
       text-align: left;
@@ -2531,9 +2620,6 @@ body#blog-interna section#comments {
       padding-left: 3px; }
       body#participe .buscamos ul.social li {
         margin-top: 7px; }
-    body#participe .quer-doar .items {
-      padding: 0;
-      margin-left: -40px; }
     body#participe .buscamos .social {
       overflow: hidden; }
     body#participe .voluntarios .seja-voluntario {

@@ -224,6 +224,65 @@ $font-din-black-5: url(fonts/din/din-black.woff2) format('woff2');
 	}
 }
 
+#newsletter-form {
+	position: fixed;
+	right:-15px;
+	top:160px;
+	padding: 47px 0 0 53px;
+	width:500px;
+	height: 87px;
+	background: transparent url(../img/newsletter-form.png) 0 0;
+	@include transition(1s);
+	z-index: 99;
+
+	.wpcf7-response-output {
+		display: none !important;
+	}
+
+	input {
+		background: $color_dark-grey;
+		border: none;
+		border-bottom: 1px solid white;
+		@include placeholder(white);
+    	margin-right: 20px;
+		width: 175px;
+
+		&[type="submit"]{
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			color: $color_dark-grey;
+			font-size: 12px;
+			background: $color_std-yellow;
+			@include border-radius(50%);
+			text-transform: uppercase;
+			font-weight: bold;
+			border:none;
+			padding: 0;
+		}
+	}
+
+	&.closed {
+		right: -461px;
+	}
+
+	&.sucesso {
+		background-image: url(../img/newsletter-form-success.png);
+		*:not(a):not(p) {
+			display: none;
+		}
+	}
+
+	.close-link {
+		display: block;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 25px;
+		left: 0px;
+	}
+}
+
 %std_button {
 	border:none;
 	height: 54px;
@@ -660,6 +719,13 @@ section#header {
 			height:100%;
 			line-height: 23px;
 			color: $color_dark-grey;
+
+			.close {
+				font-size: 1.6em;
+				position: absolute;
+				top: 30px;
+				right: 30px;
+			}
 
 			.wpcf7-form.newsletter {
 				margin-bottom: 50px;
@@ -2635,6 +2701,7 @@ body#participe {
 					color: $color_std-yellow;
 					float:left;
 					line-height: 41px;
+					padding-top: 4px;
 				}
 
 				.bootstrap-select {
@@ -2646,8 +2713,7 @@ body#participe {
 						background: $color_dark-grey;
 						color:white;
 						@include border-radius(0);
-						font:15px/41px $font_din;
-						line-height: 41px;
+						font:15px/1em $font_din;
 					}
 
 					>.dropdown-menu {

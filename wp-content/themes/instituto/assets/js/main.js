@@ -142,6 +142,10 @@ jQuery( document ).ready( function($) {
 				$(this).toggleClass('small').fadeIn();
 			});
 		});
+
+		$("#the-menu .close").click(function(){
+			$(".open-responsive-menu").trigger('click');
+		});
 	}
 
     function addColoredCirclesToBoard() {
@@ -259,6 +263,18 @@ jQuery( document ).ready( function($) {
 		});
 	}
 
+	function newsletterFixed() {
+		$('#newsletter-form').each(function(){
+			$('.wpcf7').on('wpcf7:submit',function(){
+				$('#newsletter-form').addClass('sucesso');
+			});
+
+			$('.close-link').click(function(e){
+				$('#newsletter-form').toggleClass('closed');
+			});
+		});
+	}
+
 	// Called Functions
 	$( function() {
 		fixMenuHeight();
@@ -271,6 +287,7 @@ jQuery( document ).ready( function($) {
 		projectFilters();
 		homeJumbotron();
 		participeForms();
+		newsletterFixed();
 	});
 
 	// Window Resize
