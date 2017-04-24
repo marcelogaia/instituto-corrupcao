@@ -38,6 +38,7 @@ $isHome = is_home();
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+<?php wp_head(); ?>
 </head>
 <body id="<?= $post->post_name; ?>">
 	<div id="fb-root"></div>
@@ -51,11 +52,14 @@ $isHome = is_home();
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 	<div class="shade"></div>
-	<section id="header"<?php if(is_home()){ echo ' class="front-page-section"'; } ?>>
+	<section id="header">
 		<div class="jumbotron">
+			<?php if(is_front_page()) { 
+    			//echo do_shortcode("[metaslider id=1047]"); 
+    			echo do_shortcode('[masterslider id="1"]');
+    			//masterslider(1);
+			} else { ?> 
 			<h1><?php the_title() ?></h1>
-			<?php if(is_home()) { ?>
-			<p><a class="btn btn-primary btn-lg" href="javascript:void(0);" role="button">Saiba mais</a></p>
 			<?php } ?>
 		</div>
 		<div class="nav-wrapper">

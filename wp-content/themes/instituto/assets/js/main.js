@@ -41,6 +41,9 @@ jQuery( document ).ready( function($) {
 
 	function addSlickCarousel() {
 		// http://kenwheeler.github.io/slick/
+		
+		$('.slick-home').slick();
+
 		$('.slick-carousel').slick({
 			dots: true,
 			slidesToShow: 3,
@@ -240,8 +243,6 @@ jQuery( document ).ready( function($) {
 
 				var jumbotron = $('#header .jumbotron');
 				var menuHeight = $('#header .nav-wrapper').height();
-
-				console.log(window.innerHeight, menuHeight, window.innerHeight - menuHeight);
 
 				jumbotron.css('height',window.innerHeight - menuHeight);
 

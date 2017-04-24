@@ -314,7 +314,7 @@ li {
 	}
 }
 
-.slick-initialized {
+.slick-initialized:not(.slick-home) {
 	padding: 0;
 
 	.slick-list {
@@ -551,6 +551,9 @@ section#header {
 		padding: 0;
 		height:410px;
 		background-image: url(../img/header-home.jpg);
+
+		background: black;
+
 		background-size: cover;
 		background-position: center center;
 		text-align: center;
@@ -582,6 +585,40 @@ section#header {
 		&.affix {
 			position: relative !important;
 			margin-bottom:140px;
+		}
+
+
+		.ms-slide-info {
+			position: absolute !important;
+			bottom: auto !important;
+			left: 0;
+			right: 0;
+			top: 220px;
+			text-align: center;
+			padding: 0 30px;
+
+			h1 {
+				display: block;
+			}
+		}
+		.master-slider-parent, .master-slider {
+			
+			&,.ms-container, .ms-inner-controls-cont, .ms-view,
+			.ms-slide-container, .ms-slide, .ms-slide-bgcont {
+				height:100% !important;
+			}
+			
+			.ms-bullet {
+
+				width: 50px;
+				height: 3px;
+				border:none;
+				background: $color_std-yellow;
+
+				&.ms-bullet-selected {
+					background: $color_mid-grey;
+				}
+			}	
 		}
 	}
 

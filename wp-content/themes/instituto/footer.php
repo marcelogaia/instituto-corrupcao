@@ -147,5 +147,6 @@ wp_reset_query();
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 
 	<script type="text/javascript" src="js/main.min.js"></script>
+	<?php wp_footer(); ?>
 </body>
 </html>

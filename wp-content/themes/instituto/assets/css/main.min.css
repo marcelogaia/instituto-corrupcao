@@ -206,11 +206,11 @@ li {
   .front-page-section header p {
     font: normal normal 17px/1.2 "din-regular"; }
 
-.slick-initialized {
+.slick-initialized:not(.slick-home) {
   padding: 0; }
-  .slick-initialized .slick-list {
+  .slick-initialized:not(.slick-home) .slick-list {
     margin: 0 80px; }
-  .slick-initialized li.slick-slide {
+  .slick-initialized:not(.slick-home) li.slick-slide {
     background: white;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -219,12 +219,12 @@ li {
     border-radius: 50%;
     margin: 0 32.5px;
     overflow: hidden; }
-    .slick-initialized li.slick-slide a {
+    .slick-initialized:not(.slick-home) li.slick-slide a {
       width: 100%;
       display: block; }
-    .slick-initialized li.slick-slide img {
+    .slick-initialized:not(.slick-home) li.slick-slide img {
       width: 100%; }
-  .slick-initialized .slick-arrow {
+  .slick-initialized:not(.slick-home) .slick-arrow {
     height: 260px;
     width: 70px;
     background: transparent url(../img/big-arrows.png) center center no-repeat;
@@ -244,18 +244,18 @@ li {
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s; }
-    .slick-initialized .slick-arrow.slick-prev {
+    .slick-initialized:not(.slick-home) .slick-arrow.slick-prev {
       background-position: 0px;
       left: 0; }
-    .slick-initialized .slick-arrow.slick-next {
+    .slick-initialized:not(.slick-home) .slick-arrow.slick-next {
       background-position: -70px;
       right: 0; }
-  .slick-initialized .slick-dots {
+  .slick-initialized:not(.slick-home) .slick-dots {
     text-align: center;
     width: 100%;
     margin: 58px 0 47px;
     padding: 0; }
-    .slick-initialized .slick-dots li {
+    .slick-initialized:not(.slick-home) .slick-dots li {
       display: inline-block;
       width: 35px;
       height: 7px;
@@ -263,40 +263,40 @@ li {
       background-color: black;
       opacity: .3;
       cursor: pointer; }
-      .slick-initialized .slick-dots li:hover {
+      .slick-initialized:not(.slick-home) .slick-dots li:hover {
         opacity: .5; }
-      .slick-initialized .slick-dots li.slick-active {
+      .slick-initialized:not(.slick-home) .slick-dots li.slick-active {
         opacity: .7; }
-      .slick-initialized .slick-dots li button {
+      .slick-initialized:not(.slick-home) .slick-dots li button {
         display: none; }
-  .slick-initialized:hover .slick-arrow {
+  .slick-initialized:not(.slick-home):hover .slick-arrow {
     opacity: 1; }
-  .slick-initialized.slick-carousel-ouro .slick-list, .slick-initialized.slick-carousel-prata .slick-list, .slick-initialized.slick-carousel-bronze .slick-list {
+  .slick-initialized:not(.slick-home).slick-carousel-ouro .slick-list, .slick-initialized:not(.slick-home).slick-carousel-prata .slick-list, .slick-initialized:not(.slick-home).slick-carousel-bronze .slick-list {
     margin: 0 71px; }
-  .slick-initialized.slick-carousel-ouro .slick-arrow, .slick-initialized.slick-carousel-prata .slick-arrow, .slick-initialized.slick-carousel-bronze .slick-arrow {
+  .slick-initialized:not(.slick-home).slick-carousel-ouro .slick-arrow, .slick-initialized:not(.slick-home).slick-carousel-prata .slick-arrow, .slick-initialized:not(.slick-home).slick-carousel-bronze .slick-arrow {
     height: 105px;
     width: 27px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-    .slick-initialized.slick-carousel-ouro .slick-arrow.slick-prev, .slick-initialized.slick-carousel-prata .slick-arrow.slick-prev, .slick-initialized.slick-carousel-bronze .slick-arrow.slick-prev {
+    .slick-initialized:not(.slick-home).slick-carousel-ouro .slick-arrow.slick-prev, .slick-initialized:not(.slick-home).slick-carousel-prata .slick-arrow.slick-prev, .slick-initialized:not(.slick-home).slick-carousel-bronze .slick-arrow.slick-prev {
       background-position: 0px;
       left: 40px; }
-    .slick-initialized.slick-carousel-ouro .slick-arrow.slick-next, .slick-initialized.slick-carousel-prata .slick-arrow.slick-next, .slick-initialized.slick-carousel-bronze .slick-arrow.slick-next {
+    .slick-initialized:not(.slick-home).slick-carousel-ouro .slick-arrow.slick-next, .slick-initialized:not(.slick-home).slick-carousel-prata .slick-arrow.slick-next, .slick-initialized:not(.slick-home).slick-carousel-bronze .slick-arrow.slick-next {
       background-position: -27px;
       right: 40px; }
-  .slick-initialized.slick-carousel-ouro li.slick-slide {
+  .slick-initialized:not(.slick-home).slick-carousel-ouro li.slick-slide {
     margin: 0 10px; }
-  .slick-initialized.slick-carousel-ouro .slick-arrow {
+  .slick-initialized:not(.slick-home).slick-carousel-ouro .slick-arrow {
     top: 70px; }
-  .slick-initialized.slick-carousel-prata li.slick-slide {
+  .slick-initialized:not(.slick-home).slick-carousel-prata li.slick-slide {
     margin: 0 7.5px; }
-  .slick-initialized.slick-carousel-prata .slick-arrow {
+  .slick-initialized:not(.slick-home).slick-carousel-prata .slick-arrow {
     top: 30px; }
-  .slick-initialized.slick-carousel-bronze li.slick-slide {
+  .slick-initialized:not(.slick-home).slick-carousel-bronze li.slick-slide {
     margin: 0 3.5px; }
-  .slick-initialized.slick-carousel-bronze .slick-arrow {
+  .slick-initialized:not(.slick-home).slick-carousel-bronze .slick-arrow {
     top: 0px; }
 
 form.newsletter label {
@@ -381,6 +381,7 @@ section#header {
     padding: 0;
     height: 410px;
     background-image: url(../img/header-home.jpg);
+    background: black;
     background-size: cover;
     background-position: center center;
     text-align: center;
@@ -404,6 +405,27 @@ section#header {
     section#header .jumbotron.affix {
       position: relative !important;
       margin-bottom: 140px; }
+    section#header .jumbotron .ms-slide-info {
+      position: absolute !important;
+      bottom: auto !important;
+      left: 0;
+      right: 0;
+      top: 220px;
+      text-align: center;
+      padding: 0 30px; }
+      section#header .jumbotron .ms-slide-info h1 {
+        display: block; }
+    section#header .jumbotron .master-slider-parent, section#header .jumbotron .master-slider-parent .ms-container, section#header .jumbotron .master-slider-parent .ms-inner-controls-cont, section#header .jumbotron .master-slider-parent .ms-view,
+    section#header .jumbotron .master-slider-parent .ms-slide-container, section#header .jumbotron .master-slider-parent .ms-slide, section#header .jumbotron .master-slider-parent .ms-slide-bgcont, section#header .jumbotron .master-slider, section#header .jumbotron .master-slider .ms-container, section#header .jumbotron .master-slider .ms-inner-controls-cont, section#header .jumbotron .master-slider .ms-view,
+    section#header .jumbotron .master-slider .ms-slide-container, section#header .jumbotron .master-slider .ms-slide, section#header .jumbotron .master-slider .ms-slide-bgcont {
+      height: 100% !important; }
+    section#header .jumbotron .master-slider-parent .ms-bullet, section#header .jumbotron .master-slider .ms-bullet {
+      width: 50px;
+      height: 3px;
+      border: none;
+      background: #ffc72c; }
+      section#header .jumbotron .master-slider-parent .ms-bullet.ms-bullet-selected, section#header .jumbotron .master-slider .ms-bullet.ms-bullet-selected {
+        background: #65665c; }
   section#header .my-navbar {
     width: 100%;
     height: 140px;
