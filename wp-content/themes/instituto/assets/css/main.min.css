@@ -217,7 +217,11 @@ li {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-    margin: 0 32.5px; }
+    margin: 0 32.5px;
+    overflow: hidden; }
+    .slick-initialized li.slick-slide a {
+      width: 100%;
+      display: block; }
     .slick-initialized li.slick-slide img {
       width: 100%; }
   .slick-initialized .slick-arrow {
@@ -351,7 +355,8 @@ form.newsletter .wpcf7-submit {
   font-size: 13px;
   float: right; }
   form.newsletter .wpcf7-submit:hover {
-    background: transparent !important; }
+    background: transparent !important;
+    color: white !important; }
   form.newsletter .wpcf7-submit:before {
     content: "";
     border-left: 1px solid white;
@@ -520,10 +525,22 @@ footer#contato {
         margin: 0 20px 0 0;
         font-size: 30px;
         color: white; }
+        footer#contato .contact-us-social li a .fa-linkedin:hover {
+          color: #0077B5; }
+        footer#contato .contact-us-social li a .fa-facebook:hover {
+          color: #3b5998; }
+        footer#contato .contact-us-social li a .fa-twitter:hover {
+          color: #00aced; }
+        footer#contato .contact-us-social li a .fa-instagram:hover {
+          color: #cd486b; }
+        footer#contato .contact-us-social li a .fa-google-plus:hover {
+          color: #d34836; }
   footer#contato h3.imprensa {
-    margin-top: 165px; }
+    margin-top: 165px;
+    display: none; }
   footer#contato a.imprensa {
-    color: #ffc72c; }
+    color: #ffc72c;
+    display: none; }
     footer#contato a.imprensa:after {
       content: "";
       position: absolute;
@@ -552,6 +569,18 @@ footer#contato {
       font-size: 15px;
       color: #ffffff;
       display: block; }
+      footer#contato .wpcf7 .wpcf7-form p .wpcf7-text::-webkit-input-placeholder, footer#contato .wpcf7 .wpcf7-form p .wpcf7-textarea::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: white; }
+      footer#contato .wpcf7 .wpcf7-form p .wpcf7-text::-moz-placeholder, footer#contato .wpcf7 .wpcf7-form p .wpcf7-textarea::-moz-placeholder {
+        /* Firefox 19+ */
+        color: white; }
+      footer#contato .wpcf7 .wpcf7-form p .wpcf7-text:-ms-input-placeholder, footer#contato .wpcf7 .wpcf7-form p .wpcf7-textarea:-ms-input-placeholder {
+        /* IE 10+ */
+        color: white; }
+      footer#contato .wpcf7 .wpcf7-form p .wpcf7-text:-moz-placeholder, footer#contato .wpcf7 .wpcf7-form p .wpcf7-textarea:-moz-placeholder {
+        /* Firefox 18- */
+        color: white; }
     footer#contato .wpcf7 .wpcf7-form p .wpcf7-textarea {
       height: 100px;
       padding: 7px 10px; }
@@ -579,7 +608,10 @@ footer#contato {
         color: white;
         font-weight: lighter; }
   footer#contato .menu-principal-container .menu li a {
-    font-size: 20px; }
+    font-size: 20px;
+    text-transform: lowercase; }
+    footer#contato .menu-principal-container .menu li a:hover {
+      color: #ffc72c; }
   footer#contato .contact-us-box .box-right {
     padding: 0; }
     footer#contato .contact-us-box .box-right p {
@@ -597,6 +629,8 @@ footer#contato {
         footer#contato .contact-us-box .box-right p.contact-icon, footer#contato .contact-us-box .box-right p.contact-icon a, footer#contato .contact-us-box .box-right p.contact-icon .fa {
           line-height: 40px;
           height: 40px; }
+          footer#contato .contact-us-box .box-right p.contact-icon:hover, footer#contato .contact-us-box .box-right p.contact-icon a:hover, footer#contato .contact-us-box .box-right p.contact-icon .fa:hover {
+            color: #ffc72c; }
         footer#contato .contact-us-box .box-right p.contact-icon .fa {
           width: 30px;
           font-size: 20px; }
@@ -722,8 +756,8 @@ section#blog {
       font-size: 18px;
       font-weight: 700;
       height: 65px;
-      line-height: 1em;
-      padding: 15px;
+      line-height: 1.3em;
+      padding: 10px 15px;
       position: absolute;
       text-transform: uppercase;
       text-align: left;
@@ -941,6 +975,8 @@ body#o-instituto .diretoria-e-conselho-estrategico {
         top: 50%;
         margin-top: -15px;
         right: -15px; }
+        body#o-instituto .diretoria-e-conselho-estrategico li .img-circle a.email img {
+          vertical-align: top; }
     body#o-instituto .diretoria-e-conselho-estrategico li h4 {
       font: 35px "din-condensed-bold";
       text-transform: uppercase;
@@ -1055,7 +1091,7 @@ body#o-instituto .parceiros {
     background-color: white;
     outline: 1px white solid;
     border: 6px #8b8b8b solid;
-    padding: 12px;
+    padding: 7px;
     z-index: 1;
     text-align: center;
     color: black;
@@ -1066,14 +1102,14 @@ body#o-instituto .parceiros {
       height: 1px;
       border-top: 1px white solid;
       position: absolute;
-      width: calc(100% / 12 * 5 - 120px);
+      width: calc(100% / 12 * 5 - 180px);
       left: calc(100% / 12);
-      margin-top: 3px; }
+      margin-top: 9px; }
     body#o-instituto .parceiros h4:before {
       margin-left: 60px; }
     body#o-instituto .parceiros h4:after {
       left: auto;
-      margin-top: -15px;
+      margin-top: -9px;
       margin-right: 60px;
       right: calc(100% / 12); }
     body#o-instituto .parceiros h4:first-of-type {
@@ -1715,17 +1751,17 @@ body#participe .quer-doar {
         body#participe .quer-doar ul.items > li.empresa h4 span {
           font-size: 30px;
           line-height: 32px; }
-      body#participe .quer-doar ul.items > li button {
+      body#participe .quer-doar ul.items > li > button {
         float: left;
         background: #65665c;
         border: none;
         color: #ffc72c;
         font: 45px/1.1em "din-condensed-bold";
         text-transform: uppercase; }
-        body#participe .quer-doar ul.items > li button a, body#participe .quer-doar ul.items > li button a:active, body#participe .quer-doar ul.items > li button a:visited {
+        body#participe .quer-doar ul.items > li > button a, body#participe .quer-doar ul.items > li > button a:active, body#participe .quer-doar ul.items > li > button a:visited {
           color: #ffc72c;
           padding: 35px 20px; }
-          body#participe .quer-doar ul.items > li button a:hover, body#participe .quer-doar ul.items > li button a:active:hover, body#participe .quer-doar ul.items > li button a:visited:hover {
+          body#participe .quer-doar ul.items > li > button a:hover, body#participe .quer-doar ul.items > li > button a:active:hover, body#participe .quer-doar ul.items > li > button a:visited:hover {
             color: white; }
       body#participe .quer-doar ul.items > li > div {
         float: left;
@@ -1776,27 +1812,47 @@ body#participe .voluntarios {
   body#participe .voluntarios p {
     color: #3f4444;
     margin: 10px 0 40px; }
+body#participe.modal-open .modal {
+  padding: 20px 10px 0; }
+body#participe.modal-open .modal-dialog {
+  margin-left: auto;
+  margin-right: auto; }
 body#participe.modal-open .modal-content {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  background: #ffc72c;
   overflow: auto; }
+  body#participe.modal-open .modal-content .modal-header {
+    background: #ffc72c;
+    border: none; }
+    body#participe.modal-open .modal-content .modal-header h4 {
+      display: none; }
 body#participe.modal-open .modal-body {
   padding: 0; }
   body#participe.modal-open .modal-body .ekko-lightbox-item {
     height: 100%; }
+body#participe.modal-open .modal-backdrop.fade {
+  opacity: 0.8;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
 
 .participe-form {
   text-align: center;
   background: #ffc72c;
-  padding: 50px;
+  padding: 10px;
   overflow: auto;
   height: 100%; }
   .participe-form * {
     background: #ffc72c;
     color: white; }
+  .participe-form > * {
+    max-width: calc(100% - 20px);
+    margin: 0 auto; }
   .participe-form h2 {
     margin-top: 0;
     text-transform: uppercase;
@@ -1810,7 +1866,7 @@ body#participe.modal-open .modal-body {
     height: 36px;
     line-height: 36px;
     padding: 0 12px;
-    width: 80%;
+    width: calc(100% - 40px);
     max-width: 315px; }
     .participe-form input[type="submit"] {
       background: #3f4444;
@@ -2394,6 +2450,33 @@ body#blog-interna section#comments {
       text-align: center; }
     body#participe .precisamos li h4:after {
       display: none; }
+    body#participe .quer-doar ul.items {
+      margin-top: 60px; }
+      body#participe .quer-doar ul.items > li {
+        background: url(../img/quer-doar-mobile-bg.png) no-repeat 0 0;
+        width: 312px;
+        height: 410px;
+        position: relative;
+        margin: 80px auto 270px;
+        padding-top: 80px; }
+        body#participe .quer-doar ul.items > li h4, body#participe .quer-doar ul.items > li > button {
+          margin: 0 auto; }
+        body#participe .quer-doar ul.items > li h4 {
+          float: none;
+          display: block;
+          text-align: center;
+          position: absolute;
+          top: -80px;
+          width: 100%; }
+          body#participe .quer-doar ul.items > li h4 span {
+            width: 174px; }
+        body#participe .quer-doar ul.items > li > div {
+          float: none; }
+        body#participe .quer-doar ul.items > li button {
+          position: absolute;
+          bottom: -127px;
+          left: 0;
+          right: 0; }
     body#participe .buscamos h3 {
       font: 40px/50px "din-regular" !important;
       text-align: left;

@@ -46,7 +46,7 @@ jQuery( document ).ready( function($) {
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			centerMode: true,
-			variableWidth: true,
+			variableWidth: false,
 			responsive: [
     			{
 					breakpoint: 380,
@@ -252,7 +252,9 @@ jQuery( document ).ready( function($) {
 	function participeForms() {
 		$('body#participe a.my-modal').click(function (e) {
 		    e.preventDefault();
-		    $(this).ekkoLightbox();
+		    $(this).ekkoLightbox({
+		    	alwaysShowClose : true
+		    });
 		});
 	}
 

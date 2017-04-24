@@ -101,6 +101,15 @@ get_header();
 				<?php else: ?>
 				<div class="post">
 				<?php endif;?>
+					<span class="date-label">
+						<b><?php the_time('d'); ?></b> 
+						<?php the_time('M Y'); ?>
+					</span>
+					<?php if( has_category('mundo') ) : ?>
+					<span class="flag-label"><img src="img/mundo-icon.png" alt=""></span>
+					<?php elseif ( has_category('instituto') ) : ?>
+					<span class="flag-label"><img src="img/mini-logo.png" alt=""></span>
+					<?php endif; ?>
 					<a href="<?php the_permalink() ?>" class="post-title"><?= the_title() ?></a>
 					<a href="<?php the_permalink() ?>" class="post-entry">
 						<h3><?php the_title() ?></h3>
@@ -166,12 +175,15 @@ get_header();
 		'posts_per_page' => 2
 	));
 ?>
-			<li><img src="img/partner-placeholder.png"></li>
-			<li><img src="img/partner-placeholder.png"></li>
-			<li><img src="img/partner-placeholder.png"></li>
-			<li><img src="img/partner-placeholder.png"></li>
-			<li><img src="img/partner-placeholder.png"></li>
-			<li><img src="img/partner-placeholder.png"></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 		</ul>
 		<button class="bnt-ver-todos logo-carousel-btn">Ver todos</button>
 	</div>

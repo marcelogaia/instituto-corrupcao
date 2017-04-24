@@ -325,7 +325,12 @@ li {
 		background: white;
 		@include border-radius(50%);
 		margin: 0 32.5px;
+		overflow: hidden;
 
+		a {
+			width:100%;
+			display: block;
+		}
 		img {
 			width:100%;
 		}
@@ -511,6 +516,7 @@ form.newsletter {
 
 		&:hover {
 			background: transparent !important;
+			color: white !important;
 		}
 
 		&:before {
@@ -754,16 +760,34 @@ footer#contato {
 				margin:0 20px 0 0;
 				font-size: 30px;
 				color: white;
+
+				.fa-linkedin:hover{
+					color: #0077B5;
+				}
+				.fa-facebook:hover{
+					color: #3b5998;
+				}
+				.fa-twitter:hover{
+					color: #00aced;
+				}
+				.fa-instagram:hover{
+					color: #cd486b;
+				}
+				.fa-google-plus:hover{
+					color: #d34836;
+				}
 			}
 		}
 	}
 
 	h3.imprensa {
 		margin-top: 165px;
+		display: none;
 	}
 
 	a.imprensa {
 		color: $color_std-yellow;
+		display: none;
 
 		&:after {
 			content: "";
@@ -802,6 +826,8 @@ footer#contato {
 				font-size: 15px;
 				color: #ffffff;
 				display: block;
+
+				@include placeholder(white);
 			}
 
 			.wpcf7-textarea{
@@ -847,6 +873,11 @@ footer#contato {
 
 	.menu-principal-container .menu li a {
 		font-size: 20px;
+		text-transform: lowercase;
+
+		&:hover {
+			color: $color_std-yellow;
+		}
 	}
 
 	.contact-us-box {
@@ -878,6 +909,10 @@ footer#contato {
 					&,a,.fa {
 						line-height: 40px;
 						height: 40px;
+
+						&:hover {
+							color: $color_std-yellow;
+						}
 					}
 
 					.fa {
@@ -1060,8 +1095,8 @@ section#blog {
 		    font-size: 18px;
 		    font-weight: 700;
 			height: 65px;
-			line-height: 1em;
-			padding: 15px;
+			line-height: 1.3em;
+			padding: 10px 15px;
 			position: absolute;
 		    text-transform: uppercase;
 		    text-align: left;
@@ -1374,6 +1409,9 @@ body#o-instituto {
 					top: 50%;
 					margin-top:-15px;
 					right:-15px;
+					img {
+						vertical-align: top;	
+					}
 				}
 			}
 
@@ -1550,7 +1588,7 @@ body#o-instituto {
 			background-color: white;
 			outline: 1px white solid;
 			border: 6px $color_light-grey solid;
-			padding: 12px;
+			padding: 7px;
 			z-index: 1;
 			text-align: center;
 			color: black;
@@ -1562,9 +1600,9 @@ body#o-instituto {
 				height:1px;
 				border-top: 1px white solid;
 				position: absolute;
-				width: calc(100% / 12 * 5 - 120px);
+				width: calc(100% / 12 * 5 - 180px);
 				left: calc(100% / 12);
-				margin-top: 3px;
+				margin-top: 9px;
 			}
 
 			&:before {
@@ -1573,7 +1611,7 @@ body#o-instituto {
 
 			&:after {
 				left: auto;
-				margin-top: -15px;
+				margin-top: -9px;
 				margin-right: 60px;
 				right: calc(100% / 12);
 			}
@@ -2509,7 +2547,7 @@ body#participe {
 					}
 				}
 
-				button {
+				>button {
 					float: left;
 					background: $color_mid-grey;
 					border:none;
@@ -2602,9 +2640,29 @@ body#participe {
 	}
 
 	&.modal-open {
+
+		.modal {
+			padding: 20px 10px 0;
+		}
+
+		.modal-dialog {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		.modal-content {
 			@include border-radius(0);
+			background: $color_std-yellow;
 			overflow: auto;
+
+			.modal-header {
+				h4 {
+					display: none;
+				}
+
+				background: $color_std-yellow;
+				border:none;
+			}
 		}
 
 		.modal-body {
@@ -2614,19 +2672,29 @@ body#participe {
 				height: 100%;
 			}
 		}
+
+		.modal-backdrop.fade {
+			opacity: 0.8;
+			@include transition(all 0.5s);
+		}
 	}
 }
 
 .participe-form {
 	text-align: center;
 	background: $color_std-yellow;
-	padding: 50px;
+	padding: 10px;
 	overflow: auto;
 	height: 100%;
 
 	* {
 		background: $color_std-yellow;
 		color:white;	
+	}
+
+	>* {
+		max-width: calc(100% - 20px);
+		margin: 0 auto;
 	}
 	
 	h2 {
@@ -2646,7 +2714,7 @@ body#participe {
 		height: 36px;
 		line-height: 36px;
 		padding: 0 12px;
-		width: 80%;
+		width: calc(100% - 40px);
 		max-width: 315px;
 
 		&[type="submit"] {

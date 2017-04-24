@@ -126,41 +126,53 @@
 				<div class="row">
 					<h4>Ouro</h4>
 					<ul class="slick-carousel-ouro">
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 					</ul>
 
 					<h4>Prata</h4>
 					<ul class="slick-carousel-prata">
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 					</ul>
 					<h4>Bronze</h4>
 					<ul class="slick-carousel-bronze">
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
-						<li><img src="img/partner-placeholder.png"></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 					</ul>
 				</div>
 			</div>

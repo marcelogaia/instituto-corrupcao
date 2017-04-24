@@ -96,7 +96,7 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.
 								</p>
 							</div>
-							<button>eu quero</button>
+							<button>eu <br>quero</button>
 						</li>
 						<li class="projetos">
 							<h4><span>doar para <br>um de nossos projetos</span></h4>
@@ -110,14 +110,14 @@
 									<option value="">2ª Corrida Anual</option>
 								</select>
 							</div>
-							<button><a href="<?= site_url('participe/seja-um-voluntario') ?>" class="my-modal">eu quero</a></button>
+							<button><a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">eu quero</a></button>
 						</li>
 						<li class="empresa">
 							<h4><span>doação <br>por empresa</span></h4>
 							<div>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. condimentum. </p>
 							</div>
-							<button><a href="<?= site_url('participe/seja-um-voluntario') ?>" class="my-modal">eu quero</a></button>
+							<button><a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">eu quero</a></button>
 						</li>
 					</ul>
 				</div>
