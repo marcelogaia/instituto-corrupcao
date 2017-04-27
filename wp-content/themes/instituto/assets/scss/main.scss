@@ -373,7 +373,7 @@ li {
 	}
 }
 
-.slick-initialized:not(.slick-home) {
+.slick-initialized {
 	padding: 0;
 
 	.slick-list {
@@ -654,7 +654,6 @@ section#header {
 			right: 0;
 			top: 220px;
 			text-align: center;
-			padding: 0 30px;
 
 			h1 {
 				display: block;
@@ -697,7 +696,7 @@ section#header {
 
 			button {
 				width: 190px;
-				margin-top: 43px;
+				margin-top: 20px;
 
 				@extend %basic_button;
 			}
@@ -1637,7 +1636,7 @@ body#o-instituto {
 				font: 17px/1em $font_din-alternate;
 				background: $color_dark-grey;
 				border: 1px $color_mid-grey solid;
-
+				@include border-radius(0);
 
 				.caret {
 					border: none;
@@ -2059,6 +2058,10 @@ body#biblioteca {
 		.slick-carousel-biblioteca {
 			li {
 				margin: 0 26px;
+				
+				img{
+					border: 2px $color_std-yellow solid;
+				}
 
 				button {
 					width: calc(50% - 3px);
@@ -2069,6 +2072,7 @@ body#biblioteca {
 					color: $color_dark-grey;
 					font: 17px/1em $font_din-condensed;
 					border:none;
+					padding: 8px 12px 4px;
 
 					&:first-of-type {
 						margin-right:6px;
@@ -2157,7 +2161,7 @@ body#projetos {
 							background: white;
 							width:215px;
 							height:50px;
-							line-height: 60px;
+							line-height: 50px;
 						}
 						&:hover {
 							outline-width: 1px;
@@ -2425,12 +2429,6 @@ body#participe {
 				text-align: right;
 				padding-right:25px;
 				position: relative;
-
-				&:before {
-					content:" ";
-					height:20px;
-					display: block;
-				}
 
 				&:after {
 					content:" ";
@@ -2848,7 +2846,7 @@ body#participe {
 }
 
 // Blog
-body#blog {
+body#bloco {
 	.jumbotron {
 		background-image: url(../img/blog-top.jpg);
 	}
@@ -3136,7 +3134,7 @@ body#blog {
 		}
 
 		.tags {
-			padding-left:20px;
+			margin:0 -4px;
 
 			li {
 				padding-left: 4px;

@@ -205,7 +205,7 @@
     top: 25px;
     left: 0px; }
 
-section#header .my-navbar .participe button, section#participe .row article .eu-quero, section#parceiro .bnt-ver-todos.logo-carousel-btn, body#participe .voluntarios button, section#header .jumbotron .btn, section#projetos .content-holder .row .text-holder button, body#blog section#last-news ul.filters li button, body#blog-interna section#comments button {
+section#header .my-navbar .participe button, section#participe .row article .eu-quero, section#parceiro .bnt-ver-todos.logo-carousel-btn, body#participe .voluntarios button, section#header .jumbotron .btn, section#projetos .content-holder .row .text-holder button, body#bloco section#last-news ul.filters li button, body#blog-interna section#comments button {
   border: none;
   height: 54px;
   line-height: 54px;
@@ -218,7 +218,7 @@ section#header .my-navbar .participe button, section#participe .row article .eu-
   color: #ffc72c;
   background-color: #3f4444; }
 
-section#header .jumbotron .btn, section#projetos .content-holder .row .text-holder button, body#blog section#last-news ul.filters li button, body#blog-interna section#comments button {
+section#header .jumbotron .btn, section#projetos .content-holder .row .text-holder button, body#bloco section#last-news ul.filters li button, body#blog-interna section#comments button {
   background-color: #ffc72c;
   color: #3f4444; }
 
@@ -269,11 +269,11 @@ li {
   .front-page-section header p {
     font: normal normal 17px/1.2 "din-regular"; }
 
-.slick-initialized:not(.slick-home) {
+.slick-initialized {
   padding: 0; }
-  .slick-initialized:not(.slick-home) .slick-list {
+  .slick-initialized .slick-list {
     margin: 0 80px; }
-  .slick-initialized:not(.slick-home) li.slick-slide {
+  .slick-initialized li.slick-slide {
     background: white;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -282,12 +282,12 @@ li {
     border-radius: 50%;
     margin: 0 32.5px;
     overflow: hidden; }
-    .slick-initialized:not(.slick-home) li.slick-slide a {
+    .slick-initialized li.slick-slide a {
       width: 100%;
       display: block; }
-    .slick-initialized:not(.slick-home) li.slick-slide img {
+    .slick-initialized li.slick-slide img {
       width: 100%; }
-  .slick-initialized:not(.slick-home) .slick-arrow {
+  .slick-initialized .slick-arrow {
     height: 260px;
     width: 70px;
     background: transparent url(../img/big-arrows.png) center center no-repeat;
@@ -307,18 +307,18 @@ li {
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s; }
-    .slick-initialized:not(.slick-home) .slick-arrow.slick-prev {
+    .slick-initialized .slick-arrow.slick-prev {
       background-position: 0px;
       left: 0; }
-    .slick-initialized:not(.slick-home) .slick-arrow.slick-next {
+    .slick-initialized .slick-arrow.slick-next {
       background-position: -70px;
       right: 0; }
-  .slick-initialized:not(.slick-home) .slick-dots {
+  .slick-initialized .slick-dots {
     text-align: center;
     width: 100%;
     margin: 58px 0 47px;
     padding: 0; }
-    .slick-initialized:not(.slick-home) .slick-dots li {
+    .slick-initialized .slick-dots li {
       display: inline-block;
       width: 35px;
       height: 7px;
@@ -326,40 +326,40 @@ li {
       background-color: black;
       opacity: .3;
       cursor: pointer; }
-      .slick-initialized:not(.slick-home) .slick-dots li:hover {
+      .slick-initialized .slick-dots li:hover {
         opacity: .5; }
-      .slick-initialized:not(.slick-home) .slick-dots li.slick-active {
+      .slick-initialized .slick-dots li.slick-active {
         opacity: .7; }
-      .slick-initialized:not(.slick-home) .slick-dots li button {
+      .slick-initialized .slick-dots li button {
         display: none; }
-  .slick-initialized:not(.slick-home):hover .slick-arrow {
+  .slick-initialized:hover .slick-arrow {
     opacity: 1; }
-  .slick-initialized:not(.slick-home).slick-carousel-ouro .slick-list, .slick-initialized:not(.slick-home).slick-carousel-prata .slick-list, .slick-initialized:not(.slick-home).slick-carousel-bronze .slick-list {
+  .slick-initialized.slick-carousel-ouro .slick-list, .slick-initialized.slick-carousel-prata .slick-list, .slick-initialized.slick-carousel-bronze .slick-list {
     margin: 0 71px; }
-  .slick-initialized:not(.slick-home).slick-carousel-ouro .slick-arrow, .slick-initialized:not(.slick-home).slick-carousel-prata .slick-arrow, .slick-initialized:not(.slick-home).slick-carousel-bronze .slick-arrow {
+  .slick-initialized.slick-carousel-ouro .slick-arrow, .slick-initialized.slick-carousel-prata .slick-arrow, .slick-initialized.slick-carousel-bronze .slick-arrow {
     height: 105px;
     width: 27px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-    .slick-initialized:not(.slick-home).slick-carousel-ouro .slick-arrow.slick-prev, .slick-initialized:not(.slick-home).slick-carousel-prata .slick-arrow.slick-prev, .slick-initialized:not(.slick-home).slick-carousel-bronze .slick-arrow.slick-prev {
+    .slick-initialized.slick-carousel-ouro .slick-arrow.slick-prev, .slick-initialized.slick-carousel-prata .slick-arrow.slick-prev, .slick-initialized.slick-carousel-bronze .slick-arrow.slick-prev {
       background-position: 0px;
       left: 40px; }
-    .slick-initialized:not(.slick-home).slick-carousel-ouro .slick-arrow.slick-next, .slick-initialized:not(.slick-home).slick-carousel-prata .slick-arrow.slick-next, .slick-initialized:not(.slick-home).slick-carousel-bronze .slick-arrow.slick-next {
+    .slick-initialized.slick-carousel-ouro .slick-arrow.slick-next, .slick-initialized.slick-carousel-prata .slick-arrow.slick-next, .slick-initialized.slick-carousel-bronze .slick-arrow.slick-next {
       background-position: -27px;
       right: 40px; }
-  .slick-initialized:not(.slick-home).slick-carousel-ouro li.slick-slide {
+  .slick-initialized.slick-carousel-ouro li.slick-slide {
     margin: 0 10px; }
-  .slick-initialized:not(.slick-home).slick-carousel-ouro .slick-arrow {
+  .slick-initialized.slick-carousel-ouro .slick-arrow {
     top: 70px; }
-  .slick-initialized:not(.slick-home).slick-carousel-prata li.slick-slide {
+  .slick-initialized.slick-carousel-prata li.slick-slide {
     margin: 0 7.5px; }
-  .slick-initialized:not(.slick-home).slick-carousel-prata .slick-arrow {
+  .slick-initialized.slick-carousel-prata .slick-arrow {
     top: 30px; }
-  .slick-initialized:not(.slick-home).slick-carousel-bronze li.slick-slide {
+  .slick-initialized.slick-carousel-bronze li.slick-slide {
     margin: 0 3.5px; }
-  .slick-initialized:not(.slick-home).slick-carousel-bronze .slick-arrow {
+  .slick-initialized.slick-carousel-bronze .slick-arrow {
     top: 0px; }
 
 form.newsletter label {
@@ -474,8 +474,7 @@ section#header {
       left: 0;
       right: 0;
       top: 220px;
-      text-align: center;
-      padding: 0 30px; }
+      text-align: center; }
       section#header .jumbotron .ms-slide-info h1 {
         display: block; }
     section#header .jumbotron .master-slider-parent, section#header .jumbotron .master-slider-parent .ms-container, section#header .jumbotron .master-slider-parent .ms-inner-controls-cont, section#header .jumbotron .master-slider-parent .ms-view,
@@ -503,7 +502,7 @@ section#header {
       margin-right: 30px; }
       section#header .my-navbar .participe button {
         width: 190px;
-        margin-top: 43px; }
+        margin-top: 20px; }
     section#header .my-navbar .responsive-menu {
       overflow: auto;
       border: none;
@@ -1144,7 +1143,12 @@ body#o-instituto .transparencia {
       height: 40px;
       font: 17px/1em "din-alternate";
       background: #3f4444;
-      border: 1px #65665c solid; }
+      border: 1px #65665c solid;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      border-radius: 0; }
       body#o-instituto .transparencia .bootstrap-select .dropdown-toggle .caret {
         border: none;
         width: 16px;
@@ -1434,6 +1438,8 @@ body#biblioteca section#livros {
     color: #ffc72c; }
   body#biblioteca section#livros .slick-carousel-biblioteca li {
     margin: 0 26px; }
+    body#biblioteca section#livros .slick-carousel-biblioteca li img {
+      border: 2px #ffc72c solid; }
     body#biblioteca section#livros .slick-carousel-biblioteca li button {
       width: calc(50% - 3px);
       float: left;
@@ -1446,7 +1452,8 @@ body#biblioteca section#livros {
       background: #ccc;
       color: #3f4444;
       font: 17px/1em "din-condensed-bold";
-      border: none; }
+      border: none;
+      padding: 8px 12px 4px; }
       body#biblioteca section#livros .slick-carousel-biblioteca li button:first-of-type {
         margin-right: 6px;
         background: #ffc72c; }
@@ -1500,7 +1507,7 @@ body#projetos .projetos {
           background: white;
           width: 215px;
           height: 50px;
-          line-height: 60px; }
+          line-height: 50px; }
         body#projetos .projetos .container ul.categories li:hover {
           outline-width: 1px; }
         body#projetos .projetos .container ul.categories li.todos {
@@ -1690,10 +1697,6 @@ body#participe .precisamos {
       text-align: right;
       padding-right: 25px;
       position: relative; }
-      body#participe .precisamos li h4:before {
-        content: " ";
-        height: 20px;
-        display: block; }
       body#participe .precisamos li h4:after {
         content: " ";
         height: 60px;
@@ -1985,29 +1988,29 @@ body#participe.modal-open .modal-backdrop.fade {
     max-width: 315px;
     margin: 0 auto; }
 
-body#blog .jumbotron {
+body#bloco .jumbotron {
   background-image: url(../img/blog-top.jpg); }
-body#blog .fb-page, body#blog .fb-page iframe[style], body#blog .fb-page span {
+body#bloco .fb-page, body#bloco .fb-page iframe[style], body#bloco .fb-page span {
   width: 100% !important; }
-body#blog ul {
+body#bloco ul {
   padding: 0;
   margin: 0; }
-body#blog h2 {
+body#bloco h2 {
   font: 25px "din-black";
   color: #ffc72c;
   text-transform: uppercase; }
-body#blog section#news .slick-arrow {
+body#bloco section#news .slick-arrow {
   height: 131px;
   width: 34px;
   top: 115px; }
-  body#blog section#news .slick-arrow.slick-prev {
+  body#bloco section#news .slick-arrow.slick-prev {
     left: 20px; }
-  body#blog section#news .slick-arrow.slick-next {
+  body#bloco section#news .slick-arrow.slick-next {
     background-position: -34px 0;
     right: 20px; }
-body#blog section#news .slick-list {
+body#bloco section#news .slick-list {
   margin: 0; }
-  body#blog section#news .slick-list .slick-slide {
+  body#bloco section#news .slick-list .slick-slide {
     height: 411px;
     position: relative;
     background-image: url(../img/blog-top.jpg);
@@ -2018,7 +2021,7 @@ body#blog section#news .slick-list {
     -o-border-radius: 0;
     border-radius: 0;
     margin: 0; }
-    body#blog section#news .slick-list .slick-slide h3 {
+    body#bloco section#news .slick-list .slick-slide h3 {
       position: absolute;
       font: 20px/1.1em "din-regular";
       text-transform: uppercase;
@@ -2028,21 +2031,21 @@ body#blog section#news .slick-list {
       bottom: 0;
       width: 100%;
       margin: 0; }
-body#blog section#featured ul.row {
+body#bloco section#featured ul.row {
   margin-left: -15px;
   margin-right: -15px; }
-  body#blog section#featured ul.row li {
+  body#bloco section#featured ul.row li {
     margin-bottom: 22px; }
-    body#blog section#featured ul.row li a {
+    body#bloco section#featured ul.row li a {
       padding: 47px 20px;
       background-image: url(../img/blog-top.jpg);
       background-size: cover;
       height: 144px;
       display: block;
       position: relative; }
-      body#blog section#featured ul.row li a .flag-label, body#blog section#featured ul.row li a .date-label {
+      body#bloco section#featured ul.row li a .flag-label, body#bloco section#featured ul.row li a .date-label {
         display: none; }
-      body#blog section#featured ul.row li a span.tag {
+      body#bloco section#featured ul.row li a span.tag {
         display: inline-block;
         width: 92px;
         height: 25px;
@@ -2054,16 +2057,16 @@ body#blog section#featured ul.row {
         color: #3f4444;
         text-transform: uppercase;
         padding-top: 5px; }
-      body#blog section#featured ul.row li a h3 {
+      body#bloco section#featured ul.row li a h3 {
         color: white;
         font: 16px/1.1em "din-alternate"; }
-    body#blog section#featured ul.row li:first-of-type a {
+    body#bloco section#featured ul.row li:first-of-type a {
       height: 476px; }
-      body#blog section#featured ul.row li:first-of-type a .flag-label, body#blog section#featured ul.row li:first-of-type a .date-label {
+      body#bloco section#featured ul.row li:first-of-type a .flag-label, body#bloco section#featured ul.row li:first-of-type a .date-label {
         display: block; }
-      body#blog section#featured ul.row li:first-of-type a span.tag {
+      body#bloco section#featured ul.row li:first-of-type a span.tag {
         visibility: hidden; }
-    body#blog section#featured ul.row li:first-of-type h3 {
+    body#bloco section#featured ul.row li:first-of-type h3 {
       position: absolute;
       font: 20px/1.1em "din-regular";
       text-transform: uppercase;
@@ -2074,30 +2077,30 @@ body#blog section#featured ul.row {
       left: 0;
       width: 100%;
       margin: 0; }
-body#blog section#last-news ul.filters {
+body#bloco section#last-news ul.filters {
   margin: 10px 0 30px; }
-  body#blog section#last-news ul.filters li {
+  body#bloco section#last-news ul.filters li {
     display: inline-block; }
-    body#blog section#last-news ul.filters li button {
+    body#bloco section#last-news ul.filters li button {
       width: 267px;
       height: 52px; }
-body#blog section#last-news ul li a {
+body#bloco section#last-news ul li a {
   clear: both;
   color: #3f4444;
   display: inline; }
-  body#blog section#last-news ul li a > img {
+  body#bloco section#last-news ul li a > img {
     float: left;
     margin-right: 15px;
     padding-top: 15px;
     border-top: 1px #ffc72c solid;
     max-width: 122px; }
-  body#blog section#last-news ul li a h3 {
+  body#bloco section#last-news ul li a h3 {
     color: #3f4444;
     font: 21px/1.1em "din-condensed-bold";
     text-transform: uppercase;
     margin-top: 14px;
     padding-top: 17px; }
-  body#blog section#last-news ul li a p {
+  body#bloco section#last-news ul li a p {
     font: 16px/30px "din-regular";
     color: #3f4444;
     border: 1px #3f4444 solid;
@@ -2105,33 +2108,33 @@ body#blog section#last-news ul li a {
     display: inline-block;
     padding: 10px 10px 0 0;
     margin: 0; }
-    body#blog section#last-news ul li a p span {
+    body#bloco section#last-news ul li a p span {
       display: inline-block; }
-    body#blog section#last-news ul li a p img {
+    body#bloco section#last-news ul li a p img {
       max-height: 19px;
       max-width: 25px;
       margin: -4px 0 0 2px; }
-  body#blog section#last-news ul li a:hover h3 {
+  body#bloco section#last-news ul li a:hover h3 {
     color: #ffc72c; }
-body#blog section#last-news ul li:after {
+body#bloco section#last-news ul li:after {
   content: " ";
   clear: both;
   float: none;
   width: 100%;
   display: block;
   height: 1px; }
-body#blog section#last-news ul li:first-of-type img {
+body#bloco section#last-news ul li:first-of-type img {
   padding-top: 0;
   border-top: none; }
-body#blog section#last-news ul li:first-of-type h3 {
+body#bloco section#last-news ul li:first-of-type h3 {
   padding-top: 0; }
-body#blog section#last-news .latest-news-button, body#blog section#last-news .latest-news-button:hover {
+body#bloco section#last-news .latest-news-button, body#bloco section#last-news .latest-news-button:hover {
   color: #65665c;
   display: block;
   margin: 70px auto; }
-body#blog section#side {
+body#bloco section#side {
   margin-top: 53px; }
-  body#blog section#side form.search input, body#blog section#side form.search button, body#blog section#side .search-form input, body#blog section#side .search-form button {
+  body#bloco section#side form.search input, body#bloco section#side form.search button, body#bloco section#side .search-form input, body#bloco section#side .search-form button {
     padding: 10px 15px 0;
     background: #e8e8e8;
     border: none;
@@ -2139,23 +2142,23 @@ body#blog section#side {
     color: #3f4444;
     font: 17px/43px "din-regular";
     margin-bottom: 26px; }
-  body#blog section#side form.search input, body#blog section#side .search-form input {
+  body#bloco section#side form.search input, body#bloco section#side .search-form input {
     width: calc(100% - 125px); }
-  body#blog section#side form.search button, body#blog section#side .search-form button {
+  body#bloco section#side form.search button, body#bloco section#side .search-form button {
     width: 125px; }
-  body#blog section#side .wpcf7-form.newsletter {
+  body#bloco section#side .wpcf7-form.newsletter {
     margin-bottom: 50px; }
-    body#blog section#side .wpcf7-form.newsletter input, body#blog section#side .wpcf7-form.newsletter label:after, body#blog section#side .wpcf7-form.newsletter label:before {
+    body#bloco section#side .wpcf7-form.newsletter input, body#bloco section#side .wpcf7-form.newsletter label:after, body#bloco section#side .wpcf7-form.newsletter label:before {
       border-color: #3f4444 !important;
       color: #3f4444 !important; }
-    body#blog section#side .wpcf7-form.newsletter input[type=email] {
+    body#bloco section#side .wpcf7-form.newsletter input[type=email] {
       padding-left: 25px !important;
       background-image: url(../img/dark-mail.png) !important; }
-    body#blog section#side .wpcf7-form.newsletter input[type=submit] {
+    body#bloco section#side .wpcf7-form.newsletter input[type=submit] {
       padding: 11px 3px 0 0 !important; }
-      body#blog section#side .wpcf7-form.newsletter input[type=submit]:hover {
+      body#bloco section#side .wpcf7-form.newsletter input[type=submit]:hover {
         text-decoration: underline; }
-  body#blog section#side h3 {
+  body#bloco section#side h3 {
     background: #ffc72c;
     font: 20px/1.1em "din-regular";
     padding-top: 18px;
@@ -2164,12 +2167,12 @@ body#blog section#side {
     border-bottom: 1px #3f4444 solid;
     color: #3f4444;
     text-transform: uppercase; }
-  body#blog section#side .tags {
-    padding-left: 20px; }
-    body#blog section#side .tags li {
+  body#bloco section#side .tags {
+    margin: 0 -4px; }
+    body#bloco section#side .tags li {
       padding-left: 4px;
       padding-right: 4px; }
-      body#blog section#side .tags li a {
+      body#bloco section#side .tags li a {
         display: block;
         height: 29px;
         background: #d2d2d2;
@@ -2180,7 +2183,7 @@ body#blog section#side {
         text-transform: capitalize;
         color: #3f4444;
         padding-top: 10px; }
-        body#blog section#side .tags li a:hover {
+        body#bloco section#side .tags li a:hover {
           background: #ffc72c; }
 
 body#blog-interna a {
@@ -2428,22 +2431,34 @@ body#blog-interna section#comments {
     margin: 0 -35px;
     padding: 0 20px; }
     .slick-initialized .slick-list {
-      margin: 0 35px; }
-    .slick-initialized .slick-arrow {
+      margin: 0; }
+    .slick-initialized.slick-slider .slick-arrow {
       height: 106px;
       width: 30px;
-      top: 80px; }
-      .slick-initialized .slick-arrow.slick-prev {
-        left: 22px; }
-      .slick-initialized .slick-arrow.slick-next {
-        right: 22px;
+      top: 60px; }
+      .slick-initialized.slick-slider .slick-arrow.slick-next {
         background-position: -30px; }
+    .slick-initialized.slick-carousel .slick-list {
+      margin: 0 25px;
+      padding: 0 !important; }
+    .slick-initialized.slick-carousel-ouro .slick-list, .slick-initialized.slick-carousel-prata .slick-list, .slick-initialized.slick-carousel-bronze .slick-list {
+      margin: 0 40px !important; }
+    .slick-initialized.slick-carousel-ouro .slick-arrow.slick-next, .slick-initialized.slick-carousel-prata .slick-arrow.slick-next, .slick-initialized.slick-carousel-bronze .slick-arrow.slick-next {
+      right: 12px; }
+    .slick-initialized.slick-carousel-ouro .slick-arrow.slick-prev, .slick-initialized.slick-carousel-prata .slick-arrow.slick-prev, .slick-initialized.slick-carousel-bronze .slick-arrow.slick-prev {
+      left: 12px; }
+    .slick-initialized.slick-carousel-bronze .slick-arrow {
+      top: 65px; }
+    .slick-initialized .slick-dots {
+      margin-top: 30px; }
+    .slick-initialized li.slick-slide {
+      margin: 0 10px; }
 
   section#header .jumbotron {
     height: 310px; }
     section#header .jumbotron h1 {
       font-size: 32px;
-      padding: 0 15px; }
+      padding: 0; }
   section#header .my-navbar {
     border-width: 0 0 1px;
     position: fixed;
@@ -2514,10 +2529,14 @@ body#blog-interna section#comments {
     section#participe .row.botoes {
       display: none; }
 
-  section#blog {
+  section#bloco {
     padding: 35px 0 0 0; }
-    section#blog .post:hover .post-entry {
-      display: none; }
+    section#bloco .post {
+      margin-bottom: 30px; }
+      section#bloco .post:hover .post-entry {
+        display: none; }
+      section#bloco .post .post-title {
+        height: auto; }
 
   section#parceiro header h3 {
     font-size: 27px !important;
@@ -2684,6 +2703,8 @@ body#blog-interna section#comments {
       width: 100%;
       font-size: 18px;
       margin-bottom: 20px; }
+  body#blog section#featured ul.row li a h3 {
+    text-shadow: 1px 1px 7px black; }
 
   body#blog-interna .featured-img {
     height: 200px;

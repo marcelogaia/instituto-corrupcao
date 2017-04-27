@@ -57,8 +57,8 @@ $isHome = is_home();
 		<div class="jumbotron">
 			<?php if(is_front_page()) { 
     			//echo do_shortcode("[metaslider id=1047]"); 
-    			echo do_shortcode('[masterslider id="1"]');
-    			//masterslider(1);
+   			// echo do_shortcode('[masterslider id="1"]');
+    			masterslider(1);
 			} else { ?> 
 			<h1><?php the_title() ?></h1>
 			<?php } ?>
@@ -126,7 +126,7 @@ $isHome = is_home();
 										<?php if(!empty($socialArr['google-plus'])): ?>
 											<a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
 										<?php endif; ?>
-											<div class="participe"><button type="reset" onclick="location.href='<?= site_url('participe')?>'">Participe></button></div>
+											<div class="participe"><button onclick="location.href='<?= site_url('participe')?>'">Participe</button></div>
 										</p>
 	<?php endif; ?>
 									</div><!--/.box-right-->
@@ -148,5 +148,5 @@ $isHome = is_home();
 				</div>
 			</div>
 		</div>
-		<?= do_shortcode('[contact-form-7 id="1056" title="newsletter" html_id="newsletter-form"]') ?>
+		<?= do_shortcode('[contact-form-7 id="1056" title="newsletter" html_id="newsletter-form" html_class="closed"]') ?>
 	</section>

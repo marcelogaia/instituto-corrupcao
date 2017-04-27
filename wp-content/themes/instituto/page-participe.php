@@ -92,11 +92,11 @@
 						<li class="direta">
 							<h4><span>doação direta</span></h4>
 							<div>
-								<a href="https://pag.ae/bkjpKBb" target="_blank"></a><img src="img/paypal-logo.png" alt="">
+								<img src="img/paypal-logo.png" alt="">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.
 								</p>
 							</div>
-							<button>eu <br>quero</button>
+							<button><a href="https://pag.ae/bkjpKBb" target="_blank">eu <br>quero</a></button>
 						</li>
 						<li class="projetos">
 							<h4><span>doar para <br>um de nossos projetos</span></h4>

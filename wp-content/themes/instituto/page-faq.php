@@ -39,7 +39,7 @@ foreach($posts_array as $post):
 ?>
 			<article class="pergunta row">
 				<?php if($c==1):?>
-				<h4 data-toggle="collapse" data-target="#resposta-<?= $c ?>" aria-expanded="true" aria-controls="resposta-<?= $c ?>"><span><?= $post->post_title; ?></span></h4>
+				<h4><a href="#resposta-<?= $c ?>" data-toggle="collapse" data-target="#resposta-<?= $c ?>" aria-expanded="true" aria-controls="resposta-<?= $c ?>"><span><?= $post->post_title; ?></span></a></h4>
 				<div id="resposta-<?= $c ?>" class="col-sm-10 col-sm-offset-1 collapse in resposta">
 				<?php else: ?>
 				<h4 data-toggle="collapse" data-target="#resposta-<?= $c ?>" aria-expanded="false" aria-controls="resposta-<?= $c ?>" class="collapsed"><span><?= $post->post_title; ?></span></h4>

@@ -55,6 +55,7 @@ jQuery( document ).ready( function($) {
 					breakpoint: 380,
 					settings: {
 						slidesToShow: 1,
+						// variableWidth: true,
 					}
 				}
     		]

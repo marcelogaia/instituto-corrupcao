@@ -61,7 +61,7 @@
 					<h2>Destaque</h2>
 					<ul class="row">
 <?php while( have_posts() ): the_post(); ?>	
-						<li class="<?= $count<=0 ? 'col-sm-7' : 'col-sm-5 col-xs-6' ?>">
+						<li class="<?= $count<=0 ? 'col-sm-7' : 'col-sm-5 col-xs-12' ?>">
 						<?php if(get_the_post_thumbnail()): ?>
 							<a href="<?php the_permalink(); ?>" style="background-image: url(<?= the_post_thumbnail_url() ?>)">
 						<?php else: ?>
@@ -128,7 +128,7 @@
 			</section>
 			<section id="side" class="col-sm-4">
 				<?php get_search_form() ?>
-				<div class="fb-page" data-href="https://www.facebook.com/institutonaoaceitocorrupcao/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/institutonaoaceitocorrupcao/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/institutonaoaceitocorrupcao/">Instituto Não Aceito Corrupção</a></blockquote></div>
+				<?= do_shortcode('[facebook-page href="https://facebook.com/facebook" width="300" height="800" tabs="timeline, events, messages" show_cta="true" small_header="false" align="left" hide_cover="false" show_facepile="false"]'); ?>
 
 				<h3>Newsletter</h3><!--/.box-left-->
 				<div class="form">
