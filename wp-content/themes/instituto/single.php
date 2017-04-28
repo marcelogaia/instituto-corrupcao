@@ -24,9 +24,7 @@
 					<a class="twitter" href="http://www.twitter.com/<?= $twitter ?>">
 						<span><i class="fa fa-twitter" aria-hidden="true"></i> <?= $twitter ?></span>
 					</a>
-					<a href="#" class="share">
-						<i class="fa fa-share-alt" aria-hidden="true"></i>
-					</a>
+					<a href="javascript:void(0);" class="share"><!-- share --></a>
 				</div>
 				<article class="col-sm-8 the-article">
 					<header>
@@ -51,6 +49,8 @@
 		<?php 
 			$prev = get_adjacent_post(false,'',true); 
 			$next = get_adjacent_post(false,'',false); 
+
+			$pLimit = $nLimit = 100;
 		?>
 		<div class="container">
 			<div class="row">	
@@ -60,11 +60,12 @@
 						<?php if(has_post_thumbnail($prev->ID)):
 							$postThumbID = get_post_thumbnail_id($prev->ID);
 							$thumbUrl = wp_get_attachment_thumb_url($postThumbID);
+							$pLimit = 65;
 						?>
 						<img src="<?= $thumbUrl ?>" alt="">
 						<?php endif; ?>
 						<h4>Matéria Anterior</h4>
-						<h3><?= $prev->post_title ?></h3>
+						<h3><?= limit_chars($prev->post_title,$pLimit) ?></h3>
 						<i class="fa fa-angle-left" aria-hidden="true"></i>
 					</a>
 				<?php endif; ?>
@@ -75,11 +76,12 @@
 						<?php if(has_post_thumbnail($next->ID)):
 							$postThumbID = get_post_thumbnail_id($next->ID);
 							$thumbUrl = wp_get_attachment_thumb_url($postThumbID);
+							$nLimit = 65;
 						?>
 						<img src="<?= $thumbUrl ?>" alt="">
 						<?php endif; ?>
 						<h4>Matéria Seguinte</h4>
-						<h3><?= $next->post_title ?></h3>
+						<h3><?= limit_chars($next->post_title,$nLimit) ?></h3>
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
 					</a>
 				</div>

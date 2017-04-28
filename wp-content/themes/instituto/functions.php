@@ -119,19 +119,33 @@ add_filter( 'page_template', function ( $template ) use ( &$post )
     return $locate_template;
 });
 
-function get_my_excerpt($limit) {
-	$excerpt = explode(' ', strip_tags(get_the_content()), $limit);
+function limit_chars($origin, $limit){
+	$origin = trim($origin);
+	if(strlen($origin) > $limit) {
+		$subs = substr($origin, 0,$limit-5);
+		$lastSpace = strrpos($subs, ' ');
+		return substr($origin,0,$lastSpace) . "[...]";
+	} 
+	return $origin;
+}
+
+function limit_words($origin, $limit){
+	$limited = explode(' ', strip_tags($origin), $limit);
 	
-	if (count($excerpt)>=$limit) {
-		array_pop($excerpt);
-		$excerpt = implode(" ",$excerpt).' [...]';
+	if (count($limited)>=$limit) {
+		array_pop($limited);
+		$limited = implode(" ",$limited).' [...]';
 	} else {
-		$excerpt = implode(" ",$excerpt);
+		$limited = implode(" ",$limited);
 	}
 
-	$excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+	$limited = preg_replace('`[[^]]*]`','',$limited);
 	//return $limit;
-	return $excerpt;
+	return $limited;
+}
+
+function get_my_excerpt($limit) {
+	return limit_words(get_the_content(),$limit);
 }
 
 function my_excerpt($limit) {

@@ -166,8 +166,12 @@ $font-din-black-5: url(fonts/din/din-black.woff2) format('woff2');
 	}
 }
 
-/* classes for independent colors */
+/* classes for independent colors ??? */
 .white {color: #ffffff;}
+
+.bootstrap-select.show { 
+	display: inline-block !important;
+}
 
 .latest-news-button{
 	position:relative;
@@ -1826,7 +1830,7 @@ body#o-instituto {
 }
 
 // Duvidas (FAQ)
-body#faq {
+body#duvidas {
 	background-color: $color_std-yellow;
 	.jumbotron {
 
@@ -2769,7 +2773,6 @@ body#participe {
 		background: #d2d2d2 url(../img/participe-volutariado-bg.png) no-repeat bottom center;
 		height:750px;
 		text-align: center;
-		background-size: cover;
 
 		p {
 			color: $color_dark-grey;
@@ -3259,8 +3262,7 @@ body#bloco {
 
 		h3 {
 			background: $color_std-yellow;
-			font:20px/1.1em $font_din;
-			padding-top: 18px;
+			font:20px/44px $font_din;
 			padding-left: 20px;
 			height:44px;
 			border-bottom: 1px $color_dark-grey solid;
@@ -3347,9 +3349,10 @@ body#blog-interna {
 
 			a.share {
 				display: block;
-				color: $color_dark-grey;
-				font-size: 35px;
-				margin-top: 25px;
+				width: 26px;
+				height: 29px;
+				margin: 25px auto 0;
+				background: url(../img/share-icon.png) center center no-repeat;
 			}
 
 		}

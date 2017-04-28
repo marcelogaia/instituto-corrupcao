@@ -88,9 +88,12 @@
     max-width: 32px;
     display: initial; }
 
-/* classes for independent colors */
+/* classes for independent colors ??? */
 .white {
   color: #ffffff; }
+
+.bootstrap-select.show {
+  display: inline-block !important; }
 
 .latest-news-button {
   position: relative;
@@ -1278,44 +1281,44 @@ body#o-instituto .duvidas {
     width: 275px;
     height: 35px; }
 
-body#faq {
+body#duvidas {
   background-color: #ffc72c; }
-  body#faq .jumbotron {
+  body#duvidas .jumbotron {
     background-image: url(../img/faq-top.jpg); }
-    body#faq .jumbotron h1 {
+    body#duvidas .jumbotron h1 {
       font: 100px "din-alternate";
       font-weight: bold; }
-  body#faq header {
+  body#duvidas header {
     text-align: center;
     float: none;
     overflow: hidden;
     margin-top: 50px; }
-    body#faq header p {
+    body#duvidas header p {
       font: 20px "din-regular";
       color: #3f4444;
       margin-top: 20px; }
-  body#faq .search, body#faq .search-form {
+  body#duvidas .search, body#duvidas .search-form {
     text-align: center; }
-    body#faq .search input, body#faq .search button, body#faq .search-form input, body#faq .search-form button {
+    body#duvidas .search input, body#duvidas .search button, body#duvidas .search-form input, body#duvidas .search-form button {
       height: 50px;
       line-height: 50px;
       margin: 50px 5px;
       border: none;
       vertical-align: top; }
-    body#faq .search input, body#faq .search-form input {
+    body#duvidas .search input, body#duvidas .search-form input {
       width: 475px;
       padding: 0 10px 0 25px; }
-    body#faq .search button, body#faq .search-form button {
+    body#duvidas .search button, body#duvidas .search-form button {
       width: 265px;
       background: #3f4444;
       font: 20px "din-regular";
       color: #ffc72c; }
-  body#faq .pergunta .collapsing {
+  body#duvidas .pergunta .collapsing {
     -webkit-transition: height 0.6s ease;
     -moz-transition: height 0.6s ease;
     -o-transition: height 0.6s ease;
     transition: height 0.6s ease; }
-  body#faq .pergunta h4 a {
+  body#duvidas .pergunta h4 a {
     width: 100%;
     display: block;
     position: relative;
@@ -1325,7 +1328,7 @@ body#faq {
     text-align: center;
     background-color: #3f4444;
     text-decoration: none; }
-    body#faq .pergunta h4 a:after {
+    body#duvidas .pergunta h4 a:after {
       content: ' ';
       width: 0;
       height: 0;
@@ -1336,13 +1339,13 @@ body#faq {
       position: absolute;
       left: calc(50% - 12px);
       bottom: -10px; }
-    body#faq .pergunta h4 a.collapsed {
+    body#duvidas .pergunta h4 a.collapsed {
       background-color: #65665c; }
-    body#faq .pergunta h4 a span {
+    body#duvidas .pergunta h4 a span {
       display: block;
       padding: 50px;
       text-align: center; }
-  body#faq .pergunta .resposta {
+  body#duvidas .pergunta .resposta {
     font: 20px/24px "din-regular";
     color: #3f4444;
     margin: 40px 0 50px; }
@@ -1931,8 +1934,7 @@ body#participe .quer-doar {
 body#participe .voluntarios {
   background: #d2d2d2 url(../img/participe-volutariado-bg.png) no-repeat bottom center;
   height: 750px;
-  text-align: center;
-  background-size: cover; }
+  text-align: center; }
   body#participe .voluntarios p {
     color: #3f4444;
     margin: 10px 0 40px; }
@@ -2264,8 +2266,7 @@ body#bloco section#side {
         text-decoration: underline; }
   body#bloco section#side h3 {
     background: #ffc72c;
-    font: 20px/1.1em "din-regular";
-    padding-top: 18px;
+    font: 20px/44px "din-regular";
     padding-left: 20px;
     height: 44px;
     border-bottom: 1px #3f4444 solid;
@@ -2328,9 +2329,10 @@ body#blog-interna section#the-news {
         color: #00aced; }
     body#blog-interna section#the-news .author a.share {
       display: block;
-      color: #3f4444;
-      font-size: 35px;
-      margin-top: 25px; }
+      width: 26px;
+      height: 29px;
+      margin: 25px auto 0;
+      background: url(../img/share-icon.png) center center no-repeat; }
   body#blog-interna section#the-news .the-article header .category {
     text-transform: uppercase;
     font: 20px/1.1em "din-alternate";
