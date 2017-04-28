@@ -5,6 +5,15 @@ $lg: "(min-width: 992px) and (max-width: 1199px)";
 $xl: "(min-width: 1200px)";
 
 @media #{$xs} {
+
+	p {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.ekko-lightbox {
+		max-width: 95%;
+	}
+
 	.slick-initialized {
 		margin:0 -35px;
 		padding:0 20px;
@@ -59,6 +68,8 @@ $xl: "(min-width: 1200px)";
 
 		li.slick-slide {
 			margin: 0 10px;
+			opacity: 1;
+			border-color: transparent;
 		}
 	}
 
@@ -176,16 +187,14 @@ $xl: "(min-width: 1200px)";
 		}
 	}
 
-	section#bloco {
+	section#blog {
 	    padding: 35px 0 0 0;
 
 		.post {
 	    	margin-bottom: 30px;
 
-			&:hover {
-				.post-entry {
-					display: none;
-				}
+			.post-entry {
+				display: none !important;
 			}
 
 			.post-title {
@@ -244,7 +253,6 @@ $xl: "(min-width: 1200px)";
 			
 			margin-top: 60px;
 			padding:0;
-			margin-left: -40px;
 
 			> li {
 				background: url(../img/quer-doar-mobile-bg.png) no-repeat 0 0;
@@ -398,9 +406,41 @@ $xl: "(min-width: 1200px)";
 				font-size: 15px;
 			}
 		}
+
+		.slick-initialized{
+			
+			.slick-arrow {
+				&.slick-prev {
+					left:0 !important;
+				}
+				&.slick-next {
+					right:0 !important;	
+				}
+			}
+			.slick-slide {
+				padding: 0 20px !important;
+				border: none !important;
+			}
+		}
+
+		section#videos {
+			.slick-initialized{
+				.slick-slide {
+					padding: 0 40px !important;
+				}
+			}
+		}
+
+		section#livros {
+			.slick-initialized{
+				.slick-arrow {
+					top: calc(50% - 103px);
+				}
+			}
+		}
 	}
 
-	body#faq {
+	body#duvidas {
 		section#header .jumbotron h1 {
 			font-size: 50px;
 			line-height: 50px;
@@ -460,7 +500,7 @@ $xl: "(min-width: 1200px)";
 		}
 	}
 
-	body#blog {
+	body#bloco {
 		section#side {
 			display: none;
 		}
@@ -485,8 +525,15 @@ $xl: "(min-width: 1200px)";
 	    	}
 	    }
 
-	    section#featured ul.row li a h3 {
-	    	text-shadow: 1px 1px 7px black;
+		.post-entry, .hover {
+			display: none !important;
+		}
+
+	    section#featured ul.row li a  {
+	    	background: linear-gradient(
+								rgba(0,0,0,0.2),
+								rgba(0,0,0,0.7)
+							),url(img.jpg);
 	    }
 	}
 
@@ -494,6 +541,21 @@ $xl: "(min-width: 1200px)";
 		.featured-img {
 			height: 200px;
 			margin-top: 108px;
+		}
+
+		.the-article {
+			p {
+				text-align: justify;
+
+				a {
+					display: inline;
+				}
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
 		}
 	}
 

@@ -276,6 +276,15 @@ jQuery( document ).ready( function($) {
 		});
 	}
 
+	function bibliotecaLightbox() {
+		$('body#biblioteca section#videos a').click(function (e) {
+		    e.preventDefault();
+		    $(this).ekkoLightbox({
+		    	alwaysShowClose : true
+		    });
+		});
+	}
+
 	// Called Functions
 	$( function() {
 		fixMenuHeight();
@@ -289,6 +298,7 @@ jQuery( document ).ready( function($) {
 		homeJumbotron();
 		participeForms();
 		newsletterFixed();
+		bibliotecaLightbox();
 	});
 
 	// Window Resize

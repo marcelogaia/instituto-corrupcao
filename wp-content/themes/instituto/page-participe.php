@@ -83,7 +83,7 @@
 	<section class="quer-doar">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-10 col-xs-offset-1">
+				<div>
 					<header>
 						<h3 class="general-title">quer doar?</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

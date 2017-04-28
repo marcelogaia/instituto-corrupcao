@@ -288,6 +288,26 @@ $font-din-black-5: url(fonts/din/din-black.woff2) format('woff2');
 	}
 }
 
+.ekko-lightbox {
+	margin:0 auto;
+	.modal-dialog{
+		margin-left:auto;
+		margin-right:auto;
+		.modal-title {
+			display: none;
+		}
+
+		.modal-body {
+			padding: 5px;
+		}
+	}
+}
+
+.modal-backdrop.fade{
+	opacity: 0.7;
+	background: black;
+}
+
 %std_button {
 	border:none;
 	height: 54px;
@@ -383,20 +403,28 @@ li {
 
 	.slick-list {
 		margin: 0 80px;
+		padding: 0 !important;
 	}
 
 	li.slick-slide {
-		background: white;
 		@include border-radius(50%);
 		margin: 0 32.5px;
 		overflow: hidden;
+		opacity: 0.7;
+		border: 4px transparent solid;
 
 		a {
+			background: white;
 			width:100%;
 			display: block;
 		}
 		img {
 			width:100%;
+		}
+
+		&:hover {
+			opacity: 1;
+			border-color: $color_std-yellow;
 		}
 	}
 
@@ -1894,7 +1922,7 @@ body#duvidas {
 			background-color: $color_dark-grey;
 			text-decoration: none;
 
-			&:after {
+			&:not(.collapsed):after {
 				content: ' ';
 				width: 0;
 				height: 0;
@@ -1992,12 +2020,20 @@ body#biblioteca {
 			}
 		}
 
+		.slick-slide {
+			opacity: 1 !important;
+		}
+
 		li {
 			background: none;
 			text-align: center;
 			color: $color_dark-grey;
 
 			@include border-radius(0);
+
+			a {
+				background: none;
+			}
 		}
 
 		h4 {
@@ -2070,6 +2106,10 @@ body#biblioteca {
 				margin:0 10px;
 			}
 		}
+
+		.slick-slide {
+			border-color: transparent !important;
+		}
 	}
 
 	section#livros {
@@ -2116,6 +2156,10 @@ body#biblioteca {
 				top: 95px;
 			}
 		}
+
+		.slick-slide {
+			border-color: transparent !important;
+		}
 	}
 
 	section#iniciativas {
@@ -2130,6 +2174,10 @@ body#biblioteca {
 		.slick-carousel-biblioteca {
 			li {
 				margin:0 10px;
+
+				&.slick-slide {
+					border-color: transparent !important;
+				}
 			}
 		}
 

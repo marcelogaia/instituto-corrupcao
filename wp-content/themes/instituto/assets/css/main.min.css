@@ -209,6 +209,20 @@
     top: 25px;
     left: 0px; }
 
+.ekko-lightbox {
+  margin: 0 auto; }
+  .ekko-lightbox .modal-dialog {
+    margin-left: auto;
+    margin-right: auto; }
+    .ekko-lightbox .modal-dialog .modal-title {
+      display: none; }
+    .ekko-lightbox .modal-dialog .modal-body {
+      padding: 5px; }
+
+.modal-backdrop.fade {
+  opacity: 0.7;
+  background: black; }
+
 section#header .my-navbar .participe button, section#participe .row article .eu-quero, section#parceiro .bnt-ver-todos.logo-carousel-btn, body#participe .voluntarios button, section#header .jumbotron .btn, section#projetos .content-holder .row .text-holder button, body#bloco section#last-news ul.filters li button, body#blog-interna section#comments button {
   border: none;
   height: 54px;
@@ -276,21 +290,27 @@ li {
 .slick-initialized {
   padding: 0; }
   .slick-initialized .slick-list {
-    margin: 0 80px; }
+    margin: 0 80px;
+    padding: 0 !important; }
   .slick-initialized li.slick-slide {
-    background: white;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
     margin: 0 32.5px;
-    overflow: hidden; }
+    overflow: hidden;
+    opacity: 0.7;
+    border: 4px transparent solid; }
     .slick-initialized li.slick-slide a {
+      background: white;
       width: 100%;
       display: block; }
     .slick-initialized li.slick-slide img {
       width: 100%; }
+    .slick-initialized li.slick-slide:hover {
+      opacity: 1;
+      border-color: #ffc72c; }
   .slick-initialized .slick-arrow {
     height: 260px;
     width: 70px;
@@ -1328,7 +1348,7 @@ body#duvidas {
     text-align: center;
     background-color: #3f4444;
     text-decoration: none; }
-    body#duvidas .pergunta h4 a:after {
+    body#duvidas .pergunta h4 a:not(.collapsed):after {
       content: ' ';
       width: 0;
       height: 0;
@@ -1395,6 +1415,8 @@ body#biblioteca .slick-carousel-biblioteca {
     body#biblioteca .slick-carousel-biblioteca .slick-arrow.slick-next {
       right: 20px;
       background-position: -27px; }
+  body#biblioteca .slick-carousel-biblioteca .slick-slide {
+    opacity: 1 !important; }
   body#biblioteca .slick-carousel-biblioteca li {
     background: none;
     text-align: center;
@@ -1404,6 +1426,8 @@ body#biblioteca .slick-carousel-biblioteca {
     -ms-border-radius: 0;
     -o-border-radius: 0;
     border-radius: 0; }
+    body#biblioteca .slick-carousel-biblioteca li a {
+      background: none; }
   body#biblioteca .slick-carousel-biblioteca h4 {
     font: 22px "din-black";
     margin: 30px 0 20px; }
@@ -1455,6 +1479,8 @@ body#biblioteca section#artigos {
     border: none; }
   body#biblioteca section#artigos .slick-carousel-biblioteca li {
     margin: 0 10px; }
+  body#biblioteca section#artigos .slick-slide {
+    border-color: transparent !important; }
 body#biblioteca section#livros {
   background: #3f4444; }
   body#biblioteca section#livros h3 {
@@ -1485,6 +1511,8 @@ body#biblioteca section#livros {
         background: white; }
   body#biblioteca section#livros .slick-carousel-biblioteca .slick-arrow {
     top: 95px; }
+  body#biblioteca section#livros .slick-slide {
+    border-color: transparent !important; }
 body#biblioteca section#iniciativas {
   background: white; }
   body#biblioteca section#iniciativas img {
@@ -1497,6 +1525,8 @@ body#biblioteca section#iniciativas {
     margin: 0 auto; }
   body#biblioteca section#iniciativas .slick-carousel-biblioteca li {
     margin: 0 10px; }
+    body#biblioteca section#iniciativas .slick-carousel-biblioteca li.slick-slide {
+      border-color: transparent !important; }
   body#biblioteca section#iniciativas a {
     margin-top: 5px;
     font: 22px/1em "din-condensed-bold";
@@ -2533,6 +2563,13 @@ body#blog-interna section#comments {
           vertical-align: middle; }
 
 @media (max-width: 575px) {
+  p {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  .ekko-lightbox {
+    max-width: 95%; }
+
   .slick-initialized {
     margin: 0 -35px;
     padding: 0 20px; }
@@ -2558,7 +2595,9 @@ body#blog-interna section#comments {
     .slick-initialized .slick-dots {
       margin-top: 30px; }
     .slick-initialized li.slick-slide {
-      margin: 0 10px; }
+      margin: 0 10px;
+      opacity: 1;
+      border-color: transparent; }
 
   section#header .jumbotron {
     height: 310px; }
@@ -2635,13 +2674,13 @@ body#blog-interna section#comments {
     section#participe .row.botoes {
       display: none; }
 
-  section#bloco {
+  section#blog {
     padding: 35px 0 0 0; }
-    section#bloco .post {
+    section#blog .post {
       margin-bottom: 30px; }
-      section#bloco .post:hover .post-entry {
-        display: none; }
-      section#bloco .post .post-title {
+      section#blog .post .post-entry {
+        display: none !important; }
+      section#blog .post .post-title {
         height: auto; }
 
   section#parceiro header h3 {
@@ -2672,8 +2711,7 @@ body#blog-interna section#comments {
       display: none; }
     body#participe .quer-doar ul.items {
       margin-top: 60px;
-      padding: 0;
-      margin-left: -40px; }
+      padding: 0; }
       body#participe .quer-doar ul.items > li {
         background: url(../img/quer-doar-mobile-bg.png) no-repeat 0 0;
         width: 312px;
@@ -2764,28 +2802,39 @@ body#blog-interna section#comments {
   body#biblioteca section.search form button {
     width: 115px;
     font-size: 15px; }
+  body#biblioteca .slick-initialized .slick-arrow.slick-prev {
+    left: 0 !important; }
+  body#biblioteca .slick-initialized .slick-arrow.slick-next {
+    right: 0 !important; }
+  body#biblioteca .slick-initialized .slick-slide {
+    padding: 0 20px !important;
+    border: none !important; }
+  body#biblioteca section#videos .slick-initialized .slick-slide {
+    padding: 0 40px !important; }
+  body#biblioteca section#livros .slick-initialized .slick-arrow {
+    top: calc(50% - 103px); }
 
-  body#faq section#header .jumbotron h1 {
+  body#duvidas section#header .jumbotron h1 {
     font-size: 50px;
     line-height: 50px; }
-  body#faq header .general-title {
+  body#duvidas header .general-title {
     font-size: 27px !important; }
-  body#faq header p {
+  body#duvidas header p {
     line-height: 1em; }
-  body#faq .search input, body#faq .search button {
+  body#duvidas .search input, body#duvidas .search button {
     margin: 15px 2px; }
-  body#faq .search input {
+  body#duvidas .search input {
     padding-left: 10px;
     width: calc(100% - 140px); }
-  body#faq .search button {
+  body#duvidas .search button {
     width: 115px;
     font-size: 15px; }
-  body#faq .pergunta h4 {
+  body#duvidas .pergunta h4 {
     font: 25px/1.2em "din-black";
     padding: 15px; }
-  body#faq .pergunta span {
+  body#duvidas .pergunta span {
     padding: 0px !important; }
-  body#faq .pergunta .resposta {
+  body#duvidas .pergunta .resposta {
     font-size: 16px;
     padding: 30px 15px 20px; }
 
@@ -2794,27 +2843,36 @@ body#blog-interna section#comments {
     body#projetos .chamada .container h3 {
       margin-bottom: 20px; }
 
-  body#blog section#side {
+  body#bloco section#side {
     display: none; }
-  body#blog section#last-news ul.filters {
+  body#bloco section#last-news ul.filters {
     overflow: hidden; }
-  body#blog section#last-news ul.filters li {
+  body#bloco section#last-news ul.filters li {
     float: left;
     width: 50%;
     padding-left: 5px; }
-    body#blog section#last-news ul.filters li:first-of-type {
+    body#bloco section#last-news ul.filters li:first-of-type {
       padding-left: 0;
       padding-right: 5px; }
-    body#blog section#last-news ul.filters li button {
+    body#bloco section#last-news ul.filters li button {
       width: 100%;
       font-size: 18px;
       margin-bottom: 20px; }
-  body#blog section#featured ul.row li a h3 {
-    text-shadow: 1px 1px 7px black; }
+  body#bloco .post-entry, body#bloco .hover {
+    display: none !important; }
+  body#bloco section#featured ul.row li a {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(img.jpg); }
 
   body#blog-interna .featured-img {
     height: 200px;
     margin-top: 108px; }
+  body#blog-interna .the-article p {
+    text-align: justify; }
+    body#blog-interna .the-article p a {
+      display: inline; }
+  body#blog-interna .the-article img {
+    max-width: 100%;
+    height: auto; }
 
   footer#contato .footer-title, footer#contato .imprensa, footer#contato .menu-principal-container {
     display: none; }
