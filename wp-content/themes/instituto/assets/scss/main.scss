@@ -141,6 +141,7 @@ $font-din-black-5: url(fonts/din/din-black.woff2) format('woff2');
 	font:14px/1.1em $font_din;
 	text-align: center;
 	padding-top: 10px;
+	text-transform: uppercase;
 
 	b {
 		font:27px/1.1em $font_din-black;
@@ -947,6 +948,10 @@ footer#contato {
 				height: 38px;
 				padding: 0 24px;
 				float:right;
+
+				&:hover {
+					background: $color_mid-grey;
+				}
 			}
 
 			.wpcf7-form-control-wrap {
@@ -1805,7 +1810,7 @@ body#o-instituto {
 			font: 80px $font_din;
 			text-transform: uppercase;
 			color: $color_std-yellow;
-			margin: 135px 0 31px;
+			margin: 50px 0 10px;
 			letter-spacing: 41px;
 		}
 
@@ -1871,7 +1876,10 @@ body#faq {
 	}
 
 	.pergunta {
-		h4 {
+		.collapsing {
+			@include transition(height 0.6s ease);
+		}
+		h4 a {
 			width: 100%;
 			display: block;
 			position: relative;
@@ -1879,8 +1887,21 @@ body#faq {
 			color: #ffc72c;
 			text-transform: uppercase;
 			text-align: center;
-			background-color: #3f4444;
+			background-color: $color_dark-grey;
+			text-decoration: none;
 
+			&:after {
+				content: ' ';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 12.5px 0 12.5px;
+				border-color: $color_dark-grey transparent transparent transparent;
+				display: block;
+				position: absolute;
+				left: calc(50% - 12px);
+				bottom:-10px;
+			}
 
 			&.collapsed {
 				background-color: $color_mid-grey;
@@ -1896,7 +1917,7 @@ body#faq {
 		.resposta {
 			font: 20px/24px $font_din;
 			color: $color_dark-grey;
-			padding:40px 0 50px;
+			margin:40px 0 50px;
 		}
 	}
 }
@@ -2026,7 +2047,7 @@ body#biblioteca {
 
 		button.btn {
 			width:100px;
-			padding:10px 0;
+			padding:8px 0 6px;
 			background: $color_dark-grey;
 			@include border-radius(0);
 			color:$color_std-yellow;
@@ -2072,13 +2093,23 @@ body#biblioteca {
 					color: $color_dark-grey;
 					font: 17px/1em $font_din-condensed;
 					border:none;
-					padding: 8px 12px 4px;
+					padding: 10px 12px 4px;
+					text-transform: uppercase;
+
 
 					&:first-of-type {
 						margin-right:6px;
 						background:$color_std-yellow;
 					}
+
+					&:hover {
+						background: white;
+					}
 				}
+			}
+
+			.slick-arrow {
+				top: 95px;
 			}
 		}
 	}
@@ -2738,6 +2769,7 @@ body#participe {
 		background: #d2d2d2 url(../img/participe-volutariado-bg.png) no-repeat bottom center;
 		height:750px;
 		text-align: center;
+		background-size: cover;
 
 		p {
 			color: $color_dark-grey;
@@ -2816,6 +2848,15 @@ body#participe {
 	h3 {
 		text-transform: uppercase;
 		font: 20px/1em $font_din;
+
+		&:after {
+			content:' ';
+			display: block;
+			margin: 10px auto;
+			width:19px;
+			height:11px;
+			background: url(../img/form-arrows.png);
+		}
 	}
 
 	input {
@@ -2904,6 +2945,46 @@ body#bloco {
 					width:100%;
 					margin:0;
 				}
+
+				&:hover .hover {
+					opacity: 1;
+				}
+
+				.hover {
+					@include transition(0.5s);
+					opacity: 0;
+
+					font:17px/21px $font_din;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: rgba(0,0,0,0.8);
+					text-align: center;
+					padding: 65px;
+					color: white;
+				
+					h4 {
+						text-transform: uppercase;
+						font-size: 20px;
+					}
+
+					p {
+						width:90%;
+						max-width: 490px;
+						margin: 0 auto;
+						border-left: 1px $color_std-yellow solid;
+						border-right: 1px $color_std-yellow solid;
+						padding: 0 34px 15px;
+					}
+
+					a {
+						color: $color_std-yellow;
+						text-decoration: underline;
+						margin-top: 20px;
+					}
+				}
 			}
 		}
 	}
@@ -2916,35 +2997,88 @@ body#bloco {
 			li {
 				margin-bottom: 22px;
 
-				a {
-					padding:47px 20px;
+				&:hover .hover {
+					opacity: 1;
+				}
+
+				div {
 					background-image: url(../img/blog-top.jpg);
 					background-size: cover;
-					height:144px;
-					display: block;
-					position: relative;
 
-					.flag-label, .date-label {
-						display: none;
+					a {
+						padding:47px 20px;
+						height:144px;
+						display: block;
+						position: relative;
+
+						&:hover {
+							background: linear-gradient(
+								rgba(0,0,0,0.2),
+								rgba(0,0,0,0.7)
+							),url(img.jpg);
+						}
+
+						.flag-label, .date-label {
+							display: none;
+						}
+
+						span.tag {
+							display: inline-block;
+							width: 92px;
+							height: 25px;
+							line-height: 35px;
+							color: $color_dark-grey;
+							background: $color_std-yellow;
+							text-align: center;
+							font:13px/1.1em $font_din-alternate;
+							color:$color_dark-grey;
+							text-transform: uppercase;
+							padding-top: 5px;
+						}
+
+						h3 {
+							color: white;
+							font: 16px/1.1em $font_din-alternate;
+						}
 					}
+					
+					&.hover {
+						@include transition(0.5s);
+						opacity: 0;
 
-					span.tag {
-						display: inline-block;
-						width: 92px;
-						height: 25px;
-						line-height: 35px;
-						color: $color_dark-grey;
-						background: $color_std-yellow;
+						font:17px/21px $font_din;
+						position: absolute;
+						top: 0;
+						left: 15px;
+						right: 15px;
+						bottom: 0;
+						background: rgba(0,0,0,0.8);
 						text-align: center;
-						font:13px/1.1em $font_din-alternate;
-						color:$color_dark-grey;
-						text-transform: uppercase;
-						padding-top: 5px;
-					}
-
-					h3 {
+						padding: 65px;
 						color: white;
-						font: 16px/1.1em $font_din-alternate;
+					
+						h4 {
+							text-transform: uppercase;
+							font-size: 20px;
+						}
+
+						p {
+							width:90%;
+							max-width: 490px;
+							margin: 10px auto 0;
+							border-left: 1px $color_std-yellow solid;
+							border-right: 1px $color_std-yellow solid;
+							padding: 0 34px 15px;
+						}
+
+						a {
+							height: auto;
+							color: $color_std-yellow;
+							text-decoration: underline;
+							margin-top: 20px;
+							background: none !important;
+							padding: 0;
+						}
 					}
 				}
 
@@ -2990,6 +3124,7 @@ body#bloco {
 
 					width:267px;
 					height: 52px;
+					line-height: inherit;
 				}
 			}
 		}
@@ -3025,7 +3160,7 @@ body#bloco {
 						border:1px $color_dark-grey solid;
 						border-width: 1px 0;
 						display: inline-block;
-						padding:10px 10px 0 0;
+						padding:0 10px 0 0;
 						margin: 0;
 
 						span {
@@ -3081,7 +3216,7 @@ body#bloco {
 		form.search, .search-form {
 
 			input, button {
-				padding: 10px 15px 0;
+				padding: 5px 15px;
 				background: #e8e8e8;
 				border:none;
 				float:left;

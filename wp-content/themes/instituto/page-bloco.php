@@ -44,6 +44,11 @@
 								<?php endif; ?>
 								<h3><?= the_title() ?></h3>
 							</a>
+							<div class="hover">
+								<h4><?php the_title() ?></h4>
+								<?php my_excerpt(60) ?>
+								<a href="<?php the_permalink() ?>">ler mais</a>
+							</div>
 						</li>
 	<?php endwhile; ?>
 					</ul>
@@ -63,26 +68,36 @@
 <?php while( have_posts() ): the_post(); ?>	
 						<li class="<?= $count<=0 ? 'col-sm-7' : 'col-sm-5 col-xs-12' ?>">
 						<?php if(get_the_post_thumbnail()): ?>
-							<a href="<?php the_permalink(); ?>" style="background-image: url(<?= the_post_thumbnail_url() ?>)">
+							<div style="background-image: url(<?= the_post_thumbnail_url() ?>)">
+								<a href="<?php the_permalink(); ?>">
 						<?php else: ?>
-							<a href="<?php the_permalink(); ?>">
+							<div>
+								<a href="<?php the_permalink(); ?>">
 						<?php endif; ?>
-								<span class="date-label"><b><?php the_time('d'); ?></b><?php the_time('M Y'); ?></span>
+									<span class="date-label"><b><?php the_time('d'); ?></b><?php the_time('M Y'); ?></span>
 <?php if( has_category('mundo') ) : ?>
-								<span class="flag-label"><img src="img/mundo-icon.png" alt=""></span>
+									<span class="flag-label"><img src="img/mundo-icon.png" alt=""></span>
 <?php elseif ( has_category('instituto') ) : ?>
-								<span class="flag-label"><img src="img/mini-logo.png" alt=""></span>
+									<span class="flag-label"><img src="img/mini-logo.png" alt=""></span>
 <?php endif; 
 	$tags = get_the_tags();
 	if($tags):
 		foreach($tags as $t):
 ?>
-								<span class="tag"><?= $t->name ?></span>
+									<span class="tag"><?= $t->name ?></span>
 <?php 	endforeach;
 	endif; ?>
-								<h3><?= the_title() ?></h3>
-							</a>
+									<h3><?= the_title() ?></h3>
+								</a>
+							</div>
+<?php if($count == 0): ?>
+							<div class="hover">
+								<h4><?php the_title() ?></h4>
+								<?php my_excerpt(20) ?>
+								<a href="<?php the_permalink() ?>">ler mais</a>
+							</div>
 						</li>
+<?php endif; ?>
 	<?php 
 			$count++;
 		endwhile; ?>
@@ -128,8 +143,15 @@
 			</section>
 			<section id="side" class="col-sm-4">
 				<?php get_search_form() ?>
-				<?= do_shortcode('[facebook-page href="https://facebook.com/facebook" width="300" height="800" tabs="timeline, events, messages" show_cta="true" small_header="false" align="left" hide_cover="false" show_facepile="false"]'); ?>
-
+				<div style="width:100%">
+					<div class="fb-page" 
+						data-href="https://www.facebook.com/institutonaoaceitocorrupcao"
+						data-width="420" 
+						data-hide-cover="false"
+						data-show-facepile="false" 
+						data-show-posts="false"></div>
+				</div>
+				
 				<h3>Newsletter</h3><!--/.box-left-->
 				<div class="form">
 					<form action="#" method="post" class="wpcf7-form newsletter">

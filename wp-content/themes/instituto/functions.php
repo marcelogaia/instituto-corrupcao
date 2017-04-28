@@ -118,3 +118,22 @@ add_filter( 'page_template', function ( $template ) use ( &$post )
 
     return $locate_template;
 });
+
+function get_my_excerpt($limit) {
+	$excerpt = explode(' ', strip_tags(get_the_content()), $limit);
+	
+	if (count($excerpt)>=$limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt).' [...]';
+	} else {
+		$excerpt = implode(" ",$excerpt);
+	}
+
+	$excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+	//return $limit;
+	return $excerpt;
+}
+
+function my_excerpt($limit) {
+	echo "<p>",get_my_excerpt($limit),"</p>";
+}

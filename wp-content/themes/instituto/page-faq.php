@@ -40,12 +40,14 @@ foreach($posts_array as $post):
 			<article class="pergunta row">
 				<?php if($c==1):?>
 				<h4><a href="#resposta-<?= $c ?>" data-toggle="collapse" data-target="#resposta-<?= $c ?>" aria-expanded="true" aria-controls="resposta-<?= $c ?>"><span><?= $post->post_title; ?></span></a></h4>
-				<div id="resposta-<?= $c ?>" class="col-sm-10 col-sm-offset-1 collapse in resposta">
+				<div id="resposta-<?= $c ?>" class="col-sm-10 col-sm-offset-1 collapse show">
 				<?php else: ?>
-				<h4 data-toggle="collapse" data-target="#resposta-<?= $c ?>" aria-expanded="false" aria-controls="resposta-<?= $c ?>" class="collapsed"><span><?= $post->post_title; ?></span></h4>
-				<div id="resposta-<?= $c ?>" class="col-sm-10 col-sm-offset-1 collapse resposta">
+				<h4><a href="#resposta-<?= $c ?>" data-toggle="collapse" data-target="#resposta-<?= $c ?>" aria-expanded="true" aria-controls="resposta-<?= $c ?>" class="collapsed"><span><?= $post->post_title; ?></span></a></h4>
+				<div id="resposta-<?= $c ?>" class="col-sm-10 col-sm-offset-1 collapse">
 				<?php endif; ?>
+					<div class="resposta">
 					<?= $post->post_content; ?>
+					</div>
 				</div>
 			</article>
 <?php 
