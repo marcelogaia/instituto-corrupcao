@@ -544,7 +544,8 @@ section#header {
       padding: 50px;
       background-color: #ffc72c;
       right: 0;
-      max-width: 480px;
+      width: 480px;
+      max-width: 100%;
       z-index: 9;
       height: 100%;
       line-height: 23px;
@@ -599,7 +600,7 @@ section#header {
           width: 115px;
           height: 50px;
           background: transparent url(../img/participe-btn.png) center center no-repeat;
-          font-weight: 15px; }
+          font-size: 16px; }
       section#header .my-navbar .responsive-menu ul {
         margin: 0;
         padding: 0; }
@@ -2642,6 +2643,8 @@ body#blog-interna section#comments {
       opacity: 1;
       border-color: transparent; }
 
+  section#header #newsletter-form {
+    display: none; }
   section#header .jumbotron {
     height: 310px; }
     section#header .jumbotron h1 {
@@ -2654,6 +2657,15 @@ body#blog-interna section#comments {
     left: 0;
     height: 91px;
     line-height: 91px; }
+    section#header .my-navbar p {
+      padding: 0; }
+    section#header .my-navbar .responsive-menu {
+      padding: 20px; }
+      section#header .my-navbar .responsive-menu .contact-us-box .box-right p .fa-map-marker {
+        right: 5px;
+        bottom: 20px; }
+      section#header .my-navbar .responsive-menu .contact-us-box .social-links a {
+        margin-top: 0; }
     section#header .my-navbar .open-responsive-menu {
       height: 91px; }
       section#header .my-navbar .open-responsive-menu .fa {

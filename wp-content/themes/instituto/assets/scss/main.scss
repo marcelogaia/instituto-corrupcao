@@ -758,7 +758,8 @@ section#header {
 			padding:50px;
 			background-color: $color_std-yellow;
 			right:0;
-			max-width:480px;
+			width:480px;
+			max-width: 100%;
 			z-index:9;
 			height:100%;
 			line-height: 23px;
@@ -826,7 +827,7 @@ section#header {
 					width: 115px;
 					height:50px;
 					background: transparent url(../img/participe-btn.png) center center no-repeat;
-					font-weight: 15px;
+					font-size: 16px;
 
 				}
 			}
