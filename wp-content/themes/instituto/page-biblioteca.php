@@ -29,17 +29,19 @@
 		<div class="container">	
 			<h3>Vídeos</h3>
 			<ul class="slick-carousel-biblioteca">
-<?php for($i = 0; $i < 7; $i++): ?>
+<?php for($i = 0; $i < 7; $i++):
+	$link = "5-HOEcUbcA4" ?>
 				<li>
-					<div class="wp-video">
-						<a href="https://www.youtube.com/watch?v=5-HOEcUbcA4">
-							<video style="width:100%">
-								<source type="video/mp4" src="img/movie.mp4?_=1">Colocar um titulo para o vídeoimg/movie.mp4
-							</video>
-						</a>
-					</div>
-					<h4>Título para o vídeo que tenha duas linhas</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel.</p>
+					<a href="https://www.youtube.com/watch?v=<?= $link ?>">
+						<div class="wp-video">
+								<img src="https://img.youtube.com/vi/<?= $link ?>/mqdefault.jpg">
+								<!-- <video style="width:100%">
+									<source type="video/mp4" src="img/movie.mp4?_=1">Colocar um titulo para o vídeoimg/movie.mp4
+								</video> -->
+						</div>
+						<h4>Título para o vídeo que tenha duas linhas</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel.</p>
+					</a>
 				</li>
 <?php endfor; ?>
 			</ul>

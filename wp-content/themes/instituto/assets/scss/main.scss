@@ -2052,7 +2052,7 @@ body#biblioteca {
 		.wp-video {
 			width:100%;
 
-			video {
+			img {
 				width:100%;
 				border:4px white solid;
 			}
@@ -2062,6 +2062,10 @@ body#biblioteca {
 
 			.slick-arrow {
 				@include filter(brightness(60%) grayscale(100%) saturate(0));
+			}
+
+			a {
+				color: $color_dark-grey;
 			}
 
 			li {

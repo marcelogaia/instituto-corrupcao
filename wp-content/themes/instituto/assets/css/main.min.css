@@ -1437,7 +1437,7 @@ body#biblioteca section#videos {
   background: #CCC; }
   body#biblioteca section#videos .wp-video {
     width: 100%; }
-    body#biblioteca section#videos .wp-video video {
+    body#biblioteca section#videos .wp-video img {
       width: 100%;
       border: 4px white solid; }
   body#biblioteca section#videos .slick-carousel-biblioteca .slick-arrow {
@@ -1446,6 +1446,8 @@ body#biblioteca section#videos {
     -ms-filter: brightness(60%) grayscale(100%) saturate(0);
     -o-filter: brightness(60%) grayscale(100%) saturate(0);
     filter: brightness(60%) grayscale(100%) saturate(0); }
+  body#biblioteca section#videos .slick-carousel-biblioteca a {
+    color: #3f4444; }
   body#biblioteca section#videos .slick-carousel-biblioteca li {
     margin: 0;
     padding: 4px;
