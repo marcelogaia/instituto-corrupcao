@@ -82,9 +82,11 @@ $isHome = is_home();
 										</p>
 										<p>
 											<span><?php echo $GLOBALS['cgv']['endereco-2'] ?></span>
+											<i class="fa fa-map-marker" aria-hidden="true"></i>
 										</p>
-										<p>
-											<span data-customizer="contact-us-phone">T:<?php echo $GLOBALS['cgv']['telefone'] ?></span>
+
+										<p class="phone">
+											<span data-customizer="contact-us-phone">T: <?php echo $GLOBALS['cgv']['telefone'] ?></span>
 										</p>
 										<p>
 											<span>E: <a href="mailto:<?php echo $GLOBALS['cgv']['email'] ?>" title="<?php echo $GLOBALS['cgv']['email'] ?>"><?php echo $GLOBALS['cgv']['email'] ?></a></span>
@@ -114,7 +116,7 @@ $isHome = is_home();
 ?>
 										<p class="social-links">
 										<?php if(!empty($socialArr['linkedin'])): ?>
-											<a href="$socialArr['linkedin']" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+											<a href="<?= $socialArr['linkedin'] ?>" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
 										<?php endif; ?>
 										<?php if(!empty($socialArr['facebook'])): ?>
 											<a href="<?= $socialArr['facebook'] ?>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>

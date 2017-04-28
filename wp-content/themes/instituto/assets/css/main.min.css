@@ -18,6 +18,12 @@
   font-weight: normal;
   font-style: normal; }
 @font-face {
+  font-family: "din-regular";
+  src: url(fonts/din/din.eot) format("embedded-opentype");
+  src: url(fonts/din/din.woff) format("woff"), url(fonts/din/din.ttf) format("truetype"), url(fonts/din/din.svg) format("svg"), url(fonts/din/din.woff2) format("woff2"), url(fonts/din/din.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
   font-family: "din-condensed-bold";
   src: url(fonts/din/din-condensed-bold.eot) format("embedded-opentype");
   src: url(fonts/din/din-condensed-bold.woff) format("woff"), url(fonts/din/din-condensed-bold.ttf) format("truetype"), url(fonts/din/din-condensed-bold.otf) format("opentype");
@@ -549,13 +555,29 @@ section#header {
         top: 30px;
         right: 30px; }
       section#header .my-navbar .responsive-menu .wpcf7-form.newsletter {
-        margin-bottom: 50px; }
+        margin-bottom: 0; }
+        section#header .my-navbar .responsive-menu .wpcf7-form.newsletter p {
+          margin-bottom: 0; }
         section#header .my-navbar .responsive-menu .wpcf7-form.newsletter input, section#header .my-navbar .responsive-menu .wpcf7-form.newsletter label:after, section#header .my-navbar .responsive-menu .wpcf7-form.newsletter label:before {
           border-color: #3f4444 !important;
           color: #3f4444 !important; }
         section#header .my-navbar .responsive-menu .wpcf7-form.newsletter input[type=email] {
           padding-left: 25px !important;
-          background-image: url(../img/dark-mail.png) !important; }
+          background-image: url(../img/dark-mail.png) !important;
+          font-size: 17px;
+          height: 27px !important; }
+          section#header .my-navbar .responsive-menu .wpcf7-form.newsletter input[type=email]::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #3f4444; }
+          section#header .my-navbar .responsive-menu .wpcf7-form.newsletter input[type=email]::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #3f4444; }
+          section#header .my-navbar .responsive-menu .wpcf7-form.newsletter input[type=email]:-ms-input-placeholder {
+            /* IE 10+ */
+            color: #3f4444; }
+          section#header .my-navbar .responsive-menu .wpcf7-form.newsletter input[type=email]:-moz-placeholder {
+            /* Firefox 18- */
+            color: #3f4444; }
         section#header .my-navbar .responsive-menu .wpcf7-form.newsletter input[type=submit] {
           padding: 11px 3px 0 0 !important; }
           section#header .my-navbar .responsive-menu .wpcf7-form.newsletter input[type=submit]:hover {
@@ -564,17 +586,20 @@ section#header {
         line-height: 1em; }
       section#header .my-navbar .responsive-menu .contact-us-box {
         margin-top: 60px; }
-      section#header .my-navbar .responsive-menu .social-links {
-        display: inline-block; }
-        section#header .my-navbar .responsive-menu .social-links a {
-          color: #3f4444;
-          font-size: 3.2rem;
-          margin: 15px 18px 0 0;
+        section#header .my-navbar .responsive-menu .contact-us-box .social-links {
           display: inline-block; }
+          section#header .my-navbar .responsive-menu .contact-us-box .social-links a {
+            color: #3f4444;
+            font-size: 3.2rem;
+            margin: 15px 18px 0 0;
+            display: inline-block; }
       section#header .my-navbar .responsive-menu .participe {
         margin: 0px; }
         section#header .my-navbar .responsive-menu .participe button {
-          width: 115px; }
+          width: 115px;
+          height: 50px;
+          background: transparent url(../img/participe-btn.png) center center no-repeat;
+          font-weight: 15px; }
       section#header .my-navbar .responsive-menu ul {
         margin: 0;
         padding: 0; }
@@ -586,8 +611,8 @@ section#header {
             text-align: left;
             color: #3f4444;
             font-size: 25px;
-            line-height: 65px;
-            height: 65px;
+            line-height: 64px;
+            height: 46px;
             display: block;
             text-transform: lowercase; }
             section#header .my-navbar .responsive-menu ul li a:hover {
@@ -613,6 +638,20 @@ section#header {
         overflow: hidden; }
         section#header .my-navbar .open-responsive-menu .fa.small {
           height: 55px; }
+    section#header .my-navbar .contact-us-box .box-right p {
+      line-height: 13px;
+      position: relative; }
+      section#header .my-navbar .contact-us-box .box-right p, section#header .my-navbar .contact-us-box .box-right p a {
+        font-size: 19px; }
+      section#header .my-navbar .contact-us-box .box-right p .fa-map-marker {
+        display: block;
+        position: absolute;
+        right: 15px;
+        bottom: -6px;
+        font-size: 45px; }
+      section#header .my-navbar .contact-us-box .box-right p.phone {
+        display: block;
+        margin-top: 33px; }
 
 footer#contato {
   background-color: black;
@@ -624,20 +663,22 @@ footer#contato {
     color: #ffc72c;
     text-align: left;
     font-family: "din-regular";
-    font-size: 20px; }
+    font-size: 20px;
+    margin-bottom: 18px; }
   footer#contato .contact-us-box .box-right p {
     font-size: 20px;
     line-height: 20px;
-    font-weight: lighter; }
+    font-weight: lighter;
+    margin-bottom: 4px; }
   footer#contato .contact-us-social {
     text-align: left;
-    margin: -7px 0 55px; }
+    margin: -13px 0 26px; }
     footer#contato .contact-us-social li {
       display: inline-block; }
       footer#contato .contact-us-social li a {
-        margin: 0 20px 0 0;
-        font-size: 30px;
-        color: white; }
+        margin: 0 12px 0 0;
+        font-size: 34px;
+        color: #DDD; }
         footer#contato .contact-us-social li a .fa-linkedin:hover {
           color: #0077B5; }
         footer#contato .contact-us-social li a .fa-facebook:hover {
@@ -675,25 +716,25 @@ footer#contato {
       background-color: black;
       border: 1px white solid;
       width: 100%;
-      height: 46px;
+      height: 38px;
       padding: 0 20px;
       outline: 0;
       font-family: "Source Sans Pro", sans-serif;
       font-size: 15px;
-      color: #ffffff;
+      color: #DDD;
       display: block; }
       footer#contato .wpcf7 .wpcf7-form p .wpcf7-text::-webkit-input-placeholder, footer#contato .wpcf7 .wpcf7-form p .wpcf7-textarea::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
-        color: white; }
+        color: #DDD; }
       footer#contato .wpcf7 .wpcf7-form p .wpcf7-text::-moz-placeholder, footer#contato .wpcf7 .wpcf7-form p .wpcf7-textarea::-moz-placeholder {
         /* Firefox 19+ */
-        color: white; }
+        color: #DDD; }
       footer#contato .wpcf7 .wpcf7-form p .wpcf7-text:-ms-input-placeholder, footer#contato .wpcf7 .wpcf7-form p .wpcf7-textarea:-ms-input-placeholder {
         /* IE 10+ */
-        color: white; }
+        color: #DDD; }
       footer#contato .wpcf7 .wpcf7-form p .wpcf7-text:-moz-placeholder, footer#contato .wpcf7 .wpcf7-form p .wpcf7-textarea:-moz-placeholder {
         /* Firefox 18- */
-        color: white; }
+        color: #DDD; }
     footer#contato .wpcf7 .wpcf7-form p .wpcf7-textarea {
       height: 100px;
       padding: 7px 10px; }
@@ -712,7 +753,7 @@ footer#contato {
     footer#contato .wpcf7 .wpcf7-form p .wpcf7-form-control-wrap {
       margin-bottom: 10px; }
   footer#contato .wpcf7 .wpcf7-form.newsletter p {
-    margin: -10px 0 52px; }
+    margin: -10px 0 19px; }
   footer#contato .menu {
     list-style: none;
     text-align: left;
@@ -720,7 +761,7 @@ footer#contato {
     footer#contato .menu li {
       margin-bottom: 19px; }
       footer#contato .menu li a {
-        color: white;
+        color: #DDD;
         font-weight: lighter; }
   footer#contato .menu-principal-container .menu li a {
     font-size: 20px;
@@ -730,11 +771,11 @@ footer#contato {
   footer#contato .contact-us-box .box-right {
     padding: 0; }
     footer#contato .contact-us-box .box-right p {
-      color: white; }
+      color: #DDD; }
       footer#contato .contact-us-box .box-right p a {
-        color: white; }
+        color: #DDD; }
       footer#contato .contact-us-box .box-right p:first-of-type {
-        margin-bottom: 3px; }
+        margin-bottom: 11px; }
       footer#contato .contact-us-box .box-right p:not(:first-of-type) {
         font-size: 16px; }
       footer#contato .contact-us-box .box-right p.contact-icon {
@@ -757,7 +798,8 @@ footer#contato {
     margin-top: 45px; }
     footer#contato .line-logo .last-line {
       text-align: left;
-      margin-top: 15px; }
+      margin-top: 41px;
+      font-size: 14px; }
       footer#contato .line-logo .last-line .title {
         color: #ffc72c; }
       footer#contato .line-logo .last-line .copyright {
@@ -770,7 +812,6 @@ footer#contato {
             display: inline-block;
             margin-left: 10px;
             padding-left: 10px;
-            padding-top: 7px;
             border-left: 2px solid white; }
     footer#contato .line-logo .logo {
       float: right;

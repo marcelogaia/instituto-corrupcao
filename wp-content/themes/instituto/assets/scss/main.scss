@@ -74,6 +74,18 @@ $font-din-black-5: url(fonts/din/din-black.woff2) format('woff2');
 }
 
 @font-face {
+	font-family: $font_din;
+	src: $font-din-0;
+	src: $font-din-1,
+		 $font-din-2,
+		 $font-din-3,
+		 $font-din-4,
+		 $font-din-5;
+ 	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: $font_din-condensed;
 	src: $font-din-condensed-0;
 	src: $font-din-condensed-1,
@@ -735,7 +747,7 @@ section#header {
 			}
 		}
 
-		.responsive-menu{
+		.responsive-menu {
 			overflow: auto;
 			border:none;
 			border-radius:0;
@@ -760,7 +772,11 @@ section#header {
 			}
 
 			.wpcf7-form.newsletter {
-				margin-bottom: 50px;
+				margin-bottom: 0;
+				
+				p {
+					margin-bottom: 0;
+				}
 
 				input, label:after, label:before {
 					border-color: $color_dark-grey !important;
@@ -770,6 +786,9 @@ section#header {
 				input[type=email] {
 					padding-left: 25px !important;
 					background-image: url(../img/dark-mail.png) !important;
+					font-size: 17px;
+					@include placeholder($color_dark-grey);
+					height:27px !important;
 				}
 
 				input[type=submit] {
@@ -787,16 +806,16 @@ section#header {
 
 			.contact-us-box {
 				margin-top: 60px;
-			}
 
-			.social-links {
-				display: inline-block;
-
-				a {
-					color: $color_dark-grey;
-					font-size: 3.2rem;
-					margin: 15px 18px 0 0;
+				.social-links {
 					display: inline-block;
+
+					a {
+						color: $color_dark-grey;
+						font-size: 3.2rem;
+						margin: 15px 18px 0 0;
+						display: inline-block;
+					}
 				}
 			}
 
@@ -805,6 +824,10 @@ section#header {
 
 				button {
 					width: 115px;
+					height:50px;
+					background: transparent url(../img/participe-btn.png) center center no-repeat;
+					font-weight: 15px;
+
 				}
 			}
 
@@ -820,8 +843,8 @@ section#header {
 						text-align: left;
 						color: $color_dark-grey;
 						font-size: 25px;
-						line-height: 65px;
-						height: 65px;
+						line-height: 64px;
+						height: 46px;
 						display: block;
 						text-transform: lowercase;
 
@@ -861,6 +884,28 @@ section#header {
 				}
 			}
 		}
+		.contact-us-box .box-right p {
+			line-height: 13px;
+			position: relative;
+
+			&,a{
+				font-size:19px;	
+			}
+
+			.fa-map-marker {
+				display: block;
+				position: absolute;
+				right: 15px;
+				bottom: -6px;
+				font-size: 45px;
+			}
+
+			&.phone {
+				display: block;
+				margin-top:33px;
+			}
+			
+		}
 	}
 }
 
@@ -876,25 +921,27 @@ footer#contato {
 		text-align: left;
 		font-family: $font_din;
 		font-size:20px;
+		margin-bottom: 18px;
 	}
 
 	.contact-us-box .box-right p{
 		font-size: 20px;
 		line-height: 20px;
 		font-weight: lighter;
+		margin-bottom: 4px;
 	}
 
 	.contact-us-social {
 		text-align: left;
-		margin: -7px 0 55px;
+		margin: -13px 0 26px;
 
 		li {
 			display: inline-block;
 
 			a {
-				margin:0 20px 0 0;
-				font-size: 30px;
-				color: white;
+				margin:0 12px 0 0;
+				font-size: 34px;
+				color: #DDD;
 
 				.fa-linkedin:hover{
 					color: #0077B5;
@@ -954,15 +1001,15 @@ footer#contato {
 				background-color: black;
 				border: 1px white solid;
 				width: 100%;
-				height: 46px;
+				height: 38px;
 				padding: 0 20px;
 				outline: 0;
 				font-family: "Source Sans Pro", sans-serif;
 				font-size: 15px;
-				color: #ffffff;
+				color: #DDD;
 				display: block;
 
-				@include placeholder(white);
+				@include placeholder(#DDD);
 			}
 
 			.wpcf7-textarea{
@@ -992,7 +1039,7 @@ footer#contato {
 		}
 
 		&.newsletter p{
-			margin: -10px 0 52px;
+			margin: -10px 0 19px;
 		}
 	}
 
@@ -1004,7 +1051,7 @@ footer#contato {
 		li {
 			margin-bottom: 19px;
 			a {
-				color: white;
+				color: #DDD;
 				font-weight: lighter;
 			}
 		}
@@ -1024,14 +1071,14 @@ footer#contato {
 			padding: 0;
 
 			p {
-				color: white;
+				color: #DDD;
 
 				a {
-					color: white;
+					color: #DDD;
 				}
 
 				&:first-of-type {
-					margin-bottom: 3px;
+					margin-bottom: 11px;
 				}
 
 				&:not(:first-of-type) {
@@ -1074,7 +1121,8 @@ footer#contato {
 
 		.last-line {
 			text-align: left;
-			margin-top: 15px;
+			margin-top: 41px;
+			font-size: 14px;
 
 			.title {
 				color: $color_std-yellow;
@@ -1093,7 +1141,6 @@ footer#contato {
 						display: inline-block;
 						margin-left: 10px;
 						padding-left: 10px;
-						padding-top: 7px;
 						border-left: 2px solid white;
 					}
 				}
