@@ -153,6 +153,7 @@
     display: none; }
 
 #newsletter-form {
+  opacity: 0;
   position: fixed;
   right: -15px;
   top: 160px;
@@ -164,7 +165,7 @@
   -moz-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  z-index: 99; }
+  z-index: 8; }
   #newsletter-form .wpcf7-response-output {
     display: none !important; }
   #newsletter-form input {
@@ -229,10 +230,10 @@
   opacity: 0.7;
   background: black; }
 
-section#header .my-navbar .participe button, section#participe .row article .eu-quero, section#parceiro .bnt-ver-todos.logo-carousel-btn, body#participe .voluntarios button, section#header .jumbotron .btn, section#projetos .content-holder .row .text-holder button, body#bloco section#last-news ul.filters li button, body#blog-interna section#comments button {
+section#header .my-navbar .participe button, section#participe .row article .eu-quero, section#parceiro .bnt-ver-todos.logo-carousel-btn, body#participe .voluntarios button, section#header .jumbotron .btn, section#projetos .content-holder .row .text-holder button, body#participe .voluntarios button:hover, body#bloco section#last-news ul.filters li button, body#blog-interna section#comments button {
   border: none;
   height: 54px;
-  line-height: 54px;
+  line-height: 50px;
   font-size: 18px;
   text-transform: uppercase;
   width: 175px;
@@ -242,7 +243,7 @@ section#header .my-navbar .participe button, section#participe .row article .eu-
   color: #ffc72c;
   background-color: #3f4444; }
 
-section#header .jumbotron .btn, section#projetos .content-holder .row .text-holder button, body#bloco section#last-news ul.filters li button, body#blog-interna section#comments button {
+section#header .jumbotron .btn, section#projetos .content-holder .row .text-holder button, body#participe .voluntarios button:hover, body#bloco section#last-news ul.filters li button, body#blog-interna section#comments button {
   background-color: #ffc72c;
   color: #3f4444; }
 
@@ -307,7 +308,7 @@ li {
     margin: 0 32.5px;
     overflow: hidden;
     opacity: 0.7;
-    border: 4px transparent solid; }
+    border: 2px transparent solid; }
     .slick-initialized li.slick-slide a {
       background: white;
       width: 100%;
@@ -470,6 +471,8 @@ section#header {
     height: 580px; }
     section#header.header-blog .bottom-header h2 {
       font: 100px/1.2em "din-black"; }
+  section#header .ms-skin-light-2 .ms-bullets.ms-dir-h {
+    bottom: 15px !important; }
   section#header .jumbotron {
     padding: 0;
     height: 410px;
@@ -503,7 +506,7 @@ section#header {
       bottom: auto !important;
       left: 0;
       right: 0;
-      top: 220px;
+      top: calc(50% - 60px);
       text-align: center; }
       section#header .jumbotron .ms-slide-info h1 {
         display: block; }
@@ -520,8 +523,7 @@ section#header {
         background: #65665c; }
   section#header .my-navbar {
     width: 100%;
-    height: 140px;
-    line-height: 140px;
+    height: 131px;
     background: white;
     padding: 0;
     margin: 0;
@@ -529,10 +531,12 @@ section#header {
     top: 0; }
     section#header .my-navbar .participe {
       float: right;
-      margin-right: 30px; }
+      margin-right: 30px;
+      padding: 43px 0; }
       section#header .my-navbar .participe button {
-        width: 190px;
-        margin-top: 20px; }
+        width: 190px; }
+    section#header .my-navbar .logo {
+      padding-top: 43px; }
     section#header .my-navbar .responsive-menu {
       overflow: auto;
       border: none;
@@ -649,7 +653,8 @@ section#header {
         position: absolute;
         right: 15px;
         bottom: -6px;
-        font-size: 45px; }
+        font-size: 45px;
+        text-decoration: none !important; }
       section#header .my-navbar .contact-us-box .box-right p.phone {
         display: block;
         margin-top: 33px; }
@@ -764,6 +769,8 @@ footer#contato {
       footer#contato .menu li a {
         color: #DDD;
         font-weight: lighter; }
+        footer#contato .menu li a:hover {
+          color: #ffc72c; }
   footer#contato .menu-principal-container .menu li a {
     font-size: 20px;
     text-transform: lowercase; }
@@ -824,7 +831,8 @@ section#projetos {
   text-align: center;
   background-color: #efefef; }
   section#projetos .content-holder {
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    padding: 0 15px; }
     section#projetos .content-holder .row {
       clear: both;
       position: relative;
@@ -1341,7 +1349,11 @@ body#o-instituto .duvidas {
     color: #ffc72c;
     background: transparent;
     width: 275px;
-    height: 35px; }
+    height: 35px;
+    padding-bottom: 10px; }
+    body#o-instituto .duvidas button:hover {
+      background: #ffc72c;
+      color: #65665c; }
 
 body#duvidas {
   background-color: #ffc72c; }
@@ -1819,7 +1831,7 @@ body#participe .buscamos {
   background: url(../img/participe-buscamos-bg.jpg);
   background-size: cover; }
   body#participe .buscamos h3 {
-    text-transform: lowercase;
+    text-transform: uppercase;
     color: #ffc72c !important;
     font: 75px/1.1em "din-regular" !important; }
   body#participe .buscamos .row {
@@ -1832,20 +1844,28 @@ body#participe .buscamos {
       color: white;
       font-size: 1.26em; }
     body#participe .buscamos .row a {
-      background: #ffc72c;
       display: block;
-      width: 175px;
-      height: 175px;
+      width: 190px;
+      height: 190px;
       position: absolute;
       right: calc(100% / 12);
       vertical-align: middle;
       text-align: center;
-      padding-top: 45px;
+      padding: 7px;
+      border: 1px transparent solid;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
       border-radius: 50%; }
+      body#participe .buscamos .row a:hover {
+        border-color: #ffc72c; }
+      body#participe .buscamos .row a .baixar-wrapper {
+        height: 100%;
+        padding-top: 30px;
+        border: 6px transparent solid;
+        border-radius: 50%;
+        background: #ffc72c; }
       body#participe .buscamos .row a span {
         display: block;
         color: #3f4444;
@@ -1859,12 +1879,14 @@ body#participe .buscamos {
           font-size: 18px; }
         body#participe .buscamos .row a span:nth-of-type(3) {
           font-size: 55px; }
-  body#participe .buscamos .wp-video video {
-    width: 50%;
-    margin: 0 auto;
-    display: block;
-    border: 7px white solid;
-    border-width: 7px 12px; }
+  body#participe .buscamos .wp-video {
+    margin-top: 50px; }
+    body#participe .buscamos .wp-video video {
+      width: 50%;
+      margin: 0 auto;
+      display: block;
+      border: 7px white solid;
+      border-width: 7px 12px; }
   body#participe .buscamos h4 {
     text-align: center;
     font: 34px/1.1em "din-black";
@@ -1873,7 +1895,8 @@ body#participe .buscamos {
     margin-top: 60px; }
   body#participe .buscamos .social {
     text-align: center;
-    margin: 35px 0 85px; }
+    margin: 35px 0 85px;
+    padding: 0; }
     body#participe .buscamos .social li {
       background: url(../img/social-icons.png);
       width: 101px;
@@ -2129,13 +2152,15 @@ body#bloco section#news .slick-list {
     -ms-border-radius: 0;
     -o-border-radius: 0;
     border-radius: 0;
-    margin: 0; }
+    margin: 0;
+    border: none;
+    opacity: 1; }
     body#bloco section#news .slick-list .slick-slide h3 {
       position: absolute;
       font: 20px/1.1em "din-regular";
       text-transform: uppercase;
       color: #3f4444;
-      padding: 25px 15px 10px;
+      padding: 15px;
       background: #ffc72c;
       bottom: 0;
       width: 100%;
@@ -2171,7 +2196,8 @@ body#bloco section#news .slick-list {
       body#bloco section#news .slick-list .slick-slide .hover a {
         color: #ffc72c;
         text-decoration: underline;
-        margin-top: 20px; }
+        margin-top: 20px;
+        background: none; }
 body#bloco section#featured ul.row {
   margin-left: -15px;
   margin-right: -15px; }
@@ -2202,10 +2228,18 @@ body#bloco section#featured ul.row {
           font: 13px/1.1em "din-alternate";
           color: #3f4444;
           text-transform: uppercase;
-          padding-top: 5px; }
+          padding-top: 5px;
+          display: none; }
         body#bloco section#featured ul.row li div a h3 {
-          color: white;
-          font: 16px/1.1em "din-alternate"; }
+          font: 16px/1.1em "din-alternate";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: #ffc72c;
+          color: #3f4444;
+          padding: 5px 10px 7px;
+          margin: 0; }
       body#bloco section#featured ul.row li div.hover {
         -webkit-transition: 0.5s;
         -moz-transition: 0.5s;
@@ -2264,50 +2298,58 @@ body#bloco section#last-news ul.filters {
       width: 267px;
       height: 52px;
       line-height: inherit; }
-body#bloco section#last-news ul li a {
-  clear: both;
-  color: #3f4444;
-  display: inline; }
-  body#bloco section#last-news ul li a > img {
-    float: left;
-    margin-right: 15px;
-    padding-top: 15px;
-    border-top: 1px #ffc72c solid;
-    max-width: 122px; }
-  body#bloco section#last-news ul li a h3 {
+body#bloco section#last-news ul li {
+  position: relative; }
+  body#bloco section#last-news ul li a {
+    clear: both;
     color: #3f4444;
-    font: 21px/1.1em "din-condensed-bold";
-    text-transform: uppercase;
-    margin-top: 14px;
-    padding-top: 17px; }
-  body#bloco section#last-news ul li a p {
-    font: 16px/30px "din-regular";
-    color: #3f4444;
-    border: 1px #3f4444 solid;
-    border-width: 1px 0;
-    display: inline-block;
-    padding: 0 10px 0 0;
-    margin: 0; }
-    body#bloco section#last-news ul li a p span {
-      display: inline-block; }
-    body#bloco section#last-news ul li a p img {
-      max-height: 19px;
-      max-width: 25px;
-      margin: -4px 0 0 2px; }
-  body#bloco section#last-news ul li a:hover h3 {
-    color: #ffc72c; }
-body#bloco section#last-news ul li:after {
-  content: " ";
-  clear: both;
-  float: none;
-  width: 100%;
-  display: block;
-  height: 1px; }
-body#bloco section#last-news ul li:first-of-type img {
-  padding-top: 0;
-  border-top: none; }
-body#bloco section#last-news ul li:first-of-type h3 {
-  padding-top: 0; }
+    display: inline; }
+    body#bloco section#last-news ul li a .img {
+      float: left;
+      margin-right: 15px;
+      padding-top: 5px;
+      border-top: 1px #ffc72c solid;
+      width: 122px;
+      height: 122px;
+      line-height: 122px; }
+      body#bloco section#last-news ul li a .img img {
+        max-width: 100%; }
+    body#bloco section#last-news ul li a h3 {
+      color: #3f4444;
+      font: 21px/1.1em "din-condensed-bold";
+      text-transform: uppercase;
+      margin-top: 14px;
+      padding-top: 17px; }
+    body#bloco section#last-news ul li a p {
+      font: 16px/30px "din-regular";
+      color: #3f4444;
+      border: 1px #3f4444 solid;
+      border-width: 1px 0;
+      display: inline-block;
+      padding: 0 10px 0 0;
+      margin: 0;
+      position: absolute;
+      bottom: 0; }
+      body#bloco section#last-news ul li a p span {
+        display: inline-block; }
+      body#bloco section#last-news ul li a p img {
+        max-height: 19px;
+        max-width: 25px;
+        margin: -4px 0 0 2px; }
+    body#bloco section#last-news ul li a:hover h3 {
+      color: #ffc72c; }
+  body#bloco section#last-news ul li:after {
+    content: " ";
+    clear: both;
+    float: none;
+    width: 100%;
+    display: block;
+    height: 1px; }
+  body#bloco section#last-news ul li:first-of-type img {
+    padding-top: 0;
+    border-top: none; }
+  body#bloco section#last-news ul li:first-of-type h3 {
+    padding-top: 0; }
 body#bloco section#last-news .latest-news-button, body#bloco section#last-news .latest-news-button:hover {
   color: #65665c;
   display: block;
@@ -2353,15 +2395,14 @@ body#bloco section#side {
       padding-right: 4px; }
       body#bloco section#side .tags li a {
         display: block;
-        height: 29px;
         background: #d2d2d2;
-        line-height: 29px;
         text-align: center;
         margin-bottom: 6px;
-        font: 16px/1.1em "din-regular";
+        font: 14px "din-regular";
         text-transform: capitalize;
         color: #3f4444;
-        padding-top: 10px; }
+        height: 29px;
+        line-height: 29px; }
         body#bloco section#side .tags li a:hover {
           background: #ffc72c; }
 

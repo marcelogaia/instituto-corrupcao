@@ -82,7 +82,7 @@ $isHome = is_home();
 										</p>
 										<p>
 											<span><?php echo $GLOBALS['cgv']['endereco-2'] ?></span>
-											<i class="fa fa-map-marker" aria-hidden="true"></i>
+											<a href="https://goo.gl/maps/jxrpskxYTts" target="_blank" class="fa fa-map-marker" aria-hidden="true"></a>
 										</p>
 
 										<p class="phone">

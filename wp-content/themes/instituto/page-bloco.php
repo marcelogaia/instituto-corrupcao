@@ -118,11 +118,13 @@
 	<?php while( have_posts() ): the_post(); ?>
 						<li>
 							<a href="<?php the_permalink(); ?>">
-							<?php if(get_the_post_thumbnail()): ?>
-								<img class="blog-small" src="<?php the_post_thumbnail_url() ?>">
-							<?php else: ?>
-								<img class="blog-small" src="img/blog-placeholder-small.jpg">
-							<?php endif; ?>
+								<div class="img">
+								<?php if(get_the_post_thumbnail()): ?>
+									<img class="blog-small" src="<?php the_post_thumbnail_url() ?>">
+								<?php else: ?>
+									<img class="blog-small" src="img/blog-placeholder-small.jpg">
+								<?php endif; ?>
+								</div>
 								<h3><?php the_title() ?></h3>
 								<p>
 									<span class="date-time"><?php the_time('d \d\e F \d\e Y | G:i | ' ); ?></span>  

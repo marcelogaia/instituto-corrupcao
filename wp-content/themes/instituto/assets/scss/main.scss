@@ -242,6 +242,7 @@ $font-din-black-5: url(fonts/din/din-black.woff2) format('woff2');
 }
 
 #newsletter-form {
+	opacity: 0;
 	position: fixed;
 	right:-15px;
 	top:160px;
@@ -250,7 +251,7 @@ $font-din-black-5: url(fonts/din/din-black.woff2) format('woff2');
 	height: 87px;
 	background: transparent url(../img/newsletter-form.png) 0 0;
 	@include transition(1s);
-	z-index: 99;
+	z-index: 8;
 
 	.wpcf7-response-output {
 		display: none !important;
@@ -323,7 +324,7 @@ $font-din-black-5: url(fonts/din/din-black.woff2) format('woff2');
 %std_button {
 	border:none;
 	height: 54px;
-	line-height: 54px;
+	line-height: 50px;
 	font-size: 18px;
 	text-transform: uppercase;
 	width: 175px;
@@ -423,7 +424,7 @@ li {
 		margin: 0 32.5px;
 		overflow: hidden;
 		opacity: 0.7;
-		border: 4px transparent solid;
+		border: 2px transparent solid;
 
 		a {
 			background: white;
@@ -651,6 +652,10 @@ section#header {
 		}
 	}
 
+	.ms-skin-light-2 .ms-bullets.ms-dir-h {
+		bottom: 15px !important;
+	}
+
 	.jumbotron {
 		padding: 0;
 		height:410px;
@@ -697,7 +702,7 @@ section#header {
 			bottom: auto !important;
 			left: 0;
 			right: 0;
-			top: 220px;
+			top: calc(50% - 60px);
 			text-align: center;
 
 			h1 {
@@ -727,8 +732,8 @@ section#header {
 
 	.my-navbar {
 		width:100%;
-		height: 140px;
-		line-height: 140px;
+		height: 131px;
+		// line-height: 140px;
 		background: white;
 		padding:0;
 		margin:0;
@@ -738,13 +743,17 @@ section#header {
 		.participe {
 			float:right;
 			margin-right: 30px;
+			padding: 43px 0;
 
 			button {
 				width: 190px;
-				margin-top: 20px;
 
 				@extend %basic_button;
 			}
+		}
+
+		.logo {
+			padding-top: 43px;
 		}
 
 		.responsive-menu {
@@ -899,6 +908,7 @@ section#header {
 				right: 15px;
 				bottom: -6px;
 				font-size: 45px;
+				text-decoration: none !important;
 			}
 
 			&.phone {
@@ -1054,6 +1064,10 @@ footer#contato {
 			a {
 				color: #DDD;
 				font-weight: lighter;
+
+				&:hover {
+					color: $color_std-yellow;
+				}
 			}
 		}
 	}
@@ -1163,6 +1177,7 @@ section#projetos {
 
 	.content-holder {
 		margin-bottom: 60px;
+		padding: 0 15px;
 
 		.row{
 			clear:both;
@@ -1901,6 +1916,12 @@ body#o-instituto {
 			background: transparent;
 			width:275px;
 			height:35px;
+			padding-bottom: 10px;
+
+			&:hover {
+				background: $color_std-yellow;
+				color: $color_mid-grey;
+			}
 		}
 	}
 }
@@ -2594,7 +2615,7 @@ body#participe {
 
 
 		h3 {
-			text-transform: lowercase;
+			text-transform: uppercase;
 			color: $color_std-yellow !important;
 			font:75px/1.1em $font_din !important;
 		}
@@ -2612,16 +2633,28 @@ body#participe {
 			}
 
 			a {
-				background: $color_std-yellow;
 				display: block;
-				width: 175px;
-				height: 175px;
+				width: 190px;
+				height: 190px;
 				position: absolute;
 				right: calc(100% / 12);
 				vertical-align: middle;
 				text-align: center;
-				padding-top: 45px;
+				padding: 7px;
+				border: 1px transparent solid;
 				@include border-radius(50%);
+
+				&:hover {
+					border-color: $color_std-yellow;
+				}
+
+				.baixar-wrapper {	
+					height: 100%;
+					padding-top: 30px;
+					border: 6px transparent solid;
+					border-radius: 50%;
+					background: $color_std-yellow;
+				}
 
 				span {
 					display: block;
@@ -2649,12 +2682,16 @@ body#participe {
 			}
 		}
 
-		.wp-video video {
-			width: 50%;
-			margin:0 auto;
-			display: block;
-			border:7px white solid;
-			border-width: 7px 12px;
+		.wp-video {
+			margin-top: 50px; 
+
+			video {
+				width: 50%;
+				margin:0 auto;
+				display: block;
+				border:7px white solid;
+				border-width: 7px 12px;
+			}
 		}
 
 		h4 {
@@ -2668,6 +2705,8 @@ body#participe {
 		.social {
 			text-align: center;
 			margin: 35px 0 85px;
+			padding: 0;
+
 			li {
 				background: url(../img/social-icons.png);
 				width: 101px;
@@ -2881,6 +2920,10 @@ body#participe {
 
 		button {
 			@extend %basic_button;
+
+			&:hover {
+				@extend %inverted_button;
+			}
 		}
 	}
 
@@ -3036,13 +3079,15 @@ body#bloco {
 				background-size: cover;
 				@include border-radius(0);
 				margin: 0;
+				border: none;
+				opacity: 1;
 
 				h3 {
 					position: absolute;
 					font: 20px/1.1em $font_din;
 					text-transform: uppercase;
 					color: $color_dark-grey;
-					padding:25px 15px 10px;
+					padding:15px;
 					background: $color_std-yellow;
 					bottom: 0;
 					width:100%;
@@ -3086,6 +3131,7 @@ body#bloco {
 						color: $color_std-yellow;
 						text-decoration: underline;
 						margin-top: 20px;
+						background: none;
 					}
 				}
 			}
@@ -3137,11 +3183,20 @@ body#bloco {
 							color:$color_dark-grey;
 							text-transform: uppercase;
 							padding-top: 5px;
+
+							display: none;
 						}
 
 						h3 {
-							color: white;
 							font: 16px/1.1em $font_din-alternate;
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							background: $color_std-yellow;
+							color: $color_dark-grey;
+							padding: 5px 10px 7px;
+							margin: 0;
 						}
 					}
 					
@@ -3234,18 +3289,25 @@ body#bloco {
 
 		ul {
 			li {
+				position: relative;
 
 				a {
 					clear: both;
 					color: $color_dark-grey;
 					display: inline;
 
-					>img {
+					.img {
 						float:left;
 						margin-right:15px;
-						padding-top: 15px;
+						padding-top: 5px;
 						border-top: 1px $color_std-yellow solid;
-						max-width: 122px;
+						width: 122px;
+						height: 122px;
+						line-height: 122px;
+
+						img {
+							max-width: 100%;
+						}
 					}
 
 					h3 {
@@ -3265,6 +3327,8 @@ body#bloco {
 						display: inline-block;
 						padding:0 10px 0 0;
 						margin: 0;
+						position: absolute;
+						bottom: 0;
 
 						span {
 							display: inline-block;
@@ -3378,15 +3442,14 @@ body#bloco {
 				padding-right: 4px;
 				a {
 					display: block;
-					height:29px;
 					background: #d2d2d2;
-					line-height: 29px;
 					text-align: center;
 					margin-bottom: 6px;
-					font:16px/1.1em $font_din;
+					font:14px $font_din;
 					text-transform: capitalize;
 					color:$color_dark-grey;
-					padding-top:10px;
+					height:29px;
+					line-height: 29px;
 
 					&:hover {
 						background: $color_std-yellow;

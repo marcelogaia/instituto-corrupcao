@@ -12,6 +12,7 @@ jQuery( document ).ready( function($) {
 	var vidWidth = $video.attr('width');
 	var vidHeight = $video.attr('height');
 
+	// TODO: Understand why.
     function makeBoardProfilePictureRound() {
     	$('.diretoria-e-conselho-estrategico img').wrap("<div><a href='mailto:contato@naoaceitocorrupcao.org.br'></div>");
     }
@@ -127,11 +128,17 @@ jQuery( document ).ready( function($) {
 				$('.shade').fadeIn(400, function(){
 					$('.my-navbar').addClass('fix-top');
 				});
+				$(document).keyup(function(e) {
+				     if (e.keyCode == 27) { // escape key maps to keycode `27`
+						$(".open-responsive-menu").trigger('click');
+				    }
+				});
 			} else {
 				$('.shade').fadeOut(400, function(){
 					$('.my-navbar').removeClass('fix-top');
 				});
-				
+				$(document).unbind("keyup");
+				$(window).trigger('scroll');
 			}
 			
 			$( '.responsive-menu' ).toggle( 'slow', function() {
@@ -144,7 +151,7 @@ jQuery( document ).ready( function($) {
 			});
 		});
 
-		$("#the-menu .close").click(function(){
+		$("#the-menu .close, .shade").click(function(){
 			$(".open-responsive-menu").trigger('click');
 		});
 	}
@@ -199,13 +206,16 @@ jQuery( document ).ready( function($) {
 	function fixedMenu() {
         $(window).scroll(function(){
 			var wTop = $(window).scrollTop();
+			var navBarHeight = $("#header .my-navbar").height();
 
 			if(wTop > $('#header .jumbotron').outerHeight(false)){
 				$(".my-navbar").addClass('navbar-fixed-top');
-				$('#header').next().css("margin-top",170);
+				$('#header').next().css("margin-top",navBarHeight);
+				$('#newsletter-form').css("opacity",1);
 			} else {
 				$(".my-navbar").removeClass('navbar-fixed-top');
 				$('#header').next().css("margin-top",0);
+				$('#newsletter-form').css("opacity",0);
 			}
 		}).trigger('scroll');
 	}
@@ -247,8 +257,8 @@ jQuery( document ).ready( function($) {
 			$(window).on('scroll resize',function(){
 
 				var jumbotron = $('#header .jumbotron');
-				var menuHeight = $('#header .nav-wrapper').height();
-
+				var menuHeight = $('#header .my-navbar').height();
+				console.log(window.innerHeight,menuHeight);
 				jumbotron.css('height',window.innerHeight - menuHeight);
 
 			}).trigger("scroll");

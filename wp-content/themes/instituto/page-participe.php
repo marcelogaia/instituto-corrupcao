@@ -42,7 +42,11 @@
 				<div class="col-sm-8 col-sm-offset-1 seja-embaixador">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.</p>
 				</div>
-				<a href="javascript:void(0);"><span>baixar</span><span>Kit de imagens</span><span>INAC</span></a>
+				<a href="javascript:void(0);">
+					<div class="baixar-wrapper">
+							<span>baixar</span><span>Kit de imagens</span><span>INAC</span>
+					</div>
+				</a>
 			</div>
 
 			<div class="wp-video" style="border:none;">

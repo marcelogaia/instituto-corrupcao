@@ -32,7 +32,7 @@ wp_reset_query();
 							<p><?php echo $GLOBALS['cgv']['endereco-1'] ?></p>
 							<p><?php echo $GLOBALS['cgv']['endereco-2'] ?></p>
 							<p class="contact-icon">
-								<a href="javascript:void(0);"><i class="fa fa-map-marker" aria-hidden="true"></i>ver mapa</a>
+								<a href="https://goo.gl/maps/jxrpskxYTts" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i>ver mapa</a>
 							</p>
 							<p class="contact-icon">
 							<i class="fa fa-phone" aria-hidden="true"></i> <?php echo $GLOBALS['cgv']['telefone'] ?></p>
