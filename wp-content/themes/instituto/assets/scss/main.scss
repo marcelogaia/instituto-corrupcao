@@ -653,7 +653,7 @@ section#header {
 	}
 
 	.ms-skin-light-2 .ms-bullets.ms-dir-h {
-		bottom: 15px !important;
+		bottom: 30px !important;
 	}
 
 	.jumbotron {
@@ -1620,6 +1620,14 @@ body#o-instituto {
 					top: 50%;
 					margin-top:-15px;
 					right:-15px;
+
+					@include transition(0.5s);
+					opacity: 0.6;
+
+					&:hover {
+						opacity: 1;
+					}
+
 					img {
 						vertical-align: top;	
 					}
@@ -1934,8 +1942,8 @@ body#duvidas {
 		background-image: url(../img/faq-top.jpg);
 
 		h1 {
-			font:100px $font_din-alternate;
-			font-weight: bold;
+			// font:100px $font_din-alternate;
+			// font-weight: bold;
 		}
 	}
 

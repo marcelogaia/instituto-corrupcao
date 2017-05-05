@@ -176,14 +176,13 @@ get_header();
 	));
 ?>
 			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
 		</ul>
 		<button class="bnt-ver-todos logo-carousel-btn">Ver todos</button>
 	</div>

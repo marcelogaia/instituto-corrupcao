@@ -472,7 +472,7 @@ section#header {
     section#header.header-blog .bottom-header h2 {
       font: 100px/1.2em "din-black"; }
   section#header .ms-skin-light-2 .ms-bullets.ms-dir-h {
-    bottom: 15px !important; }
+    bottom: 30px !important; }
   section#header .jumbotron {
     padding: 0;
     height: 410px;
@@ -1144,7 +1144,14 @@ body#o-instituto .diretoria-e-conselho-estrategico {
         position: absolute;
         top: 50%;
         margin-top: -15px;
-        right: -15px; }
+        right: -15px;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        opacity: 0.6; }
+        body#o-instituto .diretoria-e-conselho-estrategico li .img-circle a.email:hover {
+          opacity: 1; }
         body#o-instituto .diretoria-e-conselho-estrategico li .img-circle a.email img {
           vertical-align: top; }
     body#o-instituto .diretoria-e-conselho-estrategico li h4 {
@@ -1359,9 +1366,6 @@ body#duvidas {
   background-color: #ffc72c; }
   body#duvidas .jumbotron {
     background-image: url(../img/faq-top.jpg); }
-    body#duvidas .jumbotron h1 {
-      font: 100px "din-alternate";
-      font-weight: bold; }
   body#duvidas header {
     text-align: center;
     float: none;
@@ -2713,7 +2717,8 @@ body#blog-interna section#comments {
         line-height: 91px;
         font-size: 45px; }
     section#header .my-navbar .logo {
-      line-height: 91px; }
+      line-height: 91px;
+      padding-top: 0; }
       section#header .my-navbar .logo img {
         width: 110px;
         margin-top: 15px; }

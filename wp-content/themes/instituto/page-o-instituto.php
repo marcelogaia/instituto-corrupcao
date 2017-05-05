@@ -169,52 +169,53 @@
 					<h4>Ouro</h4>
 					<ul class="slick-carousel-ouro">
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
 					</ul>
 
 					<h4>Prata</h4>
 					<ul class="slick-carousel-prata">
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
 					</ul>
 					<h4>Bronze</h4>
 					<ul class="slick-carousel-bronze">
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
 						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/blog-placeholder-small.jpg"></a></li>
-						<li><a href="http://www.google.com/" target="_blank"><img src="img/article-placeholder.jpg"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+						<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
 					</ul>
 				</div>
 			</div>
