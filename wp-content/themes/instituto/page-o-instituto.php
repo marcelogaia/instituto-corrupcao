@@ -50,7 +50,9 @@
 <?php
 	query_posts( array(
 		'post_type' => "pt_diretoria",
-		'order' => "ASC"
+		'order' => "ASC", 
+		'posts_per_page'   => -1, 
+		'numberposts'	   => -1
 	));
 
 	$left = true;
@@ -80,66 +82,23 @@
 					<p>Entre nossos fundadores e associados estao os seguintes:</p>
 					<div class="mCustomScrollbar founders-list" data-mcs-theme="minimal">
 						<ul>
-							<li>Elli Doubleday <span class="white">(A)</span></li>
-							<li>Darrick Reeser <span class="white">(AF)</span></li>
-							<li>Sparkle Spargo <span class="white">(F)</span></li>
-							<li>Jeanette Poudrier <span class="white">(A)</span></li>
-							<li>Freeman Rahm <span class="white">(AF)</span></li>
-							<li>Reynalda Wilmeth <span class="white">(F)</span></li>
-							<li>Santa Ravelo <span class="white">(A)</span></li>
-							<li>Leia Keener <span class="white">(AF)</span></li>
-							<li>Sunshine Ralph <span class="white">(F)</span></li>
-							<li>Carli Mackay <span class="white">(A)</span></li>
-							<li>Phyliss Mccloud <span class="white">(AF)</span></li>
-							<li>Asuncion Kearse <span class="white">(F)</span></li>
-							<li>Mercedez Kimbro <span class="white">(A)</span></li>
-							<li>Elanor Vanleer <span class="white">(AF)</span></li>
-							<li>Glen Hume <span class="white">(F)</span></li>
-							<li>Ouida Hylton <span class="white">(A)</span></li>
-							<li>Mazie Eby <span class="white">(AF)</span></li>
-							<li>Blossom Greek <span class="white">(F)</span></li>
-							<li>Orval Cooney <span class="white">(A)</span></li>
-							<li>Carmela Paek <span class="white">(AF)</span></li>
-							<li>Elli Doubleday <span class="white">(A)</span></li>
-							<li>Darrick Reeser <span class="white">(AF)</span></li>
-							<li>Sparkle Spargo <span class="white">(F)</span></li>
-							<li>Jeanette Poudrier <span class="white">(A)</span></li>
-							<li>Freeman Rahm <span class="white">(AF)</span></li>
-							<li>Reynalda Wilmeth <span class="white">(F)</span></li>
-							<li>Santa Ravelo <span class="white">(A)</span></li>
-							<li>Leia Keener <span class="white">(AF)</span></li>
-							<li>Sunshine Ralph <span class="white">(F)</span></li>
-							<li>Carli Mackay <span class="white">(A)</span></li>
-							<li>Phyliss Mccloud <span class="white">(AF)</span></li>
-							<li>Asuncion Kearse <span class="white">(F)</span></li>
-							<li>Mercedez Kimbro <span class="white">(A)</span></li>
-							<li>Elanor Vanleer <span class="white">(AF)</span></li>
-							<li>Glen Hume <span class="white">(F)</span></li>
-							<li>Ouida Hylton <span class="white">(A)</span></li>
-							<li>Mazie Eby <span class="white">(AF)</span></li>
-							<li>Blossom Greek <span class="white">(F)</span></li>
-							<li>Orval Cooney <span class="white">(A)</span></li>
-							<li>Carmela Paek <span class="white">(AF)</span></li>
-							<li>Elli Doubleday <span class="white">(A)</span></li>
-							<li>Darrick Reeser <span class="white">(AF)</span></li>
-							<li>Sparkle Spargo <span class="white">(F)</span></li>
-							<li>Jeanette Poudrier <span class="white">(A)</span></li>
-							<li>Freeman Rahm <span class="white">(AF)</span></li>
-							<li>Reynalda Wilmeth <span class="white">(F)</span></li>
-							<li>Santa Ravelo <span class="white">(A)</span></li>
-							<li>Leia Keener <span class="white">(AF)</span></li>
-							<li>Sunshine Ralph <span class="white">(F)</span></li>
-							<li>Carli Mackay <span class="white">(A)</span></li>
-							<li>Phyliss Mccloud <span class="white">(AF)</span></li>
-							<li>Asuncion Kearse <span class="white">(F)</span></li>
-							<li>Mercedez Kimbro <span class="white">(A)</span></li>
-							<li>Elanor Vanleer <span class="white">(AF)</span></li>
-							<li>Glen Hume <span class="white">(F)</span></li>
-							<li>Ouida Hylton <span class="white">(A)</span></li>
-							<li>Mazie Eby <span class="white">(AF)</span></li>
-							<li>Blossom Greek <span class="white">(F)</span></li>
-							<li>Orval Cooney <span class="white">(A)</span></li>
-							<li>Carmela Paek <span class="white">(AF)</span></li>
+<?php 
+query_posts( array(	'post_type' => 'pt_fundadores',
+	'order' => "ASC", 
+	'posts_per_page'   => -1, 
+	'numberposts'	   => -1
+
+));
+
+	while(have_posts()): the_post(); ?>
+							<li><?php the_title(); ?> <span class="white">(<?php 
+		
+		$type = get_field('tipo_de_colaborador');
+		if(in_array('associado',$type)) echo "A";
+		if(in_array('fundador',$type)) echo "F";
+		
+		?>)</span></li>
+<?php	endwhile; ?>
 						</ul>
 					</div>
 				</div>
@@ -164,7 +123,7 @@
 		<div class="parceiros" >
 			<div class="container">
 				<h2>Parceiros</h2>
-				<p class="col-sm-8 col-sm-offset-2">Morbi at consequat magna, ac imperdiet ligula. Nam feugiat suscipit nisl. Quisque erat ipsum, placerat ac quam at, lobortis rhoncus libero.</p>
+				<p class="col-sm-8 col-sm-offset-2">Agradecemos às empresas que se engajaram e de alguma forma contribuíram para o sucesso de nossos projetos. Faça parte desta lista.</p>
 				<div class="row">
 					<h4>Ouro</h4>
 					<ul class="slick-carousel-ouro">

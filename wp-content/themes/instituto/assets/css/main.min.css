@@ -1986,8 +1986,7 @@ body#participe .quer-doar {
         font: 45px/1.1em "din-condensed-bold";
         text-transform: uppercase; }
         body#participe .quer-doar ul.items > li > button a, body#participe .quer-doar ul.items > li > button a:active, body#participe .quer-doar ul.items > li > button a:visited {
-          color: #ffc72c;
-          padding: 35px 20px; }
+          color: #ffc72c; }
           body#participe .quer-doar ul.items > li > button a:hover, body#participe .quer-doar ul.items > li > button a:active:hover, body#participe .quer-doar ul.items > li > button a:visited:hover {
             color: white; }
       body#participe .quer-doar ul.items > li > div {
@@ -1999,8 +1998,8 @@ body#participe .quer-doar {
           font: 15px/1.3em "din-regular";
           color: white; }
         body#participe .quer-doar ul.items > li > div img {
-          float: right;
-          margin: 38px 25px 0 5px; }
+          margin: 10px auto;
+          display: block; }
       body#participe .quer-doar ul.items > li label {
         margin: 0 10px 0 25px;
         text-transform: uppercase;
@@ -2851,7 +2850,8 @@ body#blog-interna section#comments {
           position: absolute;
           bottom: -127px;
           left: 0;
-          right: 0; }
+          right: 0;
+          padding: 0; }
         body#participe .quer-doar ul.items > li .bootstrap-select {
           display: block;
           margin: 10px auto; }

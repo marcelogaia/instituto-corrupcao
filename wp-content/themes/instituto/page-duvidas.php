@@ -30,12 +30,14 @@
 	'order'            => 'ASC',
 	'post_type'        => 'pt_faq',
 	'post_status'      => 'publish',
-	'suppress_filters' => true 
+	'suppress_filters' => true, 
+    'posts_per_page'   => -1, 
+    'numberposts'	   => -1
 );
 $posts_array = get_posts( $args ); 
+
 $c = 1;
 foreach($posts_array as $post):
-	//print_r($post);
 ?>
 			<article class="pergunta row">
 				<?php if($c==1):?>

@@ -2849,7 +2849,6 @@ body#participe {
 
 					a, a:active, a:visited {
 						color: $color_std-yellow;
-						padding:35px 20px;
 
 						&:hover {
 							color:white;
@@ -2869,8 +2868,8 @@ body#participe {
 					}
 
 					img {
-						float:right;
-						margin: 38px 25px 0 5px;
+						margin: 10px auto;
+						display: block;
 					}
 				}
 

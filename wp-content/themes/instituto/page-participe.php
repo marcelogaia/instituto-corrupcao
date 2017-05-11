@@ -22,15 +22,15 @@
 			<ul>
 				<li class="col-sm-10 col-sm-offset-1">
 					<h4>Embaixador</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. </p>
+					<p>Seja um embaixador, ajude a divulgar a causa e os projetos do instituto em suas redes sociais, compartilhando nossos conteúdos e postagens.</p>
 				</li>
 				<li class="col-sm-10 col-sm-offset-1">
 					<h4>Doador</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. </p>
+					<p>Precisamos sempre de recursos financeiros para viabilizar nossos projetos e os custos institucionais. Faça uma doação, é simples e seguro.</p>
 				</li>
 				<li class="col-sm-10 col-sm-offset-1">
 					<h4>Voluntário</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. </p>
+					<p>Você também pode doar seu tempo, sua energia, sua experiência e conhecimento para nos ajudar a viabilizar nossos projetos de combate à corrupção.</p>
 				</li>
 			</ul>
 		</div>
@@ -96,11 +96,12 @@
 						<li class="direta">
 							<h4><span>doação direta</span></h4>
 							<div>
-								<img src="img/paypal-logo.png" alt="">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet egestas vel. Morbi id libero eu quam venenatis condimentum.
 								</p>
+								<img src="img/pagseguro-logo.png" alt="">
 							</div>
-							<button><a href="https://pag.ae/bkjpKBb" target="_blank">eu <br>quero</a></button>
+							<!-- <a href="https://pag.ae/bkjpKBb" target="_blank"> -->
+							<button><a href="<?= site_url('participe/doacao-direta') ?>" class="my-modal">eu<br>quero</a></button>
 						</li>
 						<li class="projetos">
 							<h4><span>doar para <br>um de nossos projetos</span></h4>
@@ -114,14 +115,14 @@
 									<option value="">2ª Corrida Anual</option>
 								</select>
 							</div>
-							<button><a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">eu quero</a></button>
+							<button><a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">eu<br>quero</a></button>
 						</li>
 						<li class="empresa">
 							<h4><span>doação <br>por empresa</span></h4>
 							<div>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. condimentum. </p>
 							</div>
-							<button><a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">eu quero</a></button>
+							<button><a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">eu<br>quero</a></button>
 						</li>
 					</ul>
 				</div>

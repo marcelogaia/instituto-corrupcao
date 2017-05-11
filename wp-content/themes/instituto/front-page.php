@@ -165,7 +165,7 @@ get_header();
 <section id="parceiro" class="front-page-section">
 	<div class="container">
 		<header>
-			<h3 class="general-title">Parceiro ouro</h3>
+			<h3 class="general-title">Conheça nossos principais apoiadores</h3>
 			<p>Queremos agradecer nossos parceiros, sem quem não seria possível nada.</p>
 		</header>
 		<ul class="slick-carousel">

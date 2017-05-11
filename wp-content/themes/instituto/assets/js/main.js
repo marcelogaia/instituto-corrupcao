@@ -183,7 +183,7 @@ jQuery( document ).ready( function($) {
 		$('.diretoria-e-conselho-estrategico .row').removeClass('row').addClass('col-sm-10 col-sm-offset-1');
 		
 		// Part 1
-		var numOfFoundersPerColumns = Math.round($('.fundadores-associados li').length/3);
+		var numOfFoundersPerColumns = Math.ceil($('.fundadores-associados li').length/3);
 		var lis = $(".fundadores-associados  ul > li");
 		for(var i = 0; i < lis.length; i+=numOfFoundersPerColumns) {
 			lis.slice(i, i+numOfFoundersPerColumns).wrapAll("<ul></li>");
