@@ -145,7 +145,7 @@ $isHome = is_home();
 						</div><!--/.col-sm-8-->
 						<div class="col-sm-4">
 							<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
-							<div class="participe"><button type="reset"  onclick="location.href='<?= site_url('participe')?>'">Participe</button></div>
+							<div class="participe"><a href="<?= site_url('participe') ?>"><button type="reset"  onclick="location.href='<?= site_url('participe')?>'">Participe</button></a></div>
 						</div><!--/.col-sm-4-->
 						<div class="stripped-border"><!-- Border --></div>
 					</div><!--/.row-->

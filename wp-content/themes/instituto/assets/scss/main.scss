@@ -363,6 +363,7 @@ body {
 	font-weight: 400;
 	font-size: 15px;
 	color: #888888;
+	// zoom: 0.8;
 }
 
 a {
@@ -424,7 +425,7 @@ li {
 		margin: 0 32.5px;
 		overflow: hidden;
 		opacity: 0.7;
-		border: 2px transparent solid;
+		border: 2px white solid;
 
 		a {
 			background: white;
@@ -539,7 +540,7 @@ li {
 
 	&.slick-carousel-prata {
 		li.slick-slide {
-			margin: 0 7.5px;
+			margin: 0 7px;
 		}
 		.slick-arrow {
 			top: 30px;
@@ -548,7 +549,7 @@ li {
 
 	&.slick-carousel-bronze {
 		li.slick-slide {
-			margin: 0 3.5px;
+			margin: 0 4px;
 		}
 		.slick-arrow {
 			top: 0px;
@@ -890,7 +891,8 @@ section#header {
 				border-radius:0;
 				overflow: hidden;
 				&.small {
-					height:55px;
+					height:10px;
+					line-height: 10px;
 				}
 			}
 		}
@@ -1597,6 +1599,7 @@ body#o-instituto {
 			height: 300px;
 			color: black;
 			list-style: none;
+			padding: 0 20px;
 
 			.img-circle {
 				width: 230px;
@@ -2991,7 +2994,7 @@ body#participe {
 		max-width: calc(100% - 20px);
 		margin: 0 auto;
 	}
-	
+
 	h2 {
 		margin-top: 0;
 		text-transform: uppercase;
@@ -3012,7 +3015,27 @@ body#participe {
 		}
 	}
 
-	input {
+	.wpcf7-form-control-wrap {
+		&.cidade, &.UF {
+			display: inline-block;
+			width: 50%;
+
+			input, select {
+				width: calc(100% - 30px);
+				float: right;
+				margin-right: 5px;
+				max-width: 153px;
+				@include border-radius(0);
+			}
+
+			select {
+				float: left;
+				margin-left: 5px;
+			}
+		}
+	}
+
+	input, select {
 		border: 1px solid white;
 		margin-top: 13px;
 		height: 36px;

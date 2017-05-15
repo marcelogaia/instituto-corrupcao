@@ -24,7 +24,7 @@ jQuery( document ).ready( function($) {
 			    distance      = (elementOffset - scrollTop),
 			    maxHeight	  = window.innerHeight - distance;
 
-			$('#the-menu').css('max-height',maxHeight);
+			$('#the-menu').css('height',maxHeight);
 		}).trigger('scroll');
 	}
 

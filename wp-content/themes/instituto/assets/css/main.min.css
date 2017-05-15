@@ -308,7 +308,7 @@ li {
     margin: 0 32.5px;
     overflow: hidden;
     opacity: 0.7;
-    border: 2px transparent solid; }
+    border: 2px white solid; }
     .slick-initialized li.slick-slide a {
       background: white;
       width: 100%;
@@ -385,11 +385,11 @@ li {
   .slick-initialized.slick-carousel-ouro .slick-arrow {
     top: 70px; }
   .slick-initialized.slick-carousel-prata li.slick-slide {
-    margin: 0 7.5px; }
+    margin: 0 7px; }
   .slick-initialized.slick-carousel-prata .slick-arrow {
     top: 30px; }
   .slick-initialized.slick-carousel-bronze li.slick-slide {
-    margin: 0 3.5px; }
+    margin: 0 4px; }
   .slick-initialized.slick-carousel-bronze .slick-arrow {
     top: 0px; }
 
@@ -642,7 +642,8 @@ section#header {
         border-radius: 0;
         overflow: hidden; }
         section#header .my-navbar .open-responsive-menu .fa.small {
-          height: 55px; }
+          height: 10px;
+          line-height: 10px; }
     section#header .my-navbar .contact-us-box .box-right p {
       line-height: 13px;
       position: relative; }
@@ -1120,7 +1121,8 @@ body#o-instituto .diretoria-e-conselho-estrategico {
   body#o-instituto .diretoria-e-conselho-estrategico li {
     height: 300px;
     color: black;
-    list-style: none; }
+    list-style: none;
+    padding: 0 20px; }
     body#o-instituto .diretoria-e-conselho-estrategico li .img-circle {
       width: 230px;
       height: 230px;
@@ -2093,7 +2095,23 @@ body#participe.modal-open .modal-backdrop.fade {
       width: 19px;
       height: 11px;
       background: url(../img/form-arrows.png); }
-  .participe-form input {
+  .participe-form .wpcf7-form-control-wrap.cidade, .participe-form .wpcf7-form-control-wrap.UF {
+    display: inline-block;
+    width: 50%; }
+    .participe-form .wpcf7-form-control-wrap.cidade input, .participe-form .wpcf7-form-control-wrap.cidade select, .participe-form .wpcf7-form-control-wrap.UF input, .participe-form .wpcf7-form-control-wrap.UF select {
+      width: calc(100% - 30px);
+      float: right;
+      margin-right: 5px;
+      max-width: 153px;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      border-radius: 0; }
+    .participe-form .wpcf7-form-control-wrap.cidade select, .participe-form .wpcf7-form-control-wrap.UF select {
+      float: left;
+      margin-left: 5px; }
+  .participe-form input, .participe-form select {
     border: 1px solid white;
     margin-top: 13px;
     height: 36px;
@@ -2101,19 +2119,19 @@ body#participe.modal-open .modal-backdrop.fade {
     padding: 0 12px;
     width: calc(100% - 40px);
     max-width: 315px; }
-    .participe-form input[type="submit"] {
+    .participe-form input[type="submit"], .participe-form select[type="submit"] {
       background: #3f4444;
       border: none; }
-    .participe-form input::-webkit-input-placeholder {
+    .participe-form input::-webkit-input-placeholder, .participe-form select::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       color: white; }
-    .participe-form input::-moz-placeholder {
+    .participe-form input::-moz-placeholder, .participe-form select::-moz-placeholder {
       /* Firefox 19+ */
       color: white; }
-    .participe-form input:-ms-input-placeholder {
+    .participe-form input:-ms-input-placeholder, .participe-form select:-ms-input-placeholder {
       /* IE 10+ */
       color: white; }
-    .participe-form input:-moz-placeholder {
+    .participe-form input:-moz-placeholder, .participe-form select:-moz-placeholder {
       /* Firefox 18- */
       color: white; }
   .participe-form p.note {

@@ -26,7 +26,7 @@
 							<div class="wp-video" style="border: none;">
                 <iframe width="560" height="315" src="http://www.youtube.com/embed/-g6AUHINKs4" frameborder="0" allowfullscreen></iframe>
               </div>
-							<p class="wp-caption-text"><em>Assista nosso manifesto - "UNIÃO"</em></p>
+						<p class="wp-caption-text"><em>Assista nosso manifesto - "UNIÃO"</em></p>
 						</div>
 						<p>O Instituto Não Aceito Corrupção é uma associação apartidária, sem fins lucrativos, fundada em julho de 2015 (leia nosso estatuto). A entidade surgiu da articulação de um grupo de cidadãos que viu na crise política instalada a partir de junho de 2013, com os protestos de rua, uma oportunidade para transformar indignação em esforços estruturados para o enfrentamento da corrupção.</p>
 						<p>Somos pessoas com backgrounds diferentes e formações profissionais bastante distintas, o que nos traz uma vocação multidisciplinar. Usaremos o Direito, a Estatística e a Comunicação como principais ferramentas de trabalho. Entendemos que o conhecimento atual sobre corrupção é superficial, e que seu aprofundamento é indispensável para prevenir e combater a corrupção de forma eficiente, tanto nas instâncias oficiais, quanto na percepção da sociedade.</p>
@@ -309,7 +309,7 @@ query_posts( array(	'post_type' => 'pt_fundadores',
 			<div class="container">
 				<div class="row">
 					<h2>dúvidas?</h2>
-					<button>saiba mais aqui</button>
+					<a href="<?= site_url('duvidas') ?>"><button>saiba mais aqui</button></a>
 				</div>
 			</div>
 		</div>

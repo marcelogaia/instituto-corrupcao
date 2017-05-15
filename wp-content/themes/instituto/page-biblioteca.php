@@ -84,7 +84,7 @@
 	<section id="iniciativas" class="biblioteca">
 		<div class="container">
 
-			<h3>boas iniciativas</h3>
+			<h3>painel de iniciativas</h3>
 			<ul class="slick-carousel-biblioteca">
 <?php for($i = 0; $i < 7; $i++): ?>
 				<li>
