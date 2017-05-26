@@ -44,7 +44,7 @@ get_header();
 		<div class="content-holder">
 			<?php foreach($projetos_array as $proj):
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $proj->ID ), 'single-post-thumbnail' );
-			$proj->featured_img = $image[0]//var_dump($image);
+			$proj->featured_img = $image[0];//var_dump($image);
 			?>
 			<article class="row">
 				<div class="col-sm-5 col-sm-offset-1 text-holder">
@@ -52,7 +52,7 @@ get_header();
 					<div class="project-entry">
 						<?= $proj->post_content; ?>
 					</div><!--/.project-entry-->
-					<button>Saiba mais</button>
+					<a href="<?= site_url('projetos') ?>"><button>Saiba mais</button></a>
 				</div>
 				<?php if($image): ?>
 					<div class="col-sm-6">
@@ -176,8 +176,8 @@ get_header();
 	));
 ?>
 			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="https://ih1.redbubble.net/image.218022482.5774/flat,800x800,070,f.jpg"></a></li>
+			<li><a href="http://www.google.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/2000px-Coca-Cola_logo.svg.png"></a></li>
 			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
 			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
 			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>

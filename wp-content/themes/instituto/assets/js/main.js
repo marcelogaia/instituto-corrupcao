@@ -12,23 +12,44 @@ jQuery( document ).ready( function($) {
 	var vidWidth = $video.attr('width');
 	var vidHeight = $video.attr('height');
 
+	var disableEnter = function () {
+		$(window).keydown(function(event){
+			if(event.keyCode == 13) {
+				event.preventDefault();
+				console.log("Boom! Cancelled!");
+				return false;
+			}
+		});
+	}
+
+	var disableZoom = function() {
+		document.addEventListener('touchmove', function(event) {
+			event = event.originalEvent || event;
+			if(event.scale > 1) {
+				event.preventDefault();
+			}
+		}, false);
+	}
+
 	// TODO: Understand why.
-    function makeBoardProfilePictureRound() {
+    var makeBoardProfilePictureRound = function() {
     	$('.diretoria-e-conselho-estrategico img').wrap("<div><a href='mailto:contato@naoaceitocorrupcao.org.br'></div>");
     }
 
-	function fixMenuHeight() {
+	var fixMenuHeight = function () {
 		$(window).on('scroll resize',function(){
-			var scrollTop     = $(window).scrollTop(),
-			    elementOffset = $('#the-menu').offset().top,
-			    distance      = (elementOffset - scrollTop),
-			    maxHeight	  = window.innerHeight - distance;
+			$("#the-menu").each(function(){
+				var scrollTop     = $(window).scrollTop(),
+				    elementOffset = $('#the-menu').offset().top,
+				    distance      = (elementOffset - scrollTop),
+				    maxHeight	  = window.innerHeight - distance;
 
-			$('#the-menu').css('height',maxHeight);
+				$('#the-menu').css('height',maxHeight);
+			});
 		}).trigger('scroll');
 	}
 
-	function selectProject() {
+	var selectProject = function () {
 		$('.project-tabs .tab').click(function(event){
 			event.preventDefault();
 			event.stopPropagation();
@@ -40,9 +61,10 @@ jQuery( document ).ready( function($) {
 		}).eq(0).click();
 	}
 
-	function addSlickCarousel() {
+	var addSlickCarousel = function() {
 		// http://kenwheeler.github.io/slick/
-		
+		if($.fn.slick == undefined) return false;
+
 		$('.slick-home').slick();
 
 		$('.slick-carousel').slick({
@@ -51,67 +73,67 @@ jQuery( document ).ready( function($) {
 			slidesToScroll: 1,
 			centerMode: true,
 			variableWidth: false,
-			responsive: [
-    			{
-					breakpoint: 380,
-					settings: {
-						slidesToShow: 1,
-						// variableWidth: true,
-					}
+			responsive: [{
+				breakpoint: 380,
+				settings: {
+					slidesToShow: 1,
 				}
-    		]
+			}]
+		});
+
+		$('.slick-carousel, .slick-carousel-ouro, .slick-carousel-prata, .slick-carousel-bronze').on('setPosition', function(event, slick){
+			$(slick.$list.context).find('li.slick-slide').each(function(){
+				var width = $(this)[0].offsetWidth;
+				
+				console.log($(this).width(), $(this)[0].offsetWidth);
+				
+				$(this).css('lineHeight',width+"px");
+				$(this).css('height',width+"px");
+			});
 		});
 
 		$('.slick-carousel-ouro').slick({
 			slidesToShow: 4,
 			slidesToScroll: 1,
-			responsive: [
-    			{
-					breakpoint: 380,
-					settings: {
-						slidesToShow: 1,
-					}
+			responsive: [{
+				breakpoint: 380,
+				settings: {
+					slidesToShow: 1,
 				}
-    		]
+			}]
 		});
 
 		$('.slick-carousel-prata').slick({
 			slidesToShow: 6,
 			slidesToScroll: 1,
-			responsive: [
-    			{
-					breakpoint: 380,
-					settings: {
-						slidesToShow: 1,
-					}
+			responsive: [{
+				breakpoint: 380,
+				settings: {
+					slidesToShow: 1,
 				}
-    		]
+			}]
 		});
 
 		$('.slick-carousel-bronze').slick({
 			slidesToShow: 9,
 			slidesToScroll: 1,
-			responsive: [
-    			{
-					breakpoint: 380,
-					settings: {
-						slidesToShow: 1,
-					}
+			responsive: [{
+				breakpoint: 380,
+				settings: {
+					slidesToShow: 1,
 				}
-    		]
+			}]
 		});
 
 		$('.slick-carousel-biblioteca').slick({
 			slidesToShow: 4,
 			slidesToScroll: 1,
-			responsive: [
-    			{
-					breakpoint: 380,
-					settings: {
-						slidesToShow: 1,
-					}
+			responsive: [{
+				breakpoint: 380,
+				settings: {
+					slidesToShow: 1,
 				}
-    		]
+			}]
 		});
 
 		$('.slick-carousel-blog').slick({
@@ -121,7 +143,7 @@ jQuery( document ).ready( function($) {
 	}
 
 	// Open Responsive Menu
-	function openResponsiveMenu() {
+	var openResponsiveMenu = function() {
 		$( '.open-responsive-menu' ).click( function() {
 
 			if(!$('.responsive-menu').hasClass('active')) {
@@ -156,7 +178,7 @@ jQuery( document ).ready( function($) {
 		});
 	}
 
-    function addColoredCirclesToBoard() {
+    var addColoredCirclesToBoard = function() {
     	$('.diretoria-e-conselho-estrategico li h4').each(function(){
     		var h4 = $(this);
     		var bullets = "<span class='bullets'>";
@@ -174,12 +196,12 @@ jQuery( document ).ready( function($) {
     	});
     }
 
-    function addHeightToVideoShortcode() {
+    var addHeightToVideoShortcode = function() {
         var targetWidth = $(this).width(); //using window width here will proportion the video to be full screen; adjust as needed
         $('div.video, div.video .mejs-container').css('height', Math.ceil(vidHeight * (targetWidth / vidWidth)));
     };
 
-	function oInstitutoPageFunctions() {
+	var oInstitutoPageFunctions = function() {
 		$('.diretoria-e-conselho-estrategico .row').removeClass('row').addClass('col-sm-10 col-sm-offset-1');
 		
 		// Part 1
@@ -203,11 +225,13 @@ jQuery( document ).ready( function($) {
 		addColoredCirclesToBoard();
 	}
 
-	function fixedMenu() {
+	var fixedMenu = function() {
         $(window).scroll(function(){
 			var wTop = $(window).scrollTop();
 			var navBarHeight = $("#header .my-navbar").height();
 
+			$('body:not(#projeto)').each(function(){return false;});
+			
 			if(wTop > $('#header .jumbotron').outerHeight(false)){
 				$(".my-navbar").addClass('navbar-fixed-top');
 				$('#header').next().css("margin-top",navBarHeight);
@@ -220,7 +244,7 @@ jQuery( document ).ready( function($) {
 		}).trigger('scroll');
 	}
 
-	function projectFilters() {
+	var projectFilters = function() {
 		$(".categories li a").click(function(e){
 			e.preventDefault();
 			e.stopPropagation();
@@ -252,29 +276,33 @@ jQuery( document ).ready( function($) {
 		});
 	}
 
-	function homeJumbotron() {
+	var homeJumbotron = function () {
 		$("body#home").each(function(){
 			$(window).on('scroll resize',function(){
 
 				var jumbotron = $('#header .jumbotron');
 				var menuHeight = $('#header .my-navbar').height();
-				console.log(window.innerHeight,menuHeight);
 				jumbotron.css('height',window.innerHeight - menuHeight);
+				jumbotron.find('.master-slider-parent').eq(0).css('height',window.innerHeight - menuHeight);
 
 			}).trigger("scroll");
 		});
 	}
 
-	function participeForms() {
+	var participeForms = function() {
 		$('body#participe a.my-modal').click(function (e) {
 		    e.preventDefault();
 		    $(this).ekkoLightbox({
-		    	alwaysShowClose : true
+		    	alwaysShowClose : true,
+		    	onShown: function() {
+		    		elementLoaded('.participe-form',validatePagSeguroForm);
+				}
 		    });
+		    
 		});
 	}
 
-	function newsletterFixed() {
+	var newsletterFixed = function() {
 		$('#newsletter-form').each(function(){
 			$('.wpcf7').on('wpcf7:submit',function(){
 				$('#newsletter-form').addClass('sucesso');
@@ -286,7 +314,7 @@ jQuery( document ).ready( function($) {
 		});
 	}
 
-	function bibliotecaLightbox() {
+	var bibliotecaLightbox = function () {
 		$('body#biblioteca section#videos a').click(function (e) {
 		    e.preventDefault();
 		    $(this).ekkoLightbox({
@@ -295,8 +323,91 @@ jQuery( document ).ready( function($) {
 		});
 	}
 
+	var elementLoaded = function (el, callback) {
+		if($(el).exists()) {
+			callback($(el));
+		} else {
+			setTimeout(function(){
+				elementLoaded(el, callback);
+			},300);
+		}
+		
+	}
+
+	var validatePagSeguroForm = function(formWrapper) {
+		// https://stackoverflow.com/a/18221081/4184867
+		var theForm;
+		console.log($('.participe-form').exists());
+
+		$('.participe-form').each(function(){
+			theForm = $(this).find('.wpcf7-form').eq(0);
+			console.log(theForm);
+
+			theForm.validate({
+				rules: {		
+					nome: {
+						required: true,
+						minlength: 2
+					},
+					sobrenome: {
+						required: true,
+						minlength: 2
+					},
+					email: {
+						required: true,
+						email: true
+					},
+					telefone: {
+						required: true,
+						minlength: 10
+					}
+				},
+				messages: {	
+					nome: {
+						required: "Campo \"Nome\" obrigatório.",
+						minlength: "Seu nome deve conter pelo menos 2 caracteres."
+					},
+					sobrenome: {
+						required:  "Campo \"Sobrenome\" obrigatório.",
+						minlength:  "Seu sobrenome deve conter pelo menos 2 caracteres."
+					},
+					email: {
+						required:  "Campo \"Email\" obrigatório.",
+						email: "Por favor, insira um email válido."
+					},
+					telefone: {
+						required:  "Campo \"Telefone\" obrigatório.",
+						digits: "Por favor, insira um telefone válido."
+					}
+				}
+			});
+			
+			
+		});
+
+		$('.wpcf7-tel').mask("(99) 99999999?9");
+
+		$(document).on('submit','.wpcf7-form',function(event){
+			event.preventDefault();
+			event.stopPropagation();
+
+			if(theForm.valid()) {
+				var formData = $(this).serializeArray();
+				// sendToMailchimp
+				// on success redirect to:
+				window.location.href = "https://pag.ae/bkjpKBb";
+
+			}
+		});
+	}
+
+	$.fn.exists = $.fn.exists || function() { 
+		return !!(this.length && (this[0] instanceof HTMLDocument || this[0] instanceof HTMLElement)); 
+	}
+
 	// Called Functions
 	$( function() {
+
 		fixMenuHeight();
 		addSlickCarousel();
 		openResponsiveMenu();
@@ -309,6 +420,10 @@ jQuery( document ).ready( function($) {
 		participeForms();
 		newsletterFixed();
 		bibliotecaLightbox();
+
+		disableEnter();
+		disableZoom();
+		//validatePagSeguroForm();
 	});
 
 	// Window Resize
@@ -318,5 +433,5 @@ jQuery( document ).ready( function($) {
 			fixMenuHeight();
 			addHeightToVideoShortcode();
 		});
-	});
+	}).trigger('resize');
 });

@@ -1,4 +1,4 @@
-<?php get_template_part('blog-header'); ?>
+<?php get_template_part('header-blog'); ?>
 <?php 
 	while(have_posts()): the_post();
 

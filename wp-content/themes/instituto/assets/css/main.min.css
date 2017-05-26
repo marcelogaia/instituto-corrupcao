@@ -203,7 +203,10 @@
       border: none;
       padding: 0; }
   #newsletter-form.closed {
-    right: -461px; }
+    right: -461px;
+    background-image: url(../img/newsletter-form-closed.png); }
+    #newsletter-form.closed .wpcf7-form-control-wrap, #newsletter-form.closed .wpcf7-form-control {
+      display: none; }
   #newsletter-form.sucesso {
     background-image: url(../img/newsletter-form-success.png); }
     #newsletter-form.sucesso *:not(a):not(p) {
@@ -247,10 +250,6 @@ section#header .jumbotron .btn, section#projetos .content-holder .row .text-hold
   background-color: #ffc72c;
   color: #3f4444; }
 
-/*
-You can add your own CSS here.
-Click the help icon above to learn more.
-*/
 html, body {
   height: 100%;
   width: 100%;
@@ -292,7 +291,8 @@ li {
 .front-page-section header {
   text-align: center; }
   .front-page-section header p {
-    font: normal normal 17px/1.2 "din-regular"; }
+    font: normal normal 17px/1.2 "din-regular";
+    margin-bottom: 40px; }
 
 .slick-initialized {
   padding: 0; }
@@ -312,9 +312,15 @@ li {
     .slick-initialized li.slick-slide a {
       background: white;
       width: 100%;
-      display: block; }
+      height: 100%;
+      display: block;
+      text-align: center;
+      padding: 0 10px; }
     .slick-initialized li.slick-slide img {
-      width: 100%; }
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 auto;
+      display: inline-block; }
     .slick-initialized li.slick-slide:hover {
       opacity: 1;
       border-color: #ffc72c; }
@@ -510,8 +516,10 @@ section#header {
       text-align: center; }
       section#header .jumbotron .ms-slide-info h1 {
         display: block; }
-    section#header .jumbotron .master-slider-parent, section#header .jumbotron .master-slider-parent .ms-container, section#header .jumbotron .master-slider-parent .ms-inner-controls-cont, section#header .jumbotron .master-slider-parent .ms-view,
-    section#header .jumbotron .master-slider-parent .ms-slide-container, section#header .jumbotron .master-slider-parent .ms-slide, section#header .jumbotron .master-slider-parent .ms-slide-bgcont, section#header .jumbotron .master-slider, section#header .jumbotron .master-slider .ms-container, section#header .jumbotron .master-slider .ms-inner-controls-cont, section#header .jumbotron .master-slider .ms-view,
+    section#header .jumbotron .master-slider-parent, section#header .jumbotron .master-slider {
+      height: 100%; }
+    section#header .jumbotron .master-slider-parent .ms-container, section#header .jumbotron .master-slider-parent .ms-inner-controls-cont, section#header .jumbotron .master-slider-parent .ms-view,
+    section#header .jumbotron .master-slider-parent .ms-slide-container, section#header .jumbotron .master-slider-parent .ms-slide, section#header .jumbotron .master-slider-parent .ms-slide-bgcont, section#header .jumbotron .master-slider .ms-container, section#header .jumbotron .master-slider .ms-inner-controls-cont, section#header .jumbotron .master-slider .ms-view,
     section#header .jumbotron .master-slider .ms-slide-container, section#header .jumbotron .master-slider .ms-slide, section#header .jumbotron .master-slider .ms-slide-bgcont {
       height: 100% !important; }
     section#header .jumbotron .master-slider-parent .ms-bullet, section#header .jumbotron .master-slider .ms-bullet {
@@ -902,7 +910,6 @@ section#blog {
   padding: 75px 0 85px 0;
   text-align: center; }
   section#blog h3 {
-    margin: 0 0 30px 0;
     text-transform: uppercase; }
   section#blog .post {
     background-repeat: no-repeat;
@@ -1489,8 +1496,8 @@ body#biblioteca .slick-carousel-biblioteca {
     body#biblioteca .slick-carousel-biblioteca li a {
       background: none; }
   body#biblioteca .slick-carousel-biblioteca h4 {
-    font: 22px "din-black";
-    margin: 30px 0 20px; }
+    font: 20px "din-black";
+    margin: 30px 15px 20px; }
   body#biblioteca .slick-carousel-biblioteca p {
     font: 17px/1.4em "din-regular"; }
 body#biblioteca section#videos {
@@ -1714,10 +1721,33 @@ body#projetos .projetos {
           border-radius: 4px; }
       body#projetos .projetos .container ul.the-projects li {
         text-align: center; }
-        body#projetos .projetos .container ul.the-projects li:hover div {
-          display: none; }
-        body#projetos .projetos .container ul.the-projects li:hover div.post-hover {
-          display: block !important; }
+        body#projetos .projetos .container ul.the-projects li.col-xs-12.col-sm-4 div.post-hover {
+          color: white;
+          background-size: cover; }
+          body#projetos .projetos .container ul.the-projects li.col-xs-12.col-sm-4 div.post-hover h4 {
+            padding-top: 100px; }
+          body#projetos .projetos .container ul.the-projects li.col-xs-12.col-sm-4 div.post-hover p {
+            font: 14px/1em "din-regular";
+            margin-top: 20px; }
+          body#projetos .projetos .container ul.the-projects li.col-xs-12.col-sm-4 div.post-hover a {
+            color: #ffc72c;
+            font: 17px/1em "din-regular";
+            margin-top: 30px;
+            display: block; }
+          body#projetos .projetos .container ul.the-projects li.col-xs-12.col-sm-4 div.post-hover:before {
+            content: " ";
+            display: block;
+            width: 30px;
+            height: 30px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: calc(50% - 15px);
+            background: white; }
         body#projetos .projetos .container ul.the-projects li div {
           background: black;
           -webkit-border-radius: 50%;
@@ -1735,64 +1765,46 @@ body#projetos .projetos {
             text-transform: uppercase; }
           body#projetos .projetos .container ul.the-projects li div.post-hover {
             display: none; }
+        body#projetos .projetos .container ul.the-projects li:hover div {
+          display: none; }
+        body#projetos .projetos .container ul.the-projects li:hover div.post-hover {
+          display: block !important; }
         body#projetos .projetos .container ul.the-projects li.radio div {
           color: white;
           background: #65665c; }
           body#projetos .projetos .container ul.the-projects li.radio div h4 {
             padding-top: 160px; }
         body#projetos .projetos .container ul.the-projects li.radio div.post-hover {
-          color: white;
-          background: url(../img/projeto-radiografia.png);
-          background-size: cover; }
-          body#projetos .projetos .container ul.the-projects li.radio div.post-hover h4 {
-            padding-top: 100px; }
-          body#projetos .projetos .container ul.the-projects li.radio div.post-hover p {
-            font: 14px/1em "din-regular";
-            margin-top: 20px; }
-          body#projetos .projetos .container ul.the-projects li.radio div.post-hover a {
-            color: #ffc72c;
-            font: 17px/1em "din-regular";
-            margin-top: 30px;
-            display: block; }
+          background: url(../img/projeto-radiografia.png); }
         body#projetos .projetos .container ul.the-projects li.mapa div {
           color: #3f4444;
           background: white; }
           body#projetos .projetos .container ul.the-projects li.mapa div h4 {
             padding-top: 140px; }
         body#projetos .projetos .container ul.the-projects li.mapa div.post-hover {
-          display: none;
-          color: white;
-          background: url(../img/projeto-mapa.png);
-          background-size: cover; }
-          body#projetos .projetos .container ul.the-projects li.mapa div.post-hover h4 {
-            padding-top: 100px; }
-          body#projetos .projetos .container ul.the-projects li.mapa div.post-hover p {
-            font: 14px/1em "din-regular";
-            margin-top: 20px; }
-          body#projetos .projetos .container ul.the-projects li.mapa div.post-hover a {
-            color: #ffc72c;
-            font: 17px/1em "din-regular";
-            margin-top: 30px;
-            display: block; }
+          background: url(../img/projeto-mapa.png); }
         body#projetos .projetos .container ul.the-projects li.corrida div {
           color: #3f4444;
           background: #ffc72c; }
           body#projetos .projetos .container ul.the-projects li.corrida div h4 {
             padding-top: 120px; }
         body#projetos .projetos .container ul.the-projects li.corrida div.post-hover {
-          color: white;
-          background: url(../img/projeto-radiografia.png);
-          background-size: cover; }
-          body#projetos .projetos .container ul.the-projects li.corrida div.post-hover h4 {
-            padding-top: 100px; }
-          body#projetos .projetos .container ul.the-projects li.corrida div.post-hover p {
-            font: 14px/1em "din-regular";
-            margin-top: 20px; }
-          body#projetos .projetos .container ul.the-projects li.corrida div.post-hover a {
-            color: #ffc72c;
-            font: 17px/1em "din-regular";
-            margin-top: 30px;
-            display: block; }
+          background: url(../img/projeto-radiografia.png); }
+        body#projetos .projetos .container ul.the-projects li.captacao div.post-hover:before {
+          background: #ffc72c !important; }
+        body#projetos .projetos .container ul.the-projects li.andamento div.post-hover:before {
+          background: white !important; }
+        body#projetos .projetos .container ul.the-projects li.realizados div.post-hover:before {
+          background: #65665c !important; }
+
+body#projeto section#single-projeto * {
+  outline: 1px gray dotted; }
+body#projeto section#single-projeto section.summary .social {
+  background: #ffc72c; }
+body#projeto section#single-projeto section.news {
+  background: #CCC; }
+body#projeto section#single-projeto section.timeline {
+  background: #ffc72c; }
 
 body#participe .jumbotron {
   background-image: url(../img/participe-top.jpg); }
@@ -1942,7 +1954,7 @@ body#participe .quer-doar {
       margin: 0 auto;
       background: url(../img/quer-doar-item-bg.png) no-repeat 84px 0;
       margin-bottom: 33px; }
-      body#participe .quer-doar ul.items > li h4, body#participe .quer-doar ul.items > li > button {
+      body#participe .quer-doar ul.items > li h4, body#participe .quer-doar ul.items > li > a {
         vertical-align: middle;
         height: 174px;
         width: 174px;
@@ -1975,21 +1987,24 @@ body#participe .quer-doar {
         background: url(../img/caret.png) center center no-repeat; }
       body#participe .quer-doar ul.items > li.empresa {
         background-position: 84px -174px; }
-        body#participe .quer-doar ul.items > li.empresa > button {
+        body#participe .quer-doar ul.items > li.empresa > a {
           background: #3f4444; }
         body#participe .quer-doar ul.items > li.empresa h4 span {
           font-size: 30px;
           line-height: 32px; }
-      body#participe .quer-doar ul.items > li > button {
+      body#participe .quer-doar ul.items > li > a, body#participe .quer-doar ul.items > li > a:active, body#participe .quer-doar ul.items > li > a:visited {
         float: left;
         background: #65665c;
-        border: none;
         color: #ffc72c;
-        font: 45px/1.1em "din-condensed-bold";
-        text-transform: uppercase; }
-        body#participe .quer-doar ul.items > li > button a, body#participe .quer-doar ul.items > li > button a:active, body#participe .quer-doar ul.items > li > button a:visited {
-          color: #ffc72c; }
-          body#participe .quer-doar ul.items > li > button a:hover, body#participe .quer-doar ul.items > li > button a:active:hover, body#participe .quer-doar ul.items > li > button a:visited:hover {
+        font: 45px/1.1em "din-condensed-bold"; }
+        body#participe .quer-doar ul.items > li > a button, body#participe .quer-doar ul.items > li > a:active button, body#participe .quer-doar ul.items > li > a:visited button {
+          border: none;
+          color: #ffc72c;
+          text-transform: uppercase;
+          background: transparent;
+          height: 100%;
+          width: 100%; }
+          body#participe .quer-doar ul.items > li > a button:hover, body#participe .quer-doar ul.items > li > a:active button:hover, body#participe .quer-doar ul.items > li > a:visited button:hover {
             color: white; }
       body#participe .quer-doar ul.items > li > div {
         float: left;
@@ -2085,6 +2100,15 @@ body#participe.modal-open .modal-backdrop.fade {
     margin-top: 0;
     text-transform: uppercase;
     font: 32px/1em "din-black"; }
+  .participe-form br {
+    display: block;
+    line-height: 1px;
+    height: 1px; }
+  .participe-form label.error {
+    width: calc(100% - 40px);
+    max-width: 315px;
+    margin: 10px auto;
+    display: block; }
   .participe-form h3 {
     text-transform: uppercase;
     font: 20px/1em "din-regular"; }
@@ -2176,6 +2200,8 @@ body#bloco section#news .slick-list {
     margin: 0;
     border: none;
     opacity: 1; }
+    body#bloco section#news .slick-list .slick-slide a {
+      background: none; }
     body#bloco section#news .slick-list .slick-slide h3 {
       position: absolute;
       font: 20px/1.1em "din-regular";
@@ -2185,7 +2211,7 @@ body#bloco section#news .slick-list {
       background: #ffc72c;
       bottom: 0;
       width: 100%;
-      margin: 0; }
+      margin: 0 -10px; }
     body#bloco section#news .slick-list .slick-slide:hover .hover {
       opacity: 1; }
     body#bloco section#news .slick-list .slick-slide .hover {
@@ -2305,7 +2331,7 @@ body#bloco section#featured ul.row {
       font: 20px/1.1em "din-regular";
       text-transform: uppercase;
       color: #3f4444;
-      padding: 25px 15px 10px;
+      padding: 15px;
       background: #ffc72c;
       bottom: 0;
       left: 0;
@@ -2431,6 +2457,8 @@ body#blog-interna a {
   color: #ffc72c; }
 body#blog-interna section#header .my-navbar {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
+  body#blog-interna section#header .my-navbar .fa-times {
+    color: black; }
 body#blog-interna .featured-img {
   margin-top: 80px;
   height: 596px;
@@ -2855,8 +2883,8 @@ body#blog-interna section#comments {
             padding: 15px 10px; }
           body#participe .quer-doar ul.items > li > div img {
             position: absolute;
-            bottom: 80px;
-            left: calc(50% - 50px);
+            bottom: 120px;
+            left: calc(50% - 111px);
             margin: 0; }
         body#participe .quer-doar ul.items > li label {
           margin: 0;

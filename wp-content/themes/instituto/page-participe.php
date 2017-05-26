@@ -101,7 +101,9 @@
 								<img src="img/pagseguro-logo.png" alt="">
 							</div>
 							<!-- <a href="https://pag.ae/bkjpKBb" target="_blank"> -->
-							<button><a href="<?= site_url('participe/doacao-direta') ?>" class="my-modal">eu<br>quero</a></button>
+							<a href="<?= site_url('participe/doacao-direta') ?>" class="my-modal">
+								<button>eu<br>quero</button>
+							</a>
 						</li>
 						<li class="projetos">
 							<h4><span>doar para <br>um de nossos projetos</span></h4>
@@ -115,14 +117,18 @@
 									<option value="">2ª Corrida Anual</option>
 								</select>
 							</div>
-							<button><a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">eu<br>quero</a></button>
+							<a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">
+								<button>eu<br>quero</button>
+							</a>
 						</li>
 						<li class="empresa">
 							<h4><span>doação <br>por empresa</span></h4>
 							<div>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. condimentum. </p>
 							</div>
-							<button><a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">eu<br>quero</a></button>
+							<a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">
+								<button>eu<br>quero</button>
+							</a>
 						</li>
 					</ul>
 				</div>
