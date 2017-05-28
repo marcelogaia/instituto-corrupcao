@@ -53,7 +53,6 @@ global $wpdb, $post;
 	</script>
 	<div class="shade"></div>
 	<section id="header">
-		<div class="jumbotron"></div>
 		<div class="nav-wrapper">
 			<div class="my-navbar">
 				<div class="container-full">

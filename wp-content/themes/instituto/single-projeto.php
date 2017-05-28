@@ -1,6 +1,7 @@
 <?php get_template_part('header-project'); ?>
 <section id="single-projeto">
 	<section class="summary">
+		<div class="featured-picture" style="background-image: url(<?php the_post_thumbnail_url() ?>);"><!-- --></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
@@ -12,13 +13,13 @@
 					<p>O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”. A iniciativa consiste em um ciclo de palestras sobre temas que abordam o acesso à informação e as ferramentas disponíveis para a obtenção dos dados pretendidos. Por exemplo, informações sobre orçamento do Poder Público, a cultura de transparência e seus reflexos positivos para a qualidade da democracia e o controle social, por meio da atuação das ONGs.</p>
 
 					<span class="previous">Edições Anteriores</span>
-					<ul>
+					<ul class="previous-items">
 						<li><a href="javascript:void(0);">2015</a></li>
 						<li><a href="javascript:void(0);">2014</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row texts">
 				<div class="col-sm-4 col-xs-12">
 					<h3>Problema Abordado</h3>
 					<p>O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação Diálogos.</p>
@@ -32,21 +33,34 @@
 					<p>O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação Diálogos.</p>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-6">Custo <span class="value"><span>R$</span>1.500.000,00</span></div>
-				<div class="col-xs-12 col-sm-6">Previsão de Lançamento <span class="value">20/11/2017</span></div>
+			<div class="custo-prazo">
+				<div>Custo <span class="value"><span>R$</span>1.500.000,00</span></div>
+				<div>Previsão de Lançamento <span class="value">20/11/2017</span></div>
 			</div>
 		</div>
+<?php
+	$socialArr = array();
+
+	if(!empty($GLOBALS['cgv']['linkedin'])) $socialArr['linkedin'] = $GLOBALS['cgv']['linkedin'];
+	if(!empty($GLOBALS['cgv']['facebook'])) $socialArr['facebook'] = $GLOBALS['cgv']['facebook'];
+	if(!empty($GLOBALS['cgv']['twitter'])) $socialArr['twitter'] = $GLOBALS['cgv']['twitter'];
+	if(!empty($GLOBALS['cgv']['instagram'])) $socialArr['instagram'] = $GLOBALS['cgv']['instagram'];
+	if(!empty($GLOBALS['cgv']['google-plus'])) $socialArr['google-plus'] = $GLOBALS['cgv']['google-plus'];
+
+	if(!empty($socialArr)):
+?>
 		<div class="social">
 			<ul>
-				<li><a href="javascript:void(0);"><img src="" alt=""></a></li>
-				<li><a href="javascript:void(0);"><img src="" alt=""></a></li>
-				<li><a href="javascript:void(0);"><img src="" alt=""></a></li>
-				<li><a href="javascript:void(0);"><img src="" alt=""></a></li>
-				<li><a href="javascript:void(0);"><img src="" alt=""></a></li>
-				<li><a href="javascript:void(0);"><img src="" alt=""></a></li>
+				<li class="share"><!-- --></li>
+				<li><a href="<?= $socialArr['linkedin'] ?>" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="<?= $socialArr['facebook'] ?>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="<?= $socialArr['twitter'] ?>" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="<?= $socialArr['instagram'] ?>" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+				<!-- <li><a href="javascript:void(0);"><img src="" alt=""></a></li> -->
 			</ul>
 		</div>
+<?php endif; ?>
 	</section>
 
 	<section class="results">

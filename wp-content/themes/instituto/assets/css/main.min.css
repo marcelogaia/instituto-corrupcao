@@ -396,6 +396,8 @@ li {
     top: 30px; }
   .slick-initialized.slick-carousel-bronze li.slick-slide {
     margin: 0 4px; }
+  .slick-initialized.slick-carousel-bronze li.slick-list {
+    margin: 0 68px; }
   .slick-initialized.slick-carousel-bronze .slick-arrow {
     top: 0px; }
 
@@ -1797,10 +1799,139 @@ body#projetos .projetos {
         body#projetos .projetos .container ul.the-projects li.realizados div.post-hover:before {
           background: #65665c !important; }
 
-body#projeto section#single-projeto * {
-  outline: 1px gray dotted; }
+body#projeto section#single-projeto section.summary .featured-picture {
+  width: 100%;
+  height: 575px;
+  background-position: center center;
+  background-size: cover; }
+body#projeto section#single-projeto section.summary span.status {
+  display: block;
+  width: 304px;
+  height: 70px;
+  border: 7px white solid;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  margin: -28px auto 0;
+  background: #ffc72c;
+  font: italic 22px/56px "din-alternate";
+  text-align: center;
+  color: #484e4e; }
+body#projeto section#single-projeto section.summary span.date {
+  font-size: 18px; }
+body#projeto section#single-projeto section.summary h2 {
+  font: 50px/1em "din-black";
+  margin: 9px 0 35px;
+  color: #3f4444; }
+body#projeto section#single-projeto section.summary p {
+  font-size: 17px;
+  line-height: 30px;
+  color: #3f4444; }
+body#projeto section#single-projeto section.summary .previous, body#projeto section#single-projeto section.summary .previous-items, body#projeto section#single-projeto section.summary li {
+  display: inline-block; }
+body#projeto section#single-projeto section.summary .previous {
+  font: 24px "din-condensed-bold";
+  color: #3f4444; }
+  body#projeto section#single-projeto section.summary .previous:before {
+    width: 22px;
+    content: " ";
+    display: block;
+    background: #3f4444;
+    height: 1px;
+    margin: 10px 0 25px; }
+body#projeto section#single-projeto section.summary ul.previous-items {
+  padding: 0;
+  margin-left: 15px; }
+  body#projeto section#single-projeto section.summary ul.previous-items li a {
+    width: 64px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #ffc72c;
+    color: #65665c; }
+    body#projeto section#single-projeto section.summary ul.previous-items li a:hover {
+      background: #d7d7d7; }
+body#projeto section#single-projeto section.summary .texts {
+  margin-top: 20px; }
+  body#projeto section#single-projeto section.summary .texts h3 {
+    font: 21px "din-black";
+    color: #ffc72c;
+    margin-bottom: 0; }
+  body#projeto section#single-projeto section.summary .texts p {
+    line-height: 23px; }
+body#projeto section#single-projeto section.summary .custo-prazo {
+  margin: 78px 0 82px; }
+  body#projeto section#single-projeto section.summary .custo-prazo div {
+    display: inline-block;
+    font: 30px "din-black";
+    color: #3f4444;
+    vertical-align: middle; }
+    body#projeto section#single-projeto section.summary .custo-prazo div:first-of-type .value {
+      margin-right: 70px; }
+    body#projeto section#single-projeto section.summary .custo-prazo div .value {
+      font: 45px "din-regular";
+      display: inline-block;
+      height: 69px;
+      line-height: 69px;
+      background: #ffc72c;
+      padding: 0 25px 0 18px;
+      margin-left: 12px;
+      vertical-align: middle; }
+      body#projeto section#single-projeto section.summary .custo-prazo div .value span {
+        font-size: 20px;
+        vertical-align: top;
+        line-height: 54px;
+        margin-right: 8px; }
 body#projeto section#single-projeto section.summary .social {
-  background: #ffc72c; }
+  background: #ffc72c;
+  height: 92px;
+  line-height: 92px; }
+  body#projeto section#single-projeto section.summary .social ul {
+    padding: 0;
+    text-align: center; }
+    body#projeto section#single-projeto section.summary .social ul li.share {
+      background: transparent url(../img/share-icon.png) center center no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 32px;
+      margin-right: 8px; }
+    body#projeto section#single-projeto section.summary .social ul li a {
+      color: white;
+      font-size: 45px;
+      padding: 0 10px; }
+      body#projeto section#single-projeto section.summary .social ul li a .fa-linkedin:hover {
+        color: #0077B5; }
+      body#projeto section#single-projeto section.summary .social ul li a .fa-facebook:hover {
+        color: #3b5998; }
+      body#projeto section#single-projeto section.summary .social ul li a .fa-twitter:hover {
+        color: #00aced; }
+      body#projeto section#single-projeto section.summary .social ul li a .fa-instagram:hover {
+        color: #cd486b; }
+      body#projeto section#single-projeto section.summary .social ul li a .fa-google-plus:hover {
+        color: #d34836; }
+body#projeto section#single-projeto section.results {
+  padding-bottom: 175px; }
+  body#projeto section#single-projeto section.results h3 {
+    font: 45px "din-regular";
+    text-transform: uppercase;
+    text-align: center;
+    color: #3f4444;
+    letter-spacing: 1px;
+    margin: 38px 0 36px; }
+  body#projeto section#single-projeto section.results p {
+    text-align: center;
+    color: #65665c;
+    font-size: 17px;
+    line-height: 25px; }
+  body#projeto section#single-projeto section.results h4 {
+    font: 25px "din-alternate";
+    color: #ffc72c;
+    text-align: center;
+    margin: 68px 0 5px; }
+  body#projeto section#single-projeto section.results img {
+    max-width: 100%; }
 body#projeto section#single-projeto section.news {
   background: #CCC; }
 body#projeto section#single-projeto section.timeline {
@@ -2358,9 +2489,10 @@ body#bloco section#last-news ul li {
       border-top: 1px #ffc72c solid;
       width: 122px;
       height: 122px;
-      line-height: 122px; }
+      line-height: 122px;
+      overflow: hidden; }
       body#bloco section#last-news ul li a .img img {
-        max-width: 100%; }
+        width: 100%; }
     body#bloco section#last-news ul li a h3 {
       color: #3f4444;
       font: 21px/1.1em "din-condensed-bold";
