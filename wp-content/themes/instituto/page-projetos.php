@@ -48,7 +48,7 @@
 					<div class="post-hover">
 						<h4 class="small-title">Radiografia</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi.</p>
-						<a href="#">Quero Ver</a>
+						<a href="<?= site_url('projeto/3a-corrida-e-caminhada-contra-a-corrupcao') ?>">Quero Ver</a>
 					</div>
 				</li>
 				<li class="mapa pesquisa andamento col-xs-12 col-sm-4">
@@ -58,7 +58,7 @@
 					<div class="post-hover">
 						<h4 class="small-title">mapa da corrupção</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi.</p>
-						<a href="#">Quero Ver</a>
+						<a href="<?= site_url('projeto/3a-corrida-e-caminhada-contra-a-corrupcao') ?>">Quero Ver</a>
 					</div>
 				</li>
 				<li class="corrida politicas captacao col-xs-12 col-sm-4">
@@ -68,7 +68,7 @@
 					<div class="post-hover">
 						<h4 class="small-title">Corrida contra corrupção</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi.</p>
-						<a href="#">Quero Ver</a>
+						<a href="<?= site_url('projeto/3a-corrida-e-caminhada-contra-a-corrupcao') ?>">Quero Ver</a>
 					</div>
 				</li>
 			</ul>

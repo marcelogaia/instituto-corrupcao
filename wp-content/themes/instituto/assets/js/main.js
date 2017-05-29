@@ -140,6 +140,17 @@ jQuery( document ).ready( function($) {
 			slidesToShow: 1,
 			slidesToScroll: 1
 		});
+
+		$('.slick-project').slick({
+			dots: true,
+			slidesToShow: 1,
+			slidesToScroll: 1
+		});
+
+		$('.slick-project-staff').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1
+		});
 	}
 
 	// Open Responsive Menu

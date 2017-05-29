@@ -84,9 +84,7 @@
 	</section>
 	
 	<section class="video">
-		<div class="container">
-			<iframe src="https://www.youtube.com/embed/rDtIqCuDTlQ"></iframe>
-		</div>
+		<iframe src="https://www.youtube.com/embed/rDtIqCuDTlQ"></iframe>
 	</section>
 
 	<section class="pictures">
@@ -109,17 +107,23 @@
 
 	<section class="news">
 		<div class="container">
-			<h3>Na Imprensa</h3>
-			<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
-			<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
-			<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
-			<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
-			<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
-			<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
-			<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
-			<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
-			<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
-			<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				<h3>Na Imprensa</h3>
+				<div class="mCustomScrollbar" data-mcs-theme="dark">
+					<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+					<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+					<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+					<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+					<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+					<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+					<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+					<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+					<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+					<p><b>13/11/17</b> | O Instituto Não Aceito Corrupção, a Secretaria da Educação do Estado de São Paulo e a Ouvidoria-Geral do Estado de São Paulo lançaram na última sexta-feira (29) a primeira edição da ação “Diálogos”.</p>
+				</div>
+			</div>
+		</div>
 		</div>
 	</section>
 
@@ -131,7 +135,14 @@
 					<h4>Monica Braizat</h4>
 					<h5>Diretora de Mkt | Unilever</h5>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget sem lacus. Ut porta feugiat finibus. Maecenas faucibus enim quis laoreet dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse convallis lacinia augue. Duis posuere varius aliquet. Pellentesque elit sapien, volutpat id venenatis sit amet, scelerisque sit amet urna. Praesent nec feugiat justo. Quisque vitae egestas lectus, a blandit quam. Proin viverra porta eros quis dignissim. Maecenas auctor nisl ut quam dictum, id aliquam ligula luctus. Morbi pulvinar augue nec leo dictum efficitur. Mauris scelerisque felis efficitur porta viverra.</p>
-					<a href="javascript:void(0);">www.unilever.com.br</a>
+					<a href="http://www.unilever.com.br" target="_blank">www.unilever.com.br</a>
+				</li>
+				<li>
+					<img src="img/project-staff-face.jpg" alt="">
+					<h4>Monica Braizat</h4>
+					<h5>Diretora de Mkt | Unilever</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget sem lacus. Ut porta feugiat finibus. Maecenas faucibus enim quis laoreet dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse convallis lacinia augue. Duis posuere varius aliquet. Pellentesque elit sapien, volutpat id venenatis sit amet, scelerisque sit amet urna. Praesent nec feugiat justo. Quisque vitae egestas lectus, a blandit quam. Proin viverra porta eros quis dignissim. Maecenas auctor nisl ut quam dictum, id aliquam ligula luctus. Morbi pulvinar augue nec leo dictum efficitur. Mauris scelerisque felis efficitur porta viverra.</p>
+					<a href="http://www.unilever.com.br" target="_blank">www.unilever.com.br</a>
 				</li>
 			</ul>
 		</div>
@@ -139,9 +150,13 @@
 
 	<section class="timeline">
 		<div class="container">
-			<ul>
+			<ul class="row">
 				<?php for($i = 0; $i < 6; $i++): ?>
-				<li>
+				<li class="col-xs-12 col-sm-7<?php
+					if($i == 0) echo ' active';
+					if($i % 2 == 1) echo ' right col-sm-offset-5';
+				?>">
+					<div class="track"><!-- --></div>
 					<span class="date-label">
 						<b>15<?php //the_time('d'); ?></b> 
 						JUN<?php //the_time('M Y'); ?>
@@ -150,45 +165,50 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget sem lacus. Ut porta feugiat finibus. Maecenas faucibus enim quis laoreet dictum. Lorem ipsum dolor sit amet.</p>
 				</li>
 				<?php endfor; ?>
-				<li><span class="year">2016</span></li>
+				<li class="col-xs-12 col-sm-7 year">
+					<span class="date-label">2016</span>
+				</li>
 			</ul>
 		</div>
 	</section>
 
 	<section class="other">
 		<div class="container">
-			<ul class="row">
-				<li class="col-sm-4">
-					<a href="javascript:void(0);">
-						<img src="img/initiative-placeholder.jpg<?php //get_the_post_thumbnail_url() ?>" alt="">
-						<h4>
-							<i class="fa fa-caret-right" aria-hidden="true"></i>
-							um titulo para o projeto com maximo duas linhas<?php //the_short_title(35) ?>
-						</h4>
-						<span class="date-time">13 de Agosto de 2016 <?php //the_time('d \d\e F \d\e Y | G:i' ); ?></span>
-					</a>
-				</li>
-				<li class="col-sm-4">
-					<a href="javascript:void(0);">
-						<img src="img/initiative-placeholder.jpg<?php //get_the_post_thumbnail_url() ?>" alt="">
-						<h4>
-							<i class="fa fa-caret-right" aria-hidden="true"></i>
-							um titulo para o projeto com maximo duas linhas<?php //the_short_title(35) ?>
-						</h4>
-						<span class="date-time">13 de Agosto de 2016 <?php //the_time('d \d\e F \d\e Y | G:i' ); ?></span>
-					</a>
-				</li>
-				<li class="col-sm-4">
-					<a href="javascript:void(0);">
-						<img src="img/initiative-placeholder.jpg<?php //get_the_post_thumbnail_url() ?>" alt="">
-						<h4>
-							<i class="fa fa-caret-right" aria-hidden="true"></i>
-							um titulo para o projeto com maximo duas linhas<?php //the_short_title(35) ?>
-						</h4>
-						<span class="date-time">13 de Agosto de 2016 <?php //the_time('d \d\e F \d\e Y | G:i' ); ?></span>
-					</a>
-				</li>
-			</ul>
+			<div class="row">
+				<h3 class="col-xs-12">Outros projetos realizados</h3>
+				<ul>
+					<li class="col-sm-4">
+						<a href="javascript:void(0);">
+							<img src="img/initiative-placeholder.jpg<?php //get_the_post_thumbnail_url() ?>" alt="">
+							<h4>
+								<i class="fa fa-caret-right" aria-hidden="true"></i>
+								um titulo para o projeto com maximo duas linhas<?php //the_short_title(35) ?>
+							</h4>
+							<span class="date-time">13 de Agosto de 2016 <?php //the_time('d \d\e F \d\e Y | G:i' ); ?></span>
+						</a>
+					</li>
+					<li class="col-sm-4">
+						<a href="javascript:void(0);">
+							<img src="img/initiative-placeholder.jpg<?php //get_the_post_thumbnail_url() ?>" alt="">
+							<h4>
+								<i class="fa fa-caret-right" aria-hidden="true"></i>
+								um titulo para o projeto com maximo duas linhas<?php //the_short_title(35) ?>
+							</h4>
+							<span class="date-time">13 de Agosto de 2016 <?php //the_time('d \d\e F \d\e Y | G:i' ); ?></span>
+						</a>
+					</li>
+					<li class="col-sm-4">
+						<a href="javascript:void(0);">
+							<img src="img/initiative-placeholder.jpg<?php //get_the_post_thumbnail_url() ?>" alt="">
+							<h4>
+								<i class="fa fa-caret-right" aria-hidden="true"></i>
+								um titulo para o projeto com maximo duas linhas<?php //the_short_title(35) ?>
+							</h4>
+							<span class="date-time">13 de Agosto de 2016 <?php //the_time('d \d\e F \d\e Y | G:i' ); ?></span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 </section>

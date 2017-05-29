@@ -94,6 +94,16 @@
 			<div class="row">	
 				<h3 class="col-xs-12">Posts relacionados</h3>
 				<ul class="col-xs-12 row">
+					<li class="col-sm-4">
+						<a href="javascript:void(0);">
+							<img src="img/initiative-placeholder.jpg<?php //get_the_post_thumbnail_url() ?>" alt="">
+							<h4>
+								<i class="fa fa-caret-right" aria-hidden="true"></i>
+								um titulo para o projeto com maximo duas linhas<?php //the_short_title(35) ?>
+							</h4>
+							<span class="date-time">13 de Agosto de 2016 <?php //the_time('d \d\e F \d\e Y | G:i' ); ?></span>
+						</a>
+					</li>
 <?php
 	$orig_post = $post;
 	global $post;
