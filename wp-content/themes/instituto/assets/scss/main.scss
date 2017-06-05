@@ -752,6 +752,7 @@ section#header {
 		height: 131px;
 		// line-height: 140px;
 		background: white;
+		position: relative;
 		padding:0;
 		margin:0;
 		z-index:9;
@@ -767,6 +768,11 @@ section#header {
 
 				@extend %basic_button;
 			}
+		}
+
+		.stripped-border {
+			position: absolute;
+			top: 0;
 		}
 
 		.logo {
@@ -1721,6 +1727,10 @@ body#o-instituto {
 			li {
 				text-transform: uppercase;
 				list-style: none;
+
+				.white {
+					display: none;
+				}
 
 				&:first-child:before {
 					content: "";
@@ -3349,7 +3359,7 @@ body#participe {
 
 		ul.items {
 			margin-top: 50px;
-			width:100%;
+			width:100%;	
 
 			>li {
 				height:174px;
@@ -3391,6 +3401,8 @@ body#participe {
 				}
 
 				&.projetos {
+					display: none; 
+
 					h4 {
 						span {
 							font-size:30px;
@@ -3957,7 +3969,7 @@ body#bloco {
 						padding:0 10px 0 0;
 						margin: 0;
 						position: absolute;
-						bottom: 0;
+						bottom: 1px;
 
 						span {
 							display: inline-block;

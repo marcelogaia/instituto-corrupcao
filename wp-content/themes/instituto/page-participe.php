@@ -117,7 +117,7 @@
 									<option value="">2ª Corrida Anual</option>
 								</select>
 							</div>
-							<a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">
+							<a href="<?= site_url('participe/doacao-por-projeto') ?>" class="my-modal">
 								<button>eu<br>quero</button>
 							</a>
 						</li>

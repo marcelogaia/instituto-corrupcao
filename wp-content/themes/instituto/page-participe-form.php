@@ -1,5 +1,6 @@
 <?php
 global $wpdb, $post;
+if(empty($_POST)):
 while(have_posts()): the_post();
 ?>
 	<div class="participe-form">
@@ -7,4 +8,7 @@ while(have_posts()): the_post();
 		<div><?php the_content(); ?></div>
 		<p class="note">* campos obrigatórios</p>
 	</div>
-<?php endwhile; ?>
+<?php endwhile; 
+else:
+	echo "success";
+endif;

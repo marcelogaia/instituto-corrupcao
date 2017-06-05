@@ -535,6 +535,7 @@ section#header {
     width: 100%;
     height: 131px;
     background: white;
+    position: relative;
     padding: 0;
     margin: 0;
     z-index: 9;
@@ -545,6 +546,9 @@ section#header {
       padding: 43px 0; }
       section#header .my-navbar .participe button {
         width: 190px; }
+    section#header .my-navbar .stripped-border {
+      position: absolute;
+      top: 0; }
     section#header .my-navbar .logo {
       padding-top: 43px; }
     section#header .my-navbar .responsive-menu {
@@ -1207,6 +1211,8 @@ body#o-instituto .fundadores-associados {
     body#o-instituto .fundadores-associados ul li {
       text-transform: uppercase;
       list-style: none; }
+      body#o-instituto .fundadores-associados ul li .white {
+        display: none; }
       body#o-instituto .fundadores-associados ul li:first-child:before {
         content: "";
         width: 35px;
@@ -2361,14 +2367,16 @@ body#participe .quer-doar {
       body#participe .quer-doar ul.items > li.direta h4 span {
         font-size: 42px;
         line-height: 45px; }
-      body#participe .quer-doar ul.items > li.projetos h4 span {
-        font-size: 30px;
-        line-height: 35px; }
-      body#participe .quer-doar ul.items > li.projetos .caret {
-        border: none;
-        width: 16px;
-        height: 9px;
-        background: url(../img/caret.png) center center no-repeat; }
+      body#participe .quer-doar ul.items > li.projetos {
+        display: none; }
+        body#participe .quer-doar ul.items > li.projetos h4 span {
+          font-size: 30px;
+          line-height: 35px; }
+        body#participe .quer-doar ul.items > li.projetos .caret {
+          border: none;
+          width: 16px;
+          height: 9px;
+          background: url(../img/caret.png) center center no-repeat; }
       body#participe .quer-doar ul.items > li.empresa {
         background-position: 84px -174px; }
         body#participe .quer-doar ul.items > li.empresa > a {
@@ -2761,7 +2769,7 @@ body#bloco section#last-news ul li {
       padding: 0 10px 0 0;
       margin: 0;
       position: absolute;
-      bottom: 0; }
+      bottom: 1px; }
       body#bloco section#last-news ul li a p span {
         display: inline-block; }
       body#bloco section#last-news ul li a p img {
@@ -3220,10 +3228,11 @@ body#blog-interna section#comments {
   section#parceiro header p {
     margin-bottom: 20px; }
 
-  body#home section#header .jumbotron {
-    padding-top: 125px; }
   body#home section#projetos {
     padding-top: 30px; }
+
+  section#header .jumbotron {
+    padding-top: 91px; }
 
   body#participe {
     height: 450px; }
@@ -3232,6 +3241,8 @@ body#blog-interna section#comments {
       padding: 0px; }
     body#participe .precisamos li {
       overflow: hidden; }
+      body#participe .precisamos li p {
+        height: auto; }
     body#participe .precisamos li h4, body#participe .precisamos li p {
       width: 100%;
       display: block;
@@ -3277,12 +3288,14 @@ body#blog-interna section#comments {
           display: block;
           width: 100%;
           float: none; }
-        body#participe .quer-doar ul.items > li > button {
+        body#participe .quer-doar ul.items > li > a.my-modal {
           position: absolute;
           bottom: -127px;
           left: 0;
           right: 0;
-          padding: 0; }
+          padding: 0;
+          margin: 0 auto;
+          float: none; }
         body#participe .quer-doar ul.items > li .bootstrap-select {
           display: block;
           margin: 10px auto; }
@@ -3365,10 +3378,12 @@ body#blog-interna section#comments {
     font: 25px/1.2em "din-black";
     padding: 15px; }
   body#duvidas .pergunta span {
-    padding: 0px !important; }
+    padding: 10px !important;
+    font-size: 20px; }
   body#duvidas .pergunta .resposta {
     font-size: 16px;
-    padding: 30px 15px 20px; }
+    padding: 10px 15px 10px;
+    margin: 0; }
 
   body#projetos .chamada .container {
     padding: 30px 0 20px; }
@@ -3379,17 +3394,30 @@ body#blog-interna section#comments {
     display: none; }
   body#bloco section#last-news ul.filters {
     overflow: hidden; }
-  body#bloco section#last-news ul.filters li {
-    float: left;
-    width: 50%;
-    padding-left: 5px; }
-    body#bloco section#last-news ul.filters li:first-of-type {
-      padding-left: 0;
-      padding-right: 5px; }
-    body#bloco section#last-news ul.filters li button {
-      width: 100%;
-      font-size: 18px;
-      margin-bottom: 20px; }
+    body#bloco section#last-news ul.filters li {
+      float: left;
+      width: 50%;
+      padding-left: 5px; }
+      body#bloco section#last-news ul.filters li:first-of-type {
+        padding-left: 0;
+        padding-right: 5px; }
+      body#bloco section#last-news ul.filters li button {
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 20px; }
+  body#bloco section#last-news ul li a .img {
+    width: 85px;
+    height: 85px;
+    line-height: 85px; }
+  body#bloco section#last-news ul li a p {
+    font: 11px/14px "din-regular";
+    left: 100px; }
+  body#bloco section#last-news ul li a h3 {
+    font-size: 14px;
+    padding-top: 10px;
+    line-height: 1.2em; }
+  body#bloco section#last-news ul li:first-of-type h3 {
+    padding-top: 10px; }
   body#bloco .post-entry, body#bloco .hover {
     display: none !important; }
   body#bloco section#featured ul.row li a {
@@ -3465,6 +3493,14 @@ body#blog-interna section#comments {
       height: auto; }
       body#o-instituto .diretoria-e-conselho-estrategico ul li.right {
         text-align: left; }
+        body#o-instituto .diretoria-e-conselho-estrategico ul li.right .img-circle {
+          width: 210px;
+          height: 210px; }
+          body#o-instituto .diretoria-e-conselho-estrategico ul li.right .img-circle a.email {
+            right: -15px;
+            left: auto; }
+        body#o-instituto .diretoria-e-conselho-estrategico ul li.right h4 .bullets {
+          margin: 0 0 0 7px 0; }
       body#o-instituto .diretoria-e-conselho-estrategico ul li .img-circle {
         float: none; }
   body#o-instituto .diretoria-e-conselho-estrategico .legend {
@@ -3497,7 +3533,7 @@ body#blog-interna section#comments {
     font-size: 20px;
     padding: 15px; }
   body#o-instituto .transparencia .bootstrap-select {
-    margin: 0 0 20px; }
+    margin: 0; }
   body#o-instituto .duvidas {
     height: 400px; }
     body#o-instituto .duvidas h2 {

@@ -65,7 +65,12 @@ jQuery( document ).ready( function($) {
 		// http://kenwheeler.github.io/slick/
 		if($.fn.slick == undefined) return false;
 
-		$('.slick-home').slick();
+		$('.slick-home').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 5000,
+		});
 
 		$('.slick-carousel').slick({
 			dots: true,
@@ -84,9 +89,7 @@ jQuery( document ).ready( function($) {
 		$('.slick-carousel, .slick-carousel-ouro, .slick-carousel-prata, .slick-carousel-bronze').on('setPosition', function(event, slick){
 			$(slick.$list.context).find('li.slick-slide').each(function(){
 				var width = $(this)[0].offsetWidth;
-				
-				console.log($(this).width(), $(this)[0].offsetWidth);
-				
+								
 				$(this).css('lineHeight',width+"px");
 				$(this).css('height',width+"px");
 			});
@@ -199,7 +202,7 @@ jQuery( document ).ready( function($) {
     		
     		bullets += "</span>";
 
-    		if(h4.parents('.right').length){
+    		if(h4.parents('.right').length && $(window).width() > 575){
     			h4.prepend(bullets);
     		} else {
     			h4.append(bullets);
@@ -250,7 +253,7 @@ jQuery( document ).ready( function($) {
 			} else {
 				$(".my-navbar").removeClass('navbar-fixed-top');
 				$('#header').next().css("margin-top",0);
-				$('#newsletter-form').css("opacity",0);
+				$('#newsletter-form').css("opacity",1);
 			}
 		}).trigger('scroll');
 	}
@@ -348,11 +351,9 @@ jQuery( document ).ready( function($) {
 	var validatePagSeguroForm = function(formWrapper) {
 		// https://stackoverflow.com/a/18221081/4184867
 		var theForm;
-		console.log($('.participe-form').exists());
 
 		$('.participe-form').each(function(){
 			theForm = $(this).find('.wpcf7-form').eq(0);
-			console.log(theForm);
 
 			theForm.validate({
 				rules: {		
@@ -396,18 +397,46 @@ jQuery( document ).ready( function($) {
 			
 		});
 
-		$('.wpcf7-tel').mask("(99) 99999999?9");
+		var mask = "(99) 9999-9999?9";
+		var options =  {
+			placeholder: "",
+			clearIfNotMatch: true,
+			onKeyPress: function(field, e, field, options){
+				var masks = ['(99) 99999-9999', '(99) 9999-9999'];
+				mask = (field.length>10) ? masks[0] : masks[1];
+				$('.wpcf7-tel').mask(mask, options);
+			}
+		};
+
+		$('.wpcf7-tel').mask(mask, options);
 
 		$(document).on('submit','.wpcf7-form',function(event){
 			event.preventDefault();
-			event.stopPropagation();
+
+			var form = $(this);
+			var fields = form.serializeArray();
+			var formData = {};
+
+			jQuery.each( fields, function( i, field ) {
+				formData[field.name] = field.value;
+				formData.action = form.attr('action');
+			});
 
 			if(theForm.valid()) {
-				var formData = $(this).serializeArray();
-				// sendToMailchimp
-				// on success redirect to:
-				window.location.href = "https://pag.ae/bkjpKBb";
-
+				$.post(
+					formData.action,
+					formData,
+					function(data) {
+						if(data == "success") {
+							if(formData.form == "doacao-direta"){
+								console.log('ok');
+								window.location.href = "https://pag.ae/bkjpKBb";
+							} else {
+								$(".modal .close").click();
+							}
+						}
+					}
+				);
 			}
 		});
 	}
