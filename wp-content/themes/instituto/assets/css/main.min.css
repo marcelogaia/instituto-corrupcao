@@ -396,7 +396,7 @@ li {
     top: 30px; }
   .slick-initialized.slick-carousel-bronze li.slick-slide {
     margin: 0 4px; }
-  .slick-initialized.slick-carousel-bronze li.slick-list {
+  .slick-initialized.slick-carousel-bronze div.slick-list {
     margin: 0 68px; }
   .slick-initialized.slick-carousel-bronze .slick-arrow {
     top: 0px; }
@@ -531,11 +531,12 @@ section#header {
       background: #ffc72c; }
       section#header .jumbotron .master-slider-parent .ms-bullet.ms-bullet-selected, section#header .jumbotron .master-slider .ms-bullet.ms-bullet-selected {
         background: #65665c; }
+  section#header .nav-wrapper {
+    position: relative; }
   section#header .my-navbar {
     width: 100%;
     height: 131px;
     background: white;
-    position: relative;
     padding: 0;
     margin: 0;
     z-index: 9;
@@ -1205,21 +1206,21 @@ body#o-instituto .fundadores-associados {
   body#o-instituto .fundadores-associados p {
     width: calc(100% / 12 * 8);
     margin: 0 auto 25px; }
-  body#o-instituto .fundadores-associados ul {
-    float: left;
-    width: calc(100% / 3); }
-    body#o-instituto .fundadores-associados ul li {
-      text-transform: uppercase;
-      list-style: none; }
-      body#o-instituto .fundadores-associados ul li .white {
-        display: none; }
-      body#o-instituto .fundadores-associados ul li:first-child:before {
-        content: "";
-        width: 35px;
-        height: 1px;
-        border-top: 1px white solid;
-        margin: 5px auto 20px;
-        display: block; }
+  body#o-instituto .fundadores-associados ul li {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    text-transform: uppercase;
+    list-style: none; }
+    body#o-instituto .fundadores-associados ul li .white {
+      display: none; }
+    body#o-instituto .fundadores-associados ul li.top3:before {
+      content: "";
+      width: 35px;
+      height: 1px;
+      border-top: 1px white solid;
+      margin: 5px auto 20px;
+      display: block; }
 body#o-instituto .transparencia {
   text-align: center;
   background: url(../img/transparencia.jpg);
@@ -1339,20 +1340,20 @@ body#o-instituto .obrigado {
     font: 80px/76px "din-condensed-bold";
     color: #65665c;
     margin-top: 105px; }
-  body#o-instituto .obrigado ul {
-    float: left;
-    width: calc(100% / 3); }
-    body#o-instituto .obrigado ul li {
-      text-transform: uppercase;
-      color: #65665c;
-      list-style: none; }
-      body#o-instituto .obrigado ul li:first-child:before {
-        content: "";
-        width: 35px;
-        height: 1px;
-        border-top: 1px #65665c solid;
-        margin: 5px auto 20px;
-        display: block; }
+  body#o-instituto .obrigado ul li {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    text-transform: uppercase;
+    color: #65665c;
+    list-style: none; }
+    body#o-instituto .obrigado ul li.top3:before {
+      content: "";
+      width: 35px;
+      height: 1px;
+      border-top: 1px #65665c solid;
+      margin: 5px auto 20px;
+      display: block; }
 body#o-instituto .duvidas {
   text-align: center;
   height: 505px;
@@ -3103,9 +3104,10 @@ body#blog-interna section#comments {
     .slick-initialized .slick-list {
       margin: 0; }
     .slick-initialized.slick-slider .slick-arrow {
-      height: 106px;
+      height: calc(100% - 37px);
+      top: 0;
       width: 30px;
-      top: 60px; }
+      background-size: 60px; }
       .slick-initialized.slick-slider .slick-arrow.slick-next {
         background-position: -30px; }
     .slick-initialized.slick-carousel .slick-list {
@@ -3113,12 +3115,12 @@ body#blog-interna section#comments {
       padding: 0 !important; }
     .slick-initialized.slick-carousel-ouro .slick-list, .slick-initialized.slick-carousel-prata .slick-list, .slick-initialized.slick-carousel-bronze .slick-list {
       margin: 0 40px !important; }
-    .slick-initialized.slick-carousel-ouro .slick-arrow.slick-next, .slick-initialized.slick-carousel-prata .slick-arrow.slick-next, .slick-initialized.slick-carousel-bronze .slick-arrow.slick-next {
-      right: 12px; }
-    .slick-initialized.slick-carousel-ouro .slick-arrow.slick-prev, .slick-initialized.slick-carousel-prata .slick-arrow.slick-prev, .slick-initialized.slick-carousel-bronze .slick-arrow.slick-prev {
-      left: 12px; }
-    .slick-initialized.slick-carousel-bronze .slick-arrow {
-      top: 65px; }
+    .slick-initialized.slick-carousel-ouro .slick-arrow, .slick-initialized.slick-carousel-prata .slick-arrow, .slick-initialized.slick-carousel-bronze .slick-arrow {
+      height: 100%; }
+      .slick-initialized.slick-carousel-ouro .slick-arrow.slick-next, .slick-initialized.slick-carousel-prata .slick-arrow.slick-next, .slick-initialized.slick-carousel-bronze .slick-arrow.slick-next {
+        right: 12px; }
+      .slick-initialized.slick-carousel-ouro .slick-arrow.slick-prev, .slick-initialized.slick-carousel-prata .slick-arrow.slick-prev, .slick-initialized.slick-carousel-bronze .slick-arrow.slick-prev {
+        left: 12px; }
     .slick-initialized .slick-dots {
       margin-top: 30px; }
     .slick-initialized li.slick-slide {

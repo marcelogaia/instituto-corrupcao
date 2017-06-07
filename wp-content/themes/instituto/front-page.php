@@ -175,14 +175,8 @@ get_header();
 		'posts_per_page' => 2
 	));
 ?>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="https://ih1.redbubble.net/image.218022482.5774/flat,800x800,070,f.jpg"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/2000px-Coca-Cola_logo.svg.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
-			<li><a href="http://www.google.com/" target="_blank"><img src="img/partner-placeholder.png"></a></li>
+			<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Ouro/ITAU.jpg"></a></li>
+			<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Ouro/MULTIPLAN.png"></a></li>
 		</ul>
 		<button class="bnt-ver-todos logo-carousel-btn">Ver todos</button>
 	</div>

@@ -28,7 +28,7 @@
 		<div class="container">
 			<h3 class="general-title">Projetos</h3>
 			<div class="description">
-				<p>Conheça mais sobre nossos projetos, os que já realizamos e os que estamos planejando. Veja como vc pode ajudar a realizá-los!</p>
+				<p>Conheça mais sobre nossos projetos, os que já realizamos e os que estamos planejando. Veja como você pode ajudar a realizá-los!</p>
 			</div>
 			<ul class="categories"
 				><li class="todos"><a href="#">Ver Todos</a></li
@@ -47,8 +47,8 @@
 					</div>
 					<div class="post-hover">
 						<h4 class="small-title">Radiografia</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi.</p>
-						<a href="<?= site_url('projeto/3a-corrida-e-caminhada-contra-a-corrupcao') ?>">Quero Ver</a>
+						<p>Pessoas mais bem informadas são mais conscientes de seus direitos e deveres, comportam-se melhor em sociedade e votam melhor. Pessoas mobilizadas em prol de temas como combate à corrupção e incentivo à transparência contribuem para chamar a atenção das instituições para a importância do tema e cobrar providências.</p>
+						<?php /*<a href="javascript:void(0);<?=  site_url('projeto/3a-corrida-e-caminhada-contra-a-corrupcao') ?>">Quero Ver</a> */ ?>
 					</div>
 				</li>
 				<li class="mapa pesquisa andamento col-xs-12 col-sm-4">
@@ -57,8 +57,8 @@
 					</div>
 					<div class="post-hover">
 						<h4 class="small-title">mapa da corrupção</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi.</p>
-						<a href="<?= site_url('projeto/3a-corrida-e-caminhada-contra-a-corrupcao') ?>">Quero Ver</a>
+						<p>O primeiro passo para o sucesso de um projeto é um diagnóstico bem feito do cenário e de experiências passadas. Quanto melhor for essa avaliação, maiores as chances de se atingir um resultado efetivo. Há informações extremamente superficiais sobre corrupção no Brasil. Nosso objetivo é construir esse conhecimento e, assim, contribuir para a prevenção e o enfrentamento desse crime e de ilícitos relacionados.</p>
+						<?php /*<a href="javascript:void(0);<?=  site_url('projeto/3a-corrida-e-caminhada-contra-a-corrupcao') ?>">Quero Ver</a> */ ?>
 					</div>
 				</li>
 				<li class="corrida politicas captacao col-xs-12 col-sm-4">
@@ -67,8 +67,8 @@
 					</div>
 					<div class="post-hover">
 						<h4 class="small-title">Corrida contra corrupção</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Nulla vel risus sed odio dignissim vulputate. Mauris pulvinar dui ac euismod aliquet. Nulla facilisi.</p>
-						<a href="<?= site_url('projeto/3a-corrida-e-caminhada-contra-a-corrupcao') ?>">Quero Ver</a>
+						<p>A seguir, usaremos esses dados para aprimorar leis, projetos de leis e outras normas sobre os temas a que o Instituto se dedica. Os projetos deste eixo englobam a construção, participação e disseminação de iniciativas legislativas dedicadas à prevenção e ao combate à corrupção.</p>
+						<?php /*<a href="javascript:void(0);<?=  site_url('projeto/3a-corrida-e-caminhada-contra-a-corrupcao') ?>">Quero Ver</a> */ ?>
 					</div>
 				</li>
 			</ul>

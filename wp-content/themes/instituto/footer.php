@@ -82,38 +82,12 @@ wp_reset_query();
 				<div class=" col-sm-4">
 					<div class="contact-us-newsletter">
 						<h3 class="footer-title" data-customizer="box-left-customer-support-title"> Newsletter </h3><!--/.box-left-->
-						<div role="form" class="wpcf7" id="wpcf7-f97-o2" lang="en-CA" dir="ltr">
-							<form action="#" method="post" class="wpcf7-form newsletter">
-								<p>
-									<label>
-										<span class="wpcf7-form-control-wrap email">
-											<input type="email" name="email" placeholder="email" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" />
-										</span>
-									</label>
-									<input type="submit" value="enviar" class="wpcf7-form-control wpcf7-submit" />
-								</p>
-							</form>
-						</div>
+						<?= do_shortcode('[contact-form-7 id="1131" title="Newsletter short" html_class="newsletter"]'); ?>
 					</div><!--/.contact-us-newsletter-->
 				</div>
 				<div class="col-sm-4">
 					<h3 class="footer-title form-title">Fale Conosco</h3>
-					<div role="form" class="wpcf7 form" id="wpcf7-f6-o3" lang="en-CA" dir="ltr">
-						<form action="#" method="post" class="wpcf7-form">
-							<p class="wpcf7-form-control-wrap nome">
-								<input type="text" name="nome" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="nome" />
-							</p>
-							<p class="wpcf7-form-control-wrap email">
-							<input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="email" />
-							</p>
-							<p class="wpcf7-form-control-wrap mensagem">
-								<textarea name="mensagem" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="mensagem"></textarea>
-							</p>
-							<p>
-								<input type="submit" value="enviar" class="wpcf7-form-control wpcf7-submit" />
-							</p>
-						</form>
-					</div>
+					<?= do_shortcode('[contact-form-7 id="1129" title="Contato"]'); ?>
 				</div>
 			</div><!--/.row-->
 

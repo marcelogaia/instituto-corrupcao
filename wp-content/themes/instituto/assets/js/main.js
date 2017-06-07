@@ -74,7 +74,7 @@ jQuery( document ).ready( function($) {
 
 		$('.slick-carousel').slick({
 			dots: true,
-			slidesToShow: 3,
+			slidesToShow: 4,
 			slidesToScroll: 1,
 			centerMode: true,
 			variableWidth: false,
@@ -98,6 +98,7 @@ jQuery( document ).ready( function($) {
 		$('.slick-carousel-ouro').slick({
 			slidesToShow: 4,
 			slidesToScroll: 1,
+			centerMode: true,
 			responsive: [{
 				breakpoint: 380,
 				settings: {
@@ -107,12 +108,13 @@ jQuery( document ).ready( function($) {
 		});
 
 		$('.slick-carousel-prata').slick({
-			slidesToShow: 6,
+			slidesToShow: 5,
 			slidesToScroll: 1,
+			centerMode: false,
 			responsive: [{
 				breakpoint: 380,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
 				}
 			}]
 		});
@@ -120,17 +122,19 @@ jQuery( document ).ready( function($) {
 		$('.slick-carousel-bronze').slick({
 			slidesToShow: 9,
 			slidesToScroll: 1,
+			centerMode: true,
 			responsive: [{
 				breakpoint: 380,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 3,
 				}
 			}]
 		});
 
 		$('.slick-carousel-biblioteca').slick({
-			slidesToShow: 4,
+			slidesToShow: 3,
 			slidesToScroll: 1,
+			centerMode: true,
 			responsive: [{
 				breakpoint: 380,
 				settings: {
@@ -218,7 +222,7 @@ jQuery( document ).ready( function($) {
 	var oInstitutoPageFunctions = function() {
 		$('.diretoria-e-conselho-estrategico .row').removeClass('row').addClass('col-sm-10 col-sm-offset-1');
 		
-		// Part 1
+		/*// Part 1
 		var numOfFoundersPerColumns = Math.ceil($('.fundadores-associados li').length/3);
 		var lis = $(".fundadores-associados  ul > li");
 		for(var i = 0; i < lis.length; i+=numOfFoundersPerColumns) {
@@ -232,7 +236,7 @@ jQuery( document ).ready( function($) {
 		for(var i = 0; i < lis.length; i+=numOfFoundersPerColumns) {
 			lis.slice(i, i+numOfFoundersPerColumns).wrapAll("<ul></li>");
 		}
-		$(".obrigado  ul > ul").unwrap();
+		$(".obrigado  ul > ul").unwrap();*/
 
 		addHeightToVideoShortcode();
 		makeBoardProfilePictureRound();
@@ -372,6 +376,10 @@ jQuery( document ).ready( function($) {
 					telefone: {
 						required: true,
 						minlength: 10
+					},
+					profissao: {
+						required: true,
+						minlength: 2
 					}
 				},
 				messages: {	
@@ -390,7 +398,11 @@ jQuery( document ).ready( function($) {
 					telefone: {
 						required:  "Campo \"Telefone\" obrigatório.",
 						digits: "Por favor, insira um telefone válido."
-					}
+					},
+					profissao: {
+						required:  "Campo \"Profissão\" obrigatório.",
+						minlength:  "Sua profissão deve conter pelo menos 2 caracteres."
+					},
 				}
 			});
 			
@@ -432,7 +444,8 @@ jQuery( document ).ready( function($) {
 								console.log('ok');
 								window.location.href = "https://pag.ae/bkjpKBb";
 							} else {
-								$(".modal .close").click();
+								//$(".modal .close").click();
+								console.log(data);
 							}
 						}
 					}

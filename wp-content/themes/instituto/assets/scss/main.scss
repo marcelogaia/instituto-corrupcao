@@ -560,7 +560,7 @@ li {
 		li.slick-slide {
 			margin: 0 4px;
 		}
-		li.slick-list {
+		div.slick-list {
 			margin: 0 68px;
 		}
 		.slick-arrow {
@@ -747,12 +747,14 @@ section#header {
 		}
 	}
 
+	.nav-wrapper {
+		position: relative;
+	}
+
 	.my-navbar {
 		width:100%;
 		height: 131px;
-		// line-height: 140px;
 		background: white;
-		position: relative;
 		padding:0;
 		margin:0;
 		z-index:9;
@@ -1721,10 +1723,12 @@ body#o-instituto {
 		}
 
 		ul {
-			float: left;
-			width: calc(100% / 3);
 
 			li {
+
+				display: inline-block;
+				width: 33%;
+				vertical-align: top;
 				text-transform: uppercase;
 				list-style: none;
 
@@ -1732,7 +1736,7 @@ body#o-instituto {
 					display: none;
 				}
 
-				&:first-child:before {
+				&.top3:before {
 					content: "";
 					width: 35px;
 					height: 1px;
@@ -1910,15 +1914,16 @@ body#o-instituto {
 		}
 
 		ul {
-			float: left;
-			width: calc(100% / 3);
 
 			li {
+				display: inline-block;
+				width: 33%;
+				vertical-align: top;
 				text-transform: uppercase;
 				color: $color_mid-grey;
 				list-style: none;
 
-				&:first-child:before {
+				&.top3:before {
 					content: "";
 					width: 35px;
 					height: 1px;

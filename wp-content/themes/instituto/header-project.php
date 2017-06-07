@@ -78,18 +78,7 @@ global $wpdb, $post;
 										<p>
 											<span>E: <a href="mailto:<?php echo $GLOBALS['cgv']['email'] ?>" title="<?php echo $GLOBALS['cgv']['email'] ?>"><?php echo $GLOBALS['cgv']['email'] ?></a></span>
 										</p>
-										<div role="form" class="wpcf7" id="wpcf7-f97-o2" lang="en-CA" dir="ltr">
-											<form action="#" method="post" class="wpcf7-form newsletter">
-												<p>
-													<label>
-														<span class="wpcf7-form-control-wrap email">
-															<input type="email" name="email" placeholder="email" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" />
-														</span>
-													</label>
-													<input type="submit" value="enviar" class="wpcf7-form-control wpcf7-submit" />
-												</p>
-											</form>
-										</div>
+										<?= do_shortcode('[contact-form-7 id="1131" title="Newsletter short" html_class="newsletter"]'); ?>
 <?php
 	$socialArr = array();
 

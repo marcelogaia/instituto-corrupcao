@@ -40,7 +40,7 @@
 			<h3 class="general-title">buscamos embaixadores</h3>
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-1 seja-embaixador">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.</p>
+					<p>Que tal ajudar no combate à corrupção apertando algumas vezes o botão de compartilhar em suas redes sociais? É esse convite que queremos fazer para você hoje. Se torne um embaixador digital do Instituto Não Aceito Corrupção, é fácil e o resultado para a causa é imenso.O embaixador digital tem como função ajudar a divulgar nossos conteúdos para que nossa mensagem alcance o máximo de pessoas possível. Para se tornar embaixador é muito simples, basta seguir todos os canais sociais do Instituto, baixar nosso Kit de Imagens para personalizar seus canais sociais e começar a compartilhar nossos conteúdos. Quanto mais pessoas engajadas maior o impacto da nossa luta, contamos com você!</p>
 				</div>
 				<a href="javascript:void(0);">
 					<div class="baixar-wrapper">
@@ -90,14 +90,13 @@
 				<div>
 					<header>
 						<h3 class="general-title">quero doar</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p>Somos um Instituto e dependemos de doações financeiras para continuar a promover o combate à corrupção. Contamos com você para continuarmos nossa luta. Veja abaixo nossas diferentes formas de doação.</p>
 					</header>
 					<ul class="items">
 						<li class="direta">
 							<h4><span>doação direta</span></h4>
 							<div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet egestas vel. Morbi id libero eu quam venenatis condimentum.
-								</p>
+								<p>As doações direta nos ajudam a manter os custos fixos do Instituto em dia. Essas doações são para o pagamentos de nossa estrutura e equipe.</p>
 								<img src="img/pagseguro-logo.png" alt="">
 							</div>
 							<!-- <a href="https://pag.ae/bkjpKBb" target="_blank"> -->
@@ -108,7 +107,7 @@
 						<li class="projetos">
 							<h4><span>doar para <br>um de nossos projetos</span></h4>
 							<div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl.</p>
+								<p>Outra forma de nos ajudar é doando diretamente para um de nossos projetos. Veja qual projeto que você mais se identifica e faça parte dessa realização.</p>
 								<br>
 								<label for="projeto">escolha o projeto</label>
 								<select class="selectpicker" id="projeto" data-style="btn-warning" name="" id="">
@@ -124,7 +123,7 @@
 						<li class="empresa">
 							<h4><span>doação <br>por empresa</span></h4>
 							<div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. condimentum. </p>
+								<p>Se você é uma empresa e deseja nos ajudar ao mesmo tempo que associa sua marca à nossa causa, esse é o formato ideal para fazer isso acontecer.</p>
 							</div>
 							<a href="<?= site_url('participe/doacao-por-empresa') ?>" class="my-modal">
 								<button>eu<br>quero</button>
@@ -140,7 +139,7 @@
 			<div class="row">
 				<div class="col-sm-8 col-xs-offset-2 seja-voluntario">
 					<h3 class="general-title">precisamos de voluntários</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan mattis ipsum, imperdiet auctor nisl egestas vel. Morbi id libero eu quam venenatis condimentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+					<p>Todas as habilidades e conhecimentos profissionais podem ser úteis à nossa luta. Se você quer ajudar, clique no botão abaixo e nos diga como pode contribuir!</p>
 					<a href="<?= site_url('participe/seja-um-voluntario') ?>" class="my-modal"><button>quero ser um</button></a>
 				</div>
 			</div>
