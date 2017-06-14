@@ -166,7 +166,7 @@ get_header();
 	<div class="container">
 		<header>
 			<h3 class="general-title">Conheça nossos principais apoiadores</h3>
-			<p>Queremos agradecer nossos parceiros, sem quem não seria possível nada.</p>
+			<p>Queremos agradecer nossos parceiros, sem os quais nada seria possível.</p>
 		</header>
 		<ul class="slick-carousel">
 <?php
@@ -177,8 +177,9 @@ get_header();
 ?>
 			<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Ouro/ITAU.jpg"></a></li>
 			<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Ouro/MULTIPLAN.png"></a></li>
+			<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Ouro/Siemens.png"></a></li>
 		</ul>
-		<button class="bnt-ver-todos logo-carousel-btn">Ver todos</button>
+		<a href="<?= site_url("/o-instituto") ?>/#parceiros" class="link-ver-todos"><button class="bnt-ver-todos logo-carousel-btn">Ver todos</button></a>
 	</div>
 </section>
 

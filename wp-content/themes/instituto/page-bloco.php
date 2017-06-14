@@ -105,17 +105,33 @@
 				</section>
 <?php endif;
 	// List all other posts
-	query_posts( 'category_name=uncategorized' );
-	if ( have_posts() ) : 
-	$count = 0 ?>
+	$otherPost = new WP_Query(
+		array(
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'category',
+					'field' => 'slug',
+					'terms' => array( 
+						'uncategorized', 
+						'mundo', 
+						'instituto' 
+					)
+				)
+			),
+			"posts_per_page" => 7
+		)
+	);
+	//query_posts( 'category_name=uncategorized&posts_per_page=7' );
+	if ($otherPost->have_posts() ) :
+		$count = 0 ?>
 				<section id="last-news">
 					<h2>ultimas notícias</h2>
 					<ul class="filters">
-						<li class="instituto"><button><img src="img/mini-logo.png" alt=""> Instituto</button></li>
-						<li class="mundo"><button><img src="img/mundo-icon.png" alt=""> Mundo</button></li>
+						<li class="instituto"><a href="<?= site_url('/category/instituto') ?>"><button><img src="img/mini-logo.png" alt=""> Instituto</button></a></li>
+						<li class="mundo"><a href="<?= site_url('/category/mundo') ?>"><button><img src="img/mundo-icon.png" alt=""> Mundo</button></a></li>
 					</ul>
 					<ul>
-	<?php while( have_posts() ): the_post(); ?>
+	<?php while( $otherPost->have_posts() ): $otherPost->the_post(); ?>
 						<li>
 							<a href="<?php the_permalink(); ?>">
 								<div class="img">
@@ -127,11 +143,12 @@
 								</div>
 								<h3><?php the_title() ?></h3>
 								<p>
-									<span class="date-time"><?php the_time('d \d\e F \d\e Y | G:i | ' ); ?></span>  
+									<span class="date-time"><?php the_time('d \d\e F \d\e Y | G:i' ); ?></span>  
 									<span class="comments"><?php comments_number( "Nenhum comentário", "1  comentário", "%  comentários" ); ?></span> | 
 									<?php if( has_category('mundo') ) : ?>
 									<img src="img/mundo-icon.png" alt="">
-									<?php elseif ( has_category('instituto') ) : ?>
+									<?php endif; ?>
+									<?php if ( has_category('instituto') ) : ?>
 									<img src="img/mini-logo.png" alt="">
 									<?php endif; ?>
 								</p>
@@ -155,18 +172,7 @@
 				</div>
 				
 				<h3>Newsletter</h3><!--/.box-left-->
-				<div class="form">
-					<form action="#" method="post" class="wpcf7-form newsletter">
-						<p>
-							<label>
-								<span class="wpcf7-form-control-wrap email">
-									<input type="email" name="email" placeholder="email" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" />
-								</span>
-							</label>
-							<input type="submit" value="enviar" class="wpcf7-form-control wpcf7-submit" />
-						</p>
-					</form>
-				</div>
+				<?= do_shortcode('[contact-form-7 id="1131" title="Newsletter short" html_class="newsletter"]') ?>
 <?php 
 
 $tags_arr = get_tags(); 

@@ -123,6 +123,7 @@
 			</div>
 		</div>
 		<div class="parceiros" >
+			<span id="parceiros"><!-- temp anchor --></span>
 			<div class="container">
 				<h2>Parceiros</h2>
 				<p class="col-sm-8 col-sm-offset-2">Agradecemos às empresas que se engajaram e de alguma forma contribuíram para o sucesso de nossos projetos. Faça parte desta lista.</p>
@@ -131,6 +132,7 @@
 					<ul class="slick-carousel-ouro">
 						<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Ouro/ITAU.jpg"></a></li>
 						<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Ouro/MULTIPLAN.png"></a></li>
+						<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Ouro/Siemens.png"></a></li>
 					</ul>
 
 					<h4>Prata</h4>
@@ -154,6 +156,8 @@
 						<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Bronze/OAB_SP.jpg"></a></li>
 						<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Bronze/QUARTIER_LATIN.jpg"></a></li>
 						<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Bronze/TJ_SP.jpg"></a></li>
+						<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Bronze/S2_Consultoria.png"></a></li>
+						<li><a href="javascript:void(0);" target="_blank"><img src="img/Parceiros/Bronze/Staples.png"></a></li>
 					</ul>
 				</div>
 			</div>

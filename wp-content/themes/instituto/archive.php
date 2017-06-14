@@ -44,7 +44,13 @@
 	<?php while( have_posts() ): the_post(); ?>
 						<li>
 							<a href="<?php the_permalink(); ?>">
-								<img class="blog-small" src="img/blog-placeholder-small.jpg">
+								<div class="img">
+								<?php if(get_the_post_thumbnail()): ?>
+									<img class="blog-small" src="<?php the_post_thumbnail_url() ?>">
+								<?php else: ?>
+									<img class="blog-small" src="img/blog-placeholder-small.jpg">
+								<?php endif; ?>
+								</div>
 								<h3><?php the_title() ?></h3>
 								<p>
 									<span class="date-time"><?php the_time('d \d\e F \d\e Y | G:i' ); ?></span>  
@@ -60,27 +66,23 @@
 						</li>
 	<?php endwhile; ?>
 					</ul>
-					<a href="<?= site_url('blog')?>" title="VER" class="latest-news-button">VER</a>
+					<!-- <a href="<?= site_url('blog')?>" title="VER" class="latest-news-button">VER</a> -->
 				</section>
 <?php endif; ?>
 			</section>
 			<section id="side" class="col-sm-4">
 				<?php get_search_form() ?>
-				<div class="fb-page" data-href="https://www.facebook.com/institutonaoaceitocorrupcao/" data-tabs="timeline" data-height="120" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/institutonaoaceitocorrupcao/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/institutonaoaceitocorrupcao/">Instituto Não Aceito Corrupção</a></blockquote></div>
-
-				<h3>Newsletter</h3><!--/.box-left-->
-				<div class="form">
-					<form action="#" method="post">
-						<p>
-							<label>
-								<span class="wpcf7-form-control-wrap email">
-									<input type="email" name="email" placeholder="email" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" />
-								</span>
-							</label>
-							<input type="submit" value="enviar" class="wpcf7-form-control wpcf7-submit" />
-						</p>
-					</form>
+				<div style="width:100%">
+					<div class="fb-page" 
+						data-href="https://www.facebook.com/institutonaoaceitocorrupcao"
+						data-width="420" 
+						data-hide-cover="false"
+						data-show-facepile="false" 
+						data-show-posts="false"></div>
 				</div>
+				
+				<h3>Newsletter</h3><!--/.box-left-->
+				<?= do_shortcode('[contact-form-7 id="1131" title="Newsletter short" html_class="newsletter"]') ?>
 <?php 
 
 $tags_arr = get_tags(); 
@@ -95,7 +97,7 @@ if(sizeof($tags_arr) > 0):
 <?php endforeach ?>
 				</ul>
 <?php endif; ?>
-			</section>
+						</section>
 		</div>
 	</div>		
 <?php

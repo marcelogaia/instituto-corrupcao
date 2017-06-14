@@ -54,6 +54,7 @@ wp_reset_query();
 	if(!empty($GLOBALS['cgv']['twitter'])) $socialArr['twitter'] = $GLOBALS['cgv']['twitter'];
 	if(!empty($GLOBALS['cgv']['instagram'])) $socialArr['instagram'] = $GLOBALS['cgv']['instagram'];
 	if(!empty($GLOBALS['cgv']['google-plus'])) $socialArr['google-plus'] = $GLOBALS['cgv']['google-plus'];
+	if(!empty($GLOBALS['cgv']['youtube'])) $socialArr['youtube'] = $GLOBALS['cgv']['youtube'];
 
 	if(!empty($socialArr)):
 ?>
@@ -75,6 +76,9 @@ wp_reset_query();
 	<?php endif; ?>
 	<?php if(!empty($socialArr['google-plus'])): ?>
 						<li><a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+	<?php endif; ?>
+	<?php if(!empty($socialArr['youtube'])): ?>
+						<li><a href="<?= $socialArr['youtube'] ?>" title="Youtube" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
 	<?php endif; ?>
 					</div><!--/.contact-us-social-->
 				</div>

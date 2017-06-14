@@ -550,6 +550,10 @@ li {
 	&.slick-carousel-prata {
 		li.slick-slide {
 			margin: 0 7px;
+
+			a {
+				padding:0 30px;
+			}
 		}
 		.slick-arrow {
 			top: 30px;
@@ -559,6 +563,10 @@ li {
 	&.slick-carousel-bronze {
 		li.slick-slide {
 			margin: 0 4px;
+
+			a {
+				padding:0 20px;
+			}
 		}
 		div.slick-list {
 			margin: 0 68px;
@@ -994,6 +1002,9 @@ footer#contato {
 				}
 				.fa-google-plus:hover{
 					color: #d34836;
+				}
+				.fa-youtube-play:hover{
+					color: #b31217;
 				}
 			}
 		}
@@ -1463,6 +1474,11 @@ section#parceiro {
 			font-size: 18px;
 			margin-bottom: 70px;
 		}
+	}
+	.link-ver-todos {
+	    margin: 0 auto 48px;
+	    position: relative;
+	    display: block;
 	}
 
 	.bnt-ver-todos.logo-carousel-btn {
@@ -3312,7 +3328,7 @@ body#participe {
 			padding: 0;
 
 			li {
-				background: url(../img/social-icons.png);
+				background: url(../img/social-icons.png); 
 				width: 101px;
 				height: 101px;
 				display: inline-block;
@@ -3327,22 +3343,48 @@ body#participe {
 
 				&.linkedin {
 					background-position: 0 0;
+					&:hover {
+						background-position: 0 -101px;
+					}
 				}
 
 				&.facebook {
 					background-position: -134px 0;
+					&:hover {
+						background-position: -134px -101px;
+					}
 				}
 
 				&.twitter {
 					background-position: -266px 0;
+					&:hover {
+						background-position: -266px -101px;
+					}
 				}
 
 				&.instagram {
 					background-position: -398px 0;
+					&:hover {
+						background-position: -398px -101px;
+					}
 				}
 
 				&.gplus {
 					background-position: -531px 0;
+					&:hover {
+						background-position: -531px -101px;
+					}
+				}
+
+				&.youtube {
+					background-position: -657px 0;
+					&:hover {
+						background-position: -657px -101px;
+					}
+				}
+
+				&:hover {
+
 				}
 			}
 		}
@@ -3933,6 +3975,8 @@ body#bloco {
 		}
 
 		ul {
+			margin-bottom: 50px;
+
 			li {
 				position: relative;
 
@@ -4081,7 +4125,7 @@ body#bloco {
 		}
 
 		.tags {
-			margin:0 -4px;
+			margin:0 -4px 50px -4px;
 
 			li {
 				padding-left: 4px;
@@ -4102,6 +4146,16 @@ body#bloco {
 					}
 				}
 
+			}
+		}
+	}
+
+	&.archive {
+		section#last-news ul li:first-of-type { 
+			padding: 5px;
+
+			p {
+				bottom: 6px;
 			}
 		}
 	}

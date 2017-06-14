@@ -60,6 +60,7 @@
 	if(!empty($GLOBALS['cgv']['twitter'])) $socialArr['twitter'] = $GLOBALS['cgv']['twitter'];
 	if(!empty($GLOBALS['cgv']['instagram'])) $socialArr['instagram'] = $GLOBALS['cgv']['instagram'];
 	if(!empty($GLOBALS['cgv']['google-plus'])) $socialArr['google-plus'] = $GLOBALS['cgv']['google-plus'];
+	if(!empty($GLOBALS['cgv']['youtube'])) $socialArr['youtube'] = $GLOBALS['cgv']['youtube'];
 
 	if(!empty($socialArr)):
 ?>
@@ -77,8 +78,11 @@
 	<?php if(!empty($socialArr['instagram'])): ?>
 				<li class="instagram"><a href="<?= $socialArr['instagram'] ?>">INSTAGRAM</a></li>
 	<?php endif; ?>
-	<?php if(!empty($socialArr['gplus'])): ?>
-				<li class="gplus"><a href="<?= $socialArr['gplus'] ?>">GOOGLE+</a></li>
+	<?php if(!empty($socialArr['google-plus'])): ?>
+				<li class="gplus"><a href="<?= $socialArr['google-plus'] ?>">GOOGLE+</a></li>
+	<?php endif; ?>
+	<?php if(!empty($socialArr['youtube'])): ?>
+				<li class="youtube"><a href="<?= $socialArr['youtube'] ?>">YOUTUBE</a></li>
 	<?php endif; ?>
 			</ul>
 <?php endif; ?>

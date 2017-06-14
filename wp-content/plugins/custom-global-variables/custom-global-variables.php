@@ -150,6 +150,7 @@ class Custom_Global_Variables {
 									'twitter' => "Twitter",
 									'instagram' => "Instagram",
 									'google-plus' => "Google Plus",
+									'youtube' => "Youtube",
 								);
 							?>
 
@@ -211,7 +212,7 @@ class Custom_Global_Variables {
 
 			<div id="custom-global-variables-author-info">
 
-				<img alt="Konnect Digital" class="konnect" src="<?php echo plugin_dir_url( __FILE__ ) ?>/konnect.png"> This is a <a href="https://www.konnectdigital.com.au" target="_blank">Konnect Digital</a> plugin created by <em>Abdullah Khalfan</em> and slightly modified by <em>Marcelo Gaia</em>
+				<img alt="Konnect Digital" class="konnect" src="<?php echo plugin_dir_url( __FILE__ ) ?>/konnect.png"> This is a <a href="https://www.konnectdigital.com.au" target="_blank">Konnect Digital</a> plugin created by <em>Abdullah Khalfan</em> and modified by <em><a href="https://www.marcelogaia.com.br" target="_blank">Marcelo Gaia</a></em>
 
 			</div>
 

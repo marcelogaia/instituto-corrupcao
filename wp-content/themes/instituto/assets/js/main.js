@@ -65,16 +65,19 @@ jQuery( document ).ready( function($) {
 		// http://kenwheeler.github.io/slick/
 		if($.fn.slick == undefined) return false;
 
+		/*
 		$('.slick-home').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplay: true,
 			autoplaySpeed: 5000,
 		});
-
+		*/
+	
+		// Parceiros Home
 		$('.slick-carousel').slick({
 			dots: true,
-			slidesToShow: 4,
+			slidesToShow: 3,
 			slidesToScroll: 1,
 			centerMode: true,
 			variableWidth: false,
@@ -86,6 +89,7 @@ jQuery( document ).ready( function($) {
 			}]
 		});
 
+		// Circles height-width fix
 		$('.slick-carousel, .slick-carousel-ouro, .slick-carousel-prata, .slick-carousel-bronze').on('setPosition', function(event, slick){
 			$(slick.$list.context).find('li.slick-slide').each(function(){
 				var width = $(this)[0].offsetWidth;
@@ -95,8 +99,9 @@ jQuery( document ).ready( function($) {
 			});
 		});
 
+		// Parceiros Ouro (O Instituto)
 		$('.slick-carousel-ouro').slick({
-			slidesToShow: 4,
+			slidesToShow: 3,
 			slidesToScroll: 1,
 			centerMode: true,
 			responsive: [{
@@ -107,6 +112,7 @@ jQuery( document ).ready( function($) {
 			}]
 		});
 
+		// Parceiros Prata (O Instituto)
 		$('.slick-carousel-prata').slick({
 			slidesToShow: 5,
 			slidesToScroll: 1,
@@ -119,6 +125,7 @@ jQuery( document ).ready( function($) {
 			}]
 		});
 
+		// Parceiros Bronze (O Instituto)
 		$('.slick-carousel-bronze').slick({
 			slidesToShow: 9,
 			slidesToScroll: 1,
@@ -131,6 +138,7 @@ jQuery( document ).ready( function($) {
 			}]
 		});
 
+		// Biblioteca Geral
 		$('.slick-carousel-biblioteca').slick({
 			slidesToShow: 3,
 			slidesToScroll: 1,
@@ -142,6 +150,7 @@ jQuery( document ).ready( function($) {
 				}
 			}]
 		});
+
 
 		$('.slick-carousel-blog').slick({
 			slidesToShow: 1,

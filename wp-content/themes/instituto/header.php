@@ -10,6 +10,8 @@
 global $wpdb, $post;
 
 $isHome = is_home();
+$isArchive = $post->post_name != null;
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +43,11 @@ $isHome = is_home();
 <![endif]-->
 <?php wp_head(); ?>
 </head>
-<body id="<?= $post->post_name; ?>">
+<?php if($isArchive): ?>
+<body id="<?= $post->post_name ?>">
+<?php else: ?>
+<body id="bloco" class="archive">
+<?php endif; ?>
 	<div id="fb-root"></div>
 	<script>
 		(function(d, s, id) {
@@ -98,6 +104,7 @@ $isHome = is_home();
 	if(!empty($GLOBALS['cgv']['twitter'])) $socialArr['twitter'] = $GLOBALS['cgv']['twitter'];
 	if(!empty($GLOBALS['cgv']['instagram'])) $socialArr['instagram'] = $GLOBALS['cgv']['instagram'];
 	if(!empty($GLOBALS['cgv']['google-plus'])) $socialArr['google-plus'] = $GLOBALS['cgv']['google-plus'];
+	if(!empty($GLOBALS['cgv']['youtube'])) $socialArr['youtube'] = $GLOBALS['cgv']['youtube'];
 
 	if(!empty($socialArr)):
 ?>
@@ -116,6 +123,9 @@ $isHome = is_home();
 										<?php endif; ?>
 										<?php if(!empty($socialArr['google-plus'])): ?>
 											<a href="<?= $socialArr['google-plus'] ?>" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
+										<?php endif; ?>
+										<?php if(!empty($socialArr['youtube'])): ?>
+											<a href="<?= $socialArr['youtube'] ?>" title="Youtube" target="_blank"><i class="fa fa-youtube-play"></i></a>
 										<?php endif; ?>
 											<div class="participe"><button onclick="location.href='<?= site_url('participe')?>'">Participe</button></div>
 										</p>
