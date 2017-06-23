@@ -405,20 +405,20 @@ li {
   .slick-initialized.slick-carousel-bronze .slick-arrow {
     top: 0px; }
 
-form.newsletter label {
+form.newsletter p > label {
   width: calc( 100% - 60px) !important;
   display: inline-block;
   line-height: 30px;
   height: 30px;
   margin: 0;
   position: relative; }
-  form.newsletter label span {
+  form.newsletter p > label span {
     width: auto;
     display: inline;
     line-height: 30px;
     height: 30px;
     margin: 0 !important; }
-    form.newsletter label span input {
+    form.newsletter p > label span input {
       padding: 0 25px !important;
       color: white;
       line-height: 30px !important;
@@ -428,7 +428,7 @@ form.newsletter label {
       border: none !important;
       border-bottom: 1px solid white !important;
       background: transparent url(../img/light-mail.png) no-repeat left center !important; }
-  form.newsletter label:before {
+  form.newsletter p > label:before {
     content: "";
     border-left: 1px solid white;
     -webkit-transform: rotate(45deg);
@@ -441,7 +441,7 @@ form.newsletter label {
     position: absolute;
     top: -6px;
     left: calc(100% + 14px); }
-  form.newsletter label:after {
+  form.newsletter p > label:after {
     content: "";
     border-top: 1px solid white;
     display: inline-block;
@@ -798,30 +798,32 @@ footer#contato {
     text-transform: lowercase; }
     footer#contato .menu-principal-container .menu li a:hover {
       color: #ffc72c; }
-  footer#contato .contact-us-box .box-right {
-    padding: 0; }
-    footer#contato .contact-us-box .box-right p {
-      color: #DDD; }
-      footer#contato .contact-us-box .box-right p a {
+  footer#contato .contact-us-box {
+    margin-bottom: 75px; }
+    footer#contato .contact-us-box .box-right {
+      padding: 0; }
+      footer#contato .contact-us-box .box-right p {
         color: #DDD; }
-      footer#contato .contact-us-box .box-right p:first-of-type {
-        margin-bottom: 11px; }
-      footer#contato .contact-us-box .box-right p:not(:first-of-type) {
-        font-size: 16px; }
-      footer#contato .contact-us-box .box-right p.contact-icon {
-        margin-top: 20px; }
-        footer#contato .contact-us-box .box-right p.contact-icon ~ .contact-icon {
-          margin-top: 0; }
-        footer#contato .contact-us-box .box-right p.contact-icon, footer#contato .contact-us-box .box-right p.contact-icon a, footer#contato .contact-us-box .box-right p.contact-icon .fa {
-          line-height: 40px;
-          height: 40px; }
-          footer#contato .contact-us-box .box-right p.contact-icon:hover, footer#contato .contact-us-box .box-right p.contact-icon a:hover, footer#contato .contact-us-box .box-right p.contact-icon .fa:hover {
-            color: #ffc72c; }
-        footer#contato .contact-us-box .box-right p.contact-icon .fa {
-          width: 30px;
-          font-size: 20px; }
-        footer#contato .contact-us-box .box-right p.contact-icon .fa.fa-map-marker {
-          font-size: 24px; }
+        footer#contato .contact-us-box .box-right p a {
+          color: #DDD; }
+        footer#contato .contact-us-box .box-right p:first-of-type {
+          margin-bottom: 11px; }
+        footer#contato .contact-us-box .box-right p:not(:first-of-type) {
+          font-size: 16px; }
+        footer#contato .contact-us-box .box-right p.contact-icon {
+          margin-top: 20px; }
+          footer#contato .contact-us-box .box-right p.contact-icon ~ .contact-icon {
+            margin-top: 0; }
+          footer#contato .contact-us-box .box-right p.contact-icon, footer#contato .contact-us-box .box-right p.contact-icon a, footer#contato .contact-us-box .box-right p.contact-icon .fa {
+            line-height: 40px;
+            height: 40px; }
+            footer#contato .contact-us-box .box-right p.contact-icon:hover, footer#contato .contact-us-box .box-right p.contact-icon a:hover, footer#contato .contact-us-box .box-right p.contact-icon .fa:hover {
+              color: #ffc72c; }
+          footer#contato .contact-us-box .box-right p.contact-icon .fa {
+            width: 30px;
+            font-size: 20px; }
+          footer#contato .contact-us-box .box-right p.contact-icon .fa.fa-map-marker {
+            font-size: 24px; }
   footer#contato .line-logo {
     height: 60px;
     position: relative;
@@ -1574,12 +1576,12 @@ body#biblioteca section#livros {
   body#biblioteca section#livros h3 {
     color: #ffc72c; }
   body#biblioteca section#livros .slick-carousel-biblioteca li {
-    margin: 0 26px; }
+    margin: 0 26px;
+    text-align: center; }
     body#biblioteca section#livros .slick-carousel-biblioteca li img {
       border: 2px #ffc72c solid; }
     body#biblioteca section#livros .slick-carousel-biblioteca li button {
       width: calc(50% - 3px);
-      float: left;
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
       -ms-border-radius: 0;
@@ -2872,10 +2874,12 @@ body#bloco section#side {
         line-height: 29px; }
         body#bloco section#side .tags li a:hover {
           background: #ffc72c; }
-body#bloco.archive section#last-news ul li:first-of-type {
-  padding: 5px; }
-  body#bloco.archive section#last-news ul li:first-of-type p {
-    bottom: 6px; }
+body#bloco.archive section#last-news ul li {
+  margin: 25px 0; }
+  body#bloco.archive section#last-news ul li:first-of-type {
+    padding: 5px 0; }
+    body#bloco.archive section#last-news ul li:first-of-type p {
+      bottom: 6px; }
 
 body#blog-interna a {
   color: #ffc72c; }

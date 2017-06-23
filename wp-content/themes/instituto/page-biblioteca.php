@@ -34,8 +34,8 @@
 						<div class="wp-video">
 							<img src="img/article-placeholder.jpg">
 						</div>
-						<h4>Especialistas divergem em debate sobre o foro privilegiado</h4>
-						<p>Já está no ar a íntegra do debate que foi realizado na última quarta-feira, no jornal Folha de S. Paulo, sobre o foro privilegiado para políticos. A discussão foi polêmica e os participantes apresentaram pontos de vistas bastante divergentes. O presidente do INAC, Roberto Livianu, foi um dos especialistas convidados.</p>
+						<h4><?php the_short_text("Especialistas divergem em debate sobre o foro privilegiado",45); ?></h4>
+						<p><?php the_short_text("Já está no ar a íntegra do debate que foi realizado na última quarta-feira, no jornal Folha de S. Paulo, sobre o foro privilegiado para políticos. A discussão foi polêmica e os participantes apresentaram pontos de vistas bastante divergentes. O presidente do INAC, Roberto Livianu, foi um dos especialistas convidados.",205); ?></p>
 					</a>
 				</li>
 				<li>
@@ -43,8 +43,8 @@
 						<div class="wp-video">
 							<img src="img/article-placeholder.jpg">
 						</div>
-						<h4>Os bastidores da maior movimentação contra a Lava-Jato, no dia em ela completa 3 anos</h4>
-						<p>O programa Política no Brasil, da Globo News, exibiu ontem um especial sobre os bastidores da Operação Lava Jato, além de discutir o que é Caixa 1 e Caixa 2. O presidente do INAC, Roberto Livianu, foi um dos entrevistados.</p>
+						<h4><?php the_short_text("Os bastidores da maior movimentação contra a Lava-Jato, no dia em ela completa 3 anos",45); ?></h4>
+						<p><?php the_short_text("O programa Política no Brasil, da Globo News, exibiu ontem um especial sobre os bastidores da Operação Lava Jato, além de discutir o que é Caixa 1 e Caixa 2. O presidente do INAC, Roberto Livianu, foi um dos entrevistados.",205); ?></p>
 					</a>
 				</li>
 				<li>
@@ -52,8 +52,8 @@
 						<div class="wp-video">
 							<img src="https://img.youtube.com/vi/vYmJEW7E05s/mqdefault.jpg">
 						</div>
-						<h4>Lázaro Ramos entrevista Leandro Karnal no Espelho</h4>
-						<p>O historiador e professor Leandro Karnal concedeu uma entrevista ao ator Lázaro Ramos, no programa Espelho, do Canal Brasil, na qual ele falou sobre corrupção. Em suas palavras, "não existe governo corrupto numa nação ética, e não existe nação corrupta com governo transparente e democrático".</p>
+						<h4><?php the_short_text("Lázaro Ramos entrevista Leandro Karnal no Espelho",45); ?></h4>
+						<p><?php the_short_text('O historiador e professor Leandro Karnal concedeu uma entrevista ao ator Lázaro Ramos, no programa Espelho, do Canal Brasil, na qual ele falou sobre corrupção. Em suas palavras, "não existe governo corrupto numa nação ética, e não existe nação corrupta com governo transparente e democrático".',205); ?></p>
 					</a>
 				</li>
 			</ul>
@@ -100,17 +100,17 @@
 			<ul class="slick-carousel-biblioteca">
 				<li>
 					<img src="img/Livros/Deltan.jpg">
-					<button class="btn btn-default">comprar</button>
+					<!-- <button class="btn btn-default">comprar</button> -->
 					<button class="btn btn-warning">ver mais</button>
 				</li>
 				<li>
 					<img src="img/Livros/Instituto.jpg">
-					<button class="btn btn-default">comprar</button>
+					<!-- <button class="btn btn-default">comprar</button> -->
 					<button class="btn btn-warning">ver mais</button>
 				</li>
 				<li>
 					<img src="img/Livros/Luiz_Flavio.png">
-					<button class="btn btn-default">comprar</button>
+					<!-- <button class="btn btn-default">comprar</button> -->
 					<button class="btn btn-warning">ver mais</button>
 				</li>
 			</ul>

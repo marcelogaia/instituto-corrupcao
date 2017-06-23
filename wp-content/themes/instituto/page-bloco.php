@@ -156,7 +156,7 @@
 						</li>
 	<?php endwhile; ?>
 					</ul>
-					<a href="blog/" title="VER" class="latest-news-button">VER</a>
+					<a href="<?= site_url('bloco/todos') ?>" title="VER" class="latest-news-button">VER</a>
 				</section>
 <?php endif; ?>
 			</section>

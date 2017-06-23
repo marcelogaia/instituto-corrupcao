@@ -578,7 +578,7 @@ li {
 }
 
 form.newsletter {
-	label {
+	p>label {
 		width: calc( 100% - 60px) !important;
 		display: inline-block;
 		line-height: 30px;
@@ -1119,6 +1119,7 @@ footer#contato {
 	}
 
 	.contact-us-box {
+		margin-bottom: 75px;
 		.box-right {
 			padding: 0;
 
@@ -2252,6 +2253,7 @@ body#biblioteca {
 		.slick-carousel-biblioteca {
 			li {
 				margin: 0 26px;
+				text-align: center;
 				
 				img{
 					border: 2px $color_std-yellow solid;
@@ -2259,7 +2261,7 @@ body#biblioteca {
 
 				button {
 					width: calc(50% - 3px);
-					float:left;
+					// float:left;
 					@include border-radius(0);
 					margin-top:10px;
 					background:#ccc;
@@ -4151,11 +4153,15 @@ body#bloco {
 	}
 
 	&.archive {
-		section#last-news ul li:first-of-type { 
-			padding: 5px;
+		section#last-news ul li {
+			margin: 25px 0;
 
-			p {
-				bottom: 6px;
+			&:first-of-type { 
+				padding: 5px 0;
+
+				p {
+					bottom: 6px;
+				}
 			}
 		}
 	}

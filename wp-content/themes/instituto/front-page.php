@@ -120,7 +120,7 @@ get_header();
 			</article>
 <?php endwhile; ?>
 		</div>
-		<a href="<?= site_url('bloco') ?>" title="VER" class="latest-news-button">VER</a>
+		<a href="<?= site_url('bloco/todos') ?>" title="VER" class="latest-news-button">VER</a>
 	</div>
 </section>
 

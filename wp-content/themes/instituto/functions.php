@@ -83,19 +83,27 @@ add_filter('pre_get_posts','searchfilter');
 * Place the code inside the loop and set the character limit.  If the title is longer than the character limit set,
 * it will display ellipsis at the end.
 --------------------------------------------------------------------*/
-function get_short_title( $maxchar = 90 ) {
+
+
+function get_short_text($text, $maxchar = 90 ) {
+
+	// get the length of the text
+	$textLength = strlen($text);
 	
-	$fullTitle = get_the_title();
-	
-	// get the length of the title
-	$titleLength = strlen($fullTitle);
-	
-	if($maxchar > $titleLength) {
-		return $fullTitle;									
+	if($maxchar > $textLength) {
+		return $text;									
 	} else {
-		$shortTitle = substr( $fullTitle, 0, $maxchar );
+		$shortTitle = substr( $text, 0, $maxchar );
 		return $shortTitle . " &hellip;";									
 	}
+}
+
+function the_short_text($text, $maxchar = 90 ) {
+	echo get_short_text($text, $maxchar);
+}
+
+function get_short_title( $maxchar = 90 ) {
+	return get_short_text(get_the_title(), $maxchar);
 }
 
 function the_short_title( $maxchar = 90 ) {

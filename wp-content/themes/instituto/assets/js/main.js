@@ -322,16 +322,24 @@ jQuery( document ).ready( function($) {
 		    $(this).ekkoLightbox({
 		    	alwaysShowClose : true,
 		    	onShown: function() {
-		    		elementLoaded('.participe-form',validatePagSeguroForm);
+		    		elementLoaded('.participe-form',validateForms);
 				}
 		    });
 		    
 		});
 	}
 
+	var newsForms = function() {
+		$('.newsletter').each(function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+		    validateForms($(this).parents('.wpcf7'));
+		});
+	}
+
 	var newsletterFixed = function() {
 		$('#newsletter-form').each(function(){
-			$('.wpcf7').on('wpcf7:submit',function(){
+			$(this).find('.wpcf7').on('wpcf7:submit',function(){
 				$('#newsletter-form').addClass('sucesso');
 			});
 
@@ -361,11 +369,12 @@ jQuery( document ).ready( function($) {
 		
 	}
 
-	var validatePagSeguroForm = function(formWrapper) {
+	var validateForms = function(formWrapper) {
 		// https://stackoverflow.com/a/18221081/4184867
+		console.log(formWrapper);
 		var theForm;
 
-		$('.participe-form').each(function(){
+		formWrapper.each(function(){
 			theForm = $(this).find('.wpcf7-form').eq(0);
 
 			theForm.validate({
@@ -434,6 +443,8 @@ jQuery( document ).ready( function($) {
 		$(document).on('submit','.wpcf7-form',function(event){
 			event.preventDefault();
 
+			console.log("Submitting form...");
+
 			var form = $(this);
 			var fields = form.serializeArray();
 			var formData = {};
@@ -461,6 +472,8 @@ jQuery( document ).ready( function($) {
 				);
 			}
 		});
+
+		return false;
 	}
 
 	$.fn.exists = $.fn.exists || function() { 
@@ -480,12 +493,13 @@ jQuery( document ).ready( function($) {
 		projectFilters();
 		homeJumbotron();
 		participeForms();
+		newsForms();
 		newsletterFixed();
 		bibliotecaLightbox();
 
 		disableEnter();
 		disableZoom();
-		//validatePagSeguroForm();
+		//validateForms();
 	});
 
 	// Window Resize

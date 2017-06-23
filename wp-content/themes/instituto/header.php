@@ -10,7 +10,7 @@
 global $wpdb, $post;
 
 $isHome = is_home();
-$isArchive = $post->post_name != null;
+$isArchive = $post->post_name != null && $post->post_name != "todos";
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -149,5 +149,5 @@ $isArchive = $post->post_name != null;
 				</div>
 			</div>
 		</div>
-		<?= do_shortcode('[contact-form-7 id="1056" title="newsletter" html_id="newsletter-form" html_class="closed"]') ?>
+		<?= do_shortcode('[contact-form-7 id="1056" title="newsletter" html_id="newsletter-form" html_class="closed newsletter"]') ?>
 	</section>
